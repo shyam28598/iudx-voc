@@ -1,0 +1,60 @@
+* Example QuantitativeValue definition
+
+QuantitativeValue
+#+BEGIN_SRC json
+{
+    "@context": {
+        "schema": "https://schema.org/"
+    }
+    "@graph": [
+        {
+            "@id": "schema:QuantitativeValue",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A point value or interval for product characteristics and other purposes.",
+            "rdfs:label": "QuantitativeValue",
+            "rdfs:subClassOf": {
+                "@id": "schema:StructuredValue"
+            }
+        },
+        {
+            "@id": "schema:unitCode",
+            "@type": "rdfs:Property",
+            "schema:domainIncludes": [
+                {
+                   "@id": "schema:QuantitativeValue"
+                }
+            ],
+            "schema:rangeIncldues": [
+                {
+                   "@id": "schema:Text"
+                }
+            ],
+        }
+    ]
+}
+#+END_SRC
+
+Temperature Sensor
+#+BEGIN_SRC json
+{
+    "@context": {
+        "schema": "https://schema.org/"
+    }
+    "@graph": [
+        {
+            "@id": "schema:air_temperature",
+            "@type": "rdfs:Property",
+            "rdfs:comment": "Air Temperature",
+            "rdfs:label": "air_temperature",
+            "schema:rangeIncludes:": [
+                {
+                   "@id": "schema:QuantitativeValue"
+                }
+            ],
+        },
+        {
+            "@id": "schema:Temperature"
+        }
+    ]
+}
+#+END_SRC

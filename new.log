@@ -1,0 +1,189 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdftex 2020.3.23)  23 MAR 2020 23:17
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**new.tex
+(./new.tex
+! Undefined control sequence.
+l.3 \documentclass
+                  [11pt]{article}
+? 
+! Undefined control sequence.
+l.4 \usepackage
+               [utf8]{inputenc}
+? 
+! Undefined control sequence.
+l.5 \usepackage
+               [T1]{fontenc}
+? 
+! Undefined control sequence.
+l.6 \usepackage
+               {graphicx}
+? 
+! Undefined control sequence.
+l.7 \usepackage
+               {grffile}
+? 
+! Undefined control sequence.
+l.8 \usepackage
+               {longtable}
+? 
+! Undefined control sequence.
+l.9 \usepackage
+               {wrapfig}
+? 
+! Undefined control sequence.
+l.10 \usepackage
+                {rotating}
+? 
+! Undefined control sequence.
+l.11 \usepackage
+                [normalem]{ulem}
+? 
+! Undefined control sequence.
+l.12 \usepackage
+                {amsmath}
+? 
+! Undefined control sequence.
+l.13 \usepackage
+                {textcomp}
+? 
+! Undefined control sequence.
+l.14 \usepackage
+                {amssymb}
+? 
+! Undefined control sequence.
+l.15 \usepackage
+                {capt-of}
+? 
+! Undefined control sequence.
+l.16 \usepackage
+                {hyperref}
+? 
+! Undefined control sequence.
+l.17 \author
+            {rraks}
+? 
+! Undefined control sequence.
+l.18 \date
+          {\today}
+? 
+! Undefined control sequence.
+l.18 \date{\today
+                 }
+? 
+! Undefined control sequence.
+l.19 \title
+           {}
+? 
+! Undefined control sequence.
+l.20 \hypersetup
+                {
+? 
+! Undefined control sequence.
+l.27 \begin
+           {document}
+? 
+! Undefined control sequence.
+l.29 \tableofcontents
+                     
+? 
+! Undefined control sequence.
+l.31 \section
+             {IUDX Migrating to better linked data}
+? 
+! Undefined control sequence.
+l.32 \label
+           {sec:org8cd3bdb}
+? 
+! Undefined control sequence.
+l.35 \section
+             {Getting started}
+? 
+! Undefined control sequence.
+l.36 \label
+           {sec:org4b8a498}
+? 
+! Undefined control sequence.
+l.37 \subsection
+                {Basic items}
+? 
+! Undefined control sequence.
+l.38 \label
+           {sec:org3b26ea5}
+? 
+! Undefined control sequence.
+l.39 \subsubsection
+                   {Following schema.org \href{https://schema.org/}{json-ld ...
+
+? 
+! Undefined control sequence.
+l.39 \subsubsection{Following schema.org \href
+                                              {https://schema.org/}{json-ld ...
+
+? 
+! Undefined control sequence.
+l.40 \label
+           {sec:org017acbf}
+? 
+
+Overfull \hbox (7.34308pt too wide) in paragraph at lines 35--41
+[]\tenrm Getting started sec:org4b8a498 Ba-sic items sec:org3b26ea5 Fol-low-ing
+ schema.org https://schema.org/json-|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm G
+.\tenrm e
+.\tenrm t
+.\tenrm t
+.etc.
+
+! Undefined control sequence.
+l.44 \subsubsection
+                   {Do we use schema.org standard terminologies such as \hre...
+
+? 
+! Undefined control sequence.
+l.44 ...a.org standard terminologies such as \href
+                                                  {https://schema.org/Thing....
+
+? 
+! Undefined control sequence.
+l.45 \label
+           {sec:org4d130c9}
+? 
+! Undefined control sequence.
+l.46 \begin
+           {enumerate}
+? 
+! Undefined control sequence.
+l.48 \label
+           {sec:orgbe4459f}
+? 
+! Undefined control sequence.
+l.49 \begin
+           {verbatim}
+? 
+
+Overfull \hbox (8.16257pt too wide) in paragraph at lines 47--69
+\tenrm "schema:dataFeedElement", "schema:rangeIncludes":  "@id": "schema:Thing"
+  ,  "@id": "schema:name",|
+
+\hbox(6.94444+1.94444)x449.75499, glue set - 1.0
+.\tenrm "
+.\tenrm s
+.\tenrm c
+.\kern-0.27779
+.\tenrm h
+.etc.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] )</usr/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on new.pdf (1 page, 24249 bytes).
+PDF statistics:
+ 12 PDF objects out of 1000 (max. 8388607)
+ 7 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

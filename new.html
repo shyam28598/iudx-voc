@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-03-24 Tue 08:10 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="rraks" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&dn=gpl-3.0.txt GPL-v3-or-Later
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.cacheClassElem = elem.className;
+         elem.cacheClassTarget = target.className;
+         target.className = "code-highlighted";
+         elem.className   = "code-highlighted";
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(elem.cacheClassElem)
+         elem.className = elem.cacheClassElem;
+       if(elem.cacheClassTarget)
+         target.className = elem.cacheClassTarget;
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgc88c40c">1. IUDX Migrating to better linked data</a></li>
+<li><a href="#org96436e4">2. Getting started</a>
+<ul>
+<li><a href="#org346d065">2.1. Basic items</a>
+<ul>
+<li><a href="#org31ef0bf">2.1.1. Following schema.org json-ld form</a></li>
+<li><a href="#org72bac6e">2.1.2. Do we use schema.org standard terminologies such as &ldquo;Thing&rdquo; instead of ResourceItem?</a></li>
+</ul>
+</li>
+<li><a href="#org8980518">2.2. Basic Types</a>
+<ul>
+<li><a href="#orga8fe545">2.2.1. schema:measuredValue is essentially iudx:QuantitativeProperty</a></li>
+<li><a href="#org3cff436">2.2.2. Datatypes in schema.org use schema:DataType</a></li>
+<li><a href="#org829a6bd">2.2.3. What this means</a></li>
+<li><a href="#org99f0f93">2.2.4. schema.org is flexible is a little ambiguous</a></li>
+<li><a href="#orgb01d166">2.2.5. According to this, time is a measured value and therefore, iudx:TimeProperty will be invalidated.</a></li>
+</ul>
+</li>
+<li><a href="#org1b576df">2.3. A higher level to measuredValue</a>
+<ul>
+<li><a href="#orga2cdc44">2.3.1. Observation - This is what QuantitativeProperty should be. This is in the pending list along with measuredValue</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org4e862f3">3. List of IUDX properties and their mappings</a>
+<ul>
+<li><a href="#org70c38a4">3.1. schema.org meta includes - Class, Property, domainIncludes, supersededBy (rangeIncludes??)</a></li>
+<li><a href="#org3e4c4e1">3.2. We need to differentiate between Observation and QuantitativeValue. All Observations are Quantitative and the reverse is not true</a></li>
+<li><a href="#org930dc07">3.3. schema:StructuredValue seems to be subclass of most of the properties we are intereseted in</a></li>
+<li><a href="#org8985d1d">3.4. Example of a few derived attributes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc88c40c" class="outline-2">
+<h2 id="orgc88c40c"><span class="section-number-2">1</span> IUDX Migrating to better linked data</h2>
+</div>
+
+
+<div id="outline-container-org96436e4" class="outline-2">
+<h2 id="org96436e4"><span class="section-number-2">2</span> Getting started</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org346d065" class="outline-3">
+<h3 id="org346d065"><span class="section-number-3">2.1</span> Basic items</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org31ef0bf" class="outline-4">
+<h4 id="org31ef0bf"><span class="section-number-4">2.1.1</span> Following schema.org <a href="https://schema.org/">json-ld form</a></h4>
+</div>
+
+
+
+<div id="outline-container-org72bac6e" class="outline-4">
+<h4 id="org72bac6e"><span class="section-number-4">2.1.2</span> Do we use schema.org standard terminologies such as <a href="https://schema.org/Thing.jsonld">&ldquo;Thing&rdquo;</a> instead of ResourceItem?</h4>
+<div class="outline-text-4" id="text-2-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org5297035"></a>JSON<br />
+<div class="outline-text-5" id="text-2-1-2-1">
+<div class="org-src-container">
+<pre class="src src-json">{
+    <span style="color: #51afef;">"@context"</span>: {
+        <span style="color: #51afef;">"schema"</span>: <span style="color: #98be65;">"http://schema.org/"</span>
+    },
+    <span style="color: #51afef;">"@graph"</span>: [
+        {
+            <span style="color: #51afef;">"@id"</span>: <span style="color: #98be65;">"schema:dataFeedElement"</span>,
+            <span style="color: #51afef;">"schema:rangeIncludes"</span>: {
+                <span style="color: #51afef;">"@id"</span>: <span style="color: #98be65;">"schema:Thing"</span>
+            }
+        },
+        {
+            <span style="color: #51afef;">"@id"</span>: <span style="color: #98be65;">"schema:name"</span>,
+            <span style="color: #51afef;">"schema:domainIncludes"</span>: {
+                <span style="color: #51afef;">"@id"</span>: <span style="color: #98be65;">"schema:Thing"</span>
+            }
+        }
+    ]
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="org0fbbb3d"></a>LD Expansion<br />
+<div class="outline-text-5" id="text-2-1-2-2">
+
+<div class="figure">
+<p><img src="./graph.png" alt="graph.png" />
+</p>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-org8980518" class="outline-3">
+<h3 id="org8980518"><span class="section-number-3">2.2</span> Basic Types</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-orga8fe545" class="outline-4">
+<h4 id="orga8fe545"><span class="section-number-4">2.2.1</span> schema:measuredValue is essentially iudx:QuantitativeProperty</h4>
+</div>
+<div id="outline-container-org3cff436" class="outline-4">
+<h4 id="org3cff436"><span class="section-number-4">2.2.2</span> Datatypes in schema.org use schema:DataType</h4>
+</div>
+<div id="outline-container-org829a6bd" class="outline-4">
+<h4 id="org829a6bd"><span class="section-number-4">2.2.3</span> What this means</h4>
+<div class="outline-text-4" id="text-2-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="org2fdc949"></a>JSON<br />
+<div class="outline-text-5" id="text-2-2-3-1">
+<div class="org-src-container">
+<pre class="src src-json">{
+    <span style="color: #51afef;">"@context"</span>: {
+        <span style="color: #51afef;">"schema"</span>: <span style="color: #98be65;">"http://schema.org/"</span>
+    },
+    <span style="color: #51afef;">"@graph"</span>: [
+        {
+            <span style="color: #51afef;">"@id"</span>: <span style="color: #98be65;">"schema:measuredValue"</span>,
+            <span style="color: #51afef;">"schema:rangeIncludes"</span>: {
+                <span style="color: #51afef;">"@id"</span>: <span style="color: #98be65;">"schema:DataType"</span>
+            }
+        },
+        {
+            <span style="color: #51afef;">"@id"</span>: <span style="color: #98be65;">"schema:DataType"</span>,
+            <span style="color: #51afef;">"@type"</span>: <span style="color: #98be65;">"rdf:Class"</span>,
+            <span style="color: #51afef;">"rdf:comment"</span>: <span style="color: #98be65;">"The basic data types such as Integers, Strings, etc."</span>,
+            <span style="color: #51afef;">"rdf:label"</span>: <span style="color: #98be65;">"DataType"</span>,
+            <span style="color: #51afef;">"rdf:subClassOf"</span>: {
+                <span style="color: #51afef;">"@id"</span>: <span style="color: #98be65;">"rdf:Class"</span>
+            }
+        },
+        {
+            <span style="color: #51afef;">"@id"</span>: <span style="color: #98be65;">"schema:Number"</span>,
+            <span style="color: #51afef;">"@type"</span>: <span style="color: #98be65;">"schema:DataType"</span>
+        }
+
+    ]
+}
+</pre>
+</div>
+
+<div class="figure">
+<p><img src="./datatype.png" alt="datatype.png" />
+</p>
+</div>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org99f0f93" class="outline-4">
+<h4 id="org99f0f93"><span class="section-number-4">2.2.4</span> schema.org is flexible is a little ambiguous</h4>
+<div class="outline-text-4" id="text-2-2-4">
+</div>
+<ol class="org-ol">
+<li><a id="orgecfd46e"></a>measuredValue doesn&rsquo;t have rdf:subclass or type<br /></li>
+<li><a id="org658cfcd"></a>DataType is of @type and subclass off rdf:class&#x2026; why?.. why not rdfs:resource<br /></li>
+<li><a id="org0be6ad0"></a>Does @type imply rdf:range?<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-orgb01d166" class="outline-4">
+<h4 id="orgb01d166"><span class="section-number-4">2.2.5</span> According to this, time is a measured value and therefore, iudx:TimeProperty will be invalidated.</h4>
+<div class="outline-text-4" id="text-2-2-5">
+
+<div class="figure">
+<p><img src="./time.png" alt="time.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1b576df" class="outline-3">
+<h3 id="org1b576df"><span class="section-number-3">2.3</span> A higher level to measuredValue</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-orga2cdc44" class="outline-4">
+<h4 id="orga2cdc44"><span class="section-number-4">2.3.1</span> Observation - This is what QuantitativeProperty should be. This is in the pending list along with measuredValue</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<div class="org-src-container">
+<pre class="src src-json">[
+    {
+        <span style="color: #51afef;">"@id"</span>: <span style="color: #98be65;">"schema:Observation"</span>,
+        <span style="color: #51afef;">"@type"</span>: <span style="color: #98be65;">"rdf:Class"</span>,
+        <span style="color: #51afef;">"dcterms:source"</span>: {
+            <span style="color: #51afef;">"@id"</span>: "https://github.com/schemaorg/schemaorg/issues/<span style="color: #da8548; font-weight: bold;">2291</span>"
+        },
+        <span style="color: #51afef;">"rdf:comment"</span>: <span style="color: #98be65;">"Instances of the class &lt;a class=\"localLink\" href=\"http://schema.org/Observation\"&gt;Observation&lt;/a&gt; are used to specify observations about an entity (which may or may not be an instance of a &lt;a class=\"localLink\" href=\"http://schema.org/StatisticalPopulation\"&gt;StatisticalPopulation&lt;/a&gt;), at a particular time. The principal properties of an &lt;a class=\"localLink\" href=\"http://schema.org/Observation\"&gt;Observation&lt;/a&gt; are &lt;a class=\"localLink\" href=\"http://schema.org/observedNode\"&gt;observedNode&lt;/a&gt;, &lt;a class=\"localLink\" href=\"http://schema.org/measuredProperty\"&gt;measuredProperty&lt;/a&gt;, &lt;a class=\"localLink\" href=\"http://schema.org/measuredValue\"&gt;measuredValue&lt;/a&gt; (or &lt;a class=\"localLink\" href=\"http://schema.org/median\"&gt;median&lt;/a&gt;, etc.) and &lt;a class=\"localLink\" href=\"http://schema.org/observationDate\"&gt;observationDate&lt;/a&gt; (&lt;a class=\"localLink\" href=\"http://schema.org/measuredProperty\"&gt;measuredProperty&lt;/a&gt; properties can, but need not always, be W3C RDF Data Cube \"measure properties\", as in the &lt;a href=\"https://www.w3.org/TR/vocab-data-cube/#dsd-example\"&gt;lifeExpectancy example&lt;/a&gt;).\nSee also &lt;a class=\"localLink\" href=\"http://schema.org/StatisticalPopulation\"&gt;StatisticalPopulation&lt;/a&gt;, and the &lt;a href=\"/docs/data-and-datasets.html\"&gt;data and datasets&lt;/a&gt; overview for more details."</span>,
+        <span style="color: #51afef;">"rdf:label"</span>: <span style="color: #98be65;">"Observation"</span>,
+        <span style="color: #51afef;">"rdf:subClassOf"</span>: {
+            <span style="color: #51afef;">"@id"</span>: <span style="color: #98be65;">"schema:Intangible"</span>
+        },
+        <span style="color: #51afef;">"schema:category"</span>: "issue-<span style="color: #da8548; font-weight: bold;">2291</span>",
+        <span style="color: #51afef;">"schema:isPartOf"</span>: {
+            <span style="color: #51afef;">"@id"</span>: <span style="color: #98be65;">"http://pending.schema.org"</span>
+        }
+    }
+]
+</pre>
+</div>
+
+<div class="figure">
+<p><img src="./obs.png" alt="obs.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-org4e862f3" class="outline-2">
+<h2 id="org4e862f3"><span class="section-number-2">3</span> List of IUDX properties and their mappings</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+NOTE: schema.org doesn&rsquo;t have rdf:Resource
+</p>
+</div>
+
+<div id="outline-container-org70c38a4" class="outline-3">
+<h3 id="org70c38a4"><span class="section-number-3">3.1</span> schema.org meta includes - Class, Property, domainIncludes, supersededBy (rangeIncludes??)</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+We need to have our meta (Class, Property) same as schema.orgs&rsquo;
+Basics
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">IUDX</th>
+<th scope="col" class="org-left">Schema.org</th>
+<th scope="col" class="org-left">rdf/s</th>
+<th scope="col" class="org-left">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">-</td>
+<td class="org-left">Class</td>
+<td class="org-left">Class</td>
+<td class="org-left">no such definition in iudx</td>
+</tr>
+
+<tr>
+<td class="org-left">-</td>
+<td class="org-left">Property</td>
+<td class="org-left">Class</td>
+<td class="org-left">no such definition in iudx</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">(domain, range) -includes-&gt; Class</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">-</td>
+<td class="org-left">domainIncludes</td>
+<td class="org-left">Property</td>
+<td class="org-left">no such definition in iudx</td>
+</tr>
+
+<tr>
+<td class="org-left">-</td>
+<td class="org-left">rangeIncludes(Not Present)</td>
+<td class="org-left">Property</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<p>
+IUDX:CoreTypes
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">IUDX</th>
+<th scope="col" class="org-left">Schema.org</th>
+<th scope="col" class="org-left">@type</th>
+<th scope="col" class="org-left">subClass</th>
+<th scope="col" class="org-left">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Property</td>
+<td class="org-left">schema:Property</td>
+<td class="org-left">rdfs:Class</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Generic property describing a thing. Includes relationship</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">in schema.org. Shouldn&rsquo;t get confused with rdf:Property,</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">schema:StructuredValue</td>
+<td class="org-left">maybe change name??</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">QuantitativeProperty</td>
+<td class="org-left">schema:QuantitativeValue</td>
+<td class="org-left">rdfs:Class</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">or</td>
+<td class="org-left">schema:StructuredValue</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">schema:QunatitativeValue</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">GeoProperty</td>
+<td class="org-left">schema:GeoCoordinates</td>
+<td class="org-left">rdfs:Class</td>
+<td class="org-left">schema:StructuredValue</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">or</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">schema:GeoCoordinates</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">TimeProperty</td>
+<td class="org-left">schema:Time</td>
+<td class="org-left">rdfs:Class</td>
+<td class="org-left">schema:StructuredValue</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">or</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">schema:Time</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org3e4c4e1" class="outline-3">
+<h3 id="org3e4c4e1"><span class="section-number-3">3.2</span> We need to differentiate between Observation and QuantitativeValue. All Observations are Quantitative and the reverse is not true</h3>
+</div>
+<div id="outline-container-org930dc07" class="outline-3">
+<h3 id="org930dc07"><span class="section-number-3">3.3</span> schema:StructuredValue seems to be subclass of most of the properties we are intereseted in</h3>
+</div>
+
+<div id="outline-container-org8985d1d" class="outline-3">
+<h3 id="org8985d1d"><span class="section-number-3">3.4</span> Example of a few derived attributes</h3>
+<div class="outline-text-3" id="text-3-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">IUDX Property</th>
+<th scope="col" class="org-left">@type</th>
+<th scope="col" class="org-left">domainIncludes</th>
+<th scope="col" class="org-left">rangeIncludes</th>
+<th scope="col" class="org-left">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">name</td>
+<td class="org-left">rdfs:Property</td>
+<td class="org-left">iudx:Property</td>
+<td class="org-left">schema:Text</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">and</td>
+<td class="org-left">or</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">iudx:ResourceItem</td>
+<td class="org-left">iudx:Text</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">or</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">json:String</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">lastUpdatedAt</td>
+<td class="org-left">rdfs:Property</td>
+<td class="org-left">iudx:TimeProperty</td>
+<td class="org-left">schema:DateTime</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">and</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">iudx:DataPacket??</td>
+<td class="org-left">or</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">iudx:DateTime</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">or</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">json:DateTime</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">temperature</td>
+<td class="org-left">rdfs:Property</td>
+<td class="org-left">iudx:QuantitativeProperty</td>
+<td class="org-left">schema:measuredValue</td>
+<td class="org-left">Here, we&rsquo;ll need two levels of abstraction</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">or</td>
+<td class="org-left">and talk about measuredValue too. This is because</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">schema:number</td>
+<td class="org-left">a QuantitativeProperty need not be a measuredValue</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">or</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">iudx:measuredValue</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: rraks</p>
+<p class="date">Created: 2020-03-24 Tue 08:10</p>
+</div>
+</body>
+</html>
