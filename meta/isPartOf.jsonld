@@ -1,0 +1,27 @@
+{
+    "@context": {
+        "iudx": "https://iudx.org.in/voc/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/"
+    },
+    "@id": "iudx:isPartOf",
+    "@type": "rdf:Property",
+    "rdfs:comment": "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.",
+    "rdfs:label": "isPartOf",
+    "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+    },
+    "schema:inverseOf": {
+        "@id": "schema:hasPart"
+    },
+    "schema:rangeIncludes": [
+        {
+            "@id": "schema:CreativeWork"
+        },
+        {
+            "@id": "schema:URL"
+        }
+    ]
+}

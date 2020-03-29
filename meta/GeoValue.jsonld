@@ -1,0 +1,18 @@
+{
+    "@context": {
+        "iudx": "https://iudx.org.in/voc/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@graph": [
+        {
+            "@id": "iudx:GeoValue",
+            "@type": ["owl:Class", "rdfs:Class"],
+            "rdfs:label": "Describes the value of a Geographical attribute",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        }
+    ]
+}
