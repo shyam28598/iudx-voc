@@ -1,5 +1,6 @@
 {
     "@context": {
+        "iudx": "https://iudx.org.in/voc/",
         "cc": "http://creativecommons.org/ns#",
         "cert": "http://www.w3.org/ns/auth/cert#",
         "dbp": "http://dbpedia.org/property/",

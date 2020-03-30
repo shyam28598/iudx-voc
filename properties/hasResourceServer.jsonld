@@ -20,7 +20,7 @@
     "schema:rangeIncludes": [
         {
             "@id": "xsd:string",
-            "@container": "@set"
+            "@type": "@id"
         },
         {
             "@id": "iudx:RelationshipValue"
