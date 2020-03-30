@@ -13,7 +13,7 @@
         "@id": "iudx:Property"
     },
     "iudx:isPartOf": {
-        "@id": "https://iudx.org.in/voc/meta["
+        "@id": "https://iudx.org.in/voc/meta"
     },
     "iudx:rangeIncludes": {
         "@id": "iudx:Class"
