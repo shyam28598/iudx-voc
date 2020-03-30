@@ -11,10 +11,10 @@
     "rdfs:label": "hasResourceServer",
     "schema:domainIncludes": [
         {
-            "@id": "iudx:Resource"
+            "@id": "iudx:ResourceItem"
         },
         {
-            "@id": "iudx:ResourceGroup"
+            "@id": "iudx:ResourceGroupItem"
         }
     ],
     "schema:rangeIncludes": [
