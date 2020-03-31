@@ -5,29 +5,25 @@
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
-    "@graph": [
+    "@id": "iudx:tags",
+    "@type": [
+        "owl:DatatypeProperty",
+        "rdf:Property"
+    ],
+    "rdfs:comment": "Discovery tags associated with items (resource item, resource Group item, data models) in IUDX catalogue",
+    "rdfs:label": "Discovery tags",
+    "iudx:domainIncludes": [
         {
-            "@id": "iudx:tags",
-            "@type": [
-                "owl:DatatypeProperty",
-                "rdf:Property"
-            ],
-            "rdfs:comment": "Discovery tags associated with items (resource item, resource Group item, data models) in IUDX catalogue",
-            "rdfs:label": "Discovery tags",
-            "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:ResourceItem"
-                },
-                {
-                    "@id": "iudx:ResourceGroupItem"
-                }
-            ],
-            "schema:rangeIncludes": [
-                {
-                    "@id": "xsd:string",
-                    "@container": "@set"
-                }
-            ]
+            "@id": "iudx:ResourceItem"
+        },
+        {
+            "@id": "iudx:ResourceGroupItem"
+        }
+    ],
+    "iudx:rangeIncludes": [
+        {
+            "@id": "xsd:string",
+            "@container": "@set"
         }
     ]
 }

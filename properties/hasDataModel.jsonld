@@ -9,7 +9,7 @@
     "@type": "rdf:Property",
     "rdfs:comment":  "urn pointing to the data-model entity",
     "rdfs:label": "hasDataModel",
-    "schema:domainIncludes": [
+    "iudx:domainIncludes": [
         {
             "@id": "iudx:ResourceGroupItem"
         },
@@ -17,7 +17,7 @@
             "@id": "iudx:ResourceItem"
         }
     ],
-    "schema:rangeIncludes": [
+    "iudx:rangeIncludes": [
         {
             "@id": "xsd:string",
             "@type": "@id"

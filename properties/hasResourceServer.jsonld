@@ -9,7 +9,7 @@
     "@type": "rdf:Property",
     "rdfs:comment":  "urn pointing to the resourceServer entity",
     "rdfs:label": "hasResourceServer",
-    "schema:domainIncludes": [
+    "iudx:domainIncludes": [
         {
             "@id": "iudx:ResourceItem"
         },
@@ -17,7 +17,7 @@
             "@id": "iudx:ResourceGroupItem"
         }
     ],
-    "schema:rangeIncludes": [
+    "iudx:rangeIncludes": [
         {
             "@id": "xsd:string",
             "@type": "@id"

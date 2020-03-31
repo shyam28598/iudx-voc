@@ -9,12 +9,12 @@
     "@type": "rdf:Property",
     "rdfs:comment":  "urn pointing to the resourceGroup entity",
     "rdfs:label": "hasResourceGroup",
-    "schema:domainIncludes": [
+    "iudx:domainIncludes": [
         {
             "@id": "iudx:ResourceItem"
         }
     ],
-    "schema:rangeIncludes": [
+    "iudx:rangeIncludes": [
         {
             "@id": "xsd:string",
             "@type": "@id"
