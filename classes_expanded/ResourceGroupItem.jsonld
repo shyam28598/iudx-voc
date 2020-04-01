@@ -1,0 +1,123 @@
+{
+    "@context": {
+        "iudx": "https://iudx.org.in/voc/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@graph": [
+        {
+            "@id": "iudx:ResourceGroupItem",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Describes the Resource Group entry in the IUDX catalogue.",
+            "rdfs:label": "Resource Group Item",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:hasResourceServer",
+            "@type": [
+                "rdf:Property",
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "urn pointing to the resourceServer entity",
+            "rdfs:label": "hasResourceServer",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceItem"
+                },
+                {
+                    "@id": "iudx:ResourceGroupItem"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:string",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:hasDataModel",
+            "@type": [
+                "rdf:Property",
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "urn pointing to the data-model entity",
+            "rdfs:label": "hasDataModel",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceGroupItem"
+                },
+                {
+                    "@id": "iudx:ResourceItem"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:string",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:hasProvider",
+            "@type": [
+                "rdf:Property",
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "URN pointing to the provider entity associated with the given catalogue item",
+            "rdfs:label": "hasProvider",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceItem"
+                },
+                {
+                    "@id": "iudx:ResourceGroupItem"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:string",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:tags",
+            "@type": [
+                "rdf:Property",
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Discovery tags associated with items (resource item, resource Group item, data models) in IUDX catalogue",
+            "rdfs:label": "Discovery tags",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceItem"
+                },
+                {
+                    "@id": "iudx:ResourceGroupItem"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:string",
+                    "@container": "@set"
+                }
+            ]
+        }
+    ]
+}

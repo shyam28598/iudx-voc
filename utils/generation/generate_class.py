@@ -43,14 +43,19 @@ for p in properties.keys():
                 print(properties[p])
                 print(e)
 
-
 for fl in os.listdir(classes_dir):
+    cls_name = "iudx:" + str(fl[:-7])
     with open(os.path.join(classes_dir, fl), "r") as f:
         cls = json.load(f)
-    if fl[:-7] not in classes.keys():
-        print("Class - " + fl[:-7] + " doesn't exist")
+    if cls_name not in classes.keys():
+        print("Class - " + cls_name + " doesn't exist")
         continue
-    for props in classes[fl[:-7]]:
-        cls["@context"] = list(set(props["@context"]) + cls["@context"])
-
-print(cls)
+    for props in classes[cls_name]:
+        try:
+            cls["@context"] = {**cls["@context"], **props["@context"]}
+            props.pop("@context")
+            cls["@graph"].append(props)
+        except Exception as e:
+            print(e)
+    with open(classes_generated_dir + fl, "w") as f:
+        json.dump(cls, f, indent=4)
