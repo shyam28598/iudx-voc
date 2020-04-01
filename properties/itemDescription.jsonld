@@ -24,10 +24,10 @@
         "@id": "iudx:ResourceItem"
      },
      {
-        "@id": "iudx:ResourseGroupItem"
+        "@id": "iudx:ResourceGroupItem"
      },
      {
-        "@id": "iudx:ResourseServerItem"
+        "@id": "iudx:ResourceServerItem"
      },
      {
         "@id": "iudx:ProviderItem"

@@ -17,6 +17,44 @@
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             }
+        },
+        {
+            "@id": "iudx:itemDescription",
+            "@type": [
+                "rdf:Property",
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": {
+                "@value": "Description for the catalouge item"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:label": {
+                "@value": "Description"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceItem"
+                },
+                {
+                    "@id": "iudx:ResourceGroupItem"
+                },
+                {
+                    "@id": "iudx:ResourceServerItem"
+                },
+                {
+                    "@id": "iudx:ProviderItem"
+                },
+                {
+                    "@id": "iudx:DataModelItem"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:string"
+                }
+            ]
         }
     ]
 }
