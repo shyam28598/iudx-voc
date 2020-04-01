@@ -6,7 +6,10 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@id": "iudx:hasResourceGroup",
-    "@type": "rdf:Property",
+    "@type": [
+         "rdf:Property",
+         "iudx:Relationship"
+    ],
     "rdfs:comment":  "urn pointing to the resourceGroup entity",
     "rdfs:label": "hasResourceGroup",
     "iudx:domainIncludes": [

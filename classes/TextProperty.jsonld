@@ -7,18 +7,18 @@
     },
     "@graph": [
         {
-            "@id": "iudx:PropertyValue",
+            "@id": "iudx:TextProperty",
             "@type": "rdfs:Class",
             "owl:equivalentClass": {
                 "@id": "rdf:Property"
             },
-            "rdfs:comment": "A property, used to indicate attributes and relationships of some Thing; equivalent to rdf:Property.",
-            "rdfs:label": "Property",
+            "rdfs:comment": "Class of all Text Properties. The range of Text property contains text (multiple words).",
+            "rdfs:label": "Text Property",
             "rdfs:subClassOf": {
                 "@id": "iudx:Intangible"
             },
-            "iudx:isPartOf": {
-                "@id": "https://iudx.org.in/voc/meta"
+            "rdfs:subClassOf": {
+                "@id": "rdf:Property"
             }
         }
     ]

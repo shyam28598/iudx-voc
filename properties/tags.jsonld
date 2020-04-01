@@ -7,8 +7,8 @@
     },
     "@id": "iudx:tags",
     "@type": [
-        "owl:DatatypeProperty",
-        "rdf:Property"
+        "rdf:Property",
+        "iudx:TextProperty"
     ],
     "rdfs:comment": "Discovery tags associated with items (resource item, resource Group item, data models) in IUDX catalogue",
     "rdfs:label": "Discovery tags",

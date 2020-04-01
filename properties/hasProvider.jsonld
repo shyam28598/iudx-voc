@@ -6,7 +6,10 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@id": "iudx:hasProvider",
-    "@type": "rdf:Property",
+    "@type": [
+        "rdf:Property", 
+        "iudx:Relationship"
+    ],
     "rdfs:comment":  "URN pointing to the provider entity associated with the given catalogue item",
     "rdfs:label": "hasProvider",
     "iudx:domainIncludes": [

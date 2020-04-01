@@ -7,8 +7,8 @@
     },
     "@id": "iudx:hasRelationshipValue",
     "@type": [
-        "owl:DatatypeProperty",
-        "rdf:Property"
+        "rdf:Property",
+        "iudx:Property"
     ],
     "rdfs:comment": {
         "@value": "Value associated with RelationshipValue class. Contains IRI(s) that specify the relationship object(s)."
