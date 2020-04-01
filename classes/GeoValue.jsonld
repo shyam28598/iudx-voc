@@ -9,7 +9,8 @@
         {
             "@id": "iudx:GeoValue",
             "@type": ["owl:Class", "rdfs:Class"],
-            "rdfs:label": "Describes the value of a Geographical attribute",
+            "rdfs:comment": "Describes the value of a Geographical attribute",
+            "rdfs:label": "Geo Value",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             }

@@ -15,12 +15,8 @@
             "rdfs:comment": "Class of all Text Properties. The range of Text property contains text (multiple words).",
             "rdfs:label": "Text Property",
             "rdfs:subClassOf": {
-                "@id": "iudx:Intangible"
-            },
-            "rdfs:subClassOf": {
                 "@id": "rdf:Property"
             }
         }
     ]
 }
-
