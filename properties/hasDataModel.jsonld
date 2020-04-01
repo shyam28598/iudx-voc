@@ -6,7 +6,10 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@id": "iudx:hasDataModel",
-    "@type": "rdf:Property",
+    "@type": [
+        "rdf:Property", 
+        "iudx:Relationship"
+    ],
     "rdfs:comment":  "urn pointing to the data-model entity",
     "rdfs:label": "hasDataModel",
     "iudx:domainIncludes": [

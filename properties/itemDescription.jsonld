@@ -7,8 +7,8 @@
     },
     "@id": "iudx:itemDescription",
     "@type": [
-        "owl:DatatypeProperty",
-        "rdf:Property"
+        "rdf:Property",
+        "iudx:TextProperty"
     ],
     "rdfs:comment": {
         "@value": "Description for the catalouge item"
@@ -21,19 +21,19 @@
     },
     "iudx:domainIncludes": [
      {
-        "@id": "iudx:resourceItem"
+        "@id": "iudx:ResourceItem"
      },
      {
-        "@id": "iudx:resourseGroupItem"
+        "@id": "iudx:ResourseGroupItem"
      },
      {
-        "@id": "iudx:resourseServerItem"
+        "@id": "iudx:ResourseServerItem"
      },
      {
-        "@id": "iudx:providerItem"
+        "@id": "iudx:ProviderItem"
      },
      {
-        "@id": "iudx:dataModelItem"
+        "@id": "iudx:DataModelItem"
      }
    ],
    "iudx:rangeIncludes": [

@@ -6,7 +6,10 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@id": "iudx:name",
-    "@type": "rdf:Property",
+    "@type": [
+        "rdf:Property",
+        "iudx:Property"
+    ],
     "owl:equivalentProperty": {
         "@id": "dcterms:title"
     },
