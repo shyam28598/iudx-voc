@@ -52,4 +52,5 @@ for fl in os.listdir(classes_dir):
         continue
     for props in classes[fl[:-7]]:
         cls["@context"] = list(set(props["@context"]) + cls["@context"])
-    print(cls)
+
+print(cls)
