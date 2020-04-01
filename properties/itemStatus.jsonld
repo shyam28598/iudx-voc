@@ -1,0 +1,45 @@
+{
+    "@context": {
+        "iudx": "https://iudx.org.in/voc/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@id": "iudx:itemStatus",
+    "@type": [
+        "rdf:Property",
+        "iudx:TextProperty"
+    ],
+    "rdfs:comment": {
+        "@value": "Status of a catalouge item. ENUM: [ACTIVE, DEPRECATED]."
+    },
+    "rdfs:isDefinedBy": {
+        "@id": "iudx:"
+    },
+    "rdfs:label": {
+        "@value": "Status of catalogue item [ACTIVE/DEPRECATED]"
+    },
+    "iudx:domainIncludes": [
+     {
+        "@id": "iudx:ResourceItem"
+     },
+     {
+        "@id": "iudx:ResourceGroupItem"
+     },
+     {
+        "@id": "iudx:ResourceServerItem"
+     },
+     {
+        "@id": "iudx:ProviderItem"
+     },
+     {
+        "@id": "iudx:DataModelItem"
+     }
+   ],
+   "iudx:rangeIncludes": [
+    {
+        "@id": "xsd:string"
+    }
+   ]
+
+}
