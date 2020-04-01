@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "iudx": "https://iudx.org.in/voc/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@graph": [
+        {
+            "@id": "iudx:Relationship",
+            "@type": ["owl:Class", "rdfs:Class"],
+            "rdfs:label": "Relationship",
+            "rdfs:comment": "Class of all Relationships in IUDX. Values of these properties will define a relationship to another object that may be an IUDX resource (e.g., catalogue item ) or maybe an external resource.",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "rdf:Property"
+            }
+        }
+    ]
+}

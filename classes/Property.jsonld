@@ -7,18 +7,18 @@
     },
     "@graph": [
         {
-            "@id": "iudx:PropertyValue",
+            "@id": "iudx:Property",
             "@type": "rdfs:Class",
             "owl:equivalentClass": {
                 "@id": "rdf:Property"
             },
-            "rdfs:comment": "A property, used to indicate attributes and relationships of some Thing; equivalent to rdf:Property.",
+            "rdfs:comment": "Class of all generic properties of IUDX. In general, the values are strings.",
             "rdfs:label": "Property",
             "rdfs:subClassOf": {
                 "@id": "iudx:Intangible"
             },
-            "iudx:isPartOf": {
-                "@id": "https://iudx.org.in/voc/meta"
+            "rdfs:subClassOf": {
+                "@id": "rdf:Property"
             }
         }
     ]

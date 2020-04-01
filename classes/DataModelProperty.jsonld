@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "iudx": "https://iudx.org.in/voc/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@graph": [
+        {
+            "@id": "iudx:DataModelProperty",
+            "@type": ["owl:Class", "rdfs:Class"],
+            "rdfs:label": "Data Model Property",
+            "rdfs:comment": "Class of all data model properties in IUDX. These properties are used by IUDX data models to describe the meta-data of the data from a given resource. The value of the property, described by the data-model, describes just the meta-information (e.g., units, min-value, max-value etc.) and does not contain the actual data.",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "rdf:Property"
+            }
+        }
+    ]
+}
