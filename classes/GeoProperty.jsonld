@@ -10,7 +10,7 @@
             "@id": "iudx:GeoProperty",
             "@type": ["owl:Class", "rdfs:Class"],
             "rdfs:label": "Geo Property",
-            "rdfs:comment": "Describes the class of all GeoProperties in IUDX. Values of these properties are objects describing geo-coordinates (e.g., latitude, longitude, GeoJSON objects etc.)",
+            "rdfs:comment": "Describes the class of all GeoProperties in IUDX. The range of a geo-property are objects describing geo-coordinates (e.g., latitude, longitude, GeoJSON objects etc.)",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },

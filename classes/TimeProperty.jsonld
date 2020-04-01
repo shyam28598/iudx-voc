@@ -10,7 +10,7 @@
             "@id": "iudx:TimeProperty",
             "@type": ["owl:Class", "rdfs:Class"],
             "rdfs:label": "Time Property",
-            "rdfs:comment": "Class of all Time properties in IUDX. The values of these properties are time/date values",
+            "rdfs:comment": "Class of all Time properties in IUDX. The range of time property is a time/date objects in standard formats.",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
