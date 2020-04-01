@@ -19,6 +19,42 @@
             }
         },
         {
+            "@id": "iudx:hasValue",
+            "@type": [
+                "owl:DatatypeProperty",
+                "rdf:Property"
+            ],
+            "rdfs:comment": {
+                "@value": "Value associated with PropertyValue, QuantitativeValue and RelationshipValue."
+            },
+            "rdfs:label": {
+                "@value": "Value of a property or attribute"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:PropertyValue"
+                },
+                {
+                    "@id": "iudx:QuantitativeValue"
+                },
+                {
+                    "@id": "iudx:GeoValue"
+                },
+                {
+                    "@id": "iudx:TimeValue"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:string",
+                    "@type": "@id"
+                }
+            ]
+        },
+        {
             "@id": "iudx:hasRelationshipValue",
             "@type": [
                 "rdf:Property",

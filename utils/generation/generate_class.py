@@ -1,6 +1,8 @@
 import json
 import sys
 import os
+import traceback
+import copy
 
 """Create expanded class form of iudx classes by introspecting properties
 """
@@ -50,12 +52,16 @@ for fl in os.listdir(classes_dir):
     if cls_name not in classes.keys():
         print("Class - " + cls_name + " doesn't exist")
         continue
-    for props in classes[cls_name]:
+    for prop in classes[cls_name]:
+        print("Before")
+        print(json.dumps(prop, indent=4))
         try:
-            cls["@context"] = {**cls["@context"], **props["@context"]}
-            props.pop("@context")
-            cls["@graph"].append(props)
+            prop_new = copy.deepcopy(prop)
+            prop_new.pop("@context")
+            cls["@graph"].append(prop_new)
         except Exception as e:
-            print(e)
+            print("error")
+            print(json.dumps(prop, indent=4))
+            input()
     with open(classes_generated_dir + fl, "w") as f:
         json.dump(cls, f, indent=4)
