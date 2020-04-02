@@ -5,30 +5,18 @@
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
-    "@id": "iudx:hasValue",
+    "@id": "iudx:relatedResource",
     "@type": [
-        "owl:DatatypeProperty",
-        "rdf:Property"
+        "rdf:Property",
+        "iudx:TextProperty"
     ],
     "rdfs:comment": {
-        "@value": "Value associated with PropertyValue, QuantitativeValue and RelationshipValue."
+        "@value": "Value associated with RelationshipValue class. Contains IRI(s) that specify the relationship object(s)."
     },
     "rdfs:label": {
-        "@value": "Value of a property or attribute"
+        "@value": "IRIs for the objects for which relationship is being defined."
     },
     "iudx:domainIncludes": [
-        {
-            "@id": "iudx:PropertyValue"
-        },
-        {
-            "@id": "iudx:QuantitativeValue"
-        },
-        {
-            "@id": "iudx:GeoValue"
-        },
-        {
-            "@id": "iudx:TimeValue"
-        },
         {
             "@id": "iudx:RelationshipValue"
         }
@@ -37,6 +25,11 @@
         {
             "@id": "xsd:string",
             "@type": "@id"
+        },
+        {
+            "@id": "xsd:string",
+            "@type": "@id",
+            "@container": "@set"
         }
     ]
 }
