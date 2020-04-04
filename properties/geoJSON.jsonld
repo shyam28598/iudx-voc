@@ -36,7 +36,7 @@
     ],
     "iudx:rangeIncludes": [
      {
-        "@id": "iudx:Feature"
+        "@id": "iudx:GeoJSONGeometry"
      }
     ]
 }

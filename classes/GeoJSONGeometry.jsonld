@@ -10,19 +10,13 @@
     },
     "@graph": [
         {
-            "@id": "iudx:Feature",
-            "@type": ["owl:Class", "rdfs:Class", "iudx:GeoJSONGeometry"],
-            "rdfs:comment": "Describes the GeoJSON Feature",
-            "rdfs:label": "GeoJSON Feature",
+            "@id": "iudx:GeoJSONGeometry",
+            "@type": ["owl:Class", "rdfs:Class"],
+            "rdfs:comment": "Describes the GeoJSON object",
+            "rdfs:label": "GeoJSONGeometry",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
-            },
-            "rdfs:subClassOf": {
-                "@id": "iudx:GeoJSONGeometry"
-            },
-            "skos:exactMatch": {
-                "@id": "geojson:Feature"
-             }
+            }
         }
     ]
 }
