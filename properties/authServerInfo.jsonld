@@ -6,25 +6,21 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
-    "@id": "iudx:hasAccessObject",
+    "@id": "iudx:authServerInfo",
     "@type": [
         "rdf:Property", 
-        "iudx:Relationship"
+        "iudx:StructuredProperty"
     ],
-    "rdfs:comment":  "Link to the access object. For example, an open API object.",
-    "rdfs:label": "Access Object",
+    "rdfs:comment":  "Information about the Authorization Server used for a given resource.",
+    "rdfs:label": "Auth Server Info",
     "iudx:domainIncludes": [
         {
-            "@id": "iudx:AccessObjectInfoValue"
+            "@id": "iudx:ResourceGroupItem"
         }
     ],
     "iudx:rangeIncludes": [
         {
-            "@id": "xsd:string",
-            "@type": "@id"
-        },
-        {
-            "@id": "iudx:RelationshipValue"
+            "@id": "iudx:AuthServerInfoValue"
         }
     ]
 }
