@@ -13,6 +13,9 @@
             "rdfs:label": "Geo Value",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:StructuredValue"
             }
         }
     ]

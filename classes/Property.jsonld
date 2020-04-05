@@ -9,10 +9,7 @@
         {
             "@id": "iudx:Property",
             "@type": "rdfs:Class",
-            "owl:equivalentClass": {
-                "@id": "rdf:Property"
-            },
-            "rdfs:comment": "Class of all generic properties of IUDX. In general, the values are strings.",
+            "rdfs:comment": "Class of all properties of IUDX. In general, the values are strings.",
             "rdfs:label": "Property",
             "rdfs:subClassOf": {
                 "@id": "iudx:Intangible"

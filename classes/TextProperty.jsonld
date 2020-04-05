@@ -15,7 +15,7 @@
             "rdfs:comment": "Class of all Text Properties. The range of Text property contains text (multiple words).",
             "rdfs:label": "Text Property",
             "rdfs:subClassOf": {
-                "@id": "rdf:Property"
+                "@id": "iudx:SimpleProperty"
             }
         }
     ]

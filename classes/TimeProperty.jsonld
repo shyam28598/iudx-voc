@@ -15,7 +15,7 @@
                 "@id": "iudx:"
             },
             "rdfs:subClassOf": {
-                "@id": "rdf:Property"
+                "@id": "iudx:SimpleProperty"
             }
         }
     ]

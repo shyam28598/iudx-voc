@@ -13,6 +13,9 @@
             "rdfs:comment": "Describes the value of a Relationship Object.",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:StructuredValue"
             }
         }
     ]
