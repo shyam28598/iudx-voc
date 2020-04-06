@@ -17,6 +17,9 @@
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
+            "rdfs:subClassOf": {
+                "@id": "iudx:StructuredValue"
+            },
             "skos:closeMatch": {
                 "@id": "schema:Place"
              }
