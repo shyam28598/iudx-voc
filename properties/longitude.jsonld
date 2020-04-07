@@ -21,7 +21,7 @@
         "@id": "iudx:"
     },
     "rdfs:label": {
-        "@value": "Latitude"
+        "@value": "Longitude"
     },
     "iudx:domainIncludes": [
      {
@@ -32,9 +32,6 @@
      },
      {
         "@id": "iudx:ResourceItem"
-     },
-     {
-        "@id": "iudx:ResourceGroupItem"
      }
     ],
     "iudx:rangeIncludes": [

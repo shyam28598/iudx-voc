@@ -32,9 +32,6 @@
      },
      {
         "@id": "iudx:ResourceItem"
-     },
-     {
-        "@id": "iudx:ResourceGroupItem"
      }
     ],
     "iudx:rangeIncludes": [
