@@ -13,6 +13,9 @@
             "rdfs:label": "Resource Group Item",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:StructuredValue"
             }
         }
     ]

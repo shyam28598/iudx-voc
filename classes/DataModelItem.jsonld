@@ -13,6 +13,9 @@
             "rdfs:comment": "Describes the Data Model Item entry in the IUDX catalogue.",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:StructuredValue"
             }
         }
     ]
