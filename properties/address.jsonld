@@ -26,6 +26,9 @@
     "iudx:domainIncludes": [
      {
         "@id": "iudx:Place"
+     },
+     {
+        "@id": "iudx:Organization"
      }
     ],
     "iudx:rangeIncludes": [
