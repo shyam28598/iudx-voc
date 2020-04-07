@@ -6,21 +6,22 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
-    "@id": "iudx:listOfDataFields",
+    "@id": "iudx:secureDataFields",
     "@type": [
         "rdf:Property",
         "iudx:TextProperty"
     ],
-    "rdfs:comment": "List of properties/fields/attributes contained in the data available from the resources associated with a given resource Group. The meta-information related to the individual fields/attributes are further defined in data-model item referred to by the resource Group item.",
-    "rdfs:label": "List Of Data Fields",
+    "rdfs:comment": "List of properties/fields/attributes contained in the data available from the resources associated with a given resource Group which are secure, i.e., need authorization from the auth server to access these fields for a given resource.",
+    "rdfs:label": "Secure Data Fields",
     "iudx:domainIncludes": [
         {
-            "@id": "iudx:ResourceGroupItem"
+            "@id": "iudx:DataFieldListValue"
         }
     ],
     "iudx:rangeIncludes": [
         {
-            "@id": "iudx:DataFieldListValue"
+            "@id": "xsd:string",
+            "@container": "@set"
         }
     ]
 }
