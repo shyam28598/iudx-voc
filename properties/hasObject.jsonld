@@ -6,7 +6,7 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
-    "@id": "iudx:relatedResource",
+    "@id": "iudx:hasObject",
     "@type": [
         "rdf:Property",
         "iudx:TextProperty"
@@ -15,7 +15,7 @@
         "@value": "Value associated with RelationshipValue class. Contains IRI(s) that specify the relationship object(s)."
     },
     "rdfs:label": {
-        "@value": "IRIs for the objects for which relationship is being defined."
+        "@value": "hasObject"
     },
     "iudx:domainIncludes": [
         {
