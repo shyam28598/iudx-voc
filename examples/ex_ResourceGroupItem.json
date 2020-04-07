@@ -36,7 +36,7 @@
        "additionalInfoURL": "https://AdditionalInfoForAPI.blah.blah/",
        "accessObjectType": "openAPI"
     },
-    "applicableDataAPISet": ["attribute", "temporal"],
+    "iudxResourceAPIs": ["attribute", "temporal"],
     "itemCreatedAt": "2019-02-20T10:30:06.093121",
     "location": {
       "@type": "Place",
