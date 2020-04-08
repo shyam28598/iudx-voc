@@ -7,7 +7,7 @@
           "type":"@type"
         }
     ],
-    "@type": ["ResourceItem"],
+    "type": ["ResourceItem"],
     "id": "8898kwiorit9490494",
     "itemDescription": "Description for IITM weather station resource providing RAINFALL and AQI data",
     "tags": [ 
@@ -19,7 +19,7 @@
     "itemCreatedAt": "2019-02-20T10:30:06.093121",
     "name": "hadapsar",
     "location": {
-      "@type": "Place",
+      "type": "Place",
       "geoJSON": {
           "type": "Feature",
           {

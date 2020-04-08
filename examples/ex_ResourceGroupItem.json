@@ -7,7 +7,7 @@
           "type":"@type"
         }
     ],
-    "@type": ["ResourceGroupItem"],
+    "type": ["ResourceGroupItem"],
     "id": "pscdcl/pudx-resource-server/pune-iitm-aqi",
     "itemDescription": "Description for IITM weather station resource group providing rainfall and aqm data.",
     "name": "iitm-pune-aqi",
@@ -21,17 +21,17 @@
     "resourceAuthControlLevel": "INDIVIDUAL",
     "resourceType": "messageStream",
     "authServerInfo": {
-       "@type": ["AuthServerInfoValue"],
+       "type": ["AuthServerInfoValue"],
        "authServerURL": "https://auth.blah.blah/",
        "authType": "iudx-auth"
     },
     "listOfDataFields": {
-       "@type": ["DataFieldListValue"],
+       "type": ["DataFieldListValue"],
        "openDataFields": ["blah1", "blah2", "blah3"],
        "secureDataFields": [""]
     },
     "accessObjectInfo": {
-       "@type": ["AccessObjectInfoValue"],
+       "type": ["AccessObjectInfoValue"],
        "accessObject": "https://apiObject.blah.blah/",
        "additionalInfoURL": "https://AdditionalInfoForAPI.blah.blah/",
        "accessObjectType": "openAPI"
@@ -39,7 +39,7 @@
     "iudxResourceAPIs": ["attribute", "temporal"],
     "itemCreatedAt": "2019-02-20T10:30:06.093121",
     "location": {
-      "@type": "Place",
+      "type": "Place",
       "name": "Pune"
     }
 }
