@@ -13,9 +13,12 @@
             "@id": "iudx:Point",
             "@type": ["owl:Class", "rdfs:Class"],
             "rdfs:comment": "Describes the GeoJSON Point",
-            "rdfs:label": "GeoJSON Point",
+            "rdfs:label": "Point",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:GeoJSONGeometry"
             },
             "skos:exactMatch": {
                 "@id": "geojson:Point"

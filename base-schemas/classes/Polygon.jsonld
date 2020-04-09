@@ -13,9 +13,12 @@
             "@id": "iudx:Polygon",
             "@type": ["owl:Class", "rdfs:Class"],
             "rdfs:comment": "Describes the GeoJSON Polygon",
-            "rdfs:label": "GeoJSON Polygon",
+            "rdfs:label": "Polygon",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:GeoJSONGeometry"
             },
             "skos:exactMatch": {
                 "@id": "geojson:Polygon"
