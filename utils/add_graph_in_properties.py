@@ -6,7 +6,6 @@ import copy
 
 folder_path = "../base-schemas/properties/"
 for filename in glob.glob(os.path.join(folder_path, '*.jsonld')):
-  with open(filename, "r") as f:
     with open(filename, "r+") as obj_file:
         new_dict ={}
         new_list = []

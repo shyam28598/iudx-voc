@@ -5,7 +5,6 @@ import os,glob
 
 folder_path = "../base-schemas/classes/"
 for filename in glob.glob(os.path.join(folder_path, '*.jsonld')):
-  with open(filename, "r") as f:
     with open(filename, "r+") as obj_file:
         obj = json.load(obj_file)
         for field in obj["@graph"]:
