@@ -49,6 +49,6 @@
      }
     ],
     "skos:exactMatch": {
-        "@id": "schema:latitude"
+        "@id": "schema:name"
      }
 }
