@@ -6,35 +6,23 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
-    "@id": "iudx:itemDescription",
+    "@id": "iudx:description",
     "@type": [
         "rdf:Property",
         "iudx:TextProperty"
     ],
     "rdfs:comment": {
-        "@value": "Description for the catalouge item"
+        "@value": "Description for an IUDX thing."
     },
     "rdfs:isDefinedBy": {
         "@id": "iudx:"
     },
     "rdfs:label": {
-        "@value": "Description"
+        "@value": "description"
     },
     "iudx:domainIncludes": [
      {
-        "@id": "iudx:ResourceItem"
-     },
-     {
-        "@id": "iudx:ResourceGroupItem"
-     },
-     {
-        "@id": "iudx:ResourceServerItem"
-     },
-     {
-        "@id": "iudx:ProviderItem"
-     },
-     {
-        "@id": "iudx:DataModelItem"
+        "@id": "iudx:Thing"
      }
    ],
    "iudx:rangeIncludes": [
@@ -42,5 +30,4 @@
         "@id": "xsd:string"
     }
    ]
-
 }
