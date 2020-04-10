@@ -15,7 +15,7 @@
         "iudx:GeoProperty"
     ],
     "rdfs:comment": {
-        "@value": "Latitude of a place. Specified in WGS 84 CRS (https://en.wikipedia.org/wiki/World_Geodetic_System\)"
+        "@value": "Latitude of a place. Specified in WGS 84 CRS (https://en.wikipedia.org/wiki/World_Geodetic_System)"
     },
     "rdfs:isDefinedBy": {
         "@id": "iudx:"
