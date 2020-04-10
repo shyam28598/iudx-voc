@@ -9,7 +9,7 @@
     ],
     "type": ["ResourceItem"],
     "id": "8898kwiorit9490494",
-    "itemDescription": "Description for IITM weather station resource providing RAINFALL and AQI data",
+    "description": "Description for IITM weather station resource providing RAINFALL and AQI data",
     "tags": [ 
          "environment", "air quality", "climate", "air", "aqi", "iitm", "safar", "pollution", "rainfall", "temperature", "uv" 
     ],

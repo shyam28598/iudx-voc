@@ -9,7 +9,7 @@
     ],
     "type": ["ResourceGroupItem"],
     "id": "pscdcl/pudx-resource-server/pune-iitm-aqi",
-    "itemDescription": "Description for IITM weather station resource group providing rainfall and aqm data.",
+    "description": "Description for IITM weather station resource group providing rainfall and aqm data.",
     "name": "iitm-pune-aqi",
     "tags": [ 
          "environment", "air quality", "climate", "air", "aqi", "iitm", "safar", "pollution", "rainfall", "temperature", "uv" 
