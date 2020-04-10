@@ -9,7 +9,7 @@
         {
             "@id": "iudx:EnvAQM",
             "@type": ["owl:Class", "rdfs:Class"],
-            "rdfs:comment": "Class of all Data Models.",
+            "rdfs:comment": "Air Quality Monitoring (AQM) Data Model.",
             "rdfs:label": "EnvAQM",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
