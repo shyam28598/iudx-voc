@@ -9,7 +9,7 @@
        "CO2_MAX": "iudx:co2MAX",
        "CO2_MIN": "iudx:co2MIN"
     },
-    "@type": ["DataDescriptor"],
+    "@type": ["DataDescriptor", "EnvAQM"],
     "@id": "env_aqm_climo_Pune_example",
     "description": "Data Descriptor for data from CLIMO sensors in Pune city.",
     "AIR_PRESSURE": {
