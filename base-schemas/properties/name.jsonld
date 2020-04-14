@@ -38,6 +38,9 @@
      },
      {
         "@id": "iudx:ProviderItem"
+     },
+     {
+        "@id": "iudx:FunctionDescription"
      }
     ],
     "iudx:rangeIncludes": [
