@@ -1,0 +1,43 @@
+{
+    "@context": {
+        "iudx": "https://iudx.org.in/voc/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@id": "iudx:unitCode",
+    "@type": [
+        "rdf:Property",
+        "iudx:TextProperty"
+    ],
+    "rdfs:comment": {
+        "@value": "The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes/unit vocabularies may be used with a prefix"
+    },
+    "rdfs:isDefinedBy": {
+        "@id": "iudx:"
+    },
+    "rdfs:label": {
+        "@value": "unitCode"
+    },
+    "iudx:domainIncludes": [
+     {
+        "@id": "iudx:QuantitativeValue"
+     }
+    ],
+    "iudx:rangeIncludes": [
+     {
+        "@id": "xsd:string"
+     },
+     {
+        "@id": "xsd:string",
+        "@type": "@id"
+     }
+    ],
+    "skos:exactMatch": {
+        "@id": "schema:unitCode"
+     }
+}

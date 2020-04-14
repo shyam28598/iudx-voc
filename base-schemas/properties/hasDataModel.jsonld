@@ -1,0 +1,33 @@
+{
+    "@context": {
+        "iudx": "https://iudx.org.in/voc/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@id": "iudx:hasDataModel",
+    "@type": [
+        "rdf:Property", 
+        "iudx:Relationship"
+    ],
+    "rdfs:comment":  "urn pointing to the data-model entity",
+    "rdfs:label": "hasDataModel",
+    "iudx:domainIncludes": [
+        {
+            "@id": "iudx:ResourceGroupItem"
+        },
+        {
+            "@id": "iudx:ResourceItem"
+        }
+    ],
+    "iudx:rangeIncludes": [
+        {
+            "@id": "xsd:string",
+            "@type": "@id"
+        },
+        {
+            "@id": "iudx:RelationshipValue"
+        }
+    ]
+}

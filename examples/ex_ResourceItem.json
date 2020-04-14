@@ -1,0 +1,34 @@
+{
+    "@context": [
+        "http://voc.iudx.org.in/general/base_iudx_context.jsonld",
+        {
+          "@vocab": "https://voc.iudx.org.in/",
+          "id": "@id",
+          "type":"@type"
+        }
+    ],
+    "type": ["ResourceItem"],
+    "id": "8898kwiorit9490494",
+    "description": "Description for IITM weather station resource providing RAINFALL and AQI data",
+    "tags": [ 
+         "environment", "air quality", "climate", "air", "aqi", "iitm", "safar", "pollution", "rainfall", "temperature", "uv" 
+    ],
+    "itemStatus": "ACTIVE",
+    "hasResourceServer": "iudx-catalogue-pune:pudx-resource-server",
+    "hasResourceGroup": "iudx-catalogue-pune:pscdcl/pudx-resource-server/pune-iitm-aqi",
+    "itemCreatedAt": "2019-02-20T10:30:06.093121",
+    "name": "hadapsar",
+    "location": {
+      "type": "Place",
+      "geoJSON": {
+          "type": "Feature",
+          {
+              "geometry": {
+                "type": "Point",
+                "coordinates": [73.927456, 18.502167]
+              }
+          }
+      },
+      "address": "Hadapsar Area, Pune"
+    }
+}
