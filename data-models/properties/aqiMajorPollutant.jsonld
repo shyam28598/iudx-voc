@@ -9,19 +9,19 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
-    "@id": "iudx:airPressure",
+    "@id": "iudx:aqiMajorPollutant",
     "@type": [
         "rdf:Property",
         "iudx:QuantitativeProperty"
     ],
     "rdfs:comment": {
-        "@value": "Describes measured air (atmospheric or barometric) pressure"
+        "@value": "Major pollutant in the Air Quality Index (AQI)."
     },
     "rdfs:isDefinedBy": {
         "@id": "iudx:"
     },
     "rdfs:label": {
-        "@value": "airPressure"
+        "@value": "aqiMajorPollutant"
     },
     "iudx:domainIncludes": [
      {
@@ -33,10 +33,10 @@
     ],
     "iudx:rangeIncludes": [
      {
-        "@id": "iudx:Number"
+        "@id": "xsd:string"
      },
      {
-        "@id": "iudx:QuantitativeValue"
+        "@id": "iudx:QuantitativeProperty"
      }
     ]
 }

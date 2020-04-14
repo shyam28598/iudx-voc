@@ -9,19 +9,19 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
-    "@id": "iudx:airPressure",
+    "@id": "iudx:co2MIN",
     "@type": [
         "rdf:Property",
         "iudx:QuantitativeProperty"
     ],
     "rdfs:comment": {
-        "@value": "Describes measured air (atmospheric or barometric) pressure"
+        "@value": "Describes minimum value of CO2 over a set of observations in past."
     },
     "rdfs:isDefinedBy": {
         "@id": "iudx:"
     },
     "rdfs:label": {
-        "@value": "airPressure"
+        "@value": "co2MIN"
     },
     "iudx:domainIncludes": [
      {
