@@ -6,21 +6,25 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
-    "@id": "iudx:durationInHours",
-    "@type": [
-        "rdf:Property", 
-        "iudx:StructuredProperty"
-    ],
-    "rdfs:comment": "Specifies the duration of an interval in Hours.",
-    "rdfs:label": "durationInHours",
-    "iudx:domainIncludes": [
+    "@graph": [
         {
-            "@id": "iudx:QuantitativeValue"
-        }
-    ],
-    "iudx:rangeIncludes": [
-        {
-            "@id": "xsd:decimal"
+            "@id": "iudx:durationInHours",
+            "@type": [
+                "rdf:Property",
+                "iudx:StructuredProperty"
+            ],
+            "rdfs:comment": "Specifies the duration of an interval in Hours.",
+            "rdfs:label": "durationInHours",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:QuantitativeValue"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:decimal"
+                }
+            ]
         }
     ]
 }

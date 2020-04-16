@@ -9,7 +9,10 @@
     "@graph": [
         {
             "@id": "iudx:Thing",
-            "@type": ["owl:Class", "rdfs:Class"],
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
             "rdfs:comment": "Most generic IUDX object.",
             "rdfs:label": "Thing",
             "rdfs:isDefinedBy": {

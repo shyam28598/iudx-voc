@@ -11,7 +11,10 @@
     "@graph": [
         {
             "@id": "iudx:LineString",
-            "@type": ["owl:Class", "rdfs:Class"],
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
             "rdfs:comment": "Describes the GeoJSON LineString",
             "rdfs:label": "LineString",
             "rdfs:isDefinedBy": {
@@ -22,7 +25,7 @@
             },
             "skos:exactMatch": {
                 "@id": "geojson:LineString"
-             }
+            }
         }
     ]
 }

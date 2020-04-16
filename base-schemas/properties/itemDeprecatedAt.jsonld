@@ -1,4 +1,12 @@
 {
+    "@context": {
+        "iudx": "https://iudx.org.in/voc/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
     "@graph": [
         {
             "@id": "iudx:itemDeprecatedAt",
@@ -6,15 +14,11 @@
                 "rdf:Property",
                 "iudx:TimeProperty"
             ],
-            "rdfs:comment": {
-                "@value": "DateTime of deprecation of a catalogue item."
-            },
+            "rdfs:comment": "DateTime of deprecation of a catalogue item.",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
-            "rdfs:label": {
-                "@value": "DateTime of deprecation of a catalogue item"
-            },
+            "rdfs:label": "itemDeprecatedAt",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:ResourceItem"
@@ -41,13 +45,5 @@
                 }
             ]
         }
-    ],
-    "@context": {
-        "iudx": "https://iudx.org.in/voc/",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
-    }
+    ]
 }
