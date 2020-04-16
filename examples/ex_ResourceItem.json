@@ -1,13 +1,14 @@
 {
     "@context": [
-        "http://voc.iudx.org.in/general/base_iudx_context.jsonld",
         {
           "@vocab": "https://voc.iudx.org.in/",
+          "iudx-catalogue-pune": "https://pudx.catalogue.iudx.org.in/",
           "id": "@id",
-          "type":"@type"
+          "type":"@type",
+          "DEVICEID": "aqmDeviceID"
         }
     ],
-    "type": ["ResourceItem"],
+    "type": ["ResourceItem", "EnvAQM"],
     "id": "8898kwiorit9490494",
     "description": "Description for IITM weather station resource providing RAINFALL and AQI data",
     "tags": [ 
@@ -18,15 +19,14 @@
     "hasResourceGroup": "iudx-catalogue-pune:pscdcl/pudx-resource-server/pune-iitm-aqi",
     "itemCreatedAt": "2019-02-20T10:30:06.093121",
     "name": "hadapsar",
+    "DEVICEID": "169af06f-bfee-3513-56e5-847957490-sensoragent",
     "location": {
       "type": "Place",
       "geoJSON": {
           "type": "Feature",
-          {
-              "geometry": {
-                "type": "Point",
-                "coordinates": [73.927456, 18.502167]
-              }
+          "geometry": {
+            "type": "Point",
+            "coordinates": [73.927456, 18.502167]
           }
       },
       "address": "Hadapsar Area, Pune"
