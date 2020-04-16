@@ -4,8 +4,8 @@ import os
 import glob
 
 
-iudx_classes = os.listdir("../base-schemas/classes")
-folder_path = "../base-schemas/properties/"
+iudx_classes = os.listdir("../../base-schemas/classes")
+folder_path = "../../base-schemas/properties/"
 for filename in glob.glob(os.path.join(folder_path, '*.jsonld')):
     with open(filename, "r+") as obj_file:
         obj = json.load(obj_file)

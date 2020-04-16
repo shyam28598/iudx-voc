@@ -8,7 +8,7 @@ import copy
 from collections import OrderedDict
 
 
-folder_path = "../base-schemas/properties/"
+folder_path = "../../base-schemas/properties/"
 
 
 def del_obj(obj_key):

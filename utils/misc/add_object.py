@@ -8,7 +8,7 @@ import sys
 from collections import OrderedDict
 
 
-folder_path = "../base-schemas/properties/"
+folder_path = "../../base-schemas/properties/"
 #new_obj_path = "./example_object.json"
 
 
