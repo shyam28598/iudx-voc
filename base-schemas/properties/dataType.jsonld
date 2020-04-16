@@ -1,4 +1,14 @@
 {
+    "@context": {
+        "iudx": "https://iudx.org.in/voc/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
     "@graph": [
         {
             "@id": "iudx:dataType",
@@ -6,15 +16,11 @@
                 "rdf:Property",
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": {
-                "@value": "Associated data type. Specified as an URI (linking it to one of the known data type vocabulary, e.g., xsd)"
-            },
+            "rdfs:comment": "Associated data type. Specified as an URI (linking it to one of the known data type vocabulary, e.g., xsd)",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
-            "rdfs:label": {
-                "@value": "dataType"
-            },
+            "rdfs:label": "dataType",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:QuantitativeValue"
@@ -27,15 +33,5 @@
                 }
             ]
         }
-    ],
-    "@context": {
-        "iudx": "https://iudx.org.in/voc/",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
-    }
+    ]
 }

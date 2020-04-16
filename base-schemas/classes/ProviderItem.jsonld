@@ -8,9 +8,12 @@
     "@graph": [
         {
             "@id": "iudx:ProviderItem",
-            "@type": ["owl:Class", "rdfs:Class"],
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
             "rdfs:comment": "Describes the Provider entry in the IUDX catalogue.",
-            "rdfs:label": "Provider Item",
+            "rdfs:label": "ProviderItem",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             }

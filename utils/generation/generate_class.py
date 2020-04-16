@@ -25,7 +25,7 @@ for fl in os.listdir(properties_dir):
 classes = {}
 for p in properties.keys():
     try:
-        cls = properties[p]["iudx:domainIncludes"]
+        cls = properties[p]["@graph"][0]["iudx:domainIncludes"]
         if type(cls) is dict:
             cl_names = [cls["@id"]]
         elif type(cls) is list:
@@ -37,10 +37,10 @@ for p in properties.keys():
 
     for c in cl_names:
         if c not in classes.keys():
-            classes[c] = [properties[p]]
+            classes[c] = [properties[p]["@graph"][0]]
         else:
             try:
-                classes[c].append(properties[p])
+                classes[c].append(properties[p]["@graph"][0])
             except Exception as e:
                 print(properties[p])
                 print(e)
@@ -57,7 +57,6 @@ for fl in os.listdir(classes_dir):
         print(json.dumps(prop, indent=4))
         try:
             prop_new = copy.deepcopy(prop)
-            prop_new.pop("@context")
             cls["@graph"].append(prop_new)
         except Exception as e:
             print("error")

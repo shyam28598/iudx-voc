@@ -1,4 +1,11 @@
 {
+    "@context": {
+        "iudx": "https://iudx.org.in/voc/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
     "@graph": [
         {
             "@id": "iudx:resourceType",
@@ -6,15 +13,11 @@
                 "rdf:Property",
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": {
-                "@value": "Type of resource. ENUM: [messageStream, message, dataset-table, dataset-file, mediaStream]."
-            },
+            "rdfs:comment": "Type of resource. ENUM: [messageStream, message, dataset-table, dataset-file, mediaStream].",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
-            "rdfs:label": {
-                "@value": "ResourceType"
-            },
+            "rdfs:label": "resourceType",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:ResourceGroupItem"
@@ -26,12 +29,5 @@
                 }
             ]
         }
-    ],
-    "@context": {
-        "iudx": "https://iudx.org.in/voc/",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
-    }
+    ]
 }

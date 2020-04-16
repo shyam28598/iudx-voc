@@ -11,7 +11,10 @@
     "@graph": [
         {
             "@id": "iudx:Polygon",
-            "@type": ["owl:Class", "rdfs:Class"],
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
             "rdfs:comment": "Describes the GeoJSON Polygon",
             "rdfs:label": "Polygon",
             "rdfs:isDefinedBy": {
@@ -22,7 +25,7 @@
             },
             "skos:exactMatch": {
                 "@id": "geojson:Polygon"
-             }
+            }
         }
     ]
 }

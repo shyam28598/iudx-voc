@@ -6,22 +6,26 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
-    "@id": "iudx:functionParameters",
-    "@type": [
-        "rdf:Property", 
-        "iudx:TextProperty"
-    ],
-    "rdfs:comment": "List of parameters associated with a function.",
-    "rdfs:label": "functionParameters",
-    "iudx:domainIncludes": [
+    "@graph": [
         {
-            "@id": "iudx:FunctionDescription"
-        }
-    ],
-    "iudx:rangeIncludes": [
-        {
-            "@id": "xsd:string",
-            "@container": "@list"
+            "@id": "iudx:functionParameters",
+            "@type": [
+                "rdf:Property",
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "List of parameters associated with a function.",
+            "rdfs:label": "functionParameters",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:FunctionDescription"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:string",
+                    "@container": "@list"
+                }
+            ]
         }
     ]
 }

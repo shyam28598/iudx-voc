@@ -8,8 +8,11 @@
     "@graph": [
         {
             "@id": "iudx:DataFieldListValue",
-            "@type": ["owl:Class", "rdfs:Class"],
-            "rdfs:label": "",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:label": "DataFieldListValue",
             "rdfs:comment": "Lists various fields associated with the data available from a given group of resource items.",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

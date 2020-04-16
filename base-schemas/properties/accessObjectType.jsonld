@@ -1,4 +1,11 @@
 {
+    "@context": {
+        "iudx": "https://iudx.org.in/voc/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
     "@graph": [
         {
             "@id": "iudx:accessObjectType",
@@ -7,7 +14,7 @@
                 "iudx:TextProperty"
             ],
             "rdfs:comment": "Type of access object (OpenAPI, AsyncAPI etc.)",
-            "rdfs:label": "Access Object Type",
+            "rdfs:label": "accessObjectType",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:AccessObjectInfoValue"
@@ -19,12 +26,5 @@
                 }
             ]
         }
-    ],
-    "@context": {
-        "iudx": "https://iudx.org.in/voc/",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
-    }
+    ]
 }

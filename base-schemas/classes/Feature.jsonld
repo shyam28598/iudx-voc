@@ -11,7 +11,11 @@
     "@graph": [
         {
             "@id": "iudx:Feature",
-            "@type": ["owl:Class", "rdfs:Class", "iudx:GeoJSONGeometry"],
+            "@type": [
+                "owl:Class",
+                "rdfs:Class",
+                "iudx:GeoJSONGeometry"
+            ],
             "rdfs:comment": "Describes the GeoJSON Feature",
             "rdfs:label": "Feature",
             "rdfs:isDefinedBy": {
@@ -22,7 +26,7 @@
             },
             "skos:exactMatch": {
                 "@id": "geojson:Feature"
-             }
+            }
         }
     ]
 }

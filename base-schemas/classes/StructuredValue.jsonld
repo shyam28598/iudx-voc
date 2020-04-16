@@ -8,9 +8,12 @@
     "@graph": [
         {
             "@id": "iudx:StructuredValue",
-            "@type": ["owl:Class", "rdfs:Class"],
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
             "rdfs:comment": "Describes a nested JSON structured value",
-            "rdfs:label": "Structured Value",
+            "rdfs:label": "StructuredValue",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             }

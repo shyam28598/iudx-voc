@@ -7,13 +7,14 @@ from collections import OrderedDict
 
 
 folder_path = "../base-schemas/classes/"
-#folder_path = "../base-schemas/properties/"
+# folder_path = "../base-schemas/properties/"
 for filename in glob.glob(os.path.join(folder_path, '*.jsonld')):
     with open(filename, "r+") as obj_file:
+        print("Creating label for " + filename)
         new_dict = OrderedDict()
         obj = json.load(obj_file)
         new_dict["@context"] = obj["@context"]
-        del(obj["@context"]) 
+        del(obj["@context"])
         new_dict["@graph"] = obj["@graph"]
         for field in new_dict["@graph"]:
             label = field["@id"].split(":")

@@ -8,8 +8,11 @@
     "@graph": [
         {
             "@id": "iudx:AuthServerInfoValue",
-            "@type": ["owl:Class", "rdfs:Class"],
-            "rdfs:label": "Authorization Server Info Value",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:label": "AuthServerInfoValue",
             "rdfs:comment": "Describes information about the IUDX Authorization Server for a given resource.",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

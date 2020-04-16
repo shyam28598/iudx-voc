@@ -8,8 +8,11 @@
     "@graph": [
         {
             "@id": "iudx:StructuredProperty",
-            "@type": ["owl:Class", "rdfs:Class"],
-            "rdfs:label": "Geo Property",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:label": "StructuredProperty",
             "rdfs:comment": "Describes the class of all properties in IUDX that have a complex JSON structures and cannot be described using simple strings and native data types.",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

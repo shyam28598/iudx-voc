@@ -8,8 +8,11 @@
     "@graph": [
         {
             "@id": "iudx:SimpleProperty",
-            "@type": ["owl:Class", "rdfs:Class"],
-            "rdfs:label": "Geo Property",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:label": "SimpleProperty",
             "rdfs:comment": "Describes the class of all simple properties in IUDX.",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

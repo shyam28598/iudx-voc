@@ -8,7 +8,10 @@
     "@graph": [
         {
             "@id": "iudx:QuantitativeValue",
-            "@type": ["owl:Class", "rdfs:Class"],
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
             "rdfs:label": "QuantitativeValue",
             "rdfs:comment": "Describes the value of a Quantitative Property",
             "rdfs:isDefinedBy": {
