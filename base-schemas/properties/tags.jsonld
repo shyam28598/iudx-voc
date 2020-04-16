@@ -1,30 +1,34 @@
 {
+    "@graph": [
+        {
+            "@id": "iudx:tags",
+            "@type": [
+                "rdf:Property",
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Discovery tags associated with items (resource item, resource Group item, data models) in IUDX catalogue",
+            "rdfs:label": "Discovery tags",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceItem"
+                },
+                {
+                    "@id": "iudx:ResourceGroupItem"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:string",
+                    "@container": "@set"
+                }
+            ]
+        }
+    ],
     "@context": {
         "iudx": "https://iudx.org.in/voc/",
         "owl": "http://www.w3.org/2002/07/owl#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
-    },
-    "@id": "iudx:tags",
-    "@type": [
-        "rdf:Property",
-        "iudx:TextProperty"
-    ],
-    "rdfs:comment": "Discovery tags associated with items (resource item, resource Group item, data models) in IUDX catalogue",
-    "rdfs:label": "Discovery tags",
-    "iudx:domainIncludes": [
-        {
-            "@id": "iudx:ResourceItem"
-        },
-        {
-            "@id": "iudx:ResourceGroupItem"
-        }
-    ],
-    "iudx:rangeIncludes": [
-        {
-            "@id": "xsd:string",
-            "@container": "@set"
-        }
-    ]
+    }
 }

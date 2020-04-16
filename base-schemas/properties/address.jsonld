@@ -1,4 +1,38 @@
 {
+    "@graph": [
+        {
+            "@id": "iudx:address",
+            "@type": [
+                "rdf:Property",
+                "iudx:GeoProperty"
+            ],
+            "rdfs:comment": {
+                "@value": "Physical address of a place."
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:label": {
+                "@value": "Address"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Place"
+                },
+                {
+                    "@id": "iudx:Organization"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:string"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:address"
+            }
+        }
+    ],
     "@context": {
         "iudx": "https://iudx.org.in/voc/",
         "owl": "http://www.w3.org/2002/07/owl#",
@@ -8,35 +42,5 @@
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
-    },
-    "@id": "iudx:address",
-    "@type": [
-        "rdf:Property",
-        "iudx:GeoProperty"
-    ],
-    "rdfs:comment": {
-        "@value": "Physical address of a place."
-    },
-    "rdfs:isDefinedBy": {
-        "@id": "iudx:"
-    },
-    "rdfs:label": {
-        "@value": "Address"
-    },
-    "iudx:domainIncludes": [
-     {
-        "@id": "iudx:Place"
-     },
-     {
-        "@id": "iudx:Organization"
-     }
-    ],
-    "iudx:rangeIncludes": [
-     {
-        "@id": "xsd:string"
-     }
-    ],
-    "skos:exactMatch": {
-        "@id": "schema:address"
-     }
+    }
 }

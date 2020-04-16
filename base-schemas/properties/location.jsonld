@@ -1,4 +1,50 @@
 {
+    "@graph": [
+        {
+            "@id": "iudx:location",
+            "@type": [
+                "rdf:Property",
+                "iudx:GeoProperty"
+            ],
+            "rdfs:comment": {
+                "@value": "Location associated with a resource Item (a spatial point), a group of resource items (a spatial region) or even an observation in case of a mobile sensor."
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:label": {
+                "@value": "Location"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceItem"
+                },
+                {
+                    "@id": "iudx:ResourceGroupItem"
+                },
+                {
+                    "@id": "iudx:ProviderItem"
+                },
+                {
+                    "@id": "iudx:ResourceServerItem"
+                },
+                {
+                    "@id": "iudx:EnvAQM"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Place"
+                },
+                {
+                    "@id": "xsd:String"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:location"
+            }
+        }
+    ],
     "@context": {
         "iudx": "https://iudx.org.in/voc/",
         "owl": "http://www.w3.org/2002/07/owl#",
@@ -8,47 +54,5 @@
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
-    },
-    "@id": "iudx:location",
-    "@type": [
-        "rdf:Property",
-        "iudx:GeoProperty"
-    ],
-    "rdfs:comment": {
-        "@value": "Location associated with a resource Item (a spatial point), a group of resource items (a spatial region) or even an observation in case of a mobile sensor."
-    },
-    "rdfs:isDefinedBy": {
-        "@id": "iudx:"
-    },
-    "rdfs:label": {
-        "@value": "Location"
-    },
-    "iudx:domainIncludes": [
-     {
-        "@id": "iudx:ResourceItem"
-     },
-     {
-        "@id": "iudx:ResourceGroupItem"
-     },
-     {
-        "@id": "iudx:ProviderItem"
-     },
-     {
-        "@id": "iudx:ResourceServerItem"
-     },
-     {
-        "@id": "iudx:EnvAQM"
-     }
-    ],
-    "iudx:rangeIncludes": [
-     {
-        "@id": "iudx:Place"
-     },
-     {
-        "@id": "xsd:String"
-     }
-    ],
-    "skos:exactMatch": {
-        "@id": "schema:location"
     }
 }

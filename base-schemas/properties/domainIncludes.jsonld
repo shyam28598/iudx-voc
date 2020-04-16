@@ -1,4 +1,28 @@
 {
+    "@graph": [
+        {
+            "@id": "iudx:domainincludes",
+            "@type": ["rdf:property"],
+            "rdfs:comment": {
+                "@value": "relates a property to a class that is (one of) the type(s) the property is expected to be used on."
+            },
+            "rdfs:label": {
+                "@value": "domainIncludes"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Property"
+                }],
+                "skos:exactmatch": {
+                    "@id": "schema:domainIncludes"
+                },
+                "iudx:rangeIncludes": [
+                    {
+                        "@id": "iudx:Class"
+                    }
+                ]
+        }
+    ],
     "@context": {
         "iudx": "https://iudx.org.in/voc/",
         "owl": "http://www.w3.org/2002/07/owl#",
@@ -6,18 +30,5 @@
         "schema": "http://schema.org/",
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
-    },
-    "@id": "iudx:domainIncludes",
-    "@type": "rdf:Property",
-    "rdfs:comment": "Relates a property to a class that is (one of) the type(s) the property is expected to be used on.",
-    "rdfs:label": "domainIncludes",
-    "rdfs:domain": {
-        "@id": "iudx:Property"
-    },
-    "skos:exactMatch": {
-        "@id": "schema:domainIncludes"
-     },
-    "rdfs:range": {
-        "@id": "iudx:Class"
     }
 }

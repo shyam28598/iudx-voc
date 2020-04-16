@@ -1,4 +1,41 @@
 {
+    "@graph": [
+        {
+            "@id": "iudx:geoCovers",
+            "@type": [
+                "rdf:Property",
+                "iudx:GeoProperty"
+            ],
+            "rdfs:comment": {
+                "@value": "Represents the coverage relationship between two geometries/places."
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:label": {
+                "@value": "Geo Covers"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Place"
+                },
+                {
+                    "@id": "iudx:ResourceItem"
+                },
+                {
+                    "@id": "iudx:ResourceGroupItem"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:GeoJSONGeometry"
+                },
+                {
+                    "@id": "iudx:Place"
+                }
+            ]
+        }
+    ],
     "@context": {
         "iudx": "https://iudx.org.in/voc/",
         "owl": "http://www.w3.org/2002/07/owl#",
@@ -8,38 +45,5 @@
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
-    },
-    "@id": "iudx:geoCovers",
-    "@type": [
-        "rdf:Property",
-        "iudx:GeoProperty"
-    ],
-    "rdfs:comment": {
-        "@value": "Represents the coverage relationship between two geometries/places."
-    },
-    "rdfs:isDefinedBy": {
-        "@id": "iudx:"
-    },
-    "rdfs:label": {
-        "@value": "Geo Covers"
-    },
-    "iudx:domainIncludes": [
-     {
-        "@id": "iudx:Place"
-     },
-     {
-        "@id": "iudx:ResourceItem"
-     },
-     {
-        "@id": "iudx:ResourceGroupItem"
-     }
-    ],
-    "iudx:rangeIncludes": [
-     {
-        "@id": "iudx:GeoJSONGeometry"
-     },
-     {
-        "@id": "iudx:Place"
-     }
-    ]
+    }
 }

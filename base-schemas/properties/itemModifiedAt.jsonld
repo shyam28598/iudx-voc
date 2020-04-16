@@ -1,4 +1,47 @@
 {
+    "@graph": [
+        {
+            "@id": "iudx:itemModifiedAt",
+            "@type": [
+                "rdf:Property",
+                "iudx:TimeProperty"
+            ],
+            "rdfs:comment": {
+                "@value": "DateTime of modification of a catalogue item."
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:label": {
+                "@value": "DateTime of modification of a catalogue item"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceItem"
+                },
+                {
+                    "@id": "iudx:ResourceGroupItem"
+                },
+                {
+                    "@id": "iudx:ResourceServerItem"
+                },
+                {
+                    "@id": "iudx:ProviderItem"
+                },
+                {
+                    "@id": "iudx:DataModelItem"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "schema:DateTime"
+                },
+                {
+                    "@id": "xsd:DateTime"
+                }
+            ]
+        }
+    ],
     "@context": {
         "iudx": "https://iudx.org.in/voc/",
         "owl": "http://www.w3.org/2002/07/owl#",
@@ -6,44 +49,5 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "schema": "http://schema.org/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
-    },
-    "@id": "iudx:itemModifiedAt",
-    "@type": [
-        "rdf:Property",
-        "iudx:TimeProperty"
-    ],
-    "rdfs:comment": {
-        "@value": "DateTime of modification of a catalogue item."
-    },
-    "rdfs:isDefinedBy": {
-        "@id": "iudx:"
-    },
-    "rdfs:label": {
-        "@value": "DateTime of modification of a catalogue item"
-    },
-    "iudx:domainIncludes": [
-     {
-        "@id": "iudx:ResourceItem"
-     },
-     {
-        "@id": "iudx:ResourceGroupItem"
-     },
-     {
-        "@id": "iudx:ResourceServerItem"
-     },
-     {
-        "@id": "iudx:ProviderItem"
-     },
-     {
-        "@id": "iudx:DataModelItem"
-     }
-   ],
-   "iudx:rangeIncludes": [
-    {
-        "@id": "schema:DateTime"
-    },
-    {
-        "@id": "xsd:DateTime"
     }
-   ]
 }

@@ -1,4 +1,36 @@
 {
+    "@graph": [
+        {
+            "@id": "iudx:coordinates",
+            "@type": [
+                "rdf:Property",
+                "iudx:GeoProperty"
+            ],
+            "rdfs:comment": {
+                "@value": "Coordinates for the GeoJSON object"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:label": {
+                "@value": "GeoJSON object coordinates"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Point"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:decimal",
+                    "@container": "@list"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "geojson:coordinates"
+            }
+        }
+    ],
     "@context": {
         "iudx": "https://iudx.org.in/voc/",
         "owl": "http://www.w3.org/2002/07/owl#",
@@ -8,33 +40,5 @@
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
-    },
-    "@id": "iudx:coordinates",
-    "@type": [
-        "rdf:Property",
-        "iudx:GeoProperty"
-    ],
-    "rdfs:comment": {
-        "@value": "Coordinates for the GeoJSON object"
-    },
-    "rdfs:isDefinedBy": {
-        "@id": "iudx:"
-    },
-    "rdfs:label": {
-        "@value": "GeoJSON object coordinates"
-    },
-    "iudx:domainIncludes": [
-     {
-        "@id": "iudx:Point"
-     }
-    ],
-    "iudx:rangeIncludes": [
-     {
-         "@id": "xsd:decimal",
-         "@container": "@list"
-     }
-    ],
-    "skos:exactMatch": {
-        "@id": "geojson:coordinates"
-     }
+    }
 }
