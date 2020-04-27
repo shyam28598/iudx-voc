@@ -1,0 +1,57 @@
+{
+    "@context": {
+        "iudx": "https://iudx.org.in/voc/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@graph": [
+        {
+            "@id": "iudx:Point",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Describes the GeoJSON Point",
+            "rdfs:label": "Point",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:GeoJSONGeometry"
+            },
+            "skos:exactMatch": {
+                "@id": "geojson:Point"
+            }
+        },
+        {
+            "@id": "iudx:coordinates",
+            "@type": [
+                "rdf:Property",
+                "iudx:GeoProperty"
+            ],
+            "rdfs:comment": "Coordinates for the GeoJSON object",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:label": "coordinates",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Point"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:decimal",
+                    "@container": "@list"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "geojson:coordinates"
+            }
+        }
+    ]
+}
