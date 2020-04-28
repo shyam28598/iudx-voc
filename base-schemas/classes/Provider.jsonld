@@ -14,6 +14,9 @@
             ],
             "rdfs:comment": "Describes the Provider entry in the IUDX catalogue.",
             "rdfs:label": "ProviderItem",
+            "rdfs:subClassOf": {
+                "@id": "iudx:Thing"
+            },
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             }
