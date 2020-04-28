@@ -4,8 +4,13 @@ import os
 import glob
 
 
+<<<<<<< HEAD
+iudx_classes = os.listdir("../base-schemas/classes")
+folder_path = "../base-schemas/properties/"
+=======
 iudx_classes = os.listdir("../../base-schemas/classes")
 folder_path = "../../base-schemas/properties/"
+>>>>>>> origin/master
 for filename in glob.glob(os.path.join(folder_path, '*.jsonld')):
     with open(filename, "r+") as obj_file:
         obj = json.load(obj_file)
@@ -28,4 +33,8 @@ for filename in glob.glob(os.path.join(folder_path, '*.jsonld')):
                         print("Range " + key + " is not defined in - ", end="")
                         print(filename)
     except KeyError:
+<<<<<<< HEAD
+        #print("Key not in file - " + filename)
+=======
+>>>>>>> origin/master
         pass
