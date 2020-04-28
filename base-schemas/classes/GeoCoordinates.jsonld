@@ -22,7 +22,10 @@
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
-            "skos:closeMatch": {
+            "rdfs:subClassOf": {
+                "@id": "iudx:StructuredValue"
+            },
+            "skos:exactMatch": {
                 "@id": "schema:GeoCoordinates"
             }
         }

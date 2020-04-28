@@ -17,6 +17,9 @@
             ],
             "rdfs:comment": "Describes the GeoJSON object",
             "rdfs:label": "GeoJSONGeometry",
+            "rdfs:subClassOf": {
+                "@id": "iudx:StructuredValue"
+            },
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             }

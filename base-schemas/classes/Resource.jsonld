@@ -13,7 +13,7 @@
                 "rdfs:Class"
             ],
             "rdfs:comment": "Describes the Resource Item entry in the IUDX catalogue.",
-            "rdfs:label": "ResourceItem",
+            "rdfs:label": "Resource",
             "rdfs:subClassOf": {
                 "@id": "iudx:IUDXEntity"
             },

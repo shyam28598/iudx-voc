@@ -14,6 +14,9 @@
             ],
             "rdfs:label": "TimeProperty",
             "rdfs:comment": "Class of all Time properties in IUDX. The range of time property is a time/date objects in standard formats.",
+            "rdfs:subClassOf": {
+                "@id": "iudx:rdf:Property"
+            },
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             }
