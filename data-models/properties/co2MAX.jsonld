@@ -36,9 +36,6 @@
         "@id": "iudx:Number"
      },
      {
-        "@id": "iudx:ValueDescriptor"
-     },
-     {
         "@id": "iudx:QuantitativeValue"
      }
     ]
