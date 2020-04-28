@@ -27,9 +27,6 @@
                 },
                 {
                     "@id": "iudx:Place"
-                },
-                {
-                    "@id": "iudx:ResourceItem"
                 }
             ],
             "iudx:rangeIncludes": [

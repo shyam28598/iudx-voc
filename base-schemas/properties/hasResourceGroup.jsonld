@@ -17,7 +17,7 @@
             "rdfs:label": "hasResourceGroup",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:ResourceItem"
+                    "@id": "iudx:Resource"
                 }
             ],
             "iudx:rangeIncludes": [

@@ -17,10 +17,10 @@
             "rdfs:label": "hasDataModel",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:ResourceGroupItem"
+                    "@id": "iudx:ResourceGroup"
                 },
                 {
-                    "@id": "iudx:ResourceItem"
+                    "@id": "iudx:Resource"
                 }
             ],
             "iudx:rangeIncludes": [

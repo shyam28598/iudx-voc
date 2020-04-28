@@ -17,7 +17,7 @@
             "rdfs:label": "resourceServerOrg",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:ResourceServerItem"
+                    "@id": "iudx:ResourceServer"
                 }
             ],
             "iudx:rangeIncludes": [

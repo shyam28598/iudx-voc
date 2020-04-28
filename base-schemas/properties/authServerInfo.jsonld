@@ -17,7 +17,7 @@
             "rdfs:label": "authServerInfo",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:ResourceGroupItem"
+                    "@id": "iudx:ResourceGroup"
                 }
             ],
             "iudx:rangeIncludes": [

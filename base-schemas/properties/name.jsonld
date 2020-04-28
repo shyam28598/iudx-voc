@@ -29,13 +29,13 @@
                     "@id": "iudx:Organization"
                 },
                 {
-                    "@id": "iudx:ResourceServerItem"
+                    "@id": "iudx:ResourceServer"
                 },
                 {
-                    "@id": "iudx:ResourceGroupItem"
+                    "@id": "iudx:ResourceGroup"
                 },
                 {
-                    "@id": "iudx:ProviderItem"
+                    "@id": "iudx:Provider"
                 },
                 {
                     "@id": "iudx:FunctionDescription"

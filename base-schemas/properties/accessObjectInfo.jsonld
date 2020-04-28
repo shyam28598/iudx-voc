@@ -17,7 +17,7 @@
             "rdfs:label": "accessObjectInfo",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:ResourceGroupItem"
+                    "@id": "iudx:ResourceGroup"
                 }
             ],
             "iudx:rangeIncludes": [
