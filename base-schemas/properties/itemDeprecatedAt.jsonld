@@ -21,19 +21,7 @@
             "rdfs:label": "itemDeprecatedAt",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:ResourceItem"
-                },
-                {
-                    "@id": "iudx:ResourceGroupItem"
-                },
-                {
-                    "@id": "iudx:ResourceServerItem"
-                },
-                {
-                    "@id": "iudx:ProviderItem"
-                },
-                {
-                    "@id": "iudx:DataModelItem"
+                    "@id": "iudx:IUDXEntity"
                 }
             ],
             "iudx:rangeIncludes": [
