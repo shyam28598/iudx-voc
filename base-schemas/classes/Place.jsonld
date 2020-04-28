@@ -21,7 +21,7 @@
                 "@id": "iudx:"
             },
             "rdfs:subClassOf": {
-                "@id": "iudx:StructuredValue"
+                "@id": "iudx:Thing"
             },
             "skos:closeMatch": {
                 "@id": "schema:Place"
