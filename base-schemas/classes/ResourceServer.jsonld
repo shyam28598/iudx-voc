@@ -15,7 +15,7 @@
             "rdfs:comment": "Describes the Resource Server entry in the IUDX catalogue.",
             "rdfs:label": "ResourceServerItem",
             "rdfs:subClassOf": {
-                "@id": "iudx:Thing"
+                "@id": "iudx:IUDXEntity"
             },
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

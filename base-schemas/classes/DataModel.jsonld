@@ -14,6 +14,9 @@
             ],
             "rdfs:comment": "Class of all Data Models.",
             "rdfs:label": "DataModel",
+            "rdfs:subClassOf": {
+                "@id": "iudx:Thing"
+            },
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             }

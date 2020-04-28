@@ -15,7 +15,7 @@
             "rdfs:comment": "Describes the Resource Group entry in the IUDX catalogue.",
             "rdfs:label": "ResourceGroupItem",
             "rdfs:subClassOf": {
-                "@id": "iudx:Thing"
+                "@id": "iudx:IUDXEntity"
             },
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

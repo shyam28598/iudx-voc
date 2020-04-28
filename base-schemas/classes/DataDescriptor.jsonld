@@ -14,6 +14,9 @@
             ],
             "rdfs:comment": "Describes the Data Descriptor Object/Item in the IUDX catalogue. It describes various data fields associated with a resource.",
             "rdfs:label": "DataDescriptor",
+            "rdfs:subClassOf": {
+                "@id": "iudx:IUDXEntity"
+            },
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             }
