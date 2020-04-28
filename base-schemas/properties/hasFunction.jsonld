@@ -18,6 +18,9 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:QuantitativeValue"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
                 }
             ],
             "iudx:rangeIncludes": [

@@ -21,9 +21,6 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Thing"
-                },
-                {
-                    "@id": "iudx:QuantitativeValue"
                 }
             ],
             "iudx:rangeIncludes": [
