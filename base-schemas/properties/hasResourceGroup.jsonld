@@ -1,31 +1,31 @@
 {
     "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "iudx": "https://iudx.org.in/voc/",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     },
     "@graph": [
         {
-            "@type": "iudx:Relationship",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Resource"
+                }
+            ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "xsd:string",
-                    "@type": "@id"
+                    "@type": "@id",
+                    "@id": "xsd:string"
                 },
                 {
                     "@id": "iudx:RelationshipValue"
                 }
             ],
-            "rdfs:comment": "urn pointing to the resourceGroup entity",
             "@id": "iudx:hasResourceGroup",
+            "rdfs:comment": "urn pointing to the resourceGroup entity",
             "rdfs:label": "hasResourceGroup",
-            "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:Resource"
-                }
-            ]
+            "@type": "iudx:Relationship"
         }
     ]
 }

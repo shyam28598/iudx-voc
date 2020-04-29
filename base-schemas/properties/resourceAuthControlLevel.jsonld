@@ -1,30 +1,30 @@
 {
     "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "iudx": "https://iudx.org.in/voc/",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     },
     "@graph": [
         {
-            "@type": "iudx:TextProperty",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceGroup"
+                }
+            ],
             "iudx:rangeIncludes": [
                 {
                     "@id": "xsd:string"
                 }
             ],
-            "rdfs:comment": "Authorizataion Control Level for resouces associated with a given resource-group. ENUM: [individual, group]. Individual authorization control level indicates that access control is available per resource, i.e., authorization can be granted/not-granted on a per resource basis for the resources. Group authorization control level indicates that the authorization is available on group level only, i.e., authorization will be granted/not-granted for all the resources associated with the given resource group.",
             "@id": "iudx:resourceAuthControlLevel",
+            "rdfs:comment": "Authorizataion Control Level for resouces associated with a given resource-group. ENUM: [individual, group]. Individual authorization control level indicates that access control is available per resource, i.e., authorization can be granted/not-granted on a per resource basis for the resources. Group authorization control level indicates that the authorization is available on group level only, i.e., authorization will be granted/not-granted for all the resources associated with the given resource group. If this property is not present in a ResourceGroup object then it implies all resources belonging to this group are open items and one needs no authorization to get data for these resources.",
             "rdfs:label": "resourceAuthControlLevel",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
-            "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:ResourceGroup"
-                }
-            ]
+            "@type": "iudx:TextProperty"
         }
     ]
 }

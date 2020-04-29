@@ -1,17 +1,12 @@
 {
     "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "owl": "http://www.w3.org/2002/07/owl#",
         "iudx": "https://iudx.org.in/voc/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@graph": [
         {
-            "@type": [
-                "owl:Class",
-                "rdfs:Class"
-            ],
-            "@id": "iudx:ValueDescriptor",
             "rdfs:comment": "Value descriptors are JSON objects that describes the value object for a given property.",
             "rdfs:label": "ValueDescriptor",
             "rdfs:isDefinedBy": {
@@ -19,7 +14,12 @@
             },
             "rdfs:subClassOf": {
                 "@id": "iudx:Intangible"
-            }
+            },
+            "@id": "iudx:ValueDescriptor",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ]
         }
     ]
 }

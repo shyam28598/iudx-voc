@@ -1,25 +1,25 @@
 {
     "@context": {
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "iudx": "https://iudx.org.in/voc/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://iudx.org.in/voc/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     },
     "@graph": [
         {
+            "rdfs:comment": "Most generic IUDX object.",
+            "rdfs:label": "Thing",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@id": "iudx:Thing",
             "@type": [
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "@id": "iudx:Thing",
-            "rdfs:comment": "Most generic IUDX object.",
             "skos:exactMatch": {
                 "@id": "schema:Thing"
-            },
-            "rdfs:label": "Thing",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
             }
         }
     ]

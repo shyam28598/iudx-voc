@@ -1,17 +1,12 @@
 {
     "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "owl": "http://www.w3.org/2002/07/owl#",
         "iudx": "https://iudx.org.in/voc/",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     },
     "@graph": [
         {
-            "@type": [
-                "owl:Class",
-                "rdfs:Class"
-            ],
-            "@id": "iudx:ResourceServer",
             "rdfs:comment": "Describes the Resource Server entry in the IUDX catalogue.",
             "rdfs:label": "ResourceServer",
             "rdfs:isDefinedBy": {
@@ -19,7 +14,12 @@
             },
             "rdfs:subClassOf": {
                 "@id": "iudx:IUDXEntity"
-            }
+            },
+            "@id": "iudx:ResourceServer",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ]
         }
     ]
 }

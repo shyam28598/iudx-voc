@@ -1,28 +1,34 @@
 {
     "@context": {
-        "schema": "http://schema.org/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
         "owl": "http://www.w3.org/2002/07/owl#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "iudx": "https://iudx.org.in/voc/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
+            "rdfs:comment": {
+                "@value": "Describes maximum value of CO2 over a set of observations in past."
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@id": "iudx:co2MAX",
+            "rdfs:label": {
+                "@value": "co2MAX"
+            },
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Number"
                 },
                 {
-                    "@id": "iudx:ValueDescriptor"
-                },
-                {
                     "@id": "iudx:QuantitativeValue"
                 }
             ],
-            "@id": "iudx:co2MAX",
             "@type": "iudx:QuantitativeProperty",
             "iudx:domainIncludes": [
                 {
@@ -31,16 +37,7 @@
                 {
                     "@id": "iudx:DataDescriptor"
                 }
-            ],
-            "rdfs:label": {
-                "@value": "co2MAX"
-            },
-            "rdfs:comment": {
-                "@value": "Describes maximum value of CO2 over a set of observations in past."
-            },
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            }
+            ]
         }
     ]
 }

@@ -1,15 +1,19 @@
 {
     "@context": {
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "schema": "http://schema.org/",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "iudx": "https://iudx.org.in/voc/",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/"
     },
     "@graph": [
         {
-            "@type": "iudx:TimeProperty",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:IUDXEntity"
+                }
+            ],
             "iudx:rangeIncludes": [
                 {
                     "@id": "schema:DateTime"
@@ -18,17 +22,13 @@
                     "@id": "xsd:DateTime"
                 }
             ],
-            "rdfs:comment": "DateTime of modification of a catalogue item.",
             "@id": "iudx:itemModifiedAt",
+            "rdfs:comment": "DateTime of modification of a catalogue item.",
             "rdfs:label": "itemModifiedAt",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
-            "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:IUDXEntity"
-                }
-            ]
+            "@type": "iudx:TimeProperty"
         }
     ]
 }

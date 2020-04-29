@@ -1,9 +1,9 @@
 {
     "@context": {
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "iudx": "https://iudx.org.in/voc/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        "iudx": "https://iudx.org.in/voc/"
     },
     "@graph": [
         {
@@ -11,7 +11,6 @@
             "rdfs:subClassOf": {
                 "@id": "iudx:DataModel"
             },
-            "@id": "iudx:EnvAQM",
             "@type": [
                 "owl:Class",
                 "rdfs:Class"
@@ -19,6 +18,7 @@
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
+            "@id": "iudx:EnvAQM",
             "rdfs:label": "EnvAQM"
         }
     ]

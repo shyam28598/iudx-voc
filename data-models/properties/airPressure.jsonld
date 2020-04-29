@@ -1,16 +1,26 @@
 {
     "@context": {
-        "schema": "http://schema.org/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
         "owl": "http://www.w3.org/2002/07/owl#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "iudx": "https://iudx.org.in/voc/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
+            "rdfs:comment": {
+                "@value": "Describes measured air (atmospheric or barometric) pressure"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@id": "iudx:airPressure",
+            "rdfs:label": {
+                "@value": "airPressure"
+            },
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Number"
@@ -19,7 +29,6 @@
                     "@id": "iudx:QuantitativeValue"
                 }
             ],
-            "@id": "iudx:airPressure",
             "@type": "iudx:QuantitativeProperty",
             "iudx:domainIncludes": [
                 {
@@ -28,16 +37,7 @@
                 {
                     "@id": "iudx:DataDescriptor"
                 }
-            ],
-            "rdfs:label": {
-                "@value": "airPressure"
-            },
-            "rdfs:comment": {
-                "@value": "Describes measured air (atmospheric or barometric) pressure"
-            },
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            }
+            ]
         }
     ]
 }

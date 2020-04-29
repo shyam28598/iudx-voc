@@ -13,30 +13,28 @@
         {
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:Place"
+                    "@id": "iudx:ValueDescriptor"
                 },
                 {
-                    "@id": "iudx:Resource"
-                },
-                {
-                    "@id": "iudx:ResourceGroup"
+                    "@id": "iudx:QuantitativeValue"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:GeoJSONGeometry"
-                },
-                {
-                    "@id": "iudx:Place"
+                    "@type": "@id",
+                    "@id": "xsd:string"
                 }
             ],
-            "@id": "iudx:geoCovers",
-            "rdfs:comment": "Represents the coverage relationship between two geometries/places.",
-            "rdfs:label": "geoCovers",
+            "skos:exactMatch": {
+                "@id": "schema:sameAs"
+            },
+            "rdfs:comment": "URL reference to another thing/entity that identifies the given thing/entity. This may be used to provide references to another data models where a property is described or say a reference to Wiki pages for a given thing etc.",
+            "rdfs:label": "sameAs",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
-            "@type": "iudx:GeoProperty"
+            "@type": "iudx:TextProperty",
+            "@id": "iudx:sameAs"
         }
     ]
 }

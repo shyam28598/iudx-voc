@@ -1,26 +1,13 @@
 {
     "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "iudx": "https://iudx.org.in/voc/",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     },
     "@graph": [
         {
-            "@type": "iudx:Relationship",
-            "iudx:rangeIncludes": [
-                {
-                    "@id": "xsd:string",
-                    "@type": "@id"
-                },
-                {
-                    "@id": "iudx:RelationshipValue"
-                }
-            ],
-            "rdfs:comment": "URN pointing to the provider entity associated with the given catalogue item",
-            "@id": "iudx:hasProvider",
-            "rdfs:label": "hasProvider",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Resource"
@@ -28,7 +15,20 @@
                 {
                     "@id": "iudx:ResourceGroup"
                 }
-            ]
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@type": "@id",
+                    "@id": "xsd:string"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ],
+            "@id": "iudx:hasProvider",
+            "rdfs:comment": "URN pointing to the provider entity associated with the given catalogue item",
+            "rdfs:label": "hasProvider",
+            "@type": "iudx:Relationship"
         }
     ]
 }

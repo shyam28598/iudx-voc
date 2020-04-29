@@ -1,37 +1,37 @@
 {
     "@context": {
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema": "http://schema.org/",
-        "geojson": "https://purl.org/geojson/vocab#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "iudx": "https://iudx.org.in/voc/",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "geojson": "https://purl.org/geojson/vocab#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#"
     },
     "@graph": [
         {
-            "@type": "iudx:GeoProperty",
-            "iudx:rangeIncludes": [
-                {
-                    "@id": "xsd:decimal",
-                    "@container": "@list"
-                }
-            ],
-            "rdfs:comment": "Coordinates for the GeoJSON object",
-            "@id": "iudx:coordinates",
-            "skos:exactMatch": {
-                "@id": "geojson:coordinates"
-            },
-            "rdfs:label": "coordinates",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Point"
                 }
-            ]
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@container": "@list",
+                    "@id": "xsd:decimal"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "geojson:coordinates"
+            },
+            "rdfs:comment": "Coordinates for the GeoJSON object",
+            "rdfs:label": "coordinates",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:GeoProperty",
+            "@id": "iudx:coordinates"
         }
     ]
 }

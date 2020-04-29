@@ -1,17 +1,24 @@
 {
     "@context": {
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema": "http://schema.org/",
-        "geojson": "https://purl.org/geojson/vocab#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "iudx": "https://iudx.org.in/voc/",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "geojson": "https://purl.org/geojson/vocab#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#"
     },
     "@graph": [
         {
-            "@type": "iudx:GeoProperty",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:GeoCoordinates"
+                },
+                {
+                    "@id": "iudx:Place"
+                }
+            ],
             "iudx:rangeIncludes": [
                 {
                     "@id": "xsd:decimal"
@@ -20,23 +27,16 @@
                     "@id": "xsd:string"
                 }
             ],
-            "rdfs:comment": "Longitude of a place. Specified in WGS 84 CRS (https://en.wikipedia.org/wiki/World_Geodetic_System)",
-            "@id": "iudx:longitude",
             "skos:exactMatch": {
                 "@id": "schema:longitude"
             },
+            "rdfs:comment": "Longitude of a place. Specified in WGS 84 CRS (https://en.wikipedia.org/wiki/World_Geodetic_System)",
             "rdfs:label": "longitude",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
-            "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:GeoCoordinates"
-                },
-                {
-                    "@id": "iudx:Place"
-                }
-            ]
+            "@type": "iudx:GeoProperty",
+            "@id": "iudx:longitude"
         }
     ]
 }

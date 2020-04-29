@@ -1,20 +1,15 @@
 {
     "@context": {
-        "schema": "http://schema.org/",
-        "geojson": "https://purl.org/geojson/vocab#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "owl": "http://www.w3.org/2002/07/owl#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "iudx": "https://iudx.org.in/voc/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@graph": [
         {
-            "@type": [
-                "owl:Class",
-                "rdfs:Class"
-            ],
-            "@id": "iudx:Place",
             "rdfs:comment": "Describes fixed location for various entities. The places can be described using geo-Coordinates (points, polgons, bboxes etc.) , structured form of addresses or simple address strings.",
             "rdfs:label": "Place",
             "rdfs:isDefinedBy": {
@@ -23,9 +18,14 @@
             "rdfs:subClassOf": {
                 "@id": "iudx:Thing"
             },
+            "@id": "iudx:Place",
             "skos:closeMatch": {
                 "@id": "schema:Place"
-            }
+            },
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ]
         }
     ]
 }

@@ -1,20 +1,15 @@
 {
     "@context": {
-        "schema": "http://schema.org/",
-        "geojson": "https://purl.org/geojson/vocab#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "owl": "http://www.w3.org/2002/07/owl#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "iudx": "https://iudx.org.in/voc/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@graph": [
         {
-            "@type": [
-                "owl:Class",
-                "rdfs:Class"
-            ],
-            "@id": "iudx:GeoJSONGeometry",
             "rdfs:comment": "Describes the GeoJSON object",
             "rdfs:label": "GeoJSONGeometry",
             "rdfs:isDefinedBy": {
@@ -22,7 +17,12 @@
             },
             "rdfs:subClassOf": {
                 "@id": "iudx:StructuredValue"
-            }
+            },
+            "@id": "iudx:GeoJSONGeometry",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ]
         }
     ]
 }

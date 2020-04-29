@@ -1,35 +1,16 @@
 {
     "@context": {
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema": "http://schema.org/",
-        "geojson": "https://purl.org/geojson/vocab#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "iudx": "https://iudx.org.in/voc/",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "geojson": "https://purl.org/geojson/vocab#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#"
     },
     "@graph": [
         {
-            "@type": "iudx:TextProperty",
-            "iudx:rangeIncludes": [
-                {
-                    "@id": "xsd:string"
-                },
-                {
-                    "@id": "xsd:string",
-                    "@type": "@id"
-                }
-            ],
-            "rdfs:comment": "The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes/unit vocabularies may be used with a prefix",
-            "@id": "iudx:unitCode",
-            "skos:exactMatch": {
-                "@id": "schema:unitCode"
-            },
-            "rdfs:label": "unitCode",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:QuantitativeValue"
@@ -37,7 +18,26 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:string"
+                },
+                {
+                    "@type": "@id",
+                    "@id": "xsd:string"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:unitCode"
+            },
+            "rdfs:comment": "The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes/unit vocabularies may be used with a prefix",
+            "rdfs:label": "unitCode",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:TextProperty",
+            "@id": "iudx:unitCode"
         }
     ]
 }
