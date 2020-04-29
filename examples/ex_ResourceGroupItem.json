@@ -1,13 +1,13 @@
 {
     "@context": [
-        "http://voc.iudx.org.in/general/base_iudx_context.jsonld",
         {
-          "@vocab": "https://voc.iudx.org.in/",
-          "id": "@id",
-          "type":"@type"
+            "https://voc.iudx.org.in/"
+        },
+        {
+          "DEVICEID": "iudx:aqmDeviceID"
         }
     ],
-    "type": ["ResourceGroupItem"],
+    "type": ["ResourceGroup"],
     "id": "pscdcl/pudx-resource-server/pune-iitm-aqi",
     "description": "Description for IITM weather station resource group providing rainfall and aqm data.",
     "name": "iitm-pune-aqi",
@@ -17,18 +17,13 @@
     "itemStatus": "ACTIVE",
     "hasProvider": "iudx-catalogue-pune:pscdcl",
     "hasResourceServer": "iudx-catalogue-pune:pudx-resource-server",
-    "hasDataModel": "https://raw.githubusercontent.com/iudx/iudx-ld/master/data_models/environment/airQuality/env_aqi_iitmPune_0.json",
+    "hasDataDescriptor": "iudx-catalogue-pune:pune-iitm-aqi-data-descriptor",
     "resourceAuthControlLevel": "INDIVIDUAL",
     "resourceType": "messageStream",
     "authServerInfo": {
        "type": ["AuthServerInfoValue"],
-       "authServerURL": "https://auth.blah.blah/",
+       "authServerURL": "https://myauth.server.org/",
        "authType": "iudx-auth"
-    },
-    "listOfDataFields": {
-       "type": ["DataFieldListValue"],
-       "openDataFields": ["blah1", "blah2", "blah3"],
-       "secureDataFields": [""]
     },
     "accessObjectInfo": {
        "type": ["AccessObjectInfoValue"],
