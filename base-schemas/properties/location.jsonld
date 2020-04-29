@@ -23,16 +23,16 @@
             "rdfs:label": "location",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:ResourceItem"
+                    "@id": "iudx:Resource"
                 },
                 {
-                    "@id": "iudx:ResourceGroupItem"
+                    "@id": "iudx:ResourceGroup"
                 },
                 {
-                    "@id": "iudx:ProviderItem"
+                    "@id": "iudx:Provider"
                 },
                 {
-                    "@id": "iudx:ResourceServerItem"
+                    "@id": "iudx:ResourceServer"
                 },
                 {
                     "@id": "iudx:EnvAQM"
