@@ -3,11 +3,13 @@ import json
 import os
 import glob
 import copy
+import sys
 
 from collections import OrderedDict
 
 
-folder_path = "../../base-schemas/properties/"
+folder_path = sys.argv[1]
+#folder_path = "../../base-schemas/properties/"
 for filename in glob.glob(os.path.join(folder_path, '*.jsonld')):
     with open(filename, "r+") as obj_file:
         obj = json.load(obj_file)

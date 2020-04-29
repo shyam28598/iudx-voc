@@ -1,22 +1,25 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "geojson": "https://purl.org/geojson/vocab#",
         "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://iudx.org.in/voc/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     },
     "@graph": [
         {
-            "@id": "iudx:GeoCoordinates",
             "@type": [
                 "owl:Class",
                 "rdfs:Class"
             ],
+            "@id": "iudx:GeoCoordinates",
             "rdfs:comment": {
                 "@value": "Geo coordinates in Latitude and Longitude for a given place. The Lat/Long values are in WGS84 notation"
+            },
+            "skos:exactMatch": {
+                "@id": "schema:GeoCoordinates"
             },
             "rdfs:label": "GeoCoordinates",
             "rdfs:isDefinedBy": {
@@ -24,9 +27,6 @@
             },
             "rdfs:subClassOf": {
                 "@id": "iudx:StructuredValue"
-            },
-            "skos:exactMatch": {
-                "@id": "schema:GeoCoordinates"
             }
         }
     ]

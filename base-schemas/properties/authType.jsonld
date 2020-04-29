@@ -1,28 +1,25 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "owl": "http://www.w3.org/2002/07/owl#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
+        "iudx": "https://iudx.org.in/voc/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@graph": [
         {
-            "@id": "iudx:authType",
-            "@type": [
-                "rdf:Property",
-                "iudx:TextProperty"
+            "@type": "iudx:TextProperty",
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:string"
+                }
             ],
             "rdfs:comment": "Identification of the auth scheme used for a given resource.",
+            "@id": "iudx:authType",
             "rdfs:label": "authType",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:AuthServerInfoValue"
-                }
-            ],
-            "iudx:rangeIncludes": [
-                {
-                    "@id": "xsd:string"
                 }
             ]
         }

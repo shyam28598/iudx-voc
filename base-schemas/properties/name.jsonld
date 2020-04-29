@@ -1,26 +1,34 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
         "owl": "http://www.w3.org/2002/07/owl#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "schema": "http://schema.org/",
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
+        "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "iudx": "https://iudx.org.in/voc/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@graph": [
         {
-            "@id": "iudx:name",
-            "@type": [
-                "rdf:Property",
-                "iudx:TextProperty"
+            "@type": "iudx:TextProperty",
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:decimal"
+                },
+                {
+                    "@id": "xsd:string"
+                }
             ],
             "rdfs:comment": "Name of the entity.",
+            "@id": "iudx:name",
+            "skos:exactMatch": {
+                "@id": "schema:name"
+            },
+            "rdfs:label": "name",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
-            "rdfs:label": "name",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Place"
@@ -40,18 +48,7 @@
                 {
                     "@id": "iudx:FunctionDescription"
                 }
-            ],
-            "iudx:rangeIncludes": [
-                {
-                    "@id": "xsd:decimal"
-                },
-                {
-                    "@id": "xsd:string"
-                }
-            ],
-            "skos:exactMatch": {
-                "@id": "schema:name"
-            }
+            ]
         }
     ]
 }

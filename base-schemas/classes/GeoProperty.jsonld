@@ -1,19 +1,19 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "iudx": "https://iudx.org.in/voc/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     },
     "@graph": [
         {
-            "@id": "iudx:GeoProperty",
             "@type": [
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:label": "GeoProperty",
+            "@id": "iudx:GeoProperty",
             "rdfs:comment": "Describes the class of all GeoProperties in IUDX. The range of a geo-property are objects describing geo-coordinates (e.g., latitude, longitude, GeoJSON objects etc.)",
+            "rdfs:label": "GeoProperty",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },

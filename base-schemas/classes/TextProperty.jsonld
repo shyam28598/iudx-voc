@@ -1,20 +1,20 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "iudx": "https://iudx.org.in/voc/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     },
     "@graph": [
         {
-            "@id": "iudx:TextProperty",
             "@type": "rdfs:Class",
-            "owl:equivalentClass": {
+            "@id": "iudx:TextProperty",
+            "rdfs:comment": "Class of all Text Properties. The range of Text property contains text (multiple words).",
+            "rdfs:subClassOf": {
                 "@id": "rdf:Property"
             },
-            "rdfs:comment": "Class of all Text Properties. The range of Text property contains text (multiple words).",
-            "rdfs:label": "TextProperty"
-            "rdfs:subClassOf": {
+            "rdfs:label": "TextProperty",
+            "owl:equivalentClass": {
                 "@id": "rdf:Property"
             }
         }

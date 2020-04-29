@@ -13,16 +13,13 @@
         {
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
-                },
-                {
-                    "@id": "iudx:ValueDescriptor"
+                    "@id": "xsd:string"
                 },
                 {
                     "@id": "iudx:QuantitativeValue"
                 }
             ],
-            "@id": "iudx:co2MAX",
+            "@id": "iudx:aqmDeviceID",
             "@type": "iudx:QuantitativeProperty",
             "iudx:domainIncludes": [
                 {
@@ -33,10 +30,10 @@
                 }
             ],
             "rdfs:label": {
-                "@value": "co2MAX"
+                "@value": "aqmDeviceID"
             },
             "rdfs:comment": {
-                "@value": "Describes maximum value of CO2 over a set of observations in past."
+                "@value": "Device ID of the physical sensor as per the device data model"
             },
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

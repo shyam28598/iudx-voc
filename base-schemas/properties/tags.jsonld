@@ -1,19 +1,22 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "owl": "http://www.w3.org/2002/07/owl#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
+        "iudx": "https://iudx.org.in/voc/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@graph": [
         {
-            "@id": "iudx:tags",
-            "@type": [
-                "rdf:Property",
-                "iudx:TextProperty"
+            "@type": "iudx:TextProperty",
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:string",
+                    "@container": "@set"
+                }
             ],
             "rdfs:comment": "Discovery tags associated with items (resource item, resource Group item, data models) in IUDX catalogue",
+            "@id": "iudx:tags",
             "rdfs:label": "tags",
             "iudx:domainIncludes": [
                 {
@@ -21,12 +24,6 @@
                 },
                 {
                     "@id": "iudx:ResourceGroup"
-                }
-            ],
-            "iudx:rangeIncludes": [
-                {
-                    "@id": "xsd:string",
-                    "@container": "@set"
                 }
             ]
         }

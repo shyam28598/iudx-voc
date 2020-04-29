@@ -1,42 +1,43 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "geojson": "https://purl.org/geojson/vocab#",
         "schema": "http://schema.org/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "geojson": "https://purl.org/geojson/vocab#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://iudx.org.in/voc/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     },
-    "@id": "iudx:co2AVG",
-    "@type": [
-        "rdf:Property",
-        "iudx:QuantitativeProperty"
-    ],
-    "rdfs:comment": {
-        "@value": "Describes average value of CO2 over a set of observations in past."
-    },
-    "rdfs:isDefinedBy": {
-        "@id": "iudx:"
-    },
-    "rdfs:label": {
-        "@value": "co2AVG"
-    },
-    "iudx:domainIncludes": [
-     {
-        "@id": "iudx:EnvAQM"
-     },
-     {
-        "@id": "iudx:DataDescriptor"
-     }
-    ],
-    "iudx:rangeIncludes": [
-     {
-        "@id": "iudx:Number"
-     },
-     {
-        "@id": "iudx:QuantitativeValue"
-     }
+    "@graph": [
+        {
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:QuantitativeValue"
+                }
+            ],
+            "@id": "iudx:co2AVG",
+            "@type": "iudx:QuantitativeProperty",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:DataDescriptor"
+                }
+            ],
+            "rdfs:label": {
+                "@value": "co2AVG"
+            },
+            "rdfs:comment": {
+                "@value": "Describes average value of CO2 over a set of observations in past."
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        }
     ]
 }

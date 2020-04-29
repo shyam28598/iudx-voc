@@ -1,24 +1,24 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "iudx": "https://iudx.org.in/voc/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     },
     "@graph": [
         {
-            "@id": "iudx:StructuredValue",
             "@type": [
                 "owl:Class",
                 "rdfs:Class"
             ],
+            "@id": "iudx:StructuredValue",
             "rdfs:comment": "Describes a nested JSON structured value",
             "rdfs:label": "StructuredValue",
-            "rdfs:subClassOf": {
-                "@id": "iudx:Intangible"
-            },
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:Intangible"
             }
         }
     ]

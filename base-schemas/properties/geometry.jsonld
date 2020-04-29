@@ -1,41 +1,38 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
         "owl": "http://www.w3.org/2002/07/owl#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "schema": "http://schema.org/",
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
+        "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "iudx": "https://iudx.org.in/voc/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@graph": [
         {
-            "@id": "iudx:geometry",
-            "@type": [
-                "rdf:Property",
-                "iudx:GeoProperty"
-            ],
-            "rdfs:comment": {
-                "@value": "Geometry property in a GeoJSON object"
-            },
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
-            "rdfs:label": "geometry",
-            "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:Feature"
-                }
-            ],
+            "@type": "iudx:GeoProperty",
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Point"
                 }
             ],
+            "rdfs:comment": {
+                "@value": "Geometry property in a GeoJSON object"
+            },
+            "@id": "iudx:geometry",
             "skos:exactMatch": {
                 "@id": "geojson:geometry"
-            }
+            },
+            "rdfs:label": "geometry",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Feature"
+                }
+            ]
         }
     ]
 }

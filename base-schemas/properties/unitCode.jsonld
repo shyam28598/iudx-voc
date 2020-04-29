@@ -1,34 +1,17 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
         "owl": "http://www.w3.org/2002/07/owl#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "schema": "http://schema.org/",
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
+        "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "iudx": "https://iudx.org.in/voc/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@graph": [
         {
-            "@id": "iudx:unitCode",
-            "@type": [
-                "rdf:Property",
-                "iudx:TextProperty"
-            ],
-            "rdfs:comment": "The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes/unit vocabularies may be used with a prefix",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
-            "rdfs:label": "unitCode",
-            "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:QuantitativeValue"
-                },
-                {
-                    "@id": "iudx:ValueDescriptor"
-                }
-            ],
+            "@type": "iudx:TextProperty",
             "iudx:rangeIncludes": [
                 {
                     "@id": "xsd:string"
@@ -38,9 +21,23 @@
                     "@type": "@id"
                 }
             ],
+            "rdfs:comment": "The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes/unit vocabularies may be used with a prefix",
+            "@id": "iudx:unitCode",
             "skos:exactMatch": {
                 "@id": "schema:unitCode"
-            }
+            },
+            "rdfs:label": "unitCode",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:QuantitativeValue"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
         }
     ]
 }

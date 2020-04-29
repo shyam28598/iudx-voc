@@ -1,26 +1,31 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
         "owl": "http://www.w3.org/2002/07/owl#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "schema": "http://schema.org/",
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
+        "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "iudx": "https://iudx.org.in/voc/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@graph": [
         {
-            "@id": "iudx:unitText",
-            "@type": [
-                "rdf:Property",
-                "iudx:TextProperty"
+            "@type": "iudx:TextProperty",
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:string"
+                }
             ],
             "rdfs:comment": "Describes the unit of measurement. Useful if unitCode is not available.",
+            "@id": "iudx:unitText",
+            "skos:exactMatch": {
+                "@id": "schema:unitText"
+            },
+            "rdfs:label": "unitText",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
-            "rdfs:label": "unitText",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:QuantitativeValue"
@@ -28,15 +33,7 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "iudx:rangeIncludes": [
-                {
-                    "@id": "xsd:string"
-                }
-            ],
-            "skos:exactMatch": {
-                "@id": "schema:unitText"
-            }
+            ]
         }
     ]
 }
