@@ -1,3 +1,5 @@
 old/
+class_markdowns/
+generated/
 ./base-schemas/classes_expanded
 ./utils/push/*.pem
