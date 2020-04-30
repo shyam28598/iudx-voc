@@ -9,27 +9,31 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
-    "@id": "iudx:aqmDeviceID",
-    "@type": "iudx:QuantitativeProperty",
-    "rdfs:comment": "Device ID of the physical sensor as per the device data model",
-    "rdfs:isDefinedBy": {
-        "@id": "iudx:"
-    },
-    "rdfs:label": "aqmDeviceID",
-    "iudx:domainIncludes": [
-     {
-        "@id": "iudx:EnvAQM"
-     },
-     {
-        "@id": "iudx:DataDescriptor"
-     }
-    ],
-    "iudx:rangeIncludes": [
-     {
-        "@id": "xsd:string"
-     },
-     {
-         "@id": "iudx:ValueDescriptor"
-     }
+    "@graph": [
+        {
+            "@id": "iudx:aqmDeviceID",
+            "@type": "iudx:QuantitativeProperty",
+            "rdfs:comment": "Device ID of the physical sensor as per the device data model",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:label": "aqmDeviceID",
+            "iudx:domainIncludes": [
+             {
+                "@id": "iudx:EnvAQM"
+             },
+             {
+                "@id": "iudx:DataDescriptor"
+             }
+            ],
+            "iudx:rangeIncludes": [
+             {
+                "@id": "xsd:string"
+             },
+             {
+                 "@id": "iudx:ValueDescriptor"
+             }
+            ]
+        }
     ]
 }
