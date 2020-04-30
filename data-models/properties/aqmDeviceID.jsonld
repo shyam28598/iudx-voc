@@ -12,7 +12,7 @@
     "@graph": [
         {
             "@id": "iudx:aqmDeviceID",
-            "@type": "iudx:QuantitativeProperty",
+            "@type": "iudx:TextProperty",
             "rdfs:comment": "Device ID of the physical sensor as per the device data model",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

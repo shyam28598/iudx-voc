@@ -25,7 +25,7 @@
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
-            "@type": "iudx:QuantitativeProperty",
+            "@type": "iudx:TextProperty",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvAQM"

@@ -16,6 +16,7 @@
                 "@id": "iudx:"
             },
             "@id": "iudx:co2AVG",
+            "@type": "iudx:QuantitativeProperty",
             "rdfs:label": "co2AVG",
             "iudx:rangeIncludes": [
                 {
@@ -28,7 +29,6 @@
                     "@id": "iudx:QuantitativeValue"
                 }
             ],
-            "@type": "iudx:QuantitativeProperty",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvAQM"
