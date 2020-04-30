@@ -1,25 +1,25 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "iudx": "https://iudx.org.in/voc/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     },
     "@graph": [
         {
+            "rdfs:comment": "Class of all IUDX Entities (Resource, ResourceServer, Provider etc.)",
+            "rdfs:label": "IUDXEntity",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:Thing"
+            },
             "@id": "iudx:IUDXEntity",
             "@type": [
                 "owl:Class",
                 "rdfs:Class"
-            ],
-            "rdfs:comment": "Class of all IUDX Entities (Resource, ResourceServer, Provider etc.)",
-            "rdfs:label": "IUDXEntity",
-            "rdfs:subClassOf": {
-                "@id": "iudx:Thing"
-            },
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            }
+            ]
         }
     ]
 }

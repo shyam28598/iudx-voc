@@ -1,20 +1,13 @@
 {
     "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "iudx": "https://iudx.org.in/voc/",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     },
     "@graph": [
         {
-            "@id": "iudx:hasObject",
-            "@type": [
-                "rdf:Property",
-                "iudx:TextProperty"
-            ],
-            "rdfs:comment": "Value associated with RelationshipValue class. Contains IRI(s) that specify the relationship object(s).",
-            "rdfs:label": "hasObject",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:RelationshipValue"
@@ -22,15 +15,19 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "xsd:string",
-                    "@type": "@id"
+                    "@type": "@id",
+                    "@id": "xsd:string"
                 },
                 {
-                    "@id": "xsd:string",
+                    "@container": "@set",
                     "@type": "@id",
-                    "@container": "@set"
+                    "@id": "xsd:string"
                 }
-            ]
+            ],
+            "@id": "iudx:hasObject",
+            "rdfs:comment": "Value associated with RelationshipValue class. Contains IRI(s) that specify the relationship object(s).",
+            "rdfs:label": "hasObject",
+            "@type": "iudx:TextProperty"
         }
     ]
 }

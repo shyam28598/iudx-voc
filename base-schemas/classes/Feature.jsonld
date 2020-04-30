@@ -1,21 +1,15 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "geojson": "https://purl.org/geojson/vocab#",
         "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://iudx.org.in/voc/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@graph": [
         {
-            "@id": "iudx:Feature",
-            "@type": [
-                "owl:Class",
-                "rdfs:Class",
-                "iudx:GeoJSONGeometry"
-            ],
             "rdfs:comment": "Describes the GeoJSON Feature",
             "rdfs:label": "Feature",
             "rdfs:isDefinedBy": {
@@ -24,6 +18,12 @@
             "rdfs:subClassOf": {
                 "@id": "iudx:GeoJSONGeometry"
             },
+            "@id": "iudx:Feature",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class",
+                "iudx:GeoJSONGeometry"
+            ],
             "skos:exactMatch": {
                 "@id": "geojson:Feature"
             }

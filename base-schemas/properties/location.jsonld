@@ -1,26 +1,16 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://iudx.org.in/voc/",
         "geojson": "https://purl.org/geojson/vocab#",
-        "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#"
     },
     "@graph": [
         {
-            "@id": "iudx:location",
-            "@type": [
-                "rdf:Property",
-                "iudx:GeoProperty"
-            ],
-            "rdfs:comment": "Location associated with a resource Item (a spatial point), a group of resource items (a spatial region) or even an observation in case of a mobile sensor.",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
-            "rdfs:label": "location",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Resource"
@@ -48,7 +38,14 @@
             ],
             "skos:exactMatch": {
                 "@id": "schema:location"
-            }
+            },
+            "rdfs:comment": "Location associated with a resource Item (a spatial point), a group of resource items (a spatial region) or even an observation in case of a mobile sensor.",
+            "rdfs:label": "location",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:GeoProperty",
+            "@id": "iudx:location"
         }
     ]
 }

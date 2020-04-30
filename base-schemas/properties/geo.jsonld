@@ -1,28 +1,16 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://iudx.org.in/voc/",
         "geojson": "https://purl.org/geojson/vocab#",
-        "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#"
     },
     "@graph": [
         {
-            "@id": "iudx:geo",
-            "@type": [
-                "rdf:Property",
-                "iudx:GeoProperty"
-            ],
-            "rdfs:comment": {
-                "@value": "Geo-coordinates of a place specified in terms of latitude and longitude."
-            },
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
-            "rdfs:label": "geo",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Place"
@@ -35,7 +23,16 @@
             ],
             "skos:exactMatch": {
                 "@id": "schema:geo"
-            }
+            },
+            "rdfs:comment": {
+                "@value": "Geo-coordinates of a place specified in terms of latitude and longitude."
+            },
+            "rdfs:label": "geo",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:GeoProperty",
+            "@id": "iudx:geo"
         }
     ]
 }

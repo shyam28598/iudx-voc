@@ -1,23 +1,13 @@
 {
     "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "iudx": "https://iudx.org.in/voc/",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     },
     "@graph": [
         {
-            "@id": "iudx:itemStatus",
-            "@type": [
-                "rdf:Property",
-                "iudx:TextProperty"
-            ],
-            "rdfs:comment": "Status of a catalouge item. ENUM: [ACTIVE, DEPRECATED].",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
-            "rdfs:label": "itemStatus",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:IUDXEntity"
@@ -27,7 +17,14 @@
                 {
                     "@id": "xsd:string"
                 }
-            ]
+            ],
+            "@id": "iudx:itemStatus",
+            "rdfs:comment": "Status of a catalouge item. ENUM: [ACTIVE, DEPRECATED].",
+            "rdfs:label": "itemStatus",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:TextProperty"
         }
     ]
 }

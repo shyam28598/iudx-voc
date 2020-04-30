@@ -1,20 +1,15 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "geojson": "https://purl.org/geojson/vocab#",
         "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://iudx.org.in/voc/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@graph": [
         {
-            "@id": "iudx:Organization",
-            "@type": [
-                "owl:Class",
-                "rdfs:Class"
-            ],
             "rdfs:comment": "Information about a given organization (contact info, email, urls etc.)",
             "rdfs:label": "Organization",
             "rdfs:isDefinedBy": {
@@ -23,6 +18,11 @@
             "rdfs:subClassOf": {
                 "@id": "iudx:Thing"
             },
+            "@id": "iudx:Organization",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
             "skos:exactMatch": {
                 "@id": "schema:Organization"
             }
