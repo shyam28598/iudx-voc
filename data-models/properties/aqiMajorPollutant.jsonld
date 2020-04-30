@@ -22,7 +22,7 @@
                     "@id": "xsd:string"
                 },
                 {
-                    "@id": "iudx:QuantitativeProperty"
+                    "@id": "iudx:ValueDescriptor"
                 }
             ],
             "@type": "iudx:QuantitativeProperty",

@@ -29,7 +29,7 @@
         "@id": "xsd:string"
      },
      {
-        "@id": "iudx:QuantitativeValue"
+         "@id": "iudx:ValueDescriptor"
      }
     ]
 }
