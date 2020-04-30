@@ -11,16 +11,12 @@
     },
     "@graph": [
         {
-            "rdfs:comment": {
-                "@value": "Describes measured air (atmospheric or barometric) pressure"
-            },
+            "rdfs:comment": "Describes measured air (atmospheric or barometric) pressure",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "@id": "iudx:airPressure",
-            "rdfs:label": {
-                "@value": "airPressure"
-            },
+            "rdfs:label": "airPressure",
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Number"

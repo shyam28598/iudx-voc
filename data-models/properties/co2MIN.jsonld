@@ -11,16 +11,12 @@
     },
     "@graph": [
         {
-            "rdfs:comment": {
-                "@value": "Describes minimum value of CO2 over a set of observations in past."
-            },
+            "rdfs:comment": "Describes minimum value of CO2 over a set of observations in past.",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "@id": "iudx:co2MIN",
-            "rdfs:label": {
-                "@value": "co2MIN"
-            },
+            "rdfs:label": "co2MIN",
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Number"

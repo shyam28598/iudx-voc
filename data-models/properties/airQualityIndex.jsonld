@@ -11,16 +11,12 @@
     },
     "@graph": [
         {
-            "rdfs:comment": {
-                "@value": "Describes overall Air Quality Index (AQI)."
-            },
+            "rdfs:comment": "Describes overall Air Quality Index (AQI).",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "@id": "iudx:airQualityIndex",
-            "rdfs:label": {
-                "@value": "airQualityIndex"
-            },
+            "rdfs:label": "airQualityIndex",
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Number"

@@ -10,19 +10,12 @@
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@id": "iudx:aqmDeviceID",
-    "@type": [
-        "rdf:Property",
-        "iudx:QuantitativeProperty"
-    ],
-    "rdfs:comment": {
-        "@value": "Device ID of the physical sensor as per the device data model"
-    },
+    "@type": "iudx:QuantitativeProperty",
+    "rdfs:comment": "Device ID of the physical sensor as per the device data model",
     "rdfs:isDefinedBy": {
         "@id": "iudx:"
     },
-    "rdfs:label": {
-        "@value": "aqmDeviceID"
-    },
+    "rdfs:label": "aqmDeviceID",
     "iudx:domainIncludes": [
      {
         "@id": "iudx:EnvAQM"

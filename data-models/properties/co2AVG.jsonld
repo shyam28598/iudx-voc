@@ -11,16 +11,12 @@
     },
     "@graph": [
         {
-            "rdfs:comment": {
-                "@value": "Describes average value of CO2 over a set of observations in past."
-            },
+            "rdfs:comment": "Describes average value of CO2 over a set of observations in past.",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "@id": "iudx:co2AVG",
-            "rdfs:label": {
-                "@value": "co2AVG"
-            },
+            "rdfs:label": "co2AVG",
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Number"

@@ -11,16 +11,12 @@
     },
     "@graph": [
         {
-            "rdfs:comment": {
-                "@value": "Major pollutant in the Air Quality Index (AQI)."
-            },
+            "rdfs:comment": "Major pollutant in the Air Quality Index (AQI).",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "@id": "iudx:aqiMajorPollutant",
-            "rdfs:label": {
-                "@value": "aqiMajorPollutant"
-            },
+            "rdfs:label": "aqiMajorPollutant",
             "iudx:rangeIncludes": [
                 {
                     "@id": "xsd:string"
