@@ -29,9 +29,6 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvAQM"
-                },
-                {
-                    "@id": "iudx:DataDescriptor"
                 }
             ]
         }

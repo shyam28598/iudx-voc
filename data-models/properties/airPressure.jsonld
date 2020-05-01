@@ -23,18 +23,12 @@
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
-                },
-                {
-                    "@id": "iudx:QuantitativeValue"
                 }
             ],
             "@type": "iudx:QuantitativeProperty",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvAQM"
-                },
-                {
-                    "@id": "iudx:DataDescriptor"
                 }
             ]
         }
