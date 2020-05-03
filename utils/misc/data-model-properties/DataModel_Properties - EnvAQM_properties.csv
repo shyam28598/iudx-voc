@@ -1,0 +1,16 @@
+label,type,comment,older_labels
+airPressure,QP,Describes measured air (atmospheric or barometric) pressure.,AIR_PRESSURE
+airQualityIndex,QP,Describes overall Air Quality Index (AQI).,AQI
+aqiCategory,TXP,Air Quality Category Indication.,CATEGORY
+aqiMajorPollutant,TXP,Major pollutant in the Air Quality Index (AQI).,"AQI_POLLUTANT,LEAD_POLLUTANT"
+aqmRefDevice,TXP,List of one of more Device ID of the physical sensor/ measurement station corresponding to this observation.,DEVICEID
+observationDateTime,TP,Time of observation.,LASTUPDATEDATETIME
+co2AVG,QP,Describes average value of CO2 over a set of observations in past.,CO2
+co2MAX,QP,Describes maximum value of CO2 over a set of observations in past.,CO2_MAX
+co2MIN,QP,Describes minimum value of CO2 over a set of observations in past.,CO2_MIN
+,,,
+,,,
+Custom,,,
+,,,
+deviceModelInfo,,,
+location,,,
