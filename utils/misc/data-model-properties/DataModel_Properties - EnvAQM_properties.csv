@@ -1,16 +1,16 @@
-label,type,comment,older_labels
-airPressure,QP,Describes measured air (atmospheric or barometric) pressure.,AIR_PRESSURE
-airQualityIndex,QP,Describes overall Air Quality Index (AQI).,AQI
-aqiCategory,TXP,Air Quality Category Indication.,CATEGORY
-aqiMajorPollutant,TXP,Major pollutant in the Air Quality Index (AQI).,"AQI_POLLUTANT,LEAD_POLLUTANT"
-aqmRefDevice,TXP,List of one of more Device ID of the physical sensor/ measurement station corresponding to this observation.,DEVICEID
-observationDateTime,TP,Time of observation.,LASTUPDATEDATETIME
-co2AVG,QP,Describes average value of CO2 over a set of observations in past.,CO2
-co2MAX,QP,Describes maximum value of CO2 over a set of observations in past.,CO2_MAX
-co2MIN,QP,Describes minimum value of CO2 over a set of observations in past.,CO2_MIN
-,,,
-,,,
-Custom,,,
-,,,
-deviceModelInfo,,,
-location,,,
+label,type,comment,domainIncludes,rangeIncludes,exactMatch,older_labels
+airPressure,QP,Describes measured air (atmospheric or barometric) pressure.,EnvAQM,"Number, ValueDescriptor",,AIR_PRESSURE
+airQualityIndex,QP,Describes overall Air Quality Index (AQI).,EnvAQM,"Number, ValueDescriptor",,AQI
+aqiCategory,TXP,Air Quality Category Indication.,EnvAQM,"Text, ValueDescriptor",,CATEGORY
+aqiMajorPollutant,TXP,Major pollutant in the Air Quality Index (AQI).,EnvAQM,"Text, ValueDescriptor",,"AQI_POLLUTANT,LEAD_POLLUTANT"
+deviceID,TXP,Device ID of the physical sensor/ measurement station corresponding to this observation.,DataModel,"Text, ValueDescriptor",,DEVICEID
+observationDateTime,TP,Reported time of observation.,DataModel,"DateTime, ValueDescriptor",,LASTUPDATEDATETIME
+co2AVG,QP,Describes average value of CO2 over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,CO2
+co2MAX,QP,Describes maximum value of CO2 over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,CO2_MAX
+co2MIN,QP,Describes minimum value of CO2 over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,CO2_MIN
+,,,,,,
+,,,,,,
+Custom,,,,,,
+,,,,,,
+deviceModelInfo,SP,asdfasdf,,,,
+location,,,,,,
