@@ -20,7 +20,10 @@
             },
             "iudx:rangeIncludes": [
                 {
-                    "@id": "xsd:DateTime"
+                    "@id": "iudx:DateTime"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
                 }
             ],
             "iudx:domainIncludes": [

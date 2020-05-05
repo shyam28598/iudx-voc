@@ -11,21 +11,21 @@
     },
     "@graph": [
         {
-            "@id": "iudx:aqmDeviceID",
+            "@id": "iudx:deviceID",
             "@type": "iudx:TextProperty",
             "rdfs:comment": "Device ID of the physical sensor as per the device data model",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
-            "rdfs:label": "aqmDeviceID",
+            "rdfs:label": "deviceID",
             "iudx:domainIncludes": [
              {
-                "@id": "iudx:EnvAQM"
+                "@id": "iudx:DataModel"
              }
             ],
             "iudx:rangeIncludes": [
              {
-                "@id": "xsd:string"
+                "@id": "iudx:Text"
              },
              {
                  "@id": "iudx:ValueDescriptor"
