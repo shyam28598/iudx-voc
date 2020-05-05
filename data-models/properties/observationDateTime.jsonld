@@ -12,8 +12,8 @@
     "@graph": [
         {
             "@type": ["iudx:TimeProperty"],
-            "@id": "iudx:observationTime",
-            "rdfs:label": "observationTime",
+            "@id": "iudx:observationDateTime",
+            "rdfs:label": "observationDateTime",
             "rdfs:comment": "Reported time of observation.",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
