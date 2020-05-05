@@ -30,11 +30,11 @@ for filename in glob.glob(os.path.join(folder_path, '*.jsonld')):
             except KeyError:
                 pass
             try:
-                tmp_obj["rdfs:label"] = obj["rdfs:label"]
+                tmp_obj["rdfs:comment"] = obj["rdfs:comment"]
             except KeyError:
                 pass
             try:
-                tmp_obj["rdfs:comment"] = obj["rdfs:comment"]
+                tmp_obj["rdfs:label"] = obj["rdfs:label"]
             except KeyError:
                 pass
             try:
