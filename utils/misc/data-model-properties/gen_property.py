@@ -31,9 +31,10 @@ def gen_properties(file_path):
                 csv_type = item[1]
                 csv_comment = item[2]
                 csv_domain = item[3]
+                csv_range = item[4]
+                csv_match = item[5]
                 if "," in csv_domain:
                     csv_domain_list = csv_domain.split(",")
-                csv_range = item[4]
                 if "," in csv_range:
                     csv_range_list = csv_range.split(",")
                 with open(template_file, "r") as template:
@@ -88,14 +89,18 @@ def gen_properties(file_path):
                             range_list = []
                             for item in csv_range_list:
                                 range_dict = {}
-                                range_dict["@id"] = item
+                                range_dict["@id"] = "iudx:" + item.strip()
                                 range_list.append(range_dict)
                         except NameError:
                             range_list = []
                             range_dict = {}
-                            range_dict["@id"] = csv_range
+                            range_dict["@id"] = "iudx:" + csv_range.strip()
                             range_list.append(range_dict)
                         tmp_obj["iudx:rangeIncludes"] = range_list
+                        if csv_match:
+                            match_dict = {}
+                            match_dict["@id"] = csv_match
+                            tmp_obj["skos:exactMatch"] = match_dict
                         new_dict["@graph"] = new_list
                         with open(properties_path + csv_label + ".jsonld", "w+") as prop_file:
                             json.dump(new_dict, prop_file, indent=4)
