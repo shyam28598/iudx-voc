@@ -77,12 +77,18 @@ def gen_properties(file_path):
                             domain_list = []
                             for item in csv_domain_list:
                                 domain_dict = {}
-                                domain_dict["@id"] = item
+                                if ":" in item:
+                                    domain_dict["@id"] = item.strip()
+                                else:
+                                    domain_dict["@id"] = "iudx:" + item.strip()
                                 domain_list.append(domain_dict)
                         except NameError:
                             domain_list = []
                             domain_dict = {}
-                            domain_dict["@id"] = csv_domain
+                            if ":" in csv_domain:
+                                domain_dict["@id"] = csv_domain.strip()
+                            else:
+                                domain_dict["@id"] = "iudx:" + csv_domain.strip()
                             domain_list.append(domain_dict)
                         tmp_obj["iudx:domainIncludes"] = domain_list
                         try:
