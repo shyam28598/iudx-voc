@@ -21,11 +21,10 @@ def graph(obj):
                     class_name = i["@id"].replace(":", "_")
                     print("class " + class_name + "{", file=text_file) 
                     for j in graph_obj:
-                        for prop in j["@type"]:
-                            if "Property" in prop:
-                                print("\t" + j["@id"].replace(":", "_"), file=text_file)
-                            elif "Relationship" in prop:
-                                print("\t" + j["@id"].replace(":", "_"), file=text_file)
+                        if "Property" in j["@type"]:
+                            print("\t" + j["@id"].replace(":", "_"), file=text_file)
+                        elif "Relationship" in j["@type"]:
+                            print("\t" + j["@id"].replace(":", "_"), file=text_file)
                     print("}", file=text_file)
                     try:
                         superclass_name = i["rdfs:subClassOf"]["@id"].replace(":", "_")
@@ -44,11 +43,10 @@ def graph(obj):
                     class_name = i["@id"].replace(":", "_")
                     print("class " + class_name + "{", file=text_file) 
                     for j in graph_obj:
-                        for prop in j["@type"]:
-                            if "Property" in prop:
-                                print("\t" + j["@id"].replace(":", "_"), file=text_file)
-                            elif "Relationship" in prop:
-                                print("\t" + j["@id"].replace(":", "_"), file=text_file)
+                        if "Property" in j["@type"]:
+                            print("\t" + j["@id"].replace(":", "_"), file=text_file)
+                        elif "Relationship" in j["@type"]:
+                            print("\t" + j["@id"].replace(":", "_"), file=text_file)
                     print("}", file=text_file)
                     try:
                         superclass_name = i["rdfs:subClassOf"]["@id"].replace(":", "_")
