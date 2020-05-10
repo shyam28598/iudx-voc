@@ -9,14 +9,14 @@
     },
     "@graph": [
         {
-            "@id": "iudx:Text",
+            "@id": "iudx:DateTime",
             "@type": [
                 "rdfs:Class"
             ],
-            "rdfs:comment": "Data type: Text",
-            "rdfs:label": "Text",
+            "rdfs:comment": "Describes ISO Time in a DateTime format as specified in ISO 8601",
+            "rdfs:label": "DateTime",
             "skos:exactMatch": {
-                "@id": "schema:Text"
+                "@id": "schema:DateTime"
             }
         }
     ]

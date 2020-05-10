@@ -11,24 +11,24 @@
     },
     "@graph": [
         {
-            "rdfs:comment": "Major pollutant in the Air Quality Index (AQI).",
+            "@type": ["iudx:TimeProperty"],
+            "@id": "iudx:observationDateTime",
+            "rdfs:label": "observationDateTime",
+            "rdfs:comment": "Reported time of observation.",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
-            "@id": "iudx:aqiMajorPollutant",
-            "rdfs:label": "aqiMajorPollutant",
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:DateTime"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
-            "@type": "iudx:TextProperty",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:EnvAQM"
+                    "@id": "iudx:DataModel"
                 }
             ]
         }

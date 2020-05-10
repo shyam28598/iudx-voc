@@ -7,6 +7,11 @@
     },
     "@graph": [
         {
+            "@id": "iudx:Resource",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
             "rdfs:comment": "Describes the Resource entry in the IUDX catalogue.",
             "rdfs:label": "Resource",
             "rdfs:isDefinedBy": {
@@ -14,12 +19,7 @@
             },
             "rdfs:subClassOf": {
                 "@id": "iudx:IUDXEntity"
-            },
-            "@id": "iudx:Resource",
-            "@type": [
-                "owl:Class",
-                "rdfs:Class"
-            ]
+            }
         }
     ]
 }

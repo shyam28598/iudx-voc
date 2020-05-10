@@ -26,16 +26,13 @@
                     "@id": "iudx:Number"
                 },
                 {
-                    "@id": "iudx:QuantitativeValue"
+                    "@id": "iudx:ValueDescriptor"
                 }
             ],
             "@type": "iudx:QuantitativeProperty",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvAQM"
-                },
-                {
-                    "@id": "iudx:DataDescriptor"
                 }
             ]
         }

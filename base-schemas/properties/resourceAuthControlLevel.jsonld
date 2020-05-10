@@ -8,6 +8,15 @@
     },
     "@graph": [
         {
+            "@id": "iudx:resourceAuthControlLevel",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Authorizataion Control Level for resouces associated with a given resource-group. ENUM: [individual, group]. Individual authorization control level indicates that access control is available per resource, i.e., authorization can be granted/not-granted on a per resource basis for the resources. Group authorization control level indicates that the authorization is available on group level only, i.e., authorization will be granted/not-granted for all the resources associated with the given resource group. If this property is not present in a ResourceGroup object then it implies all resources belonging to this group are open items and one needs no authorization to get data for these resources.",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:label": "resourceAuthControlLevel",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:ResourceGroup"
@@ -17,14 +26,7 @@
                 {
                     "@id": "xsd:string"
                 }
-            ],
-            "@id": "iudx:resourceAuthControlLevel",
-            "rdfs:comment": "Authorizataion Control Level for resouces associated with a given resource-group. ENUM: [individual, group]. Individual authorization control level indicates that access control is available per resource, i.e., authorization can be granted/not-granted on a per resource basis for the resources. Group authorization control level indicates that the authorization is available on group level only, i.e., authorization will be granted/not-granted for all the resources associated with the given resource group. If this property is not present in a ResourceGroup object then it implies all resources belonging to this group are open items and one needs no authorization to get data for these resources.",
-            "rdfs:label": "resourceAuthControlLevel",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
-            "@type": "iudx:TextProperty"
+            ]
         }
     ]
 }

@@ -21,8 +21,7 @@
             "@id": "iudx:Feature",
             "@type": [
                 "owl:Class",
-                "rdfs:Class",
-                "iudx:GeoJSONGeometry"
+                "rdfs:Class"
             ],
             "skos:exactMatch": {
                 "@id": "geojson:Feature"
