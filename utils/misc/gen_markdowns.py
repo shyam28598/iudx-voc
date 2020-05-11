@@ -105,8 +105,8 @@ if len(sys.argv) > 1:
              print("@startuml\n", file=text_file)
              graph(obj)
              print("\n@enduml", file=text_file)
-         which_plantuml = ((subprocess.check_output("which plantuml", shell=True)).decode("utf-8")).rstrip()
-         subprocess.call([which_plantuml, markdown_file])
+         #which_plantuml = ((subprocess.check_output("which plantuml", shell=True)).decode("utf-8")).rstrip()
+         #subprocess.call([which_plantuml, markdown_file])
 else:
     if not os.path.exists("../../diagrams/class_uml_diagrams/"):
         os.makedirs("../../diagrams/class_uml_diagrams/")
@@ -119,5 +119,5 @@ else:
                  print("@startuml\n", file=text_file)
                  graph(obj)
                  print("\n@enduml", file=text_file)
-             which_plantuml = ((subprocess.check_output("which plantuml", shell=True)).decode("utf-8")).rstrip()
-             subprocess.call([which_plantuml, markdown_file])
+             #which_plantuml = ((subprocess.check_output("which plantuml", shell=True)).decode("utf-8")).rstrip()
+             #subprocess.call([which_plantuml, markdown_file])

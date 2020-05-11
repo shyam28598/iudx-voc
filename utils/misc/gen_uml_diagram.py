@@ -111,5 +111,5 @@ with open(diagram_path + "IUDX-Vocab-Ontology.txt", "w+") as text_file:
              obj = json.load(obj_file)
              graph(obj)
     print("\n" + "@enduml", file=text_file)
-which_plantuml = ((subprocess.check_output("which plantuml", shell=True)).decode("utf-8")).rstrip()
-subprocess.call([which_plantuml, diagram_path + "IUDX-Vocab-Ontology.txt"])
+#which_plantuml = ((subprocess.check_output("which plantuml", shell=True)).decode("utf-8")).rstrip()
+#subprocess.call([which_plantuml, diagram_path + "IUDX-Vocab-Ontology.txt"])
