@@ -1,0 +1,55 @@
+label,type,comment,domainIncludes,rangeIncludes,exactMatch,older_labels
+airPressure,QP,Describes measured air (atmospheric or barometric) pressure.,EnvAQM,"Number, ValueDescriptor",,AIR_PRESSURE
+airQualityIndex,QP,Describes overall Air Quality Index (AQI).,EnvAQM,"Number, ValueDescriptor",,AQI
+aqiCategory,TXP,Air Quality Category Indication.,EnvAQM,"Text, ValueDescriptor",,CATEGORY
+aqiMajorPollutant,TXP,Major pollutant in the Air Quality Index (AQI).,EnvAQM,"Text, ValueDescriptor",,"AQI_POLLUTANT,LEAD_POLLUTANT"
+deviceID,TXP,Device ID of the physical sensor/ measurement station corresponding to this observation.,DataModel,"Text, ValueDescriptor",,DEVICEID
+observationDateTime,TP,Reported time of observation.,DataModel,"DateTime, ValueDescriptor",,LASTUPDATEDATETIME
+co2AVG,QP,Describes average value of air pollutant Carbon Dioxide (CO2) over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,CO2
+co2MAX,QP,Describes maximum value of air pollutant Carbon Dioxide (CO2) over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,CO2_MAX
+co2MIN,QP,Describes minimum value of  air pollutant Carbon Dioxide (CO2) over a set of observations in past. ,EnvAQM,"Number, ValueDescriptor",,CO2_MIN
+coAVG,QP,Describes average value of  air pollutant Carbon Monoxide (CO) over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,CO
+coMAX,QP,Describes maximum value of  air pollutant Carbon Monoxide (CO) over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,CO_MAX
+coMIN,QP,Describes minimum value of  air pollutant Carbon Monoxide (CO) over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,CO_MIN
+relativeHumidity,QP,Describes instantaneous relative humidity.,EnvAQM,"Number, ValueDescriptor",,HUMIDITY
+ambientLight,QP,Describes instantaneous ambient light intensity.,EnvAQM,"Number, ValueDescriptor",,LIGHT
+no2AVG,QP,Describes average value of  air pollutant Nitrogen Dioxide (NO2) over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,NO2
+no2MAX,QP,Describes maximum value of  air pollutant Nitrogen Dioxide (NO2) over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,NO2_MAX
+no2MIN,QP,Describes minimum value of  air pollutant Nitrogen Dioxide (NO2) over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,NO2_MIN
+noAVG,QP,Describes average value of  air pollutant Nitrogen Monoxide (NO) over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,NO
+noMAX,QP,Describes maximum value of air pollutant  Nitrogen Monoxide (NO) over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,NO_MAX
+noMIN,QP,Describes minimum value of air pollutant  Nitrogen Monoxide (NO) over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,NO_MIN
+o3AVG,QP,Describes average value of  air pollutant ozone (O3) over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,OZONE
+o3MAX,QP,Describes maximum value of  air pollutant ozone (O3) over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,OZONE_MAX
+o3MIN,QP,Describes minimum value of  air pollutant ozone (O3) over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,OZONE_MIN
+o2AVG,QP,Describes average value of oxygen content in air over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,O2
+o2MAX,QP,Describes maximum value of  oxygen content in air over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,
+o2MIN,QP,Describes minimum value of  oxygen content in air over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,
+pm10AVG,QP,Describes average value of  air pollutant PM10 particulate matter over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,PM10
+pm10MAX,QP,Describes maximum value of  air pollutant PM10 particulate matter over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,PM10_MAX
+pm10MIN,QP,Describes minimum value of  air pollutant PM10 particulate matter over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,PM10_MIN
+pm2p5AVG,QP,Describes average value of  air pollutant PM2.5 particulate matter over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,
+pm2p5MAX,QP,Describes maximum value of  air pollutant PM2.5 particulate matter over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,PM2_MAX
+pm2p5MIN,QP,Describes minimum value of  air pollutant PM2.5 particulate matter over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,PM2_MIN
+so2AVG,QP,Describes average value of  air pollutant Sulphur Dioxide (SO2) over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,SO2
+so2MAX,QP,Describes maximum value of  air pollutant Sulphur Dioxide (SO2) over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,SO2_MAX
+so2MIN,QP,Describes minimum value of  air pollutant Sulphur Dioxide (SO2) over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,SO2_MIN
+ambientNoise,QP,Describes instantaneous noise level.,EnvAQM,"Number, ValueDescriptor",,SOUND
+ambientNoiseMAX,QP,Describes maximum value of  ambient noise levels over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,SoundMax
+ambientNoiseMIN,QP,Describes minimum value of  ambient noise levels over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,SoundMin
+airTemperatureAVG,QP,Describes average value of  air temperature over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,TEMPERATURE
+airTemperatureMAX,QP,Describes maximum value of  air temperature over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,TEMPERATURE_MAX
+airTemperatureMIN,QP,Describes minimum value of  air temperature over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,TEMPERATURE_MIN
+uvAVG,QP,Describes average value of level of UV radiation over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,UV
+uvMAX,QP,Describes maximum value of  level of UV radiation over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,UV_MAX
+uvMIN,QP,Describes minimum value of  level of UV radiation over a set of observations in past.,EnvAQM,"Number, ValueDescriptor",,UV_MIN
+deviceStatus,TXP,Indicates if the physical device is ON or OFF.,EnvAQM,"Text, ValueDescriptor",,STATUS
+,,,,,,
+,,,,,,
+Custom,,,,,,
+,,,,,,
+deviceModel,SP,Describes the Air Quality Monitoring (AQM) Device Model.,EnvAQM,DeviceModelInfo,,
+location,GP,,,,,
+rainfallMeasured,QP,,,,,
+rainfallForecast,QP,,,,,
+name,TXP,,,,,
