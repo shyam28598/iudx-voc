@@ -27,10 +27,10 @@
             ], 
             "iudx:rangeIncludes": [
                 {
-                    "@id": "xsd:decimal"
+                    "@id": "iudx:Number"
                 }, 
                 {
-                    "@id": "xsd:string"
+                    "@id": "iudx:Text"
                 }
             ], 
             "skos:exactMatch": {

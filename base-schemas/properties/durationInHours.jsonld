@@ -24,7 +24,7 @@
             ], 
             "iudx:rangeIncludes": [
                 {
-                    "@id": "xsd:decimal"
+                    "@id": "iudx:Number"
                 }
             ]
         }

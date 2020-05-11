@@ -27,10 +27,10 @@
             ], 
             "iudx:rangeIncludes": [
                 {
-                    "@id": "xsd:string"
+                    "@id": "iudx:Text"
                 }, 
                 {
-                    "@id": "xsd:string", 
+                    "@id": "iudx:Text", 
                     "@type": "@id"
                 }
             ], 

@@ -27,7 +27,7 @@
             ], 
             "iudx:rangeIncludes": [
                 {
-                    "@id": "xsd:string"
+                    "@id": "iudx:Text"
                 }
             ], 
             "skos:exactMatch": {

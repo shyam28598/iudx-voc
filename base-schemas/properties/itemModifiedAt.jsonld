@@ -22,10 +22,7 @@
             ], 
             "iudx:rangeIncludes": [
                 {
-                    "@id": "schema:DateTime"
-                }, 
-                {
-                    "@id": "xsd:DateTime"
+                    "@id": "iudx:DateTime"
                 }
             ], 
             "rdfs:isDefinedBy": {

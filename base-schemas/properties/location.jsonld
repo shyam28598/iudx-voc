@@ -39,7 +39,7 @@
                     "@id": "iudx:Place"
                 }, 
                 {
-                    "@id": "xsd:String"
+                    "@id": "iudx:Text"
                 }
             ], 
             "skos:exactMatch": {

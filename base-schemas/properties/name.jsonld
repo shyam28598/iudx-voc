@@ -39,10 +39,7 @@
             ], 
             "iudx:rangeIncludes": [
                 {
-                    "@id": "xsd:decimal"
-                }, 
-                {
-                    "@id": "xsd:string"
+                    "@id": "iudx:Text"
                 }
             ], 
             "skos:exactMatch": {

@@ -21,7 +21,7 @@
             ], 
             "iudx:rangeIncludes": [
                 {
-                    "@id": "xsd:string", 
+                    "@id": "iudx:Text", 
                     "@container": "@set"
                 }
             ]
