@@ -19,12 +19,13 @@ def create_type(folder_path):
         with open(filename, "r+") as obj_file:
             obj = json.load(obj_file)
             if "@graph" in obj.keys():
-                tmp_list = []
-                tmp_list.append(obj["@graph"][0]["@type"])
-                obj["@graph"][0]["@type"] = tmp_list
-                obj_file.seek(0)
-                json.dump(obj, obj_file, indent=4)
-                obj_file.truncate()
+                if isinstance(obj["@graph"][0]["@type"], str):
+                    tmp_list = []
+                    tmp_list.append(obj["@graph"][0]["@type"])
+                    obj["@graph"][0]["@type"] = tmp_list
+                    obj_file.seek(0)
+                    json.dump(obj, obj_file, indent=4)
+                    obj_file.truncate()
             else:
                 print("Graph not present in " + filename)
 

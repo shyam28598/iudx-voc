@@ -9,15 +9,11 @@ from collections import OrderedDict
 template_file = "./template.jsonld"
 
 csv_file_path = ["./DataModel_Properties - EnvAQM_properties.csv"]
-ignore = ["Custom", "location", "deviceModelInfo", ""]
+ignore = ["Custom", "location", "deviceModel", "rainfallMeasured", "rainfallForecast", "name", ""]
 
-if not os.path.exists("./properties/"):
-    os.makedirs("./properties/")
-properties_path = "./properties/"
-
-#if not os.path.exists("../../../data-models/properties/"):
-#    os.makedirs("../../../data-models/properties/")
-#properties_path = "../../../data-models/properties/"
+if not os.path.exists("../../../data-models/properties/"):
+    os.makedirs("../../../data-models/properties/")
+properties_path = "../../../data-models/properties/"
 
 
 def gen_properties(file_path):

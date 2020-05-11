@@ -103,7 +103,7 @@ with open(diagram_path + "IUDX-Vocab-Ontology.txt", "w+") as text_file:
                                 pass
         else:
             print("@graph missing in " + filename)
-    
+    #filename = "../../generated/Resource.jsonld"
     for filename in glob.glob(os.path.join(folder_path, '*.jsonld')):
         with open(filename, "r+") as obj_file:
              obj = json.load(obj_file)
