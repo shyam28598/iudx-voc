@@ -1,0 +1,81 @@
+{
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://iudx.org.in/voc/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    },
+    "@graph": [
+        {
+            "rdfs:comment": "Describes information on accessing data from a given resource.",
+            "rdfs:label": "AccessObjectInfoValue",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:StructuredValue"
+            },
+            "@id": "iudx:AccessObjectInfoValue",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ]
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AccessObjectInfoValue"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@type": "@id",
+                    "@id": "xsd:string"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ],
+            "@id": "iudx:accessObject",
+            "rdfs:comment": "Link to the access object. For example, an open API object.",
+            "rdfs:label": "accessObject",
+            "@type": "iudx:Relationship"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AccessObjectInfoValue"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:string"
+                }
+            ],
+            "@id": "iudx:accessObjectType",
+            "rdfs:comment": "Type of access object (OpenAPI, AsyncAPI etc.)",
+            "rdfs:label": "accessObjectType",
+            "@type": "iudx:TextProperty"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AccessObjectInfoValue"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@type": "@id",
+                    "@id": "xsd:string"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ],
+            "@id": "iudx:additionalInfoURL",
+            "rdfs:comment": "urn pointing to the resourceServer entity",
+            "rdfs:label": "additionalInfoURL",
+            "@type": "iudx:Relationship"
+        }
+    ]
+}

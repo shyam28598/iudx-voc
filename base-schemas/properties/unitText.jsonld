@@ -1,16 +1,26 @@
 {
     "@context": {
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "owl": "http://www.w3.org/2002/07/owl#",
         "iudx": "https://iudx.org.in/voc/",
-        "geojson": "https://purl.org/geojson/vocab#",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "geojson": "https://purl.org/geojson/vocab#",
         "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#"
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
+            "@id": "iudx:unitText",
+            "@type": [
+                "rdf:Property",
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Describes the unit of measurement. Useful if unitCode is not available.",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:label": "unitText",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:QuantitativeValue"
@@ -26,14 +36,7 @@
             ],
             "skos:exactMatch": {
                 "@id": "schema:unitText"
-            },
-            "rdfs:comment": "Describes the unit of measurement. Useful if unitCode is not available.",
-            "rdfs:label": "unitText",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
-            "@type": "iudx:TextProperty",
-            "@id": "iudx:unitText"
+            }
         }
     ]
 }

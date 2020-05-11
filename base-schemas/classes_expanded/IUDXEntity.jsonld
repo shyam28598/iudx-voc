@@ -1,0 +1,110 @@
+{
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://iudx.org.in/voc/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    },
+    "@graph": [
+        {
+            "rdfs:comment": "Class of all IUDX Entities (Resource, ResourceServer, Provider etc.)",
+            "rdfs:label": "IUDXEntity",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:Thing"
+            },
+            "@id": "iudx:IUDXEntity",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ]
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:IUDXEntity"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "schema:DateTime"
+                },
+                {
+                    "@id": "xsd:DateTime"
+                }
+            ],
+            "@id": "iudx:itemDeprecatedAt",
+            "rdfs:comment": "DateTime of deprecation of a catalogue item.",
+            "rdfs:label": "itemDeprecatedAt",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:TimeProperty"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:IUDXEntity"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "schema:DateTime"
+                },
+                {
+                    "@id": "xsd:DateTime"
+                }
+            ],
+            "@id": "iudx:itemCreatedAt",
+            "rdfs:comment": "DateTime of creation of a catalogue item.",
+            "rdfs:label": "itemCreatedAt",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:TimeProperty"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:IUDXEntity"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "schema:DateTime"
+                },
+                {
+                    "@id": "xsd:DateTime"
+                }
+            ],
+            "@id": "iudx:itemModifiedAt",
+            "rdfs:comment": "DateTime of modification of a catalogue item.",
+            "rdfs:label": "itemModifiedAt",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:TimeProperty"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:IUDXEntity"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:string"
+                }
+            ],
+            "@id": "iudx:itemStatus",
+            "rdfs:comment": "Status of a catalouge item. ENUM: [ACTIVE, DEPRECATED].",
+            "rdfs:label": "itemStatus",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:TextProperty"
+        }
+    ]
+}

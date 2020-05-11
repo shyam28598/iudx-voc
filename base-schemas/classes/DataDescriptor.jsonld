@@ -1,9 +1,9 @@
 {
     "@context": {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "owl": "http://www.w3.org/2002/07/owl#",
         "iudx": "https://iudx.org.in/voc/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@graph": [
         {
@@ -14,11 +14,11 @@
             ],
             "rdfs:comment": "Describes the Data Descriptor Object in the IUDX catalogue. It provides meta-information about various data fields associated with a resource.",
             "rdfs:label": "DataDescriptor",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "rdfs:subClassOf": {
                 "@id": "iudx:IUDXEntity"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
             }
         }
     ]

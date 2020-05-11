@@ -1,13 +1,20 @@
 {
     "@context": {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "iudx": "https://iudx.org.in/voc/",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
+            "@id": "iudx:accessObject",
+            "@type": [
+                "rdf:Property",
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "Link to the access object. For example, an open API object.",
+            "rdfs:label": "accessObject",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:AccessObjectInfoValue"
@@ -15,17 +22,13 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@type": "@id",
-                    "@id": "xsd:string"
+                    "@id": "xsd:string",
+                    "@type": "@id"
                 },
                 {
                     "@id": "iudx:RelationshipValue"
                 }
-            ],
-            "@id": "iudx:accessObject",
-            "rdfs:comment": "Link to the access object. For example, an open API object.",
-            "rdfs:label": "accessObject",
-            "@type": "iudx:Relationship"
+            ]
         }
     ]
 }

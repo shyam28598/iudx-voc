@@ -1,15 +1,20 @@
 {
     "@context": {
-        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "iudx": "https://iudx.org.in/voc/",
         "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "geojson": "https://purl.org/geojson/vocab#",
         "schema": "http://schema.org/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "iudx": "https://iudx.org.in/voc/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@graph": [
         {
+            "@id": "iudx:LineString",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
             "rdfs:comment": "Describes the GeoJSON LineString",
             "rdfs:label": "LineString",
             "rdfs:isDefinedBy": {
@@ -18,11 +23,6 @@
             "rdfs:subClassOf": {
                 "@id": "iudx:GeoJSONGeometry"
             },
-            "@id": "iudx:LineString",
-            "@type": [
-                "owl:Class",
-                "rdfs:Class"
-            ],
             "skos:exactMatch": {
                 "@id": "geojson:LineString"
             }

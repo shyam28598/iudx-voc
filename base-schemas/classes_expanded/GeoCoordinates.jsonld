@@ -1,0 +1,89 @@
+{
+    "@context": {
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://iudx.org.in/voc/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@graph": [
+        {
+            "rdfs:comment": {
+                "@value": "Geo coordinates in Latitude and Longitude for a given place. The Lat/Long values are in WGS84 notation"
+            },
+            "rdfs:label": "GeoCoordinates",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:StructuredValue"
+            },
+            "@id": "iudx:GeoCoordinates",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:GeoCoordinates"
+            }
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:GeoCoordinates"
+                },
+                {
+                    "@id": "iudx:Place"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:decimal"
+                },
+                {
+                    "@id": "xsd:string"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:longitude"
+            },
+            "rdfs:comment": "Longitude of a place. Specified in WGS 84 CRS (https://en.wikipedia.org/wiki/World_Geodetic_System)",
+            "rdfs:label": "longitude",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:GeoProperty",
+            "@id": "iudx:longitude"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:GeoCoordinates"
+                },
+                {
+                    "@id": "iudx:Place"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:decimal"
+                },
+                {
+                    "@id": "xsd:string"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:latitude"
+            },
+            "rdfs:comment": "Latitude of a place. Specified in WGS 84 CRS (https://en.wikipedia.org/wiki/World_Geodetic_System)",
+            "rdfs:label": "latitude",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:GeoProperty",
+            "@id": "iudx:latitude"
+        }
+    ]
+}

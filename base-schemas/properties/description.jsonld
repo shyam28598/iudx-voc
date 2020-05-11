@@ -1,13 +1,23 @@
 {
     "@context": {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "iudx": "https://iudx.org.in/voc/",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
+            "@id": "iudx:description",
+            "@type": [
+                "rdf:Property",
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Description for an IUDX thing.",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:label": "description",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Thing"
@@ -17,14 +27,7 @@
                 {
                     "@id": "xsd:string"
                 }
-            ],
-            "@id": "iudx:description",
-            "rdfs:comment": "Description for an IUDX thing.",
-            "rdfs:label": "description",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
-            "@type": "iudx:TextProperty"
+            ]
         }
     ]
 }

@@ -1,0 +1,82 @@
+{
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://iudx.org.in/voc/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    },
+    "@graph": [
+        {
+            "rdfs:comment": "Description of a function associated in computation of a quanitative value.",
+            "rdfs:label": "FunctionDescription",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:Intangible"
+            },
+            "@id": "iudx:FunctionDescription",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ]
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:FunctionDescription"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@container": "@list",
+                    "@id": "xsd:string"
+                }
+            ],
+            "@id": "iudx:functionParameters",
+            "rdfs:comment": "List of parameters associated with a function.",
+            "rdfs:label": "functionParameters",
+            "@type": "iudx:TextProperty"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Place"
+                },
+                {
+                    "@id": "iudx:Organization"
+                },
+                {
+                    "@id": "iudx:ResourceServer"
+                },
+                {
+                    "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:Provider"
+                },
+                {
+                    "@id": "iudx:FunctionDescription"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:decimal"
+                },
+                {
+                    "@id": "xsd:string"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:name"
+            },
+            "rdfs:comment": "Name of the entity.",
+            "rdfs:label": "name",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:TextProperty",
+            "@id": "iudx:name"
+        }
+    ]
+}

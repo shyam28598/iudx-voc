@@ -1,0 +1,216 @@
+{
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://iudx.org.in/voc/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    },
+    "@graph": [
+        {
+            "rdfs:comment": "Describes the value of a Quantitative Property",
+            "rdfs:label": "QuantitativeValue",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:StructuredValue"
+            },
+            "@id": "iudx:QuantitativeValue",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ]
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:QuantitativeValue"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:FunctionDescription"
+                }
+            ],
+            "@id": "iudx:hasFunction",
+            "rdfs:comment": "Links a given property/characterstic to a given compute function and specific input parameters.",
+            "rdfs:label": "hasFunction",
+            "@type": "iudx:StructuredProperty"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ValueDescriptor"
+                },
+                {
+                    "@id": "iudx:QuantitativeValue"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@type": "@id",
+                    "@id": "xsd:string"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:sameAs"
+            },
+            "rdfs:comment": "URL reference to another thing/entity that identifies the given thing/entity. This may be used to provide references to another data models where a property is described or say a reference to Wiki pages for a given thing etc.",
+            "rdfs:label": "sameAs",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:TextProperty",
+            "@id": "iudx:sameAs"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:QuantitativeValue"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:maxValue"
+            },
+            "rdfs:comment": "Associated maximum value of a property.",
+            "rdfs:label": "maxValue",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:TextProperty",
+            "@id": "iudx:maxValue"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:QuantitativeValue"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:string"
+                },
+                {
+                    "@type": "@id",
+                    "@id": "xsd:string"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:unitCode"
+            },
+            "rdfs:comment": "The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes/unit vocabularies may be used with a prefix",
+            "rdfs:label": "unitCode",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:TextProperty",
+            "@id": "iudx:unitCode"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:QuantitativeValue"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:decimal"
+                }
+            ],
+            "@id": "iudx:durationInHours",
+            "rdfs:comment": "Specifies the duration of an interval in Hours.",
+            "rdfs:label": "durationInHours",
+            "@type": "iudx:StructuredProperty"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:QuantitativeValue"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:minValue"
+            },
+            "rdfs:comment": "Associated minimum value of a property.",
+            "rdfs:label": "minValue",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:TextProperty",
+            "@id": "iudx:minValue"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:QuantitativeValue"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:string"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:unitText"
+            },
+            "rdfs:comment": "Describes the unit of measurement. Useful if unitCode is not available.",
+            "rdfs:label": "unitText",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:TextProperty",
+            "@id": "iudx:unitText"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:QuantitativeValue"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@type": "@id",
+                    "@id": "xsd:string"
+                }
+            ],
+            "@id": "iudx:dataType",
+            "rdfs:comment": "Associated data type. Specified as an URI (linking it to one of the known data type vocabulary, e.g., xsd)",
+            "rdfs:label": "dataType",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:TextProperty"
+        }
+    ]
+}

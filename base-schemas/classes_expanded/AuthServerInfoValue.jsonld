@@ -1,0 +1,61 @@
+{
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://iudx.org.in/voc/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    },
+    "@graph": [
+        {
+            "rdfs:comment": "Describes information about the IUDX Authorization Server for a given resource.",
+            "rdfs:label": "AuthServerInfoValue",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:StructuredValue"
+            },
+            "@id": "iudx:AuthServerInfoValue",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ]
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AuthServerInfoValue"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@type": "@id",
+                    "@id": "xsd:string"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ],
+            "@id": "iudx:authServerURL",
+            "rdfs:comment": "URL of the IUDX authorization server used for a given resource.",
+            "rdfs:label": "authServerURL",
+            "@type": "iudx:Relationship"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AuthServerInfoValue"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:string"
+                }
+            ],
+            "@id": "iudx:authType",
+            "rdfs:comment": "Identification of the auth scheme used for a given resource.",
+            "rdfs:label": "authType",
+            "@type": "iudx:TextProperty"
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "@context": {
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://iudx.org.in/voc/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@graph": [
+        {
+            "rdfs:comment": "Describes the GeoJSON Feature",
+            "rdfs:label": "Feature",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:GeoJSONGeometry"
+            },
+            "@id": "iudx:Feature",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class",
+                "iudx:GeoJSONGeometry"
+            ],
+            "skos:exactMatch": {
+                "@id": "geojson:Feature"
+            }
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Feature"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Point"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "geojson:geometry"
+            },
+            "rdfs:comment": {
+                "@value": "Geometry property in a GeoJSON object"
+            },
+            "rdfs:label": "geometry",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:GeoProperty",
+            "@id": "iudx:geometry"
+        }
+    ]
+}

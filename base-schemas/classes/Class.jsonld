@@ -1,25 +1,25 @@
 {
     "@context": {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "owl": "http://www.w3.org/2002/07/owl#",
         "iudx": "https://iudx.org.in/voc/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@graph": [
         {
-            "iudx:isPartOf": {
-                "@id": "https://iudx.org.in/voc/meta"
+            "@id": "iudx:Class",
+            "@type": "rdfs:Class",
+            "owl:equivalentClass": {
+                "@id": "rdfs:Class"
             },
             "rdfs:comment": "A class, also often called a 'Type'; equivalent to rdfs:Class.",
             "rdfs:label": "Class",
             "rdfs:subClassOf": {
                 "@id": "iudx:Intangible"
             },
-            "@id": "iudx:Class",
-            "owl:equivalentClass": {
-                "@id": "rdfs:Class"
-            },
-            "@type": "rdfs:Class"
+            "iudx:isPartOf": {
+                "@id": "https://iudx.org.in/voc/meta"
+            }
         }
     ]
 }

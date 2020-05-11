@@ -1,0 +1,102 @@
+{
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://iudx.org.in/voc/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    },
+    "@graph": [
+        {
+            "rdfs:comment": "Describes the Provider entry in the IUDX catalogue.",
+            "rdfs:label": "Provider",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:IUDXEntity"
+            },
+            "@id": "iudx:Provider",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ]
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Resource"
+                },
+                {
+                    "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:Provider"
+                },
+                {
+                    "@id": "iudx:ResourceServer"
+                },
+                {
+                    "@id": "iudx:EnvAQM"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Place"
+                },
+                {
+                    "@id": "xsd:String"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:location"
+            },
+            "rdfs:comment": "Location associated with a resource Item (a spatial point), a group of resource items (a spatial region) or even an observation in case of a mobile sensor.",
+            "rdfs:label": "location",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:GeoProperty",
+            "@id": "iudx:location"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Place"
+                },
+                {
+                    "@id": "iudx:Organization"
+                },
+                {
+                    "@id": "iudx:ResourceServer"
+                },
+                {
+                    "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:Provider"
+                },
+                {
+                    "@id": "iudx:FunctionDescription"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:decimal"
+                },
+                {
+                    "@id": "xsd:string"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:name"
+            },
+            "rdfs:comment": "Name of the entity.",
+            "rdfs:label": "name",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:TextProperty",
+            "@id": "iudx:name"
+        }
+    ]
+}
