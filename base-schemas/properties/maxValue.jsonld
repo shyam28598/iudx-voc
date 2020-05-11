@@ -1,39 +1,38 @@
 {
     "@context": {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "iudx": "https://iudx.org.in/voc/",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
-    },
+        "owl": "http://www.w3.org/2002/07/owl#", 
+        "xsd": "http://www.w3.org/2001/XMLSchema#", 
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#", 
+        "geojson": "https://purl.org/geojson/vocab#", 
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#", 
+        "iudx": "https://iudx.org.in/voc/", 
+        "skos": "http://www.w3.org/2004/02/skos/core#", 
+        "schema": "http://schema.org/"
+    }, 
     "@graph": [
         {
-            "@id": "iudx:maxValue",
+            "@id": "iudx:maxValue", 
             "@type": [
-                "rdf:Property",
                 "iudx:TextProperty"
-            ],
-            "rdfs:comment": "Associated maximum value of a property.",
-            "rdfs:label": "maxValue",
+            ], 
+            "rdfs:comment": "Associated maximum value of a property.", 
+            "rdfs:label": "maxValue", 
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:QuantitativeValue"
-                },
+                }, 
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
+            ], 
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Number"
                 }
-            ],
+            ], 
             "skos:exactMatch": {
                 "@id": "schema:maxValue"
-            },
+            }, 
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             }

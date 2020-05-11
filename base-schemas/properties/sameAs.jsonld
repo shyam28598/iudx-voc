@@ -1,39 +1,39 @@
 {
     "@context": {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "iudx": "https://iudx.org.in/voc/",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
-    },
+        "owl": "http://www.w3.org/2002/07/owl#", 
+        "xsd": "http://www.w3.org/2001/XMLSchema#", 
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#", 
+        "geojson": "https://purl.org/geojson/vocab#", 
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#", 
+        "iudx": "https://iudx.org.in/voc/", 
+        "skos": "http://www.w3.org/2004/02/skos/core#", 
+        "schema": "http://schema.org/"
+    }, 
     "@graph": [
         {
-            "@id": "iudx:sameAs",
+            "@id": "iudx:sameAs", 
             "@type": [
                 "iudx:TextProperty"
-            ],
-            "rdfs:comment": "URL reference to another thing/entity that identifies the given thing/entity. This may be used to provide references to another data models where a property is described or say a reference to Wiki pages for a given thing etc.",
-            "rdfs:label": "sameAs",
+            ], 
+            "rdfs:comment": "URL reference to another thing/entity that identifies the given thing/entity. This may be used to provide references to another data models where a property is described or say a reference to Wiki pages for a given thing etc.", 
+            "rdfs:label": "sameAs", 
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:ValueDescriptor"
-                },
+                }, 
                 {
                     "@id": "iudx:QuantitativeValue"
                 }
-            ],
+            ], 
             "iudx:rangeIncludes": [
                 {
-                    "@type": "@id",
-                    "@id": "xsd:string"
+                    "@id": "xsd:string", 
+                    "@type": "@id"
                 }
-            ],
+            ], 
             "skos:exactMatch": {
                 "@id": "schema:sameAs"
-            },
+            }, 
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             }

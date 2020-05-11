@@ -1,30 +1,29 @@
 {
     "@context": {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "iudx": "https://iudx.org.in/voc/"
-    },
+        "owl": "http://www.w3.org/2002/07/owl#", 
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#", 
+        "iudx": "https://iudx.org.in/voc/", 
+        "xsd": "http://www.w3.org/2001/XMLSchema#", 
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    }, 
     "@graph": [
         {
-            "@id": "iudx:resourceServerHTTPAccessURL",
+            "@id": "iudx:resourceServerHTTPAccessURL", 
             "@type": [
-                "rdf:Property",
                 "iudx:Relationship"
-            ],
-            "rdfs:comment": "Resource Server URL for data access based on HTTP/REST APIs",
-            "rdfs:label": "resourceServerHTTPAccessURL",
+            ], 
+            "rdfs:comment": "Resource Server URL for data access based on HTTP/REST APIs", 
+            "rdfs:label": "resourceServerHTTPAccessURL", 
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:ResourceServer"
                 }
-            ],
+            ], 
             "iudx:rangeIncludes": [
                 {
-                    "@type": "@id",
-                    "@id": "xsd:string"
-                },
+                    "@id": "xsd:string", 
+                    "@type": "@id"
+                }, 
                 {
                     "@id": "iudx:RelationshipValue"
                 }

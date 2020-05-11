@@ -1,54 +1,53 @@
 {
     "@context": {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "iudx": "https://iudx.org.in/voc/",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
-    },
+        "owl": "http://www.w3.org/2002/07/owl#", 
+        "xsd": "http://www.w3.org/2001/XMLSchema#", 
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#", 
+        "geojson": "https://purl.org/geojson/vocab#", 
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#", 
+        "iudx": "https://iudx.org.in/voc/", 
+        "skos": "http://www.w3.org/2004/02/skos/core#", 
+        "schema": "http://schema.org/"
+    }, 
     "@graph": [
         {
-            "@id": "iudx:name",
+            "@id": "iudx:name", 
             "@type": [
-                "rdf:Property",
                 "iudx:TextProperty"
-            ],
-            "rdfs:comment": "Name of the entity.",
-            "rdfs:label": "name",
+            ], 
+            "rdfs:comment": "Name of the entity.", 
+            "rdfs:label": "name", 
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Place"
-                },
+                }, 
                 {
                     "@id": "iudx:Organization"
-                },
+                }, 
                 {
                     "@id": "iudx:ResourceServer"
-                },
+                }, 
                 {
                     "@id": "iudx:ResourceGroup"
-                },
+                }, 
                 {
                     "@id": "iudx:Provider"
-                },
+                }, 
                 {
                     "@id": "iudx:FunctionDescription"
                 }
-            ],
+            ], 
             "iudx:rangeIncludes": [
                 {
                     "@id": "xsd:decimal"
-                },
+                }, 
                 {
                     "@id": "xsd:string"
                 }
-            ],
+            ], 
             "skos:exactMatch": {
                 "@id": "schema:name"
-            },
+            }, 
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             }

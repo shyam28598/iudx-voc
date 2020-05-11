@@ -1,31 +1,30 @@
 {
     "@context": {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "iudx": "https://iudx.org.in/voc/"
-    },
+        "owl": "http://www.w3.org/2002/07/owl#", 
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#", 
+        "iudx": "https://iudx.org.in/voc/", 
+        "xsd": "http://www.w3.org/2001/XMLSchema#", 
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    }, 
     "@graph": [
         {
-            "@id": "iudx:iudxResourceAPIs",
+            "@id": "iudx:iudxResourceAPIs", 
             "@type": [
-                "rdf:Property",
                 "iudx:TextProperty"
-            ],
-            "rdfs:comment": "The set of IUDX resource APIs supported by a given resource. Array of multiple strings with values from the set: [TEMPORAL, SPATIAL, ATTR, TEXT]",
-            "rdfs:label": "iudxResourceAPIs",
+            ], 
+            "rdfs:comment": "The set of IUDX resource APIs supported by a given resource. Array of multiple strings with values from the set: [TEMPORAL, SPATIAL, ATTR, TEXT]", 
+            "rdfs:label": "iudxResourceAPIs", 
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:ResourceGroup"
                 }
-            ],
+            ], 
             "iudx:rangeIncludes": [
                 {
-                    "@container": "@set",
-                    "@id": "xsd:string"
+                    "@id": "xsd:string", 
+                    "@container": "@set"
                 }
-            ],
+            ], 
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             }

@@ -1,29 +1,28 @@
 {
     "@context": {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "iudx": "https://iudx.org.in/voc/"
-    },
+        "owl": "http://www.w3.org/2002/07/owl#", 
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#", 
+        "iudx": "https://iudx.org.in/voc/", 
+        "xsd": "http://www.w3.org/2001/XMLSchema#", 
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    }, 
     "@graph": [
         {
-            "@id": "iudx:functionParameters",
+            "@id": "iudx:functionParameters", 
             "@type": [
-                "rdf:Property",
                 "iudx:TextProperty"
-            ],
-            "rdfs:comment": "List of parameters associated with a function.",
-            "rdfs:label": "functionParameters",
+            ], 
+            "rdfs:comment": "List of parameters associated with a function.", 
+            "rdfs:label": "functionParameters", 
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:FunctionDescription"
                 }
-            ],
+            ], 
             "iudx:rangeIncludes": [
                 {
-                    "@container": "@list",
-                    "@id": "xsd:string"
+                    "@id": "xsd:string", 
+                    "@container": "@list"
                 }
             ]
         }
