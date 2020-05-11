@@ -13,7 +13,9 @@ diagram_path = "../../diagrams/"
 dup_classes = []
 with open(diagram_path + "IUDX-Vocab-Ontology.txt", "w+") as text_file:
     print("@startuml", file=text_file)
-    print("title IUDX-VOC Ontology Diagram" + "\n", file=text_file)
+    print("title IUDX-VOC Ontology Diagram", file=text_file)
+    print("skinparam titleFontSize 30", file=text_file)
+    print("skinparam titleFontColor DarkGoldenRod" + "\n", file=text_file)
     print("left to right direction" + "\n" + "skinparam classFontColor DarkCyan" + "\n" + "skinparam roundcorner 27" + "\n", file=text_file)
     
 
