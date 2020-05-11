@@ -1,13 +1,20 @@
 {
     "@context": {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "iudx": "https://iudx.org.in/voc/",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
+            "@id": "iudx:authServerURL",
+            "@type": [
+                "rdf:Property",
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "URL of the IUDX authorization server used for a given resource.",
+            "rdfs:label": "authServerURL",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:AuthServerInfoValue"
@@ -15,17 +22,13 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@type": "@id",
-                    "@id": "xsd:string"
+                    "@id": "xsd:string",
+                    "@type": "@id"
                 },
                 {
                     "@id": "iudx:RelationshipValue"
                 }
-            ],
-            "@id": "iudx:authServerURL",
-            "rdfs:comment": "URL of the IUDX authorization server used for a given resource.",
-            "rdfs:label": "authServerURL",
-            "@type": "iudx:Relationship"
+            ]
         }
     ]
 }

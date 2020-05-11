@@ -1,0 +1,229 @@
+{
+    "@context": {
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://iudx.org.in/voc/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@graph": [
+        {
+            "rdfs:comment": "Describes fixed location for various entities. The places can be described using geo-Coordinates (points, polgons, bboxes etc.) , structured form of addresses or simple address strings.",
+            "rdfs:label": "Place",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:Thing"
+            },
+            "@id": "iudx:Place",
+            "skos:closeMatch": {
+                "@id": "schema:Place"
+            },
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ]
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Place"
+                },
+                {
+                    "@id": "iudx:Organization"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:string"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:address"
+            },
+            "rdfs:comment": "Physical address of a place.",
+            "rdfs:label": "address",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:GeoProperty",
+            "@id": "iudx:address"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Place"
+                },
+                {
+                    "@id": "iudx:Resource"
+                },
+                {
+                    "@id": "iudx:ResourceGroup"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:GeoJSONGeometry"
+                },
+                {
+                    "@id": "iudx:Place"
+                }
+            ],
+            "@id": "iudx:geoCovers",
+            "rdfs:comment": "Represents the coverage relationship between two geometries/places.",
+            "rdfs:label": "geoCovers",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:GeoProperty"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:GeoCoordinates"
+                },
+                {
+                    "@id": "iudx:Place"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:decimal"
+                },
+                {
+                    "@id": "xsd:string"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:longitude"
+            },
+            "rdfs:comment": "Longitude of a place. Specified in WGS 84 CRS (https://en.wikipedia.org/wiki/World_Geodetic_System)",
+            "rdfs:label": "longitude",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:GeoProperty",
+            "@id": "iudx:longitude"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Place"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:GeoCoordinates"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:geo"
+            },
+            "rdfs:comment": {
+                "@value": "Geo-coordinates of a place specified in terms of latitude and longitude."
+            },
+            "rdfs:label": "geo",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:GeoProperty",
+            "@id": "iudx:geo"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Place"
+                },
+                {
+                    "@id": "iudx:Resource"
+                },
+                {
+                    "@id": "iudx:ResourceGroup"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:GeoJSONGeometry"
+                }
+            ],
+            "@id": "iudx:geoJSON",
+            "rdfs:comment": "Geo-coordinates of a place specified in GeoJSON format.",
+            "rdfs:label": "geoJSON",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:GeoProperty"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:GeoCoordinates"
+                },
+                {
+                    "@id": "iudx:Place"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:decimal"
+                },
+                {
+                    "@id": "xsd:string"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:latitude"
+            },
+            "rdfs:comment": "Latitude of a place. Specified in WGS 84 CRS (https://en.wikipedia.org/wiki/World_Geodetic_System)",
+            "rdfs:label": "latitude",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:GeoProperty",
+            "@id": "iudx:latitude"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Place"
+                },
+                {
+                    "@id": "iudx:Organization"
+                },
+                {
+                    "@id": "iudx:ResourceServer"
+                },
+                {
+                    "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:Provider"
+                },
+                {
+                    "@id": "iudx:FunctionDescription"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "xsd:decimal"
+                },
+                {
+                    "@id": "xsd:string"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:name"
+            },
+            "rdfs:comment": "Name of the entity.",
+            "rdfs:label": "name",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:TextProperty",
+            "@id": "iudx:name"
+        }
+    ]
+}

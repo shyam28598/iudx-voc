@@ -1,13 +1,20 @@
 {
     "@context": {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "iudx": "https://iudx.org.in/voc/",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
+            "@id": "iudx:hasFunction",
+            "@type": [
+                "rdf:Property",
+                "iudx:StructuredProperty"
+            ],
+            "rdfs:comment": "Links a given property/characterstic to a given compute function and specific input parameters.",
+            "rdfs:label": "hasFunction",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:QuantitativeValue"
@@ -20,11 +27,7 @@
                 {
                     "@id": "iudx:FunctionDescription"
                 }
-            ],
-            "@id": "iudx:hasFunction",
-            "rdfs:comment": "Links a given property/characterstic to a given compute function and specific input parameters.",
-            "rdfs:label": "hasFunction",
-            "@type": "iudx:StructuredProperty"
+            ]
         }
     ]
 }

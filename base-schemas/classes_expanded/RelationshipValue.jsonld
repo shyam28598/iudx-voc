@@ -1,0 +1,47 @@
+{
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://iudx.org.in/voc/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    },
+    "@graph": [
+        {
+            "rdfs:comment": "Describes the value of a Relationship Object.",
+            "rdfs:label": "RelationshipValue",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:StructuredValue"
+            },
+            "@id": "iudx:RelationshipValue",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ]
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@type": "@id",
+                    "@id": "xsd:string"
+                },
+                {
+                    "@container": "@set",
+                    "@type": "@id",
+                    "@id": "xsd:string"
+                }
+            ],
+            "@id": "iudx:hasObject",
+            "rdfs:comment": "Value associated with RelationshipValue class. Contains IRI(s) that specify the relationship object(s).",
+            "rdfs:label": "hasObject",
+            "@type": "iudx:TextProperty"
+        }
+    ]
+}

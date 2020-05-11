@@ -1,0 +1,201 @@
+{
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://iudx.org.in/voc/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    },
+    "@graph": [
+        {
+            "rdfs:comment": "Describes the Resource entry in the IUDX catalogue.",
+            "rdfs:label": "Resource",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:IUDXEntity"
+            },
+            "@id": "iudx:Resource",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ]
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Resource"
+                },
+                {
+                    "@id": "iudx:ResourceGroup"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@type": "@id",
+                    "@id": "xsd:string"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ],
+            "@id": "iudx:hasResourceServer",
+            "rdfs:comment": "urn pointing to the resourceServer entity",
+            "rdfs:label": "hasResourceServer",
+            "@type": "iudx:Relationship"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Place"
+                },
+                {
+                    "@id": "iudx:Resource"
+                },
+                {
+                    "@id": "iudx:ResourceGroup"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:GeoJSONGeometry"
+                },
+                {
+                    "@id": "iudx:Place"
+                }
+            ],
+            "@id": "iudx:geoCovers",
+            "rdfs:comment": "Represents the coverage relationship between two geometries/places.",
+            "rdfs:label": "geoCovers",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:GeoProperty"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Resource"
+                },
+                {
+                    "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:Provider"
+                },
+                {
+                    "@id": "iudx:ResourceServer"
+                },
+                {
+                    "@id": "iudx:EnvAQM"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Place"
+                },
+                {
+                    "@id": "xsd:String"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:location"
+            },
+            "rdfs:comment": "Location associated with a resource Item (a spatial point), a group of resource items (a spatial region) or even an observation in case of a mobile sensor.",
+            "rdfs:label": "location",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:GeoProperty",
+            "@id": "iudx:location"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Place"
+                },
+                {
+                    "@id": "iudx:Resource"
+                },
+                {
+                    "@id": "iudx:ResourceGroup"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:GeoJSONGeometry"
+                }
+            ],
+            "@id": "iudx:geoJSON",
+            "rdfs:comment": "Geo-coordinates of a place specified in GeoJSON format.",
+            "rdfs:label": "geoJSON",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "@type": "iudx:GeoProperty"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Resource"
+                },
+                {
+                    "@id": "iudx:ResourceGroup"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@type": "@id",
+                    "@id": "xsd:string"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ],
+            "@id": "iudx:hasProvider",
+            "rdfs:comment": "URN pointing to the provider entity associated with the given catalogue item",
+            "rdfs:label": "hasProvider",
+            "@type": "iudx:Relationship"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Resource"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@type": "@id",
+                    "@id": "xsd:string"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ],
+            "@id": "iudx:hasResourceGroup",
+            "rdfs:comment": "urn pointing to the resourceGroup entity",
+            "rdfs:label": "hasResourceGroup",
+            "@type": "iudx:Relationship"
+        },
+        {
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Resource"
+                },
+                {
+                    "@id": "iudx:ResourceGroup"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@container": "@set",
+                    "@id": "xsd:string"
+                }
+            ],
+            "@id": "iudx:tags",
+            "rdfs:comment": "Discovery tags associated with items (resource item, resource Group item, data models) in IUDX catalogue",
+            "rdfs:label": "tags",
+            "@type": "iudx:TextProperty"
+        }
+    ]
+}
