@@ -1,9 +1,9 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
-        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://iudx.org.in/voc/"
     },
     "@graph": [
         {
@@ -12,8 +12,8 @@
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:label": "StructuredProperty",
             "rdfs:comment": "Describes the class of all properties in IUDX that have a complex JSON structures and cannot be described using simple strings and native data types.",
+            "rdfs:label": "StructuredProperty",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },

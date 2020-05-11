@@ -1,9 +1,9 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
-        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://iudx.org.in/voc/"
     },
     "@graph": [
         {
@@ -14,11 +14,11 @@
             ],
             "rdfs:comment": "Describes the Resource Group entry in the IUDX catalogue.",
             "rdfs:label": "ResourceGroup",
-            "rdfs:subClassOf": {
-                "@id": "iudx:IUDXEntity"
-            },
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:IUDXEntity"
             }
         }
     ]

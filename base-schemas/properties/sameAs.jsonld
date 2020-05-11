@@ -1,12 +1,12 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://iudx.org.in/voc/",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
@@ -16,9 +16,6 @@
                 "iudx:TextProperty"
             ],
             "rdfs:comment": "URL reference to another thing/entity that identifies the given thing/entity. This may be used to provide references to another data models where a property is described or say a reference to Wiki pages for a given thing etc.",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "rdfs:label": "sameAs",
             "iudx:domainIncludes": [
                 {
@@ -30,12 +27,15 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "xsd:string",
-                    "@type": "@id"
+                    "@type": "@id",
+                    "@id": "xsd:string"
                 }
             ],
             "skos:exactMatch": {
                 "@id": "schema:sameAs"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
             }
         }
     ]

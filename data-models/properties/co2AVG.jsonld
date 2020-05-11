@@ -2,22 +2,26 @@
     "@context": {
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "schema": "http://schema.org/",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "iudx": "https://iudx.org.in/voc/",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "rdfs:comment": "Describes average value of CO2 over a set of observations in past.",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "@id": "iudx:co2AVG",
-            "@type": "iudx:QuantitativeProperty",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes average value of CO2 over a set of observations in past.",
             "rdfs:label": "co2AVG",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                }
+            ],
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Number"
@@ -26,11 +30,9 @@
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
-            "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:EnvAQM"
-                }
-            ]
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }

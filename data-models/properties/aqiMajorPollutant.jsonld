@@ -2,21 +2,26 @@
     "@context": {
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "schema": "http://schema.org/",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "iudx": "https://iudx.org.in/voc/",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "rdfs:comment": "Major pollutant in the Air Quality Index (AQI).",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "@id": "iudx:aqiMajorPollutant",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Major pollutant in the Air Quality Index (AQI).",
             "rdfs:label": "aqiMajorPollutant",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                }
+            ],
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Text"
@@ -25,12 +30,9 @@
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
-            "@type": "iudx:TextProperty",
-            "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:EnvAQM"
-                }
-            ]
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }

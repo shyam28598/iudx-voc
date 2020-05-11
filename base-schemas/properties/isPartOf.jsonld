@@ -1,21 +1,20 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://iudx.org.in/voc/",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
             "@id": "iudx:isPartOf",
-            "@type": "rdf:Property",
+            "@type": [
+                "rdf:Property"
+            ],
             "rdfs:comment": "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.",
             "rdfs:label": "isPartOf",
-            "schema:domainIncludes": {
-                "@id": "schema:CreativeWork"
-            },
             "schema:inverseOf": {
                 "@id": "schema:hasPart"
             },
@@ -26,7 +25,10 @@
                 {
                     "@id": "schema:URL"
                 }
-            ]
+            ],
+            "schema:domainIncludes": {
+                "@id": "schema:CreativeWork"
+            }
         }
     ]
 }

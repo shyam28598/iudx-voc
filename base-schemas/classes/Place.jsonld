@@ -1,12 +1,12 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "geojson": "https://purl.org/geojson/vocab#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://iudx.org.in/voc/",
+        "geojson": "https://purl.org/geojson/vocab#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
         {
@@ -20,11 +20,11 @@
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
-            "rdfs:subClassOf": {
-                "@id": "iudx:Thing"
-            },
             "skos:closeMatch": {
                 "@id": "schema:Place"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:Thing"
             }
         }
     ]

@@ -1,10 +1,10 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "iudx": "https://iudx.org.in/voc/"
     },
     "@graph": [
         {
@@ -14,9 +14,6 @@
                 "iudx:TextProperty"
             ],
             "rdfs:comment": "The set of IUDX resource APIs supported by a given resource. Array of multiple strings with values from the set: [TEMPORAL, SPATIAL, ATTR, TEXT]",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "rdfs:label": "iudxResourceAPIs",
             "iudx:domainIncludes": [
                 {
@@ -25,10 +22,13 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "xsd:string",
-                    "@container": "@set"
+                    "@container": "@set",
+                    "@id": "xsd:string"
                 }
-            ]
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }
