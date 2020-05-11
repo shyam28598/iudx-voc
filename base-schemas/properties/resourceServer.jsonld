@@ -8,12 +8,12 @@
     }, 
     "@graph": [
         {
-            "@id": "iudx:hasResourceServer", 
+            "@id": "iudx:resourceServer", 
             "@type": [
                 "iudx:Relationship"
             ], 
-            "rdfs:comment": "urn pointing to the resourceServer entity", 
-            "rdfs:label": "hasResourceServer", 
+            "rdfs:comment": "IRI pointing to the ResourceServer entity for a given Resource or ResourceGroup.", 
+            "rdfs:label": "resourceServer", 
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Resource"

@@ -8,16 +8,13 @@
     }, 
     "@graph": [
         {
-            "@id": "iudx:hasDataModel", 
+            "@id": "iudx:resourceGroup",
             "@type": [
                 "iudx:Relationship"
             ], 
-            "rdfs:comment": "urn pointing to the data-model entity", 
-            "rdfs:label": "hasDataModel", 
+            "rdfs:comment": "IRI pointing to the resourceGroup entity associated with the resource.", 
+            "rdfs:label": "resourceGroup", 
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:ResourceGroup"
-                }, 
                 {
                     "@id": "iudx:Resource"
                 }

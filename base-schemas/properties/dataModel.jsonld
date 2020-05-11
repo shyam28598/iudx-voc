@@ -8,18 +8,18 @@
     }, 
     "@graph": [
         {
-            "@id": "iudx:hasProvider", 
+            "@id": "iudx:dataModel", 
             "@type": [
                 "iudx:Relationship"
             ], 
-            "rdfs:comment": "URN pointing to the provider entity associated with the given catalogue item", 
-            "rdfs:label": "hasProvider", 
+            "rdfs:comment": "IRI pointing to the data-model object for a given Resource or ResourceGroup.", 
+            "rdfs:label": "dataModel", 
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:Resource"
+                    "@id": "iudx:ResourceGroup"
                 }, 
                 {
-                    "@id": "iudx:ResourceGroup"
+                    "@id": "iudx:Resource"
                 }
             ], 
             "iudx:rangeIncludes": [
