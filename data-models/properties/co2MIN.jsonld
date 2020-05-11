@@ -1,43 +1,42 @@
 {
     "@context": {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "iudx": "https://iudx.org.in/voc/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
-    "@graph": [
-        {
-            "rdfs:comment": {
-                "@value": "Describes minimum value of CO2 over a set of observations in past."
-            },
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
-            "@id": "iudx:co2MIN",
-            "rdfs:label": {
-                "@value": "co2MIN"
-            },
-            "iudx:rangeIncludes": [
-                {
-                    "@id": "iudx:Number"
-                },
-                {
-                    "@id": "iudx:QuantitativeValue"
-                }
-            ],
-            "@type": "iudx:QuantitativeProperty",
-            "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:EnvAQM"
-                },
-                {
-                    "@id": "iudx:DataDescriptor"
-                }
-            ]
-        }
+    "@id": "iudx:co2MIN",
+    "@type": [
+        "rdf:Property",
+        "iudx:QuantitativeProperty"
+    ],
+    "rdfs:comment": {
+        "@value": "Describes minimum value of CO2 over a set of observations in past."
+    },
+    "rdfs:isDefinedBy": {
+        "@id": "iudx:"
+    },
+    "rdfs:label": {
+        "@value": "co2MIN"
+    },
+    "iudx:domainIncludes": [
+     {
+        "@id": "iudx:EnvAQM"
+     },
+     {
+        "@id": "iudx:DataDescriptor"
+     }
+    ],
+    "iudx:rangeIncludes": [
+     {
+        "@id": "iudx:Number"
+     },
+     {
+        "@id": "iudx:QuantitativeValue"
+     }
     ]
 }

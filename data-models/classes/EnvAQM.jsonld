@@ -1,25 +1,22 @@
 {
     "@context": {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://iudx.org.in/voc/",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "iudx": "https://iudx.org.in/voc/"
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@graph": [
         {
+            "@id": "iudx:EnvAQM",
+            "@type": ["owl:Class", "rdfs:Class"],
             "rdfs:comment": "Air Quality Monitoring (AQM) Data Model.",
-            "rdfs:subClassOf": {
-                "@id": "iudx:DataModel"
-            },
-            "@type": [
-                "owl:Class",
-                "rdfs:Class"
-            ],
+            "rdfs:label": "EnvAQM",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
-            "@id": "iudx:EnvAQM",
-            "rdfs:label": "EnvAQM"
+            "rdfs:subClassOf": {
+                "@id": "iudx:DataModel"
+            }
         }
     ]
 }
