@@ -15,13 +15,13 @@
             "rdfs:comment": "Relates a property to a class that constitutes (one of) the expected type(s) for values of the property.",
             "rdfs:label": "rangeIncludes",
             "rdfs:domain": {
-                "@id": "iudx:Property"
+                "@id": "rdf:Property"
             },
             "skos:exactMatch": {
                 "@id": "schema:rangeIncludes"
             },
             "rdfs:range": {
-                "@id": "iudx:Class"
+                "@id": "rdfs:Class"
             }
         }
     ]
