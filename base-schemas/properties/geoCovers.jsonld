@@ -26,6 +26,9 @@
                 }, 
                 {
                     "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:ResourceServer"
                 }
             ], 
             "iudx:rangeIncludes": [

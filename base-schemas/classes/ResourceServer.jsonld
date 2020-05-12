@@ -19,7 +19,13 @@
             },
             "rdfs:subClassOf": {
                 "@id": "iudx:IUDXEntity"
-            }
+            },
+            "iudx:requiredProperties": [
+                "name",
+                "resourceServerOrg",
+                "resourceServerHTTPAccessURL",
+                "itemDescription"
+            ]
         }
     ]
 }

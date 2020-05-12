@@ -8,15 +8,15 @@
     }, 
     "@graph": [
         {
-            "@id": "iudx:resourceServerOrg", 
+            "@id": "iudx:providerOrg", 
             "@type": [
                 "iudx:StructuredProperty"
             ], 
-            "rdfs:comment": "Information about the organization operating the Resource Server.", 
-            "rdfs:label": "resourceServerOrg", 
+            "rdfs:comment": "Information about the Provider Organization.",
+            "rdfs:label": "providerOrg", 
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:ResourceServer"
+                    "@id": "iudx:Provider"
                 }
             ], 
             "iudx:rangeIncludes": [
