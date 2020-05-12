@@ -15,10 +15,10 @@
             ], 
             "rdfs:comment": "Relates a property to a class that is (one of) the type(s) the property is expected to be used on.",
             "rdfs:label": "domainincludes", 
-            "iudx:domain": {
+            "rdfs:domain": {
                 "@id": "rdf:Property"
             },
-            "iudx:range": {
+            "rdfs:range": {
                 "@id": "rdfs:Class"
             },
             "skos:exactmatch": {
