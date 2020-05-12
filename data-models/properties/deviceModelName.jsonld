@@ -1,0 +1,29 @@
+{
+    "@context": {
+        "owl": "http://www.w3.org/2002/07/owl#", 
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#", 
+        "iudx": "https://iudx.org.in/voc/", 
+        "xsd": "http://www.w3.org/2001/XMLSchema#", 
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    }, 
+    "@graph": [
+        {
+            "@id": "iudx:deviceModelName", 
+            "@type": [
+                "iudx:TextProperty"
+            ], 
+            "rdfs:comment": "Product/Device Model Name",
+            "rdfs:label": "deviceModelName", 
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:DeviceModel"
+                }
+            ], 
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                } 
+            ]
+        }
+    ]
+}
