@@ -2,9 +2,6 @@
     "@context": [
         {
             "https://voc.iudx.org.in/"
-        },
-        {
-          "DEVICEID": "iudx:aqmDeviceID"
         }
     ],
     "type": ["Resource", "EnvAQM"],
@@ -17,9 +14,9 @@
     "resourceGroup": "iudx-catalogue-pune:pscdcl/pudx-resource-server/pune-iitm-aqi",
     "resourceServer": "iudx-catalogue-pune:pudx-resource-server",
     "itemCreatedAt": "2019-02-20T10:30:06.093121",
-    "DEVICEID": "169af06f-bfee-3513-56e5-847957490-sensoragent",
+    "aqmDeviceID": "169af06f-bfee-3513-56e5-847957490-sensoragent",
     "location": {
-      "type": "Place",
+      "type": ["Place"],
       "geoJSON": {
           "type": "Feature",
           "geometry": {
@@ -28,5 +25,10 @@
           }
       },
       "address": "Hadapsar Area, Pune"
+    },
+    "deviceModel": {
+       "type": ["DeviceModel"],
+       "description": "Micro climate monitoring system by Bosch",
+       "deviceModelName": "Bosch-Climo"
     }
 }

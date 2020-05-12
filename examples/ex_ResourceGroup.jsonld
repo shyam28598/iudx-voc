@@ -1,9 +1,5 @@
 {
-    "@context": [
-        {
-            "https://voc.iudx.org.in/"
-        }
-    ],
+    "@context": "https://voc.iudx.org.in/",
     "type": ["ResourceGroup"],
     "id": "pscdcl/pudx-resource-server/pune-iitm-aqi",
     "description": "Description for IITM weather station resource group providing rainfall and aqm data.",
@@ -31,7 +27,7 @@
     "iudxResourceAPIs": ["attribute", "temporal"],
     "itemCreatedAt": "2019-02-20T10:30:06.093121",
     "location": {
-      "type": "Place",
+      "type": ["Place"],
       "name": "Pune"
     }
 }
