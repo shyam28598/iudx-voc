@@ -1,6 +1,6 @@
 {
     "@context": {
-        "@vocab": "https://voc.iudx.org.in/",
+       "@vocab": "https://voc.iudx.org.in/",
        "iudx": "https://iudx.org.in/voc/",
        "xsd": "http://www.w3.org/2001/XMLSchema#",
        "AIR_PRESSURE": "iudx:airPressure", 

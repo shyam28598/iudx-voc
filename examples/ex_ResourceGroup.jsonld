@@ -2,9 +2,6 @@
     "@context": [
         {
             "https://voc.iudx.org.in/"
-        },
-        {
-          "DEVICEID": "iudx:aqmDeviceID"
         }
     ],
     "type": ["ResourceGroup"],
@@ -15,9 +12,9 @@
          "environment", "air quality", "climate", "air", "aqi", "iitm", "safar", "pollution", "rainfall", "temperature", "uv" 
     ],
     "itemStatus": "ACTIVE",
-    "hasProvider": "iudx-catalogue-pune:pscdcl",
-    "hasResourceServer": "iudx-catalogue-pune:pudx-resource-server",
-    "hasDataDescriptor": "iudx-catalogue-pune:pune-iitm-aqi-data-descriptor",
+    "provider": "iudx-catalogue-pune:pscdcl",
+    "resourceServer": "iudx-catalogue-pune:pudx-resource-server",
+    "dataModel": "iudx-catalogue-pune:pune-iitm-aqi-data-model",
     "resourceAuthControlLevel": "INDIVIDUAL",
     "resourceType": "messageStream",
     "authServerInfo": {
