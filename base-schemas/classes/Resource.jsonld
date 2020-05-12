@@ -23,7 +23,7 @@
             "iudx:requiredProperties": [
                 "tags",
                 "resourceGroup",
-                "itemDescription"
+                "description"
             ]
         }
     ]

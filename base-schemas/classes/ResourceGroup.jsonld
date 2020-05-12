@@ -24,7 +24,7 @@
                 "name",
                 "tags",
                 "resourceServer",
-                "itemDescription",
+                "description",
                 "dataModel",
                 "provider",
                 "authServerInfo",

@@ -23,7 +23,7 @@
             "iudx:requiredProperties": [
                 "name",
                 "providerOrg",
-                "itemDescription"
+                "description"
             ]
         }
     ]
