@@ -13,20 +13,14 @@
             "@type": [
                 "rdf:property"
             ], 
-            "rdfs:comment": {
-                "@value": "Relates a property to a class that is (one of) the type(s) the property is expected to be used on."
-            }, 
+            "rdfs:comment": "Relates a property to a class that is (one of) the type(s) the property is expected to be used on.",
             "rdfs:label": "domainincludes", 
-            "iudx:domainIncludes": [
-                {
-                    "@id": "rdf:Property"
-                }
-            ], 
-            "iudx:rangeIncludes": [
-                {
-                    "@id": "rdfs:Class"
-                }
-            ], 
+            "iudx:domain": {
+                "@id": "rdf:Property"
+            },
+            "iudx:range": {
+                "@id": "rdfs:Class"
+            },
             "skos:exactmatch": {
                 "@id": "schema:domainIncludes"
             }
