@@ -1,0 +1,32 @@
+{
+    "@context": {
+        "owl": "http://www.w3.org/2002/07/owl#", 
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#", 
+        "iudx": "https://iudx.org.in/voc/", 
+        "xsd": "http://www.w3.org/2001/XMLSchema#", 
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    }, 
+    "@graph": [
+        {
+            "@id": "iudx:maxDurationInHours", 
+            "@type": [
+                "rdf:Property"
+            ], 
+            "rdfs:comment": "Specifies the interval duration in Hours over which maximum value is computed. This is used in case the maximum value is reported over all the measurements in a given duration.", 
+            "rdfs:label": "maxDurationInHours", 
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:QuantitativeValue"
+                }, 
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ], 
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                }
+            ]
+        }
+    ]
+}
