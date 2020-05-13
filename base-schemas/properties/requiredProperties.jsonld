@@ -1,9 +1,7 @@
 {
     "@context": {
         "owl": "http://www.w3.org/2002/07/owl#", 
-        "xsd": "http://www.w3.org/2001/XMLSchema#", 
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#", 
-        "geojson": "https://purl.org/geojson/vocab#", 
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#", 
         "iudx": "https://iudx.org.in/voc/", 
         "skos": "http://www.w3.org/2004/02/skos/core#", 
@@ -11,29 +9,25 @@
     }, 
     "@graph": [
         {
-            "@id": "iudx:geometry", 
+            "@id": "iudx:requiredProperties",
             "@type": [
-                "iudx:GeoProperty"
+                "rdf:property"
             ], 
-            "rdfs:comment": {
-                "@value": "Geometry property in a GeoJSON object"
-            }, 
-            "rdfs:label": "geometry", 
+            "rdfs:comment": "Describes a set of properties that are mandatory for a given class.",
+            "rdfs:label": "requiredProperties",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:Feature"
+                    "@id": "rdfs:Class"
                 }
             ], 
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Point"
+                    "@id": "iudx:Text",
+                    "@container": "@set"
                 }
             ], 
-            "skos:exactMatch": {
-                "@id": "geojson:geometry"
-            }, 
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
+            "skos:exactmatch": {
+                "@id": "https://www.w3.org/2019/wot/json-schema#required"
             }
         }
     ]

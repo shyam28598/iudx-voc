@@ -8,25 +8,22 @@
     }, 
     "@graph": [
         {
-            "@id": "iudx:resourceType", 
+            "@id": "iudx:providerOrg", 
             "@type": [
-                "iudx:TextProperty"
+                "iudx:StructuredProperty"
             ], 
-            "rdfs:comment": "Type of resource. ENUM: [messageStream, message, dataset-table, dataset-file, mediaStream].", 
-            "rdfs:label": "resourceType", 
+            "rdfs:comment": "Information about the Provider Organization.",
+            "rdfs:label": "providerOrg", 
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:ResourceGroup"
+                    "@id": "iudx:Provider"
                 }
             ], 
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Organization"
                 }
-            ], 
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            }
+            ]
         }
     ]
 }

@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:co2MIN",
+            "@id": "iudx:aqiCategory",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "Describes minimum value of CO2 over a set of observations in past.",
-            "rdfs:label": "co2MIN",
+            "rdfs:comment": "Air Quality Category Indication",
+            "rdfs:label": "aqiCategory",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvAQM"
@@ -24,7 +24,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"

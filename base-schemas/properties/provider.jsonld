@@ -8,25 +8,29 @@
     }, 
     "@graph": [
         {
-            "@id": "iudx:resourceType", 
+            "@id": "iudx:provider", 
             "@type": [
-                "iudx:TextProperty"
+                "iudx:Relationship"
             ], 
-            "rdfs:comment": "Type of resource. ENUM: [messageStream, message, dataset-table, dataset-file, mediaStream].", 
-            "rdfs:label": "resourceType", 
+            "rdfs:comment": "URN pointing to the provider entity associated with the given catalogue item", 
+            "rdfs:label": "provider", 
             "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Resource"
+                }, 
                 {
                     "@id": "iudx:ResourceGroup"
                 }
             ], 
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Text", 
+                    "@type": "@id"
+                }, 
+                {
+                    "@id": "iudx:RelationshipValue"
                 }
-            ], 
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            }
+            ]
         }
     ]
 }

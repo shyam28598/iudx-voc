@@ -11,20 +11,20 @@
     },
     "@graph": [
         {
-            "@id": "iudx:co2MIN",
+            "@id": "iudx:observationDateTime",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TimeProperty"
             ],
-            "rdfs:comment": "Describes minimum value of CO2 over a set of observations in past.",
-            "rdfs:label": "co2MIN",
+            "rdfs:comment": "Reported time of observation.",
+            "rdfs:label": "observationDateTime",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:EnvAQM"
+                    "@id": "iudx:DataModel"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:DateTime"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"

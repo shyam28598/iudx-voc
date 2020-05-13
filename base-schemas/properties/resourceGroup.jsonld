@@ -8,25 +8,26 @@
     }, 
     "@graph": [
         {
-            "@id": "iudx:resourceType", 
+            "@id": "iudx:resourceGroup",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:Relationship"
             ], 
-            "rdfs:comment": "Type of resource. ENUM: [messageStream, message, dataset-table, dataset-file, mediaStream].", 
-            "rdfs:label": "resourceType", 
+            "rdfs:comment": "IRI pointing to the resourceGroup entity associated with the resource.", 
+            "rdfs:label": "resourceGroup", 
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:ResourceGroup"
+                    "@id": "iudx:Resource"
                 }
             ], 
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Text", 
+                    "@type": "@id"
+                }, 
+                {
+                    "@id": "iudx:RelationshipValue"
                 }
-            ], 
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            }
+            ]
         }
     ]
 }

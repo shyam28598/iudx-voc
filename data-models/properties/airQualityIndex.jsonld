@@ -1,42 +1,38 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://iudx.org.in/voc/",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
-    "@id": "iudx:airQualityIndex",
-    "@type": [
-        "rdf:Property",
-        "iudx:QuantitativeProperty"
-    ],
-    "rdfs:comment": {
-        "@value": "Describes overall Air Quality Index (AQI)."
-    },
-    "rdfs:isDefinedBy": {
-        "@id": "iudx:"
-    },
-    "rdfs:label": {
-        "@value": "airQualityIndex"
-    },
-    "iudx:domainIncludes": [
-     {
-        "@id": "iudx:EnvAQM"
-     },
-     {
-        "@id": "iudx:DataDescriptor"
-     }
-    ],
-    "iudx:rangeIncludes": [
-     {
-        "@id": "iudx:Number"
-     },
-     {
-        "@id": "iudx:QuantitativeValue"
-     }
+    "@graph": [
+        {
+            "@id": "iudx:airQualityIndex",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes overall Air Quality Index (AQI).",
+            "rdfs:label": "airQualityIndex",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        }
     ]
 }

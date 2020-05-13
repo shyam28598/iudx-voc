@@ -1,37 +1,33 @@
 {
     "@context": {
-        "iudx": "https://iudx.org.in/voc/",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
-    },
+        "owl": "http://www.w3.org/2002/07/owl#", 
+        "iudx": "https://iudx.org.in/voc/", 
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#", 
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#", 
+        "xsd": "http://www.w3.org/2001/XMLSchema#", 
+        "schema": "http://schema.org/"
+    }, 
     "@graph": [
         {
-            "@id": "iudx:itemModifiedAt",
+            "@id": "iudx:itemModifiedAt", 
             "@type": [
-                "rdf:Property",
                 "iudx:TimeProperty"
-            ],
-            "rdfs:comment": "DateTime of modification of a catalogue item.",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
-            "rdfs:label": "itemModifiedAt",
+            ], 
+            "rdfs:comment": "DateTime of modification of a catalogue item.", 
+            "rdfs:label": "itemModifiedAt", 
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:IUDXEntity"
                 }
-            ],
+            ], 
             "iudx:rangeIncludes": [
                 {
-                    "@id": "schema:DateTime"
-                },
-                {
-                    "@id": "xsd:DateTime"
+                    "@id": "iudx:DateTime"
                 }
-            ]
+            ], 
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }
