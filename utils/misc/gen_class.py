@@ -4,10 +4,13 @@ import os
 import glob
 
 from collections import OrderedDict
+from distutils.dir_util import copy_tree
 
+from_classes = ["../../base-schemas/classes/", "../../data-models/classes/"]
+from_properties= ["../../base-schemas/properties/", "../../data-models/properties/"]
+classes_path = "/tmp/all_classes/"
+properties_path = "/tmp/all_properties/"
 
-classes_path = ["../../base-schemas/classes/", "../../data-models/classes/"]
-properties_path = ["../../base-schemas/properties/", "../../data-models/properties/"]
 
 if not os.path.exists("../../generated/"):
     os.makedirs("../../generated/")
@@ -55,6 +58,9 @@ def generate(class_path, property_path):
                 json.dump(new_dict, new_file, indent=4)
 
 
-if len(classes_path) == len(properties_path):
-    for cpath, ppath in zip(classes_path, properties_path):
-        generate(cpath, ppath)
+if __name__=="__main__":
+    for directory in from_classes:
+        copy_tree(directory, classes_path)
+    for directory in from_properties:
+        copy_tree(directory, properties_path)
+    generate(classes_path, properties_path)
