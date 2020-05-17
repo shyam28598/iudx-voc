@@ -16,7 +16,7 @@ context = {}
 
 contextsources["type"] = "@type"
 contextsources["id"] = "@id"
-contextsources["@vocab"] = "http://voc.iudx.org.in/"
+contextsources["@vocab"] = "https://voc.iudx.org.in/"
 
 """ Classes """
 for fl in os.listdir(classes_folder):
@@ -45,6 +45,9 @@ for fl in os.listdir(properties_folder):
             print("Property - " + fl[:-7] + " failed")
             print(e)
 
+
 context = {**contextsources, **context}
+context_output = {"@context": context}
+
 with open(output_file, "w") as f:
-    json.dump(context, f, indent=4)
+    json.dump(context_output, f, indent=4)
