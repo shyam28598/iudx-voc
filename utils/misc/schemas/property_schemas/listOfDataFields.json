@@ -1,0 +1,7 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/listOfDataFields",
+    "title": "listOfDataFields",
+    "describes": "List of properties/fields/attributes contained in the data available from the resources associated with a given resource Group. The meta-information related to the individual fields/attributes are further defined in data-model item referred to by the resource Group item.",
+    "$ref": "<iudx>/DataFieldListValue"
+}

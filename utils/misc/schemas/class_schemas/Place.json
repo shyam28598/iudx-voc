@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/Place",
+    "title": "Place",
+    "describes": "Describes fixed location for various entities. The places can be described using geo-Coordinates (points, polgons, bboxes etc.) , structured form of addresses or simple address strings.",
+    "type": "object",
+    "properties": {
+        "geoJSON": {
+            "$ref": "<iudx>/geoJSON"
+        },
+        "name": {
+            "$ref": "<iudx>/name"
+        },
+        "address": {
+            "$ref": "<iudx>/address"
+        },
+        "location": {
+            "$ref": "<iudx>/location"
+        },
+        "geoCovers": {
+            "$ref": "<iudx>/geoCovers"
+        },
+        "longitude": {
+            "$ref": "<iudx>/longitude"
+        },
+        "latitude": {
+            "$ref": "<iudx>/latitude"
+        },
+        "geo": {
+            "$ref": "<iudx>/geo"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/GeoCoordinates",
+    "title": "GeoCoordinates",
+    "describes": {
+        "@value": "Geo coordinates in Latitude and Longitude for a given place. The Lat/Long values are in WGS84 notation"
+    },
+    "type": "object",
+    "properties": {
+        "longitude": {
+            "$ref": "<iudx>/longitude"
+        },
+        "latitude": {
+            "$ref": "<iudx>/latitude"
+        },
+        "geo": {
+            "$ref": "<iudx>/geo"
+        }
+    }
+}

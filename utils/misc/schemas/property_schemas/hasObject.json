@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/hasObject",
+    "title": "hasObject",
+    "describes": "Value associated with RelationshipValue class. Contains IRI(s) that specify the relationship object(s).",
+    "oneOf": [
+        {
+            "$ref": "<iudx>/Text"
+        },
+        {
+            "$ref": "<iudx>/Text"
+        }
+    ]
+}

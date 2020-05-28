@@ -1,0 +1,7 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/coordinates",
+    "title": "coordinates",
+    "describes": "Coordinates for the GeoJSON object",
+    "$ref": "<iudx>/Number"
+}

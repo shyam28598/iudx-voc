@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/geoCovers",
+    "title": "geoCovers",
+    "describes": "Represents the coverage relationship between two geometries/places.",
+    "oneOf": [
+        {
+            "$ref": "<iudx>/GeoJSONGeometry"
+        },
+        {
+            "$ref": "<iudx>/Place"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/authServerURL",
+    "title": "authServerURL",
+    "describes": "URL of the IUDX authorization server used for a given resource.",
+    "oneOf": [
+        {
+            "$ref": "<iudx>/Text"
+        },
+        {
+            "$ref": "<iudx>/RelationshipValue"
+        }
+    ]
+}

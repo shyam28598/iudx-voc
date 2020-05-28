@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/FunctionDescription",
+    "title": "FunctionDescription",
+    "describes": "Description of a function associated in computation of a quanitative value.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "$ref": "<iudx>/name"
+        },
+        "functionParameters": {
+            "$ref": "<iudx>/functionParameters"
+        },
+        "hasFunction": {
+            "$ref": "<iudx>/hasFunction"
+        }
+    }
+}

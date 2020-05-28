@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/Provider",
+    "title": "Provider",
+    "describes": "Describes the Provider entry in the IUDX catalogue.",
+    "type": "object",
+    "required": [
+        "name",
+        "providerOrg",
+        "description"
+    ],
+    "properties": {
+        "name": {
+            "$ref": "<iudx>/name"
+        },
+        "providerOrg": {
+            "$ref": "<iudx>/providerOrg"
+        },
+        "location": {
+            "$ref": "<iudx>/location"
+        }
+    }
+}

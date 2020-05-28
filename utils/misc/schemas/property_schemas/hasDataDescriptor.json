@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/hasDataDescriptor",
+    "title": "hasDataDescriptor",
+    "describes": "URI pointing to the data-descriptor entity",
+    "oneOf": [
+        {
+            "$ref": "<iudx>/TextProperty"
+        },
+        {
+            "$ref": "<iudx>/RelationshipValue"
+        }
+    ]
+}

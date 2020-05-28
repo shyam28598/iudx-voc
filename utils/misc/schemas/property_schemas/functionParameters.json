@@ -1,0 +1,7 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/functionParameters",
+    "title": "functionParameters",
+    "describes": "List of parameters associated with a function.",
+    "$ref": "<iudx>/TextProperty"
+}

@@ -1,0 +1,71 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/ResourceGroup",
+    "title": "ResourceGroup",
+    "describes": "Describes the Resource Group entry in the IUDX catalogue.",
+    "type": "object",
+    "required": [
+        "name",
+        "tags",
+        "resourceServer",
+        "description",
+        "dataModel",
+        "provider",
+        "authServerInfo",
+        "iudxResourceAPIs",
+        "resourceType"
+    ],
+    "properties": {
+        "geoJSON": {
+            "$ref": "<iudx>/geoJSON"
+        },
+        "geoCovers": {
+            "$ref": "<iudx>/geoCovers"
+        },
+        "location": {
+            "$ref": "<iudx>/location"
+        },
+        "resourceAuthControlLevel": {
+            "$ref": "<iudx>/resourceAuthControlLevel"
+        },
+        "listOfDataFields": {
+            "$ref": "<iudx>/listOfDataFields"
+        },
+        "hasResourceServer": {
+            "$ref": "<iudx>/hasResourceServer"
+        },
+        "authServerInfo": {
+            "$ref": "<iudx>/authServerInfo"
+        },
+        "hasDataDescriptor": {
+            "$ref": "<iudx>/hasDataDescriptor"
+        },
+        "resourceType": {
+            "$ref": "<iudx>/resourceType"
+        },
+        "name": {
+            "$ref": "<iudx>/name"
+        },
+        "iudxResourceAPIs": {
+            "$ref": "<iudx>/iudxResourceAPIs"
+        },
+        "accessObjectInfo": {
+            "$ref": "<iudx>/accessObjectInfo"
+        },
+        "dataModel": {
+            "$ref": "<iudx>/dataModel"
+        },
+        "resourceServer": {
+            "$ref": "<iudx>/resourceServer"
+        },
+        "provider": {
+            "$ref": "<iudx>/provider"
+        },
+        "tags": {
+            "$ref": "<iudx>/tags"
+        },
+        "hasProvider": {
+            "$ref": "<iudx>/hasProvider"
+        }
+    }
+}

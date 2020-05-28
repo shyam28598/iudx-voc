@@ -1,0 +1,7 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/accessObjectType",
+    "title": "accessObjectType",
+    "describes": "Type of access object (OpenAPI, AsyncAPI etc.)",
+    "$ref": "<iudx>/Text"
+}

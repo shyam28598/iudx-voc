@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/TextProperty",
+    "title": "TextProperty",
+    "describes": "Class of all Text Properties. The range of Text property contains text (multiple words).",
+    "type": "object",
+    "properties": {
+        "hasResourceGroup": {
+            "$ref": "<iudx>/hasResourceGroup"
+        },
+        "hasResourceServer": {
+            "$ref": "<iudx>/hasResourceServer"
+        },
+        "functionParameters": {
+            "$ref": "<iudx>/functionParameters"
+        },
+        "hasDataDescriptor": {
+            "$ref": "<iudx>/hasDataDescriptor"
+        },
+        "hasProvider": {
+            "$ref": "<iudx>/hasProvider"
+        }
+    }
+}

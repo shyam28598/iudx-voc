@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/hasResourceGroup",
+    "title": "hasResourceGroup",
+    "describes": "urn pointing to the resourceGroup entity",
+    "oneOf": [
+        {
+            "$ref": "<iudx>/TextProperty"
+        },
+        {
+            "$ref": "<iudx>/RelationshipValue"
+        }
+    ]
+}

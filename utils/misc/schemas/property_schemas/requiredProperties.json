@@ -1,0 +1,7 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/requiredProperties",
+    "title": "requiredProperties",
+    "describes": "Describes a set of properties that are mandatory for a given class.",
+    "$ref": "<iudx>/Text"
+}

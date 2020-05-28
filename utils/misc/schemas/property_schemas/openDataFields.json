@@ -1,0 +1,7 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/openDataFields",
+    "title": "openDataFields",
+    "describes": "List of properties/fields/attributes contained in the data available from the resources associated with a given resource Group which are open, i.e., no authorization is required to access these fields for a given resource.",
+    "$ref": "<iudx>/Text"
+}

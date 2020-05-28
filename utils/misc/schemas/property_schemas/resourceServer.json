@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/resourceServer",
+    "title": "resourceServer",
+    "describes": "IRI pointing to the ResourceServer entity for a given Resource or ResourceGroup.",
+    "oneOf": [
+        {
+            "$ref": "<iudx>/Text"
+        },
+        {
+            "$ref": "<iudx>/RelationshipValue"
+        }
+    ]
+}

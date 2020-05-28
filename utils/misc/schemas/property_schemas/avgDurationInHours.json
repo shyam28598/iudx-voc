@@ -1,0 +1,7 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/avgDurationInHours",
+    "title": "avgDurationInHours",
+    "describes": "Specifies the averaging interval duration in Hours. This is used in case the reported value of measurement is averaged over a given duration.",
+    "$ref": "<iudx>/Number"
+}

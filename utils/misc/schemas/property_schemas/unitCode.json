@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/unitCode",
+    "title": "unitCode",
+    "describes": "The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes/unit vocabularies may be used with a prefix",
+    "oneOf": [
+        {
+            "$ref": "<iudx>/Text"
+        },
+        {
+            "$ref": "<iudx>/Text"
+        }
+    ]
+}

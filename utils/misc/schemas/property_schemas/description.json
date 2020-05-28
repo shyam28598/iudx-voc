@@ -1,0 +1,7 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/description",
+    "title": "description",
+    "describes": "Description for an IUDX thing.",
+    "$ref": "<iudx>/Text"
+}

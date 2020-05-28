@@ -1,0 +1,12 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/QuantitativeProperty",
+    "title": "QuantitativeProperty",
+    "describes": "Class of all Quantitative properties in IUDX. The range of Quantitative properties are objects describing the associated values as well as meta-information associated with the values. Typically, the value of quantiative property isa numeric value. However, in some cases, it may be a string that has to be interpreted as a number.",
+    "type": "object",
+    "properties": {
+        "durationInHours": {
+            "$ref": "<iudx>/durationInHours"
+        }
+    }
+}

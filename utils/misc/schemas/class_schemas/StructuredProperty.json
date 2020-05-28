@@ -1,0 +1,8 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/StructuredProperty",
+    "title": "StructuredProperty",
+    "describes": "Describes the class of all properties in IUDX that have a complex JSON structures and cannot be described using simple strings and native data types.",
+    "type": "object",
+    "properties": {}
+}

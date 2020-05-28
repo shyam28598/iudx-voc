@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/DataModel",
+    "title": "DataModel",
+    "describes": "Class of all Data Models.",
+    "type": "object",
+    "properties": {
+        "observationDateTime": {
+            "$ref": "<iudx>/observationDateTime"
+        },
+        "deviceID": {
+            "$ref": "<iudx>/deviceID"
+        }
+    }
+}

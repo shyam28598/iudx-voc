@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/resourceServerHTTPAccessURL",
+    "title": "resourceServerHTTPAccessURL",
+    "describes": "Resource Server URL for data access based on HTTP/REST APIs",
+    "oneOf": [
+        {
+            "$ref": "<iudx>/Text"
+        },
+        {
+            "$ref": "<iudx>/RelationshipValue"
+        }
+    ]
+}

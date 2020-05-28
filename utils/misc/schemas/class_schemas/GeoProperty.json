@@ -1,0 +1,8 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/GeoProperty",
+    "title": "GeoProperty",
+    "describes": "Describes the class of all GeoProperties in IUDX. The range of a geo-property are objects describing geo-coordinates (e.g., latitude, longitude, GeoJSON objects etc.)",
+    "type": "object",
+    "properties": {}
+}

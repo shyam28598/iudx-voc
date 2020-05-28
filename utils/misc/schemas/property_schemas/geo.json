@@ -1,0 +1,9 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/geo",
+    "title": "geo",
+    "describes": {
+        "@value": "Geo-coordinates of a place specified in terms of latitude and longitude."
+    },
+    "$ref": "<iudx>/GeoCoordinates"
+}

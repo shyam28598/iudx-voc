@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/hasProvider",
+    "title": "hasProvider",
+    "describes": "URN pointing to the provider entity associated with the given catalogue item",
+    "oneOf": [
+        {
+            "$ref": "<iudx>/TextProperty"
+        },
+        {
+            "$ref": "<iudx>/RelationshipValue"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/maxDurationInHours",
+    "title": "maxDurationInHours",
+    "describes": "Specifies the interval duration in Hours over which maximum value is computed. This is used in case the maximum value is reported over all the measurements in a given duration.",
+    "$ref": "<iudx>/Number"
+}

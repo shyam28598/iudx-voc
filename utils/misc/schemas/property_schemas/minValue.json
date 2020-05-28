@@ -1,0 +1,7 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/minValue",
+    "title": "minValue",
+    "describes": "Associated minimum value of a property.",
+    "$ref": "<iudx>/Number"
+}

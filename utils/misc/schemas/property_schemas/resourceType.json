@@ -1,0 +1,7 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/resourceType",
+    "title": "resourceType",
+    "describes": "Type of resource. ENUM: [messageStream, message, dataset-table, dataset-file, mediaStream].",
+    "$ref": "<iudx>/Text"
+}

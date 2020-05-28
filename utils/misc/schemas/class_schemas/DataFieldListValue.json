@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/DataFieldListValue",
+    "title": "DataFieldListValue",
+    "describes": "Lists various fields associated with the data available from a given group of resource items.",
+    "type": "object",
+    "properties": {
+        "listOfDataFields": {
+            "$ref": "<iudx>/listOfDataFields"
+        },
+        "secureDataFields": {
+            "$ref": "<iudx>/secureDataFields"
+        },
+        "openDataFields": {
+            "$ref": "<iudx>/openDataFields"
+        }
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/DataDescriptor",
+    "title": "DataDescriptor",
+    "describes": "Describes the Data Descriptor Object in the IUDX catalogue. It provides meta-information about various data fields associated with a resource.",
+    "type": "object",
+    "properties": {}
+}
