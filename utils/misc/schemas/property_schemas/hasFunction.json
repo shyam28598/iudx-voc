@@ -1,7 +1,0 @@
-{
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "<iudx>/hasFunction",
-    "title": "hasFunction",
-    "describes": "Links a given property/characterstic to a given compute function and specific input parameters.",
-    "$ref": "<iudx>/FunctionDescription"
-}

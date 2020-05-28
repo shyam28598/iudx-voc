@@ -1,7 +1,0 @@
-{
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "<iudx>/tags",
-    "title": "tags",
-    "describes": "Discovery tags associated with items (resource item, resource Group item, data models) in IUDX catalogue",
-    "$ref": "<iudx>/Text"
-}

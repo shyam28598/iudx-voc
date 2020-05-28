@@ -1,7 +1,0 @@
-{
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "<iudx>/sameAs",
-    "title": "sameAs",
-    "describes": "URL reference to another thing/entity that identifies the given thing/entity. This may be used to provide references to another data models where a property is described or say a reference to Wiki pages for a given thing etc.",
-    "$ref": "<iudx>/Text"
-}

@@ -1,8 +1,0 @@
-{
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "<iudx>/Class",
-    "title": "Class",
-    "describes": "A class, also often called a 'Type'; equivalent to rdfs:Class.",
-    "type": "object",
-    "properties": {}
-}

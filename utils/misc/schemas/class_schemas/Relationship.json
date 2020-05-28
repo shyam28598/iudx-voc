@@ -1,8 +1,0 @@
-{
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "<iudx>/Relationship",
-    "title": "Relationship",
-    "describes": "Class of all Relationships in IUDX. A relationship property relates a resource to another resource. The range of relationship property are objects describing the links (URIs etc.) to the related resource and may contain meta-information about the type of relationship.",
-    "type": "object",
-    "properties": {}
-}
