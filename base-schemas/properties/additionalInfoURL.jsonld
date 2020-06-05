@@ -12,7 +12,7 @@
             "@type": [
                 "iudx:Relationship"
             ], 
-            "rdfs:comment": "urn pointing to the resourceServer entity", 
+            "rdfs:comment": "URL from which additional information of the subject can be obtained", 
             "rdfs:label": "additionalInfoURL", 
             "iudx:domainIncludes": [
                 {

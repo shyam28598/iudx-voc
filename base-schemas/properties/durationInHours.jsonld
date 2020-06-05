@@ -16,9 +16,6 @@
             "rdfs:label": "durationInHours", 
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:QuantitativeValue"
-                }, 
-                {
                     "@id": "iudx:ValueDescriptor"
                 }
             ], 

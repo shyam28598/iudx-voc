@@ -4,8 +4,7 @@ import os
 import sys
 
 dirname = sys.argv[1]
-uname = sys.argv[2]
-password = sys.argv[3]
+token = sys.argv[2]
 
 
 # local
@@ -17,8 +16,7 @@ password = sys.argv[3]
 url = "https://voc.iudx.org.in"
 verify = True
 
-headers = {"username": uname, "password": password, "content-type": "application/json+ld"}
-headers = {"username": uname, "password": password, "content-type": "application/json+ld"}
+headers = {"token": token, "content-type": "application/ld+json"}
 
 
 failed_list = []

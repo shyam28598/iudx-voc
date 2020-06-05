@@ -22,7 +22,7 @@
                     "@id": "iudx:RelationshipValue"
                 }
             ],
-            "@id": "iudx:hasDataDescriptor",
+            "@id": "iudx:dataDescriptor",
             "rdfs:comment": "URI pointing to the data-descriptor entity",
             "rdfs:label": "hasDataDescriptor",
             "@type": "iudx:Relationship"

@@ -21,9 +21,9 @@
                 "@id": "iudx:IUDXEntity"
             },
             "iudx:requiredProperties": [
-                "tags",
-                "resourceGroup",
-                "description"
+                "iudx:tags",
+                "iudx:resourceGroup",
+                "iudx:description"
             ]
         }
     ]

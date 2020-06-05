@@ -21,15 +21,15 @@
                 "@id": "iudx:IUDXEntity"
             },
             "iudx:requiredProperties": [
-                "name",
-                "tags",
-                "resourceServer",
-                "description",
-                "dataModel",
-                "provider",
-                "authServerInfo",
-                "iudxResourceAPIs",
-                "resourceType"
+                "iudx:name",
+                "iudx:tags",
+                "iudx:resourceServer",
+                "iudx:description",
+                "iudx:dataModel",
+                "iudx:provider",
+                "iudx:authServerInfo",
+                "iudx:iudxResourceAPIs",
+                "iudx:resourceType"
             ]
         }
     ]

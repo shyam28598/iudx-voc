@@ -31,6 +31,9 @@
                     "@id": "iudx:ResourceGroup"
                 }, 
                 {
+                    "@id": "iudx:Resource"
+                }, 
+                {
                     "@id": "iudx:Provider"
                 }, 
                 {

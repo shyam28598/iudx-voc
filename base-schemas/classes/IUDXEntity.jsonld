@@ -12,7 +12,7 @@
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "Class of all IUDX Entities (Resource, ResourceServer, Provider etc.)",
+            "rdfs:comment": "Class of all IUDX Entities (Resource, ResourceGroup, ResourceServer, Provider etc.)",
             "rdfs:label": "IUDXEntity",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

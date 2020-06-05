@@ -16,9 +16,6 @@
             "rdfs:label": "hasFunction", 
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:QuantitativeValue"
-                }, 
-                {
                     "@id": "iudx:ValueDescriptor"
                 }
             ], 
