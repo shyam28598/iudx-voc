@@ -15,7 +15,7 @@
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment":  "Geo coordinates in Latitude and Longitude for a given place. The Lat/Long values are in WGS84 notation",
+            "rdfs:comment": "Geo coordinates in Latitude and Longitude for a given place. The Lat/Long values are in WGS84 notation",
             "rdfs:label": "GeoCoordinates",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

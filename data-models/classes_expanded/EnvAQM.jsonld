@@ -1,0 +1,224 @@
+{
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "iudx": "https://iudx.org.in/voc/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "owl": "http://www.w3.org/2002/07/owl#"
+    },
+    "@graph": [
+        {
+            "@id": "iudx:EnvAQM",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Air Quality Monitoring (AQM) Data Model.",
+            "rdfs:label": "EnvAQM",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:DataModel"
+            }
+        },
+        {
+            "@id": "iudx:deviceID",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Device ID of the physical sensor as per the device data model",
+            "rdfs:label": "deviceID",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:DataModel"
+                },
+                {
+                    "@id": "iudx:EnvAQM"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:co2MIN",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes minimum value of CO2 over a set of observations in past.",
+            "rdfs:label": "co2MIN",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:co2MAX",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": {
+                "@value": "Describes maximum value of CO2 over a set of observations in past."
+            },
+            "rdfs:label": {
+                "@value": "co2MAX"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:aqiCategory",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Air Quality Category Indication",
+            "rdfs:label": "aqiCategory",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:aqiMajorPollutant",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Major pollutant in the Air Quality Index (AQI).",
+            "rdfs:label": "aqiMajorPollutant",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:airPressure",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes measured air (atmospheric or barometric) pressure",
+            "rdfs:label": "airPressure",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:co2AVG",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes average value of CO2 over a set of observations in past.",
+            "rdfs:label": "co2AVG",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:airQualityIndex",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes overall Air Quality Index (AQI).",
+            "rdfs:label": "airQualityIndex",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        }
+    ]
+}

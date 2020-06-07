@@ -8,6 +8,10 @@
     },
     "@graph": [
         {
+            "@id": "iudx:dataDescriptor",
+            "@type": "iudx:Relationship",
+            "rdfs:comment": "URI pointing to the data-descriptor entity",
+            "rdfs:label": "hasDataDescriptor",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:ResourceGroup"
@@ -21,11 +25,7 @@
                 {
                     "@id": "iudx:RelationshipValue"
                 }
-            ],
-            "@id": "iudx:dataDescriptor",
-            "rdfs:comment": "URI pointing to the data-descriptor entity",
-            "rdfs:label": "hasDataDescriptor",
-            "@type": "iudx:Relationship"
+            ]
         }
     ]
 }

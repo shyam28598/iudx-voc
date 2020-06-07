@@ -1,35 +1,35 @@
 {
     "@context": {
-        "owl": "http://www.w3.org/2002/07/owl#", 
-        "xsd": "http://www.w3.org/2001/XMLSchema#", 
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#", 
-        "geojson": "https://purl.org/geojson/vocab#", 
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#", 
-        "iudx": "https://iudx.org.in/voc/", 
-        "skos": "http://www.w3.org/2004/02/skos/core#", 
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://iudx.org.in/voc/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
         "schema": "http://schema.org/"
-    }, 
+    },
     "@graph": [
         {
-            "@id": "iudx:address", 
+            "@id": "iudx:address",
             "@type": [
                 "iudx:GeoProperty"
-            ], 
-            "rdfs:comment": "Physical address of a place.", 
-            "rdfs:label": "address", 
+            ],
+            "rdfs:comment": "Physical address of a place.",
+            "rdfs:label": "address",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Place"
                 }
-            ], 
+            ],
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Text"
                 }
-            ], 
+            ],
             "skos:exactMatch": {
                 "@id": "schema:address"
-            }, 
+            },
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             }

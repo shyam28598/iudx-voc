@@ -1,12 +1,17 @@
 {
     "@context": {
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "iudx": "https://iudx.org.in/voc/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        "iudx": "https://iudx.org.in/voc/"
     },
     "@graph": [
         {
+            "@id": "iudx:ResourceGroup",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
             "rdfs:comment": "Describes the Resource Group entry in the IUDX catalogue.",
             "rdfs:label": "ResourceGroup",
             "rdfs:isDefinedBy": {
@@ -15,55 +20,46 @@
             "rdfs:subClassOf": {
                 "@id": "iudx:IUDXEntity"
             },
-            "@id": "iudx:ResourceGroup",
-            "@type": [
-                "owl:Class",
-                "rdfs:Class"
+            "iudx:requiredProperties": [
+                "iudx:name",
+                "iudx:tags",
+                "iudx:resourceServer",
+                "iudx:description",
+                "iudx:dataModel",
+                "iudx:provider",
+                "iudx:authServerInfo",
+                "iudx:iudxResourceAPIs",
+                "iudx:resourceType"
             ]
         },
         {
-            "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:ResourceGroup"
-                }
-            ],
-            "iudx:rangeIncludes": [
-                {
-                    "@id": "xsd:string"
-                }
-            ],
             "@id": "iudx:resourceType",
+            "@type": [
+                "iudx:TextProperty"
+            ],
             "rdfs:comment": "Type of resource. ENUM: [messageStream, message, dataset-table, dataset-file, mediaStream].",
             "rdfs:label": "resourceType",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
-            "@type": "iudx:TextProperty"
-        },
-        {
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:Resource"
-                },
                 {
                     "@id": "iudx:ResourceGroup"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@type": "@id",
-                    "@id": "xsd:string"
-                },
-                {
-                    "@id": "iudx:RelationshipValue"
+                    "@id": "iudx:Text"
                 }
             ],
-            "@id": "iudx:hasResourceServer",
-            "rdfs:comment": "urn pointing to the resourceServer entity",
-            "rdfs:label": "hasResourceServer",
-            "@type": "iudx:Relationship"
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         },
         {
+            "@id": "iudx:geoCovers",
+            "@type": [
+                "iudx:GeoProperty"
+            ],
+            "rdfs:comment": "Represents the coverage relationship between two geometries/places.",
+            "rdfs:label": "geoCovers",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Place"
@@ -73,6 +69,9 @@
                 },
                 {
                     "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:ResourceServer"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -83,15 +82,17 @@
                     "@id": "iudx:Place"
                 }
             ],
-            "@id": "iudx:geoCovers",
-            "rdfs:comment": "Represents the coverage relationship between two geometries/places.",
-            "rdfs:label": "geoCovers",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
-            },
-            "@type": "iudx:GeoProperty"
+            }
         },
         {
+            "@id": "iudx:accessObjectInfo",
+            "@type": [
+                "iudx:StructuredProperty"
+            ],
+            "rdfs:comment": "Link to the access object. For example, an open API object.",
+            "rdfs:label": "accessObjectInfo",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:ResourceGroup"
@@ -101,13 +102,15 @@
                 {
                     "@id": "iudx:AccessObjectInfoValue"
                 }
-            ],
-            "@id": "iudx:accessObjectInfo",
-            "rdfs:comment": "Link to the access object. For example, an open API object.",
-            "rdfs:label": "accessObjectInfo",
-            "@type": "iudx:StructuredProperty"
+            ]
         },
         {
+            "@id": "iudx:authServerInfo",
+            "@type": [
+                "iudx:StructuredProperty"
+            ],
+            "rdfs:comment": "Information about the Authorization Server used for a given resource.",
+            "rdfs:label": "authServerInfo",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:ResourceGroup"
@@ -117,13 +120,15 @@
                 {
                     "@id": "iudx:AuthServerInfoValue"
                 }
-            ],
-            "@id": "iudx:authServerInfo",
-            "rdfs:comment": "Information about the Authorization Server used for a given resource.",
-            "rdfs:label": "authServerInfo",
-            "@type": "iudx:StructuredProperty"
+            ]
         },
         {
+            "@id": "iudx:location",
+            "@type": [
+                "iudx:GeoProperty"
+            ],
+            "rdfs:comment": "Location associated with a resource Item (a spatial point), a group of resource items (a spatial region) or even an observation in case of a mobile sensor.",
+            "rdfs:label": "location",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Resource"
@@ -146,21 +151,23 @@
                     "@id": "iudx:Place"
                 },
                 {
-                    "@id": "xsd:String"
+                    "@id": "iudx:Text"
                 }
             ],
             "skos:exactMatch": {
                 "@id": "schema:location"
             },
-            "rdfs:comment": "Location associated with a resource Item (a spatial point), a group of resource items (a spatial region) or even an observation in case of a mobile sensor.",
-            "rdfs:label": "location",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
-            },
-            "@type": "iudx:GeoProperty",
-            "@id": "iudx:location"
+            }
         },
         {
+            "@id": "iudx:geoJSON",
+            "@type": [
+                "iudx:GeoProperty"
+            ],
+            "rdfs:comment": "Geo-coordinates of a place specified in GeoJSON format.",
+            "rdfs:label": "geoJSON",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Place"
@@ -177,13 +184,9 @@
                     "@id": "iudx:GeoJSONGeometry"
                 }
             ],
-            "@id": "iudx:geoJSON",
-            "rdfs:comment": "Geo-coordinates of a place specified in GeoJSON format.",
-            "rdfs:label": "geoJSON",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
-            },
-            "@type": "iudx:GeoProperty"
+            }
         },
         {
             "iudx:domainIncludes": [
@@ -206,6 +209,30 @@
             "@type": "iudx:Relationship"
         },
         {
+            "@id": "iudx:listOfDataFields",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "List of properties/fields/attributes contained in the data available from the resources associated with a given resource Group. The meta-information related to the individual fields/attributes are further defined in data-model item referred to by the resource Group item.",
+            "rdfs:label": "listOfDataFields",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceGroup"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:DataFieldListValue"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:tags",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Discovery tags associated with items (resource item, resource Group item, data models) in IUDX catalogue",
+            "rdfs:label": "tags",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Resource"
@@ -216,19 +243,64 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@type": "@id",
-                    "@id": "xsd:string"
+                    "@id": "iudx:Text",
+                    "@container": "@set"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:resourceAuthControlLevel",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Authorizataion Control Level for resouces associated with a given resource-group. ENUM: [individual, group]. Individual authorization control level indicates that access control is available per resource, i.e., authorization can be granted/not-granted on a per resource basis for the resources. Group authorization control level indicates that the authorization is available on group level only, i.e., authorization will be granted/not-granted for all the resources associated with the given resource group.",
+            "rdfs:label": "resourceAuthControlLevel",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceGroup"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:dataModel",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "IRI pointing to the data-model object for a given Resource or ResourceGroup.",
+            "rdfs:label": "dataModel",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:Resource"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text",
+                    "@type": "@id"
                 },
                 {
                     "@id": "iudx:RelationshipValue"
                 }
-            ],
-            "@id": "iudx:hasProvider",
-            "rdfs:comment": "URN pointing to the provider entity associated with the given catalogue item",
-            "rdfs:label": "hasProvider",
-            "@type": "iudx:Relationship"
+            ]
         },
         {
+            "@id": "iudx:provider",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "URN pointing to the provider entity associated with the given catalogue item",
+            "rdfs:label": "provider",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Resource"
@@ -239,55 +311,43 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@container": "@set",
-                    "@id": "xsd:string"
+                    "@id": "iudx:Text",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
                 }
-            ],
-            "@id": "iudx:tags",
-            "rdfs:comment": "Discovery tags associated with items (resource item, resource Group item, data models) in IUDX catalogue",
-            "rdfs:label": "tags",
-            "@type": "iudx:TextProperty"
+            ]
         },
         {
-            "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:ResourceGroup"
-                }
-            ],
-            "iudx:rangeIncludes": [
-                {
-                    "@id": "xsd:string"
-                }
-            ],
-            "@id": "iudx:resourceAuthControlLevel",
-            "rdfs:comment": "Authorizataion Control Level for resouces associated with a given resource-group. ENUM: [individual, group]. Individual authorization control level indicates that access control is available per resource, i.e., authorization can be granted/not-granted on a per resource basis for the resources. Group authorization control level indicates that the authorization is available on group level only, i.e., authorization will be granted/not-granted for all the resources associated with the given resource group. If this property is not present in a ResourceGroup object then it implies all resources belonging to this group are open items and one needs no authorization to get data for these resources.",
-            "rdfs:label": "resourceAuthControlLevel",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
-            "@type": "iudx:TextProperty"
-        },
-        {
-            "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:ResourceGroup"
-                }
-            ],
-            "iudx:rangeIncludes": [
-                {
-                    "@container": "@set",
-                    "@id": "xsd:string"
-                }
-            ],
             "@id": "iudx:iudxResourceAPIs",
+            "@type": [
+                "iudx:TextProperty"
+            ],
             "rdfs:comment": "The set of IUDX resource APIs supported by a given resource. Array of multiple strings with values from the set: [TEMPORAL, SPATIAL, ATTR, TEXT]",
             "rdfs:label": "iudxResourceAPIs",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceGroup"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text",
+                    "@container": "@set"
+                }
+            ],
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
-            },
-            "@type": "iudx:TextProperty"
+            }
         },
         {
+            "@id": "iudx:name",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Name of the entity.",
+            "rdfs:label": "name",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Place"
@@ -310,22 +370,40 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "xsd:decimal"
-                },
-                {
-                    "@id": "xsd:string"
+                    "@id": "iudx:Text"
                 }
             ],
             "skos:exactMatch": {
                 "@id": "schema:name"
             },
-            "rdfs:comment": "Name of the entity.",
-            "rdfs:label": "name",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
-            },
-            "@type": "iudx:TextProperty",
-            "@id": "iudx:name"
+            }
+        },
+        {
+            "@id": "iudx:resourceServer",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "IRI pointing to the ResourceServer entity for a given Resource or ResourceGroup.",
+            "rdfs:label": "resourceServer",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Resource"
+                },
+                {
+                    "@id": "iudx:ResourceGroup"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ]
         }
     ]
 }

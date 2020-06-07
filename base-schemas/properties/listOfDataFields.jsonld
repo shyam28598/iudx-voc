@@ -1,24 +1,24 @@
 {
     "@context": {
-        "owl": "http://www.w3.org/2002/07/owl#", 
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#", 
-        "iudx": "https://iudx.org.in/voc/", 
-        "xsd": "http://www.w3.org/2001/XMLSchema#", 
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://iudx.org.in/voc/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
-    }, 
+    },
     "@graph": [
         {
-            "@id": "iudx:listOfDataFields", 
+            "@id": "iudx:listOfDataFields",
             "@type": [
                 "iudx:TextProperty"
-            ], 
-            "rdfs:comment": "List of properties/fields/attributes contained in the data available from the resources associated with a given resource Group. The meta-information related to the individual fields/attributes are further defined in data-model item referred to by the resource Group item.", 
-            "rdfs:label": "listOfDataFields", 
+            ],
+            "rdfs:comment": "List of properties/fields/attributes contained in the data available from the resources associated with a given resource Group. The meta-information related to the individual fields/attributes are further defined in data-model item referred to by the resource Group item.",
+            "rdfs:label": "listOfDataFields",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:ResourceGroup"
                 }
-            ], 
+            ],
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:DataFieldListValue"

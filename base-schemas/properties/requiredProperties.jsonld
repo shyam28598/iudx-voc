@@ -1,31 +1,31 @@
 {
     "@context": {
-        "owl": "http://www.w3.org/2002/07/owl#", 
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#", 
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#", 
-        "iudx": "https://iudx.org.in/voc/", 
-        "skos": "http://www.w3.org/2004/02/skos/core#", 
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://iudx.org.in/voc/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
         "schema": "http://schema.org/"
-    }, 
+    },
     "@graph": [
         {
             "@id": "iudx:requiredProperties",
             "@type": [
                 "rdf:property"
-            ], 
+            ],
             "rdfs:comment": "Describes a set of properties that are mandatory for a given class.",
             "rdfs:label": "requiredProperties",
             "iudx:domainIncludes": [
                 {
                     "@id": "rdfs:Class"
                 }
-            ], 
+            ],
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Text",
                     "@container": "@set"
                 }
-            ], 
+            ],
             "skos:exactmatch": {
                 "@id": "https://www.w3.org/2019/wot/json-schema#required"
             }

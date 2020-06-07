@@ -1,12 +1,17 @@
 {
     "@context": {
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "iudx": "https://iudx.org.in/voc/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        "iudx": "https://iudx.org.in/voc/"
     },
     "@graph": [
         {
+            "@id": "iudx:FunctionDescription",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
             "rdfs:comment": "Description of a function associated in computation of a quanitative value.",
             "rdfs:label": "FunctionDescription",
             "rdfs:isDefinedBy": {
@@ -14,14 +19,15 @@
             },
             "rdfs:subClassOf": {
                 "@id": "iudx:Intangible"
-            },
-            "@id": "iudx:FunctionDescription",
-            "@type": [
-                "owl:Class",
-                "rdfs:Class"
-            ]
+            }
         },
         {
+            "@id": "iudx:functionParameters",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "List of parameters associated with a function.",
+            "rdfs:label": "functionParameters",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:FunctionDescription"
@@ -29,16 +35,18 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@container": "@list",
-                    "@id": "xsd:string"
+                    "@id": "iudx:Text",
+                    "@container": "@list"
                 }
-            ],
-            "@id": "iudx:functionParameters",
-            "rdfs:comment": "List of parameters associated with a function.",
-            "rdfs:label": "functionParameters",
-            "@type": "iudx:TextProperty"
+            ]
         },
         {
+            "@id": "iudx:name",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Name of the entity.",
+            "rdfs:label": "name",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Place"
@@ -61,22 +69,15 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "xsd:decimal"
-                },
-                {
-                    "@id": "xsd:string"
+                    "@id": "iudx:Text"
                 }
             ],
             "skos:exactMatch": {
                 "@id": "schema:name"
             },
-            "rdfs:comment": "Name of the entity.",
-            "rdfs:label": "name",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
-            },
-            "@type": "iudx:TextProperty",
-            "@id": "iudx:name"
+            }
         }
     ]
 }

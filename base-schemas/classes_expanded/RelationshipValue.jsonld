@@ -1,12 +1,17 @@
 {
     "@context": {
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "iudx": "https://iudx.org.in/voc/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        "iudx": "https://iudx.org.in/voc/"
     },
     "@graph": [
         {
+            "@id": "iudx:RelationshipValue",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
             "rdfs:comment": "Describes the value of a Relationship Object.",
             "rdfs:label": "RelationshipValue",
             "rdfs:isDefinedBy": {
@@ -14,14 +19,15 @@
             },
             "rdfs:subClassOf": {
                 "@id": "iudx:StructuredValue"
-            },
-            "@id": "iudx:RelationshipValue",
-            "@type": [
-                "owl:Class",
-                "rdfs:Class"
-            ]
+            }
         },
         {
+            "@id": "iudx:hasObject",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Value associated with RelationshipValue class. Contains IRI(s) that specify the relationship object(s).",
+            "rdfs:label": "hasObject",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:RelationshipValue"
@@ -29,19 +35,15 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@type": "@id",
-                    "@id": "xsd:string"
+                    "@id": "iudx:Text",
+                    "@type": "@id"
                 },
                 {
-                    "@container": "@set",
+                    "@id": "iudx:Text",
                     "@type": "@id",
-                    "@id": "xsd:string"
+                    "@container": "@set"
                 }
-            ],
-            "@id": "iudx:hasObject",
-            "rdfs:comment": "Value associated with RelationshipValue class. Contains IRI(s) that specify the relationship object(s).",
-            "rdfs:label": "hasObject",
-            "@type": "iudx:TextProperty"
+            ]
         }
     ]
 }

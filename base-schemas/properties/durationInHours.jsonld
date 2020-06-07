@@ -1,24 +1,24 @@
 {
     "@context": {
-        "owl": "http://www.w3.org/2002/07/owl#", 
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#", 
-        "iudx": "https://iudx.org.in/voc/", 
-        "xsd": "http://www.w3.org/2001/XMLSchema#", 
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://iudx.org.in/voc/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
-    }, 
+    },
     "@graph": [
         {
-            "@id": "iudx:durationInHours", 
+            "@id": "iudx:durationInHours",
             "@type": [
                 "iudx:StructuredProperty"
-            ], 
-            "rdfs:comment": "Specifies the duration of an interval in Hours.", 
-            "rdfs:label": "durationInHours", 
+            ],
+            "rdfs:comment": "Specifies the duration of an interval in Hours.",
+            "rdfs:label": "durationInHours",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ], 
+            ],
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Number"

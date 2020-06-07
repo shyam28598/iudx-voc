@@ -1,0 +1,276 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "@vocab": "https://voc.iudx.org.in/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://voc.iudx.org.in/",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "GeoCoordinates": {
+            "@id": "iudx:GeoCoordinates"
+        },
+        "Organization": {
+            "@id": "iudx:Organization"
+        },
+        "Provider": {
+            "@id": "iudx:Provider"
+        },
+        "TimeProperty": {
+            "@id": "iudx:TimeProperty"
+        },
+        "TextProperty": {
+            "@id": "iudx:TextProperty"
+        },
+        "IUDXEntity": {
+            "@id": "iudx:IUDXEntity"
+        },
+        "GeoProperty": {
+            "@id": "iudx:GeoProperty"
+        },
+        "LineString": {
+            "@id": "iudx:LineString"
+        },
+        "Intangible": {
+            "@id": "iudx:Intangible"
+        },
+        "Thing": {
+            "@id": "iudx:Thing"
+        },
+        "DataModel": {
+            "@id": "iudx:DataModel"
+        },
+        "Place": {
+            "@id": "iudx:Place"
+        },
+        "StructuredProperty": {
+            "@id": "iudx:StructuredProperty"
+        },
+        "DataFieldListValue": {
+            "@id": "iudx:DataFieldListValue"
+        },
+        "QuantitativeProperty": {
+            "@id": "iudx:QuantitativeProperty"
+        },
+        "Point": {
+            "@id": "iudx:Point"
+        },
+        "AccessObjectInfoValue": {
+            "@id": "iudx:AccessObjectInfoValue"
+        },
+        "RelationshipValue": {
+            "@id": "iudx:RelationshipValue"
+        },
+        "ValueDescriptor": {
+            "@id": "iudx:ValueDescriptor"
+        },
+        "DataDescriptor": {
+            "@id": "iudx:DataDescriptor"
+        },
+        "QuantitativeValue": {
+            "@id": "iudx:QuantitativeValue"
+        },
+        "AuthServerInfoValue": {
+            "@id": "iudx:AuthServerInfoValue"
+        },
+        "FunctionDescription": {
+            "@id": "iudx:FunctionDescription"
+        },
+        "GeoJSONGeometry": {
+            "@id": "iudx:GeoJSONGeometry"
+        },
+        "StructuredValue": {
+            "@id": "iudx:StructuredValue"
+        },
+        "Relationship": {
+            "@id": "iudx:Relationship"
+        },
+        "Polygon": {
+            "@id": "iudx:Polygon"
+        },
+        "Resource": {
+            "@id": "iudx:Resource"
+        },
+        "ResourceGroup": {
+            "@id": "iudx:ResourceGroup"
+        },
+        "Class": {
+            "@id": "iudx:Class"
+        },
+        "ResourceServer": {
+            "@id": "iudx:ResourceServer"
+        },
+        "Feature": {
+            "@id": "iudx:Feature"
+        },
+        "address": {
+            "@id": "iudx:address"
+        },
+        "resourceType": {
+            "@id": "iudx:resourceType"
+        },
+        "hasFunction": {
+            "@id": "iudx:hasFunction"
+        },
+        "isPartOf": {
+            "@id": "iudx:isPartOf"
+        },
+        "hasResourceServer": {
+            "@id": "iudx:hasResourceServer"
+        },
+        "sameAs": {
+            "@id": "iudx:sameAs"
+        },
+        "maxValue": {
+            "@id": "iudx:maxValue"
+        },
+        "resourceGroup": {
+            "@id": "iudx:resourceGroup"
+        },
+        "accessObject": {
+            "@id": "iudx:accessObject"
+        },
+        "itemDeprecatedAt": {
+            "@id": "iudx:itemDeprecatedAt"
+        },
+        "geometry": {
+            "@id": "iudx:geometry"
+        },
+        "coordinates": {
+            "@id": "iudx:coordinates"
+        },
+        "resourceServerOrg": {
+            "@id": "iudx:resourceServerOrg"
+        },
+        "accessObjectType": {
+            "@id": "iudx:accessObjectType"
+        },
+        "geoCovers": {
+            "@id": "iudx:geoCovers"
+        },
+        "unitCode": {
+            "@id": "iudx:unitCode"
+        },
+        "accessObjectInfo": {
+            "@id": "iudx:accessObjectInfo"
+        },
+        "durationInHours": {
+            "@id": "iudx:durationInHours"
+        },
+        "authServerInfo": {
+            "@id": "iudx:authServerInfo"
+        },
+        "minValue": {
+            "@id": "iudx:minValue"
+        },
+        "longitude": {
+            "@id": "iudx:longitude"
+        },
+        "location": {
+            "@id": "iudx:location"
+        },
+        "rangeIncludes": {
+            "@id": "iudx:rangeIncludes"
+        },
+        "geo": {
+            "@id": "iudx:geo"
+        },
+        "openDataFields": {
+            "@id": "iudx:openDataFields"
+        },
+        "geoJSON": {
+            "@id": "iudx:geoJSON"
+        },
+        "authServerURL": {
+            "@id": "iudx:authServerURL"
+        },
+        "itemCreatedAt": {
+            "@id": "iudx:itemCreatedAt"
+        },
+        "hasDataDescriptor": {
+            "@id": "iudx:hasDataDescriptor"
+        },
+        "authType": {
+            "@id": "iudx:authType"
+        },
+        "hasDataModel": {
+            "@id": "iudx:hasDataModel"
+        },
+        "listOfDataFields": {
+            "@id": "iudx:listOfDataFields"
+        },
+        "hasProvider": {
+            "@id": "iudx:hasProvider"
+        },
+        "hasResourceGroup": {
+            "@id": "iudx:hasResourceGroup"
+        },
+        "latitude": {
+            "@id": "iudx:latitude"
+        },
+        "unitText": {
+            "@id": "iudx:unitText"
+        },
+        "additionalInfoURL": {
+            "@id": "iudx:additionalInfoURL"
+        },
+        "functionParameters": {
+            "@id": "iudx:functionParameters"
+        },
+        "tags": {
+            "@id": "iudx:tags"
+        },
+        "dataSchema": {
+            "@id": "iudx:dataSchema"
+        },
+        "itemModifiedAt": {
+            "@id": "iudx:itemModifiedAt"
+        },
+        "resourceAuthControlLevel": {
+            "@id": "iudx:resourceAuthControlLevel"
+        },
+        "secureDataFields": {
+            "@id": "iudx:secureDataFields"
+        },
+        "dataModel": {
+            "@id": "iudx:dataModel"
+        },
+        "resourceServerHTTPAccessURL": {
+            "@id": "iudx:resourceServerHTTPAccessURL"
+        },
+        "providerOrg": {
+            "@id": "iudx:providerOrg"
+        },
+        "provider": {
+            "@id": "iudx:provider"
+        },
+        "iudxResourceAPIs": {
+            "@id": "iudx:iudxResourceAPIs"
+        },
+        "domainIncludes": {
+            "@id": "iudx:domainIncludes"
+        },
+        "name": {
+            "@id": "iudx:name"
+        },
+        "itemStatus": {
+            "@id": "iudx:itemStatus"
+        },
+        "hasObject": {
+            "@id": "iudx:hasObject"
+        },
+        "resourceServer": {
+            "@id": "iudx:resourceServer"
+        },
+        "requiredProperties": {
+            "@id": "iudx:requiredProperties"
+        },
+        "description": {
+            "@id": "iudx:description"
+        }
+    }
+}

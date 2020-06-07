@@ -20,6 +20,9 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:DataModel"
+                },
+                {
+                    "@id": "iudx:EnvAQM"
                 }
             ],
             "iudx:rangeIncludes": [

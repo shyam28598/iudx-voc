@@ -1,33 +1,39 @@
 {
     "@context": {
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "geojson": "https://purl.org/geojson/vocab#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "iudx": "https://iudx.org.in/voc/",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "geojson": "https://purl.org/geojson/vocab#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
         {
-            "rdfs:comment": "Information about a given organization (contact info, email, urls etc.)",
-            "rdfs:label": "Organization",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
-            "rdfs:subClassOf": {
-                "@id": "iudx:Thing"
-            },
             "@id": "iudx:Organization",
             "@type": [
                 "owl:Class",
                 "rdfs:Class"
             ],
+            "rdfs:comment": "Information about a given organization (contact info, email, urls etc.)",
+            "rdfs:label": "Organization",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
             "skos:exactMatch": {
                 "@id": "schema:Organization"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:Thing"
             }
         },
         {
+            "@id": "iudx:address",
+            "@type": [
+                "iudx:GeoProperty"
+            ],
+            "rdfs:comment": "Physical address of a place.",
+            "rdfs:label": "address",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Place"
@@ -38,21 +44,23 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "xsd:string"
+                    "@id": "iudx:Text"
                 }
             ],
             "skos:exactMatch": {
                 "@id": "schema:address"
             },
-            "rdfs:comment": "Physical address of a place.",
-            "rdfs:label": "address",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
-            },
-            "@type": "iudx:GeoProperty",
-            "@id": "iudx:address"
+            }
         },
         {
+            "@id": "iudx:name",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Name of the entity.",
+            "rdfs:label": "name",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Place"
@@ -75,22 +83,15 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "xsd:decimal"
-                },
-                {
-                    "@id": "xsd:string"
+                    "@id": "iudx:Text"
                 }
             ],
             "skos:exactMatch": {
                 "@id": "schema:name"
             },
-            "rdfs:comment": "Name of the entity.",
-            "rdfs:label": "name",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
-            },
-            "@type": "iudx:TextProperty",
-            "@id": "iudx:name"
+            }
         }
     ]
 }
