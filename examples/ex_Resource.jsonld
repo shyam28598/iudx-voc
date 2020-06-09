@@ -1,8 +1,6 @@
 {
     "@context": [
-        {
             "https://voc.iudx.org.in/"
-        }
     ],
     "type": ["Resource", "EnvAQM"],
     "id": "8898kwiorit9490494",
