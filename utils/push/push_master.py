@@ -16,7 +16,7 @@ token = sys.argv[2]
 url = "https://voc.iudx.org.in"
 verify = True
 
-headers = {"token": token, "content-type": "application/ld+json"}
+headers = {"token": token, "content-type": "application/ld+json", "accept": "application/ld+json"}
 
 
 failed_list = []
@@ -25,6 +25,7 @@ with open(flname, 'r') as f:
     print("Sending doc " + json.dumps(doc))
     if (verify is True):
         r = requests.post(url, data=json.dumps(doc), headers=headers)
+        print(r.status_code)
         if r.status_code != 201:
             print("Failed")
     else:

@@ -7,9 +7,12 @@ import copy
 """Create expanded class form of iudx classes by introspecting properties
 """
 
-properties_dir = "properties/"
-classes_dir = "classes/"
-classes_generated_dir = "classes_expanded/"
+properties_dir = sys.argv[1]
+classes_dir = sys.argv[2]
+classes_generated_dir = sys.argv[3]
+
+if classes_generated_dir[-1] != "/":
+    classes_generated_dir += "/"
 
 
 properties = {}

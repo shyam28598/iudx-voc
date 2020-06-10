@@ -6,7 +6,7 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "iudx": "https://voc.iudx.org.in/",
+        "iudx": "https://iudx.org.in/voc/",
         "geojson": "https://purl.org/geojson/vocab#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "owl": "http://www.w3.org/2002/07/owl#",
@@ -71,9 +71,6 @@
         "DataDescriptor": {
             "@id": "iudx:DataDescriptor"
         },
-        "QuantitativeValue": {
-            "@id": "iudx:QuantitativeValue"
-        },
         "AuthServerInfoValue": {
             "@id": "iudx:AuthServerInfoValue"
         },
@@ -107,6 +104,9 @@
         "Feature": {
             "@id": "iudx:Feature"
         },
+        "EnvAQM": {
+            "@id": "iudx:EnvAQM"
+        },
         "address": {
             "@id": "iudx:address"
         },
@@ -118,9 +118,6 @@
         },
         "isPartOf": {
             "@id": "iudx:isPartOf"
-        },
-        "hasResourceServer": {
-            "@id": "iudx:hasResourceServer"
         },
         "sameAs": {
             "@id": "iudx:sameAs"
@@ -176,9 +173,6 @@
         "rangeIncludes": {
             "@id": "iudx:rangeIncludes"
         },
-        "geo": {
-            "@id": "iudx:geo"
-        },
         "openDataFields": {
             "@id": "iudx:openDataFields"
         },
@@ -191,23 +185,14 @@
         "itemCreatedAt": {
             "@id": "iudx:itemCreatedAt"
         },
-        "hasDataDescriptor": {
-            "@id": "iudx:hasDataDescriptor"
+        "dataDescriptor": {
+            "@id": "iudx:dataDescriptor"
         },
         "authType": {
             "@id": "iudx:authType"
         },
-        "hasDataModel": {
-            "@id": "iudx:hasDataModel"
-        },
         "listOfDataFields": {
             "@id": "iudx:listOfDataFields"
-        },
-        "hasProvider": {
-            "@id": "iudx:hasProvider"
-        },
-        "hasResourceGroup": {
-            "@id": "iudx:hasResourceGroup"
         },
         "latitude": {
             "@id": "iudx:latitude"
@@ -271,6 +256,36 @@
         },
         "description": {
             "@id": "iudx:description"
+        },
+        "observationDateTime": {
+            "@id": "iudx:observationDateTime"
+        },
+        "deviceID": {
+            "@id": "iudx:deviceID"
+        },
+        "co2MIN": {
+            "@id": "iudx:co2MIN"
+        },
+        "aqmDevice": {
+            "@id": "iudx:aqmDevice"
+        },
+        "co2MAX": {
+            "@id": "iudx:co2MAX"
+        },
+        "aqiCategory": {
+            "@id": "iudx:aqiCategory"
+        },
+        "aqiMajorPollutant": {
+            "@id": "iudx:aqiMajorPollutant"
+        },
+        "airPressure": {
+            "@id": "iudx:airPressure"
+        },
+        "co2AVG": {
+            "@id": "iudx:co2AVG"
+        },
+        "airQualityIndex": {
+            "@id": "iudx:airQualityIndex"
         }
     }
 }
