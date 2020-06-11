@@ -15,7 +15,7 @@ tmp_expanded_path = "/tmp/generated/"
 
 if not os.path.exists("generated/"):
     os.makedirs("generated/")
-generated_path = "/tmp/generated_classes"
+generated_path = "/tmp/generated_classes/"
 
 
 def find(element, array):
