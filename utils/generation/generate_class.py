@@ -1,69 +1,114 @@
+#!/usr/local/bin/python3
 import json
-import sys
 import os
-import traceback
-import copy
+import glob
 
-"""Create expanded class form of iudx classes by introspecting properties
-"""
+from collections import OrderedDict
+from distutils.dir_util import copy_tree
 
-properties_dir = sys.argv[1]
-classes_dir = sys.argv[2]
-classes_generated_dir = sys.argv[3]
-
-if classes_generated_dir[-1] != "/":
-    classes_generated_dir += "/"
+from_classes = ["base-schemas/classes/", "data-models/classes/"]
+from_properties= ["base-schemas/properties/", "data-models/properties/"]
+classes_path = "/tmp/all_classes/"
+properties_path = "/tmp/all_properties/"
+tmp_expanded_path = "/tmp/generated/"
 
 
-properties = {}
+if not os.path.exists("generated/"):
+    os.makedirs("generated/")
+generated_path = "/tmp/generated_classes"
 
-for fl in os.listdir(properties_dir):
-    with open(os.path.join(properties_dir, fl), "r") as f:
-        try:
-            properties[fl[:-7]] = json.load(f)
-        except Exception as e:
-            print("Property - " + fl[:-7] + " not valid json")
-            print(e)
 
-classes = {}
-for p in properties.keys():
+def find(element, array):
+    for item in array:
+        if item['@id'] == element:
+            return item
+
+def generate(class_path, property_path):
+    for class_file in glob.glob(os.path.join(class_path, '*.jsonld')):
+        domain = class_file.replace(class_path, "")
+        domain = domain.replace(".jsonld", "")
+        domain = "iudx:" + domain
+        with open(class_file, "r+") as class_obj:
+            new_dict = OrderedDict()
+            obj = json.load(class_obj)
+            if "@context" in obj.keys():
+                new_dict["@context"] = obj["@context"]
+                del(obj["@context"])
+            else:
+                print("@context missing in " + class_file)
+            if "@graph" in obj.keys():
+                new_dict["@graph"] = obj["@graph"]
+                del(obj["@graph"])
+            else:
+                print("@graph missing in " + class_file)
+            for prop_file in glob.glob(os.path.join(property_path, '*.jsonld')):
+                with open(prop_file, "r+") as prop_obj:
+                    prop = json.load(prop_obj)
+                    if "@graph" in prop.keys():
+                        try:
+                            includes = find(domain, prop["@graph"][0]["iudx:domainIncludes"])
+                            if includes is not None:
+                                new_dict["@graph"].append(prop["@graph"][0])
+                        except KeyError:
+                            pass
+                            #print("iudx:domainIncludes not in " + prop_file)
+                        try:
+                            includes = find(domain, prop["@graph"][0]["iudx:rangeIncludes"])
+                            if includes is not None:
+                                new_dict["@graph"].append(prop["@graph"][0])
+                        except KeyError:
+                            pass
+                            #print("iudx:rangeIncludes not in " + prop_file)
+                    else:
+                        print("@graph missing in " + prop_file)
+            os.makedirs(os.path.dirname(tmp_expanded_path), exist_ok=True)
+            with open(tmp_expanded_path + domain.replace("iudx:", "") + ".jsonld", "w+") as new_file:
+                json.dump(new_dict, new_file, indent=4)
+
+
+def super_class(prop, expanded_dict):
     try:
-        cls = properties[p]["@graph"][0]["iudx:domainIncludes"]
-        if type(cls) is dict:
-            cl_names = [cls["@id"]]
-        elif type(cls) is list:
-            cl_names = [c["@id"] for c in cls]
-    except Exception as e:
-        print("Property - " + p + " has no class")
-        print(e)
-        continue
+        if "rdf:" not in prop["rdfs:subClassOf"]["@id"]:
+            with open(tmp_expanded_path + prop["rdfs:subClassOf"]["@id"].split(":")[1] + ".jsonld", "r") as super_file:
+                super_obj = json.load(super_file)
+                for sub_prop in super_obj["@graph"]:
+                    expanded_dict["@graph"].append(sub_prop)
+                    super_class(sub_prop, expanded_dict)
+    except KeyError:
+        pass
 
-    for c in cl_names:
-        if c not in classes.keys():
-            classes[c] = [properties[p]["@graph"][0]]
-        else:
-            try:
-                classes[c].append(properties[p]["@graph"][0])
-            except Exception as e:
-                print(properties[p])
-                print(e)
 
-for fl in os.listdir(classes_dir):
-    cls_name = "iudx:" + str(fl[:-7])
-    with open(os.path.join(classes_dir, fl), "r") as f:
-        cls = json.load(f)
-    if cls_name not in classes.keys():
-        print("Class - " + cls_name + " doesn't exist")
-        continue
-    for prop in classes[cls_name]:
-        print("Before")
-        print(json.dumps(prop, indent=4))
-        try:
-            prop_new = copy.deepcopy(prop)
-            cls["@graph"].append(prop_new)
-        except Exception as e:
-            print("error")
-            print(json.dumps(prop, indent=4))
-            input()
-    with open(classes_generated_dir + fl, "w") as f:
-        json.dump(cls, f, indent=4)
+def generate_expanded():
+    for expanded_file in glob.glob(os.path.join(tmp_expanded_path, '*.jsonld')):
+        with open(expanded_file, "r+") as super_obj_file:
+            expanded_dict = OrderedDict()
+            obj = json.load(super_obj_file)
+            if "@context" in obj.keys():
+                expanded_dict["@context"] = obj["@context"]
+                del(obj["@context"]) 
+            else:
+                print("@context missing in " + expanded_file)
+            if "@graph" in obj.keys():
+                expanded_dict["@graph"] = obj["@graph"]
+                try:
+                    sub_class = obj["@graph"][0]["rdfs:subClassOf"]["@id"]
+                    if "rdf:" not in sub_class:
+                        with open(tmp_expanded_path + sub_class.split(":")[1] + ".jsonld", "r") as parent_file:
+                            parent_obj = json.load(parent_file)
+                            for sub_prop in parent_obj["@graph"]:
+                                expanded_dict["@graph"].append(sub_prop)
+                                super_class(sub_prop, expanded_dict)
+                except KeyError:
+                    pass
+            os.makedirs(os.path.dirname(generated_path), exist_ok=True)
+            with open(generated_path + expanded_file.replace(tmp_expanded_path, ""), "w+") as new_file:
+                json.dump(expanded_dict, new_file, indent=4)
+
+
+if __name__=="__main__":
+    for directory in from_classes:
+        copy_tree(directory, classes_path)
+    for directory in from_properties:
+        copy_tree(directory, properties_path)
+    generate(classes_path, properties_path)
+    generate_expanded()

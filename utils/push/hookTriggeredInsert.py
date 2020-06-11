@@ -9,16 +9,18 @@ import os
 import sys
 
 
-cert_file = "../../keys/cert.pem"
-key_file = "../../keys/privkey.pem"
+os.system("git pull origin master")
+os.system("python utils/generation/generate_class.py")
 
 
-classes_folder = "./base-schemas/classes/"
-dm_classes_folder = "./data-models/classes"
-properties_folder = "./base-schemas/properties/"
-dm_properties_folder = "./data-models/properties/"
+cert_file = "keys/cert.pem"
+key_file = "keys/private-key.pem"
 
-folders = [classes_folder, dm_classes_folder, properties_folder, dm_properties_folder]
+
+all_classes_folder = "/tmp/generated_classes/"
+all_properties_folder = "/tmp/all_properties/"
+
+folders = [all_classes_folder, all_properties_folder]
 
 
 cert = (cert_file, key_file)
@@ -35,6 +37,7 @@ token = requests.post(auth_api, data=json.dumps(payload),
                         headers=auth_headers, cert=cert).json()["token"]
 
 voc_headers = {"token": token, "content-type": "application/ld+json", "accept": "application/ld+json"}
+print(voc_headers)
 
 
 
