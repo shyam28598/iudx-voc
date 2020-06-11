@@ -10,7 +10,7 @@ import sys
 
 
 os.system("git pull origin master")
-os.system("python utils/generation/generate_class.py")
+os.system("python3 utils/generation/generate_class.py")
 
 
 cert_file = "keys/cert.pem"
