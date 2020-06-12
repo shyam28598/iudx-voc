@@ -14,9 +14,7 @@
         "rdf:Property",
         "iudx:QuantitativeProperty"
     ],
-    "rdfs:comment": {
-        "@value": "Device ID of the physical sensor as per the device data model"
-    },
+    "rdfs:comment":  "Device ID of the physical sensor as per the device data model",
     "rdfs:isDefinedBy": {
         "@id": "iudx:"
     },

@@ -15,12 +15,8 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": {
-                "@value": "Describes maximum value of CO2 over a set of observations in past."
-            },
-            "rdfs:label": {
-                "@value": "co2MAX"
-            },
+            "rdfs:comment":  "Describes maximum value of CO2 over a set of observations in past.",
+            "rdfs:label":  "co2MAX",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvAQM"

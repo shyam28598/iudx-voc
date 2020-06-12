@@ -1,9 +1,7 @@
 {
     "@context": {
         "owl": "http://www.w3.org/2002/07/owl#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "geojson": "https://purl.org/geojson/vocab#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "iudx": "https://voc.iudx.org.in/",
         "skos": "http://www.w3.org/2004/02/skos/core#",
@@ -11,28 +9,22 @@
     },
     "@graph": [
         {
-            "@id": "iudx:address",
+            "@id": "iudx:dataModelDomain",
             "@type": [
-                "iudx:GeoProperty"
+                "rdf:Property"
             ],
-            "rdfs:comment": "Physical address of a place.",
-            "rdfs:label": "address",
+            "rdfs:comment": "Categorizes a data-model to a particular domain",
+            "rdfs:label": "dataModelDomain",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:Place"
+                    "@id": "rdf:Property"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "rdfs:Class"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "schema:address"
-            },
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            }
+            ]
         }
     ]
 }

@@ -7,18 +7,18 @@
     },
     "@graph": [
         {
-            "@id": "iudx:DataFieldListValue",
+            "@id": "iudx:DataModelDomain",
             "@type": [
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "Lists various fields associated with the data available from a given group of resource items.",
-            "rdfs:label": "DataFieldListValue",
+            "rdfs:comment": "Representation of a data model domain. This is used to group data models in accordance to their operation space.",
+            "rdfs:label": "DataModelDomain",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "rdfs:subClassOf": {
-                "@id": "iudx:StructuredValue"
+                "@id": "iudx:Intangible"
             }
         }
     ]

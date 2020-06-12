@@ -3,7 +3,7 @@
         "owl": "http://www.w3.org/2002/07/owl#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "iudx": "https://iudx.org.in/voc/",
+        "iudx": "https://voc.iudx.org.in/",
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "schema": "http://schema.org/"
     },
@@ -11,7 +11,7 @@
         {
             "@id": "iudx:requiredProperties",
             "@type": [
-                "rdf:property"
+                "rdf:Property"
             ],
             "rdfs:comment": "Describes a set of properties that are mandatory for a given class.",
             "rdfs:label": "requiredProperties",
