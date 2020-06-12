@@ -6,7 +6,7 @@ import glob
 from collections import OrderedDict
 from distutils.dir_util import copy_tree
 
-from_classes = ["base-schemas/classes/", "data-models/classes/"]
+from_classes = ["base-schemas/classes/", "data-models/classes/", "data-types/classes"]
 from_properties= ["base-schemas/properties/", "data-models/properties/"]
 classes_path = "/tmp/all_classes/"
 properties_path = "/tmp/all_properties/"
