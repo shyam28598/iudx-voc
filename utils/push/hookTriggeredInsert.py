@@ -1,8 +1,6 @@
 """
     This is a script for a github webhook to trigger.
-    This script assumes that this script is not updated in the remote.
-    If this script is updated, manually update the iudx-voc submodule in the voc-server.
-    Give absolute paths to privkey and cert
+    Give relative paths to privkey and cert from iudx-voc folder
 """
 
 import json
@@ -12,8 +10,6 @@ import sys
 import time
 
 
-# Update the schemas
-os.system("git clean -f && git reset --hard && git pull origin master")
 # Wait for repo to get updated
 time.sleep(5)
 # Generate classes

@@ -19,16 +19,19 @@
             "skos:exactMatch": {
                 "@id": "schema:rangeIncludes"
             },
-            "rdfs:range": [
+            "iudx:domainIncludes": [
+                {
+                    "@id": "rdf:Property"
+                }
+            ],
+            "iudx:rangeIncludes": [
                 {
                     "@id": "rdfs:Class"
                 }
             ],
-            "rdfs:domain": [
-                {
-                    "@id": "rdf:Property"
-                }
-           ]
+            "skos:exactmatch": {
+                "@id": "schema:rangeIncludes"
+            }
         }
     ]
 }
