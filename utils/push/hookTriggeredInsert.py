@@ -12,6 +12,8 @@ import time
 
 # Wait for repo to get updated
 time.sleep(5)
+# clear tmp
+os.system("rm -r /tmp/generated* && rm -r /tmp/all_*")
 # Generate classes
 os.system("python3 utils/generation/generate_class.py")
 # Generate master context
