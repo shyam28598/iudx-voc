@@ -96,9 +96,8 @@ def generate_expanded():
                         with open(tmp_expanded_path + sub_class.split(":")[1] + ".jsonld", "r") as parent_file:
                             parent_obj = json.load(parent_file)
                             for sub_prop in parent_obj["@graph"]:
-                                if ("rdfs:Class" not in sub_prop["@type"]):
-                                    expanded_dict["@graph"].append(sub_prop)
-                                    super_class(sub_prop, expanded_dict)
+                                expanded_dict["@graph"].append(sub_prop)
+                                super_class(sub_prop, expanded_dict)
                 except KeyError:
                     pass
             os.makedirs(os.path.dirname(generated_path), exist_ok=True)
