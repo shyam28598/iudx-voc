@@ -11,9 +11,11 @@ import os
 import sys
 import time
 
+
+# Update the schemas
+os.system("git clean -f && git reset --hard && git pull origin master")
 # Wait for repo to get updated
 time.sleep(5)
-
 # Generate classes
 os.system("python3 utils/generation/generate_class.py")
 # Generate master context
@@ -59,9 +61,9 @@ failed_list = []
 for fldr in folders:
     for filename in os.listdir(fldr):
         with open(fldr + "/" + filename, 'r') as f:
+            print("Pushing " + filename)
             doc = json.load(f)
             name = doc["@graph"][0]["@id"][5:]
-            print("Pushing " + name)
             r = requests.post(url+"/"+name, data=json.dumps(doc), headers=voc_headers)
             if r.status_code != 201 :
                 failed_list.append(name)
