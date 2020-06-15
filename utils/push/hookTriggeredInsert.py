@@ -14,7 +14,10 @@ import time
 # Wait for repo to get updated
 time.sleep(5)
 
+# Generate classes
 os.system("python3 utils/generation/generate_class.py")
+# Generate master context
+os.system("python3 utils/generation/generate_master.py")
 
 # Wait for schemas to get generated
 time.sleep(5)
@@ -27,6 +30,7 @@ key_file = "keys/private-key.pem"
 
 all_classes_folder = "/tmp/generated_classes/"
 all_properties_folder = "/tmp/all_properties/"
+master_context_file = "./iudx.jsonld"
 
 folders = [all_classes_folder, all_properties_folder]
 
@@ -62,6 +66,13 @@ for fldr in folders:
             if r.status_code != 201 :
                 failed_list.append(name)
 
+with open(master_context_file, "r") as f:
+    master_context = json.load(f)
+    print("Pushing master context")
+    r = requests.post(url, data=json.dumps(master_context), headers=voc_headers)
+    print(r.status_code)
+    if r.status_code != 201:
+        print("Failed")
 
 
 with open("failed.txt", "w") as f:
