@@ -7,11 +7,10 @@ import subprocess
 
 
 folder_path = "/tmp/generated/"
-#folder_path = "../../expanded/"
 
-if not os.path.exists("../../diagrams/"):
-    os.makedirs("../../diagrams/")
-diagram_path = "../../diagrams/"
+if not os.path.exists("diagrams/"):
+    os.makedirs("diagrams/")
+diagram_path = "diagrams/"
 dup_classes = []
 
 
@@ -65,7 +64,6 @@ def graph(obj):
 
 with open(diagram_path + "IUDX-domain-range.txt", "w+") as text_file:
     print("@startuml", file=text_file)
-    print("title IUDX-VOC Ontology Diagram", file=text_file)
     print("skinparam titleFontSize 30", file=text_file)
     print("skinparam titleFontColor DarkGoldenRod" + "\n", file=text_file)
     #print("left to right direction" + "\n" + "skinparam classFontColor DarkCyan" + "\n" + "skinparam roundcorner 27" + "\n", file=text_file)

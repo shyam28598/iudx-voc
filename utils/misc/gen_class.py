@@ -2,20 +2,26 @@
 import json
 import os
 import glob
+import copy
 
 from collections import OrderedDict
 from distutils.dir_util import copy_tree
 
-from_classes = ["../../base-schemas/classes/", "../../data-models/classes/"]
-from_properties= ["../../base-schemas/properties/", "../../data-models/properties/"]
+# Paths for IUDX classes and properties
+from_classes = ["base-schemas/classes/", "data-models/classes/"]
+from_properties= ["base-schemas/properties/", "data-models/properties/"]
+# Path of the temporary directory to house all classes
 classes_path = "/tmp/all_classes/"
+# Path of the temporary directory to house all properties
 properties_path = "/tmp/all_properties/"
+# Path of the temporary directory to house expanded classes without super class properties
 tmp_expanded_path = "/tmp/generated/"
 
 
-if not os.path.exists("../../generated/"):
-    os.makedirs("../../generated/")
-generated_path = "../../generated/"
+# Directory to house expanded classes with all super class properties
+if not os.path.exists("generated/"):
+    os.makedirs("generated/")
+generated_path = "generated/"
 
 
 def find(element, array):
@@ -24,6 +30,12 @@ def find(element, array):
             return item
 
 def generate(class_path, property_path):
+    """Generate expanded classes without the properties of the super class.
+
+    This function appends the @graph object to the class_path file's @graph,
+    if the class_path file's ID is present either in the domainIncludes or
+    rangeIncludes of the property_path file.
+    """
     for class_file in glob.glob(os.path.join(class_path, '*.jsonld')):
         domain = class_file.replace(class_path, "")
         domain = domain.replace(".jsonld", "")
@@ -50,15 +62,17 @@ def generate(class_path, property_path):
                             if includes is not None:
                                 new_dict["@graph"].append(prop["@graph"][0])
                         except KeyError:
-                            pass
+                            # Uncomment to check filename in which domainIncludes is missing
                             #print("iudx:domainIncludes not in " + prop_file)
+                            pass
                         try:
                             includes = find(domain, prop["@graph"][0]["iudx:rangeIncludes"])
                             if includes is not None:
                                 new_dict["@graph"].append(prop["@graph"][0])
                         except KeyError:
-                            pass
+                            # Uncomment to check filename in which rangeIncludes is missing
                             #print("iudx:rangeIncludes not in " + prop_file)
+                            pass
                     else:
                         print("@graph missing in " + prop_file)
             os.makedirs(os.path.dirname(tmp_expanded_path), exist_ok=True)
@@ -79,6 +93,12 @@ def super_class(prop, expanded_dict):
 
 
 def generate_expanded():
+    """Generate expanded classes with the properties of the super class.
+
+    This function appends the @graph object of the super class to the-
+    @graph of the class, if the class is a sub class of the mentioned super class.
+    """
+    final_dict = OrderedDict()
     for expanded_file in glob.glob(os.path.join(tmp_expanded_path, '*.jsonld')):
         with open(expanded_file, "r+") as super_obj_file:
             expanded_dict = OrderedDict()
@@ -106,8 +126,10 @@ def generate_expanded():
 
 
 if __name__=="__main__":
+    # Copy all class objects(base-schemas classes and data-models classes) to one directory 
     for directory in from_classes:
         copy_tree(directory, classes_path)
+    # Copy all property objects(base-schemas properties and data-models properties) to one directory 
     for directory in from_properties:
         copy_tree(directory, properties_path)
     generate(classes_path, properties_path)

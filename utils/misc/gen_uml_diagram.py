@@ -5,15 +5,22 @@ import glob
 import copy
 import subprocess
 
-
-folder_path = "../../generated/"
-if not os.path.exists("../../diagrams/"):
-    os.makedirs("../../diagrams/")
-diagram_path = "../../diagrams/"
+# Path to expanded classes
+folder_path = "generated/"
+# Path to generate the UML diagram
+if not os.path.exists("diagrams/"):
+    os.makedirs("diagrams/")
+diagram_path = "diagrams/"
+# List of classnames to avoid duplication
 dup_classes = []
 
 
 def graph(obj):
+    """Generate PlantUML text.
+
+    This function generates a text file from the generated expanded classes,
+    which is used by plantuml to generate the UML Ontology diagram for IUDX.
+    """
     if "@graph" in obj.keys():
         graph_obj = copy.deepcopy(obj["@graph"])
         for i in obj["@graph"]:
@@ -64,7 +71,8 @@ with open(diagram_path + "IUDX-Vocab-Ontology.txt", "w+") as text_file:
     print("skinparam titleFontSize 30", file=text_file)
     print("skinparam titleFontColor DarkGoldenRod" + "\n", file=text_file)
     print("left to right direction" + "\n" + "skinparam classFontColor DarkCyan" + "\n" + "skinparam roundcorner 27" + "\n", file=text_file)
-    #filename = "../../generated/Resource.jsonld"
+    # Uncomment to generate UML for a given class
+    #filename = "generated/Resource.jsonld"
     for filename in glob.glob(os.path.join(folder_path, '*.jsonld')):
         with open(filename, "r+") as obj_file:
              obj = json.load(obj_file)
