@@ -15,12 +15,16 @@
             ],
             "rdfs:comment": "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.",
             "rdfs:label": "isPartOf",
-            "schema:domainIncludes": {
-                "@id": "schema:CreativeWork"
-            },
-            "schema:inverseOf": {
-                "@id": "schema:hasPart"
-            },
+            "schema:domainIncludes": [
+                {
+                    "@id": "schema:CreativeWork"
+                }
+            ],
+            "schema:inverseOf": [
+                {
+                    "@id": "schema:hasPart"
+                }
+            ],
             "schema:rangeIncludes": [
                 {
                     "@id": "schema:CreativeWork"

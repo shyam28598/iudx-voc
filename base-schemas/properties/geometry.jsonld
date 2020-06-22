@@ -15,9 +15,7 @@
             "@type": [
                 "iudx:GeoProperty"
             ],
-            "rdfs:comment": {
-                "@value": "Geometry property in a GeoJSON object"
-            },
+            "rdfs:comment":  "Geometry property in a GeoJSON object",
             "rdfs:label": "geometry",
             "iudx:domainIncludes": [
                 {

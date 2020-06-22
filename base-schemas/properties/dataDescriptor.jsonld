@@ -9,7 +9,7 @@
     "@graph": [
         {
             "@id": "iudx:dataDescriptor",
-            "@type": "iudx:Relationship",
+            "@type": [ "iudx:Relationship" ],
             "rdfs:comment": "URI pointing to the data-descriptor entity",
             "rdfs:label": "hasDataDescriptor",
             "iudx:domainIncludes": [
