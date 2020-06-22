@@ -11,7 +11,8 @@ import time
 
 
 # Wait for repo to get updated
-time.sleep(15)
+os.system("git fetch && git reset --hard origin/master ")
+time.sleep(10)
 # clear tmp
 os.system("rm -r /tmp/generated* && rm -r /tmp/all_*")
 # Generate classes
