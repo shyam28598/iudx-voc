@@ -1,5 +1,5 @@
 """
-    This is a script for a github webhook to trigger.
+    This is a script triggered by github webhook to insert schemas into the voc-server.
     Give relative paths to privkey and cert from iudx-voc folder
 """
 
