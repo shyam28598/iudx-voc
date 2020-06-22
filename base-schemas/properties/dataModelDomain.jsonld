@@ -13,7 +13,7 @@
             "@type": [
                 "rdf:Property"
             ],
-            "rdfs:comment": "Categorizes a data-model to a particular domain",
+            "rdfs:comment": "Categorizes a data-model to a particular domain through the domains id",
             "rdfs:label": "dataModelDomain",
             "iudx:domainIncludes": [
                 {
