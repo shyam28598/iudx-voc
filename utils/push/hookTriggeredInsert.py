@@ -11,7 +11,7 @@ import time
 
 
 # Wait for repo to get updated
-time.sleep(5)
+time.sleep(15)
 # clear tmp
 os.system("rm -r /tmp/generated* && rm -r /tmp/all_*")
 # Generate classes
