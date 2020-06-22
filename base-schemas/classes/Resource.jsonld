@@ -12,7 +12,7 @@
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "Describes the Resource entry in the IUDX catalogue.",
+            "rdfs:comment": "Describes the Resource entity in the IUDX catalogue.",
             "rdfs:label": "Resource",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
