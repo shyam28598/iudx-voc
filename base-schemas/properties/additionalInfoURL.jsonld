@@ -17,6 +17,9 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:AccessObjectInfoValue"
+                },
+                {
+                    "@id": "iudx:Organization"
                 }
             ],
             "iudx:rangeIncludes": [

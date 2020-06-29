@@ -32,12 +32,15 @@
                 },
                 {
                     "@id": "iudx:Organization"
-                },
-                {
-                    "@id": "iudx:EnvAQM"
                 }
             ],
             "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Point"
+                },
+                {
+                    "@id": "iudx:GeoJSONGeometry"
+                },
                 {
                     "@id": "iudx:Place"
                 },
