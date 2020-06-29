@@ -1,23 +1,13 @@
 {
-    "@context": [
-        {
-            "https://voc.iudx.org.in/"
-        },
-        {
-          "DEVICEID": "iudx:aqmDeviceID"
-        }
-    ],
-    "type": ["ResourceGroup"],
-    "id": "pscdcl/pudx-resource-server/pune-iitm-aqi",
-    "description": "Description for IITM weather station resource group providing rainfall and aqm data.",
+    "@context": "https://voc.iudx.org.in/",
+    "type": ["iudx:ResourceGroup"],
+    "id": "<hash>/<rs>/<group>",
+    "description": "An AQM Item",
     "name": "iitm-pune-aqi",
-    "tags": [ 
-         "environment", "air quality", "climate", "air", "aqi", "iitm", "safar", "pollution", "rainfall", "temperature", "uv" 
-    ],
+    "tags":  "environment, air quality",
     "itemStatus": "ACTIVE",
-    "hasProvider": "iudx-catalogue-pune:pscdcl",
-    "hasResourceServer": "iudx-catalogue-pune:pudx-resource-server",
-    "hasDataDescriptor": "iudx-catalogue-pune:pune-iitm-aqi-data-descriptor",
+    "provider": "<provider>",
+    "resourceServer": "<hash>/<rs>",
     "resourceAuthControlLevel": "INDIVIDUAL",
     "resourceType": "messageStream",
     "authServerInfo": {
