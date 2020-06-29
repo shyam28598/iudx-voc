@@ -11,7 +11,7 @@
             "@id": "iudx:dataDescriptor",
             "@type": [ "iudx:Relationship" ],
             "rdfs:comment": "URI pointing to the data-descriptor entity",
-            "rdfs:label": "hasDataDescriptor",
+            "rdfs:label": "dataDescriptor",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:ResourceGroup"
