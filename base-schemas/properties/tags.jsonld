@@ -12,7 +12,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Discovery tags associated with items (resource item, resource Group item, data models) in IUDX catalogue",
+            "rdfs:comment": "Comma separated discovery tags associated with an IUDXEntity (resource , resource Group)",
             "rdfs:label": "tags",
             "iudx:domainIncludes": [
                 {
@@ -24,8 +24,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text",
-                    "@container": "@set"
+                    "@id": "iudx:Text"
                 }
             ]
         }

@@ -12,7 +12,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "The set of IUDX resource APIs supported by a given resource. Array of multiple strings with values from the set: [TEMPORAL, SPATIAL, ATTR, TEXT]",
+            "rdfs:comment": "The set of IUDX resource APIs supported by a given ResourceGroup. ENUM: [TEMPORAL, SPATIAL, ATTR, TEXT]",
             "rdfs:label": "iudxResourceAPIs",
             "iudx:domainIncludes": [
                 {

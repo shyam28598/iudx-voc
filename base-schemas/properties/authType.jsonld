@@ -12,7 +12,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Identification of the auth scheme used for a given resource.",
+            "rdfs:comment": "Identification of the auth scheme used for a given resource.  ENUM: [IUDXAUTH].",
             "rdfs:label": "authType",
             "iudx:domainIncludes": [
                 {

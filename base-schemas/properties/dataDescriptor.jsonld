@@ -20,10 +20,13 @@
             "iudx:rangeIncludes": [
                 {
                     "@type": "@id",
-                    "@id": "xsd:string"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:RelationshipValue"
+                },
+                {
+                    "@id": "iudx:DataModel"
                 }
             ]
         }

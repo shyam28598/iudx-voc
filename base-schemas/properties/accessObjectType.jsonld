@@ -12,7 +12,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Type of access object (OpenAPI, AsyncAPI etc.)",
+            "rdfs:comment": "Type of access object. ENUM: [OpenAPI, AsyncAPI]",
             "rdfs:label": "accessObjectType",
             "iudx:domainIncludes": [
                 {
