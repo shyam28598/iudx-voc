@@ -7,8 +7,8 @@
          "environment", "air quality", "climate", "air", "aqi", "iitm", "safar", "pollution", "rainfall", "temperature", "uv" 
     ],
     "itemStatus": "ACTIVE",
-    "hasResourceServer": "iudx-catalogue-pune:pudx-resource-server",
-    "hasResourceGroup": "iudx-catalogue-pune:pscdcl/pudx-resource-server/pune-iitm-aqi",
+    "resourceServer": "iudx-catalogue-pune:pudx-resource-server",
+    "resourceGroup": "iudx-catalogue-pune:pscdcl/pudx-resource-server/pune-iitm-aqi",
     "itemCreatedAt": "2019-02-20T10:30:06.093121",
     "deviceId": "169af06f-bfee-3513-56e5-847957490-sensoragent",
     "location": {
