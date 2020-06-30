@@ -8,13 +8,13 @@ token = sys.argv[2]
 
 
 # local
-# url = "https://localhost:8080"
-# verify = False
+url = "https://localhost:8080"
+verify = False
 
 
 # ext
-url = "https://voc.iudx.org.in"
-verify = True
+# url = "https://voc.iudx.org.in"
+# verify = True
 
 headers = {"token": token, "content-type": "application/ld+json"}
 
