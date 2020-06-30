@@ -14,14 +14,11 @@
             ],
             "rdfs:comment": "Air Quality Monitoring (AQM) Data Model.",
             "rdfs:label": "EnvAQM",
-            "iudx:dataModelDomain": {
-                "@id": "iudx:Environment"
-            },
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "rdfs:subClassOf": {
-                "@id": "iudx:DataModel"
+                "@id": "iudx:Environment"
             }
         }
     ]
