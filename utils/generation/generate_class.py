@@ -22,7 +22,6 @@ from_properties= []
 for (dirpath, dirnames, filenames) in os.walk("./"):
 
     if (len([dirpath.find(e) for e in excluded if dirpath.find(e)>0])):
-        print(dirpath)
         continue
 
     if(dirpath.find("classes")>0 and dirpath.find("properties")==-1 ):
