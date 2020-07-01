@@ -1,0 +1,28 @@
+{
+    "@context": "https://voc.iudx.org.in/",
+    "type": [
+        "iudx:Resource",
+        "iudx:WifiHostspot"
+    ],
+    "id": "rbccps.org/aa9d66a000d94a78895de8d4c0b3a67f3450e531/pudx-resource-server/wifi-hotspot/Todkar Hospital",
+    "description": "Describes a resource providing telemetry data for WiFi HotSpots for Pune City Wi-Fi Service",
+    "tags": "wifi, hotspot, download, telemetry, upload, user counts",
+    "itemStatus": "ACTIVE",
+    "resourceGroup": "rbccps.org/aa9d66a000d94a78895de8d4c0b3a67f3450e531/pudx-resource-server/wifi-hotspot",
+    "resourceServer": "rbccps.org/aa9d66a000d94a78895de8d4c0b3a67f3450e531/pudx-resource-server",
+    "itemCreatedAt": "Fri Nov 01 06:10:15 UTC 2019",
+    "deviceId": "181",
+    "location": {
+        "type": "Place",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                73.86393,
+                18.5229699
+            ]
+        },
+        "address": "Todkar Hospital"
+    },
+    "provider": "rbccps.org/aa9d66a000d94a78895de8d4c0b3a67f3450e531",
+    "itemModifiedAt": "Fri Nov 01 06:10:15 UTC 2019"
+}

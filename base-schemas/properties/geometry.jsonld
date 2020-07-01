@@ -20,11 +20,14 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Feature"
+                },
+                {
+                    "@id": "iudx:Place"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Point"
+                    "@id": "iudx:GeoJSONGeometry"
                 }
             ],
             "skos:exactMatch": {
