@@ -1,13 +1,13 @@
 {
     "@context": "https://voc.iudx.org.in/",
-    "type": ["iudx:ResourceGroup"],
-    "id": "<hash>/<rs>/<group>",
-    "description": "An AQM Item",
-    "name": "iitm-pune-aqi",
+    "type": ["iudx:ResourceGroup", "iudx:EnvAQM"],
+    "id": "rbccps.org/aa9d66a000d94a78895de8d4c0b3a67f3450e531/rs.pudx.org.in/aqm-bosch-climo",
+    "description": "An AQM Group",
+    "name": "aqm-bosch-climo",
     "tags":  "environment, air quality",
     "itemStatus": "ACTIVE",
-    "provider": "<provider>",
-    "resourceServer": "<hash>/<rs>",
+    "provider": "rbccps.org/aa9d66a000d94a78895de8d4c0b3a67f3450e531",
+    "resourceServer": "rbccps.org/aa9d66a000d94a78895de8d4c0b3a67f3450e531/rs.pudx.org.in",
     "resourceAuthControlLevel": "INDIVIDUAL",
     "resourceType": "messageStream",
     "authServerInfo": {
@@ -25,6 +25,6 @@
     "itemCreatedAt": "2019-02-20T10:30:06.093121",
     "location": {
       "type": "Place",
-      "name": "Pune"
+      "address": "Pune"
     }
 }
