@@ -1,0 +1,62 @@
+{
+    "@context": {
+       "@vocab": "https://voc.iudx.org.in/",
+       "iudx": "https://iudx.org.in/voc/",
+       "xsd": "http://www.w3.org/2001/XMLSchema#",
+       "AIR_PRESSURE": "iudx:airPressure", 
+       "AQI": "iudx:airQualityIndex",
+       "AQI_POLLUTANT": "iudx:aqiMajorPollutant",
+       "CO2_MAX": "iudx:co2MAX",
+       "CO2_MIN": "iudx:co2MIN"
+    },
+    "@type": ["DataDescriptor", "EnvAQM"],
+    "@id": "env_aqm_climo_Pune_example",
+    "description": "Data Descriptor for data from CLIMO sensors in Pune city.",
+    "AIR_PRESSURE": {
+        "@type": ["QuantitativeValue"],
+        "description": "Measured Air pressure",
+        "unitCode": "ATM",
+        "unitText": "standard atmosphere",
+        "dataType": "xsd:decimal"
+    },
+    "AQI": {
+        "@type": "QuantitativeValue",
+        "description": "Overall AQI ",
+        "unitCode": "C62",
+        "unitText": "dimensionless",
+        "dataType": "xsd:decimal"
+    },
+    "AQI_POLLUTANT": {
+        "@type": "QuantitativeValue",
+        "description": "Major pollutant in the AQI index.",
+        "dataType": "xsd:string"
+    },
+    "CO2_MAX": {
+        "@type": "QuantitativeValue",
+        "description": "Maximum value of CO2 for the last 24 hours",
+        "unitCode": "X59",
+        "unitText": "part per million (ppm)",
+        "dataType": "xsd:decimal",
+        "hasFunction": {
+           "@type": "FunctionDescription",
+           "name": "TimeSeriesMAX",
+           "description": "Maximum value for a given time series for the past durationInHours hours.",
+           "functionParams": ["durationInHours"]
+        },
+        "durationInHours": 24
+    },
+    "CO2_MIN": {
+        "@type": "QuantitativeValue",
+        "describes": "Minimum value of CO2 for the last 24 hours",
+        "unitCode": "X59",
+        "unitText": "part per million (ppm)",
+        "dataType": "xsd:decimal",
+        "hasFunction": {
+           "@type": "FunctionDescription",
+           "name": "TimeSeriesMIN",
+           "description": "Minimum value for a given time series for the past durationInHours hours.",
+           "functionParams": ["durationInHours"]
+        },
+        "durationInHours": 24
+    }
+}
