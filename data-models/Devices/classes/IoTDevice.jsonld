@@ -12,7 +12,7 @@
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "A device connected to the internet that could have sensors or actuators and reporting measurements via the internet.",
+            "rdfs:comment": "A device connected to the internet that could have sensors or actuators and reporting measurements.",
             "rdfs:label": "IoTDevice",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
