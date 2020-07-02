@@ -11,23 +11,23 @@
     },
     "@graph": [
         {
-            "@id": "iudx:co2MIN",
+            "@id": "iudx:floodLevelStatus",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "Observed minimum value of  air pollutant Carbon Dioxide (CO2) over a set of observations in past. ",
-            "rdfs:label": "co2MIN",
+            "rdfs:comment": "Flood level status indication given by the flood sensing device. The status is marked Danger if the current level is higher than the danger level threshold value.",
+            "rdfs:label": "floodLevelStatus",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:EnvAQM"
+                    "@id": "iudx:EnvFlood"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"

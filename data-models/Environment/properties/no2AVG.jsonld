@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:co2MIN",
+            "@id": "iudx:no2AVG",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Observed minimum value of  air pollutant Carbon Dioxide (CO2) over a set of observations in past. ",
-            "rdfs:label": "co2MIN",
+            "rdfs:comment": "Observed average value of  air pollutant Nitrogen Dioxide (NO2) over a set of observations in past.",
+            "rdfs:label": "no2AVG",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },

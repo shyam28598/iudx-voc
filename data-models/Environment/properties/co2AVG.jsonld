@@ -1,13 +1,13 @@
 {
     "@context": {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "iudx": "https://voc.iudx.org.in/",
         "geojson": "https://purl.org/geojson/vocab#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "schema": "http://schema.org/",
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
+        "iudx": "https://iudx.org.in/voc/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
         {
@@ -15,8 +15,11 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Describes average value of CO2 over a set of observations in past.",
+            "rdfs:comment": "Observed average value of air pollutant Carbon Dioxide (CO2) over a set of observations in past.",
             "rdfs:label": "co2AVG",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvAQM"
@@ -29,10 +32,7 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            }
+            ]
         }
     ]
 }

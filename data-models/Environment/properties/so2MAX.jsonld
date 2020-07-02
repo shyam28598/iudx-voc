@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:co2MIN",
+            "@id": "iudx:so2MAX",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Observed minimum value of  air pollutant Carbon Dioxide (CO2) over a set of observations in past. ",
-            "rdfs:label": "co2MIN",
+            "rdfs:comment": "Observed maximum value of  air pollutant Sulphur Dioxide (SO2) over a set of observations in past.",
+            "rdfs:label": "so2MAX",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },

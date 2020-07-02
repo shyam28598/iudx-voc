@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:co2MIN",
+            "@id": "iudx:rainfallMeasured",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Observed minimum value of  air pollutant Carbon Dioxide (CO2) over a set of observations in past. ",
-            "rdfs:label": "co2MIN",
+            "rdfs:comment": "Observed measured rainfall over a given duration.",
+            "rdfs:label": "rainfallMeasured",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },

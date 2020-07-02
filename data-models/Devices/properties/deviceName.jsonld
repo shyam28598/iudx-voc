@@ -1,33 +1,33 @@
 {
     "@context": {
-        "geojson": "https://purl.org/geojson/vocab#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "iudx": "https://iudx.org.in/voc/",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "iudx": "https://voc.iudx.org.in/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
         {
-            "@id": "iudx:airPressure",
+            "@id": "iudx:deviceName",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "Observed measured air (atmospheric or barometric) pressure.",
-            "rdfs:label": "airPressure",
+            "rdfs:comment": "Name of the device",
+            "rdfs:label": "deviceName",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:EnvAQM"
+                    "@id": "iudx:IoTDevice"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"

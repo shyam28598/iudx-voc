@@ -11,18 +11,18 @@
     },
     "@graph": [
         {
-            "@id": "iudx:co2MIN",
+            "@id": "iudx:currentLevel",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Observed minimum value of  air pollutant Carbon Dioxide (CO2) over a set of observations in past. ",
-            "rdfs:label": "co2MIN",
+            "rdfs:comment": "Current flooding level indicated by the sensing station corresponding to this observation.",
+            "rdfs:label": "currentLevel",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:EnvAQM"
+                    "@id": "iudx:EnvFlood"
                 }
             ],
             "iudx:rangeIncludes": [
