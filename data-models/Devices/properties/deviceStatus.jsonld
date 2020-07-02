@@ -1,13 +1,13 @@
 {
     "@context": {
-        "schema": "http://schema.org/",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "iudx": "https://voc.iudx.org.in/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "owl": "http://www.w3.org/2002/07/owl#"
+        "iudx": "https://iudx.org.in/voc/",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     },
     "@graph": [
         {
@@ -15,14 +15,17 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Indicates if the device is ON or OFF.",
+            "rdfs:comment": "Indicates if the physical device is ON or OFF.",
             "rdfs:label": "deviceStatus",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:IoTDevice"
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:EnvFlood"
                 }
             ],
             "iudx:rangeIncludes": [
