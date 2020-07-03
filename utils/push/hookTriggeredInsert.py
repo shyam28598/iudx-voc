@@ -9,22 +9,6 @@ import os
 import sys
 import time
 
-
-# Wait for repo to get updated
-os.system("git fetch && git reset --hard origin/master ")
-time.sleep(10)
-# clear tmp
-os.system("rm -r /tmp/generated* && rm -r /tmp/all_*")
-# Generate classes
-os.system("python3 utils/generation/generate_class.py")
-# Generate master context
-os.system("python3 utils/generation/generate_master.py")
-
-# Wait for schemas to get generated
-time.sleep(5)
-
-
-
 cert_file = "keys/cert.pem"
 key_file = "keys/private-key.pem"
 
@@ -59,14 +43,18 @@ failed_list = []
 
 for fldr in folders:
     for filename in os.listdir(fldr):
-        with open(fldr + "/" + filename, 'r') as f:
-            print("Pushing " + filename)
-            doc = json.load(f)
-            name = doc["@graph"][0]["@id"][5:]
-            r = requests.post(url+"/"+name, data=json.dumps(doc), headers=voc_headers)
-            if r.status_code != 201 :
-                failed_list.append(name)
-        time.sleep(0.5)
+        try:
+            with open(fldr + "/" + filename, 'r') as f:
+                print("Pushing " + filename)
+                doc = json.load(f)
+                name = doc["@graph"][0]["@id"][5:]
+                r = requests.post(url+"/"+name, data=json.dumps(doc), headers=voc_headers)
+                if r.status_code != 201 :
+                    failed_list.append(name)
+        except Exception as e:
+            print("Failed inserting " + name)
+            failed_list.append(name)
+
 
 with open(master_context_file, "r") as f:
     master_context = json.load(f)
