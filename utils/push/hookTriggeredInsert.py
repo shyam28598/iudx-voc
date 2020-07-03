@@ -66,6 +66,7 @@ for fldr in folders:
             r = requests.post(url+"/"+name, data=json.dumps(doc), headers=voc_headers)
             if r.status_code != 201 :
                 failed_list.append(name)
+        time.sleep(0.5)
 
 with open(master_context_file, "r") as f:
     master_context = json.load(f)
