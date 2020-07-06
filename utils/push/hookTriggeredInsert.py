@@ -15,9 +15,10 @@ key_file = "keys/private-key.pem"
 
 all_classes_folder = "/tmp/generated_classes/"
 all_properties_folder = "/tmp/all_properties/"
+all_examples_folder = "/tmp/all_examples/"
 master_context_file = "./iudx.jsonld"
 
-folders = [all_classes_folder, all_properties_folder]
+schema_folders = [all_classes_folder, all_properties_folder]
 
 
 cert = (cert_file, key_file)
@@ -41,7 +42,7 @@ print(voc_headers)
 failed_list = []
 
 
-for fldr in folders:
+for fldr in schema_folders:
     for filename in os.listdir(fldr):
         try:
             with open(fldr + "/" + filename, 'r') as f:
@@ -55,6 +56,18 @@ for fldr in folders:
             print("Failed inserting " + name)
             failed_list.append(name)
 
+for filename in os.listdir(all_examples_folder):
+    try:
+        with open(fldr + "/" + filename, 'r') as f:
+            print("Pushing " + filename)
+            doc = json.load(f)
+            name = doc["@graph"][0]["@id"][5:]
+            r = requests.post(url+"/examples/"+name, data=json.dumps(doc), headers=voc_headers)
+            if r.status_code != 201 :
+                failed_list.append(name)
+    except Exception as e:
+        print("Failed inserting " + name)
+        failed_list.append(name)
 
 with open(master_context_file, "r") as f:
     master_context = json.load(f)

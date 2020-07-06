@@ -3,25 +3,30 @@ import json
 import os
 from os import walk
 import glob
+import shutil
 
 from collections import OrderedDict
 from distutils.dir_util import copy_tree
 
 
-dirs = ["base-schemas", "data-types"]
 data_models_dir = "data-models"
 
 excluded = ["utils", "examples", "generated", "diagrams", ".git"]
+
+examples_dir = "examples"
 
 
 # Recursively list out classes and properties paths
 
 from_classes = []
 from_properties= []
+from_examples = []
 
 for (dirpath, dirnames, filenames) in os.walk("./"):
 
     if (len([dirpath.find(e) for e in excluded if dirpath.find(e)>0])):
+        if(dirpath.find(examples_dir)>0):
+            from_examples.append(dirpath)
         continue
 
     if(dirpath.find("classes")>0 and dirpath.find("properties")==-1 ):
@@ -30,14 +35,29 @@ for (dirpath, dirnames, filenames) in os.walk("./"):
     if(dirpath.find("properties")>0):
         from_properties.append(dirpath)
 
+
 classes_path = "/tmp/all_classes/"
 properties_path = "/tmp/all_properties/"
+examples_path = "/tmp/all_examples"
 tmp_expanded_path = "/tmp/generated/"
+
 
 
 if not os.path.exists("generated/"):
     os.makedirs("generated/")
+if not os.path.exists(examples_path):
+    os.makedirs(examples_path)
+
 generated_path = "/tmp/generated_classes/"
+
+
+
+def gen_examples():
+    print("Folders are ", from_examples)
+    for fldr in from_examples:
+        copy_tree(fldr, examples_path)
+
+
 
 
 def find(element, array):
@@ -84,14 +104,16 @@ def generate(class_path, property_path):
                     else:
                         print("@graph missing in " + prop_file)
             os.makedirs(os.path.dirname(tmp_expanded_path), exist_ok=True)
-            with open(tmp_expanded_path + domain.replace("iudx:", "") + ".jsonld", "w+") as new_file:
+            with open(tmp_expanded_path + 
+                    domain.replace("iudx:", "") + ".jsonld", "w+") as new_file:
                 json.dump(new_dict, new_file, indent=4)
 
 
 def super_class(prop, expanded_dict):
     try:
         if "rdf:" not in prop["rdfs:subClassOf"]["@id"]:
-            with open(tmp_expanded_path + prop["rdfs:subClassOf"]["@id"].split(":")[1] + ".jsonld", "r") as super_file:
+            with open(tmp_expanded_path + 
+                    prop["rdfs:subClassOf"]["@id"].split(":")[1] + ".jsonld", "r") as super_file:
                 super_obj = json.load(super_file)
                 for sub_prop in super_obj["@graph"]:
                     expanded_dict["@graph"].append(sub_prop)
@@ -115,7 +137,8 @@ def generate_expanded():
                 try:
                     sub_class = obj["@graph"][0]["rdfs:subClassOf"]["@id"]
                     if "rdf:" not in sub_class:
-                        with open(tmp_expanded_path + sub_class.split(":")[1] + ".jsonld", "r") as parent_file:
+                        with open(tmp_expanded_path +
+                                sub_class.split(":")[1] + ".jsonld", "r") as parent_file:
                             parent_obj = json.load(parent_file)
                             for sub_prop in parent_obj["@graph"]:
                                 expanded_dict["@graph"].append(sub_prop)
@@ -123,7 +146,8 @@ def generate_expanded():
                 except KeyError:
                     pass
             os.makedirs(os.path.dirname(generated_path), exist_ok=True)
-            with open(generated_path + expanded_file.replace(tmp_expanded_path, ""), "w+") as new_file:
+            with open(generated_path + 
+                    expanded_file.replace(tmp_expanded_path, ""), "w+") as new_file:
                 json.dump(expanded_dict, new_file, indent=4)
 
 
@@ -134,3 +158,4 @@ if __name__=="__main__":
         copy_tree(directory, properties_path)
     generate(classes_path, properties_path)
     generate_expanded()
+    gen_examples()
