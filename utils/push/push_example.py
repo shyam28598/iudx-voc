@@ -8,12 +8,12 @@ token = "localauth"
 
 
 # local
-url = "https://localhost:8080/examples"
-verify = False
+# url = "https://localhost:8080/examples"
+# verify = False
 
 # ext
-# url = "https://voc.iudx.org.in"
-# verify = True
+url = "https://voc.iudx.org.in"
+verify = True
 
 headers = {"token": token, "content-type": "application/ld+json"}
 
@@ -25,11 +25,11 @@ for filename in os.listdir(dirname):
         doc = json.load(f)
         print("Pushing " + filename)
         if (verify is True):
-            r = requests.post(url+":"+filename, data=json.dumps(doc), headers=headers)
+            r = requests.post(url+"/"+filename, data=json.dumps(doc), headers=headers)
             if r.status_code != 201 :
                 failed_list.append(filename)
         else:
-            r = requests.post(url+":"+filename, data=json.dumps(doc), headers=headers, verify=verify)
+            r = requests.post(url+"/"+filename, data=json.dumps(doc), headers=headers, verify=verify)
             print(json.dumps(doc))
 
 with open("failed.txt", "w") as f:

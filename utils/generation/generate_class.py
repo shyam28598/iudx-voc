@@ -53,7 +53,6 @@ generated_path = "/tmp/generated_classes/"
 
 
 def gen_examples():
-    print("Folders are ", from_examples)
     for fldr in from_examples:
         copy_tree(fldr, examples_path)
 
