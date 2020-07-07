@@ -19,12 +19,7 @@
             },
             "rdfs:subClassOf": {
                 "@id": "iudx:IUDXEntity"
-            },
-            "iudx:requiredProperties": [
-                "name",
-                "providerOrg",
-                "description"
-            ]
+            }
         }
     ]
 }

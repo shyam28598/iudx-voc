@@ -16,7 +16,8 @@
             "rdfs:label": "providerOrg",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:Provider"
+                    "@id": "iudx:Provider",
+                    "iudx:requiredProperty": true
                 }
             ],
             "iudx:rangeIncludes": [

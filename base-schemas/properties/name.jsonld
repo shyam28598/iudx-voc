@@ -25,7 +25,8 @@
                     "@id": "iudx:Organization"
                 },
                 {
-                    "@id": "iudx:IUDXEntity"
+                    "@id": "iudx:IUDXEntity",
+                    "iudx:requiredProperty": true
                 }
             ],
             "iudx:rangeIncludes": [
