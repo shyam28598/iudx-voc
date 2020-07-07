@@ -25,9 +25,6 @@
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:GeoJSONGeometry"
-                },
-                {
-                    "@id": "iudx:Place"
                 }
             ],
             "rdfs:isDefinedBy": {
