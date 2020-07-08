@@ -41,6 +41,9 @@ print(voc_headers)
 
 failed_list = []
 
+failed_schemas = []
+failed_examples = []
+
 
 for fldr in schema_folders:
     for filename in os.listdir(fldr):
@@ -49,19 +52,22 @@ for fldr in schema_folders:
                 print("Pushing " + filename)
                 doc = json.load(f)
                 name = doc["@graph"][0]["@id"][5:]
-                r = requests.post(url+"/"+name, data=json.dumps(doc), headers=voc_headers)
+                r = requests.post(url+"/"+name, data=json.dumps(doc), 
+                        headers=voc_headers, timeout=2)
                 if r.status_code != 201 :
                     failed_list.append(name)
         except Exception as e:
             print("Failed inserting " + name)
             failed_list.append(name)
+            failed_schemas.append("fldr" + "/" + filename)
 
 for filename in os.listdir(all_examples_folder):
     try:
         with open(all_examples_folder + "/" + filename, 'r') as f:
             print("Pushing " + filename)
             doc = json.load(f)
-            r = requests.post(url+"/examples/"+filename, data=json.dumps(doc), headers=voc_headers)
+            r = requests.post(url+"/examples/"+filename, data=json.dumps(doc),
+                    headers=voc_headers, timeout=2)
             if r.status_code != 201 :
                 failed_list.append(filename)
     except Exception as e:
@@ -71,11 +77,12 @@ for filename in os.listdir(all_examples_folder):
 with open(master_context_file, "r") as f:
     master_context = json.load(f)
     print("Pushing master context")
-    r = requests.post(url, data=json.dumps(master_context), headers=voc_headers)
+    r = requests.post(url, data=json.dumps(master_context), 
+            headers=voc_headers, timeout=2)
     print(r.status_code)
     if r.status_code != 201:
         print("Failed")
 
-
+print( "Failed inserting - ", failed_list)
 with open("failed.txt", "w") as f:
     json.dump(failed_list, f)
