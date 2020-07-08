@@ -23,9 +23,6 @@
                 {
                     "@id": "iudx:Text",
                     "@type": "@id"
-                },
-                {
-                    "@id": "iudx:RelationshipValue"
                 }
             ]
         }

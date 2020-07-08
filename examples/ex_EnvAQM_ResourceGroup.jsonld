@@ -1,0 +1,68 @@
+{
+    "@context": "https://voc.iudx.org.in/",
+    "type": ["iudx:ResourceGroup", "iudx:EnvAQM"],
+    "id": "rbccps.org/aa9d66a000d94a78895de8d4c0b3a67f3450e531/rs.pudx.org.in/aqm-bosch-climo",
+    "description": "An AQM Group",
+    "name": "aqm-bosch-climo",
+    "tags":  "environment, air quality",
+    "itemStatus": "ACTIVE",
+    "provider": "rbccps.org/aa9d66a000d94a78895de8d4c0b3a67f3450e531",
+    "resourceServer": "rbccps.org/9384230wefw0e9823089rhf083r/rs.pudx.org.in",
+    "resourceAuthControlLevel": "INDIVIDUAL",
+    "resourceType": "messageStream",
+    "authServerInfo": {
+       "type": ["AuthServerInfoValue"],
+       "authServerURL": "https://myauth.server.org/",
+       "authType": "iudx-auth"
+    },
+    "accessObjectInfo": {
+       "type": ["AccessObjectInfoValue"],
+       "accessObject": "https://apiObject.blah.blah/",
+       "additionalInfoURL": "https://AdditionalInfoForAPI.blah.blah/",
+       "accessObjectType": "openAPI"
+    },
+    "iudxResourceAPIs": ["attribute", "temporal"],
+    "itemCreatedAt": "2019-02-20T10:30:06.093121",
+    "location": {
+      "type": "Place",
+      "address": "Pune"
+    },
+    "dataDescriptor": {
+        "type": ["DataModel", "EnvAQM"],
+        "airPressure": {
+            "type": ["ValueDescriptor"],
+            "description": "Measured Air pressure",
+            "unitCode": "ATM",
+            "unitText": "standard atmosphere",
+            "dataSchema": "iudx:Number"
+        },
+        "airQualityIndex": {
+            "type": ["ValueDescriptor"],
+            "description": "Overall AQI ",
+            "unitCode": "C62",
+            "unitText": "dimensionless",
+            "dataSchema": "iudx:Number"
+        },
+        "aqiMajorPollutant": {
+            "type": ["ValueDescriptor"],
+            "description": "Major pollutant in the AQI index.",
+            "dataSchema": "iudx:Text"
+        },
+        "co2MAX": {
+            "type": ["ValueDescriptor"],
+            "description": "Maximum value of CO2 for the last 24 hours",
+            "unitCode": "X59",
+            "unitText": "part per million (ppm)",
+            "dataSchema": "iudx:Number",
+            "maxDurationInHours": 24
+        },
+        "co2MIN": {
+            "type": ["ValueDescriptor"],
+            "describes": "Minimum value of CO2 for the last 24 hours",
+            "unitCode": "X59",
+            "unitText": "part per million (ppm)",
+            "dataSchema": "iudx:Number",
+            "minDurationInHours": 24
+        }
+    }
+}
