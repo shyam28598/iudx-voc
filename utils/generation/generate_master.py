@@ -2,16 +2,29 @@ import json
 import os
 from collections import OrderedDict
 
-classes_folder = "./base-schemas/classes/"
-dm_classes_folder = "./data-models/classes"
-properties_folder = "./base-schemas/properties/"
-dm_properties_folder = "./data-models/properties/"
-types_folder = "./data-types/classes/"
 
-folders = [classes_folder, dm_classes_folder,
-            properties_folder, dm_properties_folder, types_folder]
+data_models_dir = "data-models"
 
+excluded = ["utils", "examples", "generated", "diagrams", ".git"]
+
+examples_dir = "examples"
+
+folders = []
+
+
+# Recursively list out classes and properties paths
 output_file = "iudx.jsonld"
+
+for (dirpath, dirnames, filenames) in os.walk("./"):
+
+    if (len([dirpath.find(e) for e in excluded if dirpath.find(e)>0])):
+        continue
+
+    if(dirpath.find("classes")>0 or dirpath.find("properties")>0 ):
+        folders.append(dirpath)
+
+
+
 
 
 context = OrderedDict()
@@ -37,6 +50,8 @@ for fldr in folders:
 
 
 
+context.pop("id")
+context["id"] = "@id"
 context = {**contextsources, **context}
 context_output = {"@context": context}
 

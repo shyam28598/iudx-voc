@@ -3,14 +3,209 @@
         "type": "@type",
         "id": "@id",
         "@vocab": "https://voc.iudx.org.in/",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "iudx": "https://iudx.org.in/voc/",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "iudx": "https://voc.iudx.org.in/",
         "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema": "http://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "Boolean": {
+            "@id": "iudx:Boolean"
+        },
+        "Text": {
+            "@id": "iudx:Text"
+        },
+        "Number": {
+            "@id": "iudx:Number"
+        },
+        "DateTime": {
+            "@id": "iudx:DateTime"
+        },
+        "UrbanMobility": {
+            "@id": "iudx:UrbanMobility"
+        },
+        "Civic": {
+            "@id": "iudx:Civic"
+        },
+        "Environment": {
+            "@id": "iudx:Environment"
+        },
+        "WasteManagement": {
+            "@id": "iudx:WasteManagement"
+        },
+        "IoTDevice": {
+            "@id": "iudx:IoTDevice"
+        },
+        "deviceName": {
+            "@id": "iudx:deviceName"
+        },
+        "deviceStatus": {
+            "@id": "iudx:deviceStatus"
+        },
+        "observationDateTime": {
+            "@id": "iudx:observationDateTime"
+        },
+        "deviceID": {
+            "@id": "iudx:deviceID"
+        },
+        "deviceModel": {
+            "@id": "iudx:deviceModel"
+        },
+        "EnvFlood": {
+            "@id": "iudx:EnvFlood"
+        },
+        "EnvAQM": {
+            "@id": "iudx:EnvAQM"
+        },
+        "dangerLevel": {
+            "@id": "iudx:dangerLevel"
+        },
+        "o3MAX": {
+            "@id": "iudx:o3MAX"
+        },
+        "pm10MIN": {
+            "@id": "iudx:pm10MIN"
+        },
+        "alertLevel": {
+            "@id": "iudx:alertLevel"
+        },
+        "coMAX": {
+            "@id": "iudx:coMAX"
+        },
+        "pm10AVG": {
+            "@id": "iudx:pm10AVG"
+        },
+        "so2AVG": {
+            "@id": "iudx:so2AVG"
+        },
+        "pm10MAX": {
+            "@id": "iudx:pm10MAX"
+        },
+        "noMAX": {
+            "@id": "iudx:noMAX"
+        },
+        "co2MIN": {
+            "@id": "iudx:co2MIN"
+        },
+        "ambientNoiseMAX": {
+            "@id": "iudx:ambientNoiseMAX"
+        },
+        "no2MAX": {
+            "@id": "iudx:no2MAX"
+        },
+        "uvMAX": {
+            "@id": "iudx:uvMAX"
+        },
+        "o2MAX": {
+            "@id": "iudx:o2MAX"
+        },
+        "o2MIN": {
+            "@id": "iudx:o2MIN"
+        },
+        "airTemperatureAVG": {
+            "@id": "iudx:airTemperatureAVG"
+        },
+        "ambientLight": {
+            "@id": "iudx:ambientLight"
+        },
+        "no2AVG": {
+            "@id": "iudx:no2AVG"
+        },
+        "so2MAX": {
+            "@id": "iudx:so2MAX"
+        },
+        "airTemperatureMIN": {
+            "@id": "iudx:airTemperatureMIN"
+        },
+        "no2MIN": {
+            "@id": "iudx:no2MIN"
+        },
+        "airTemperatureMAX": {
+            "@id": "iudx:airTemperatureMAX"
+        },
+        "rainfallMeasured": {
+            "@id": "iudx:rainfallMeasured"
+        },
+        "so2MIN": {
+            "@id": "iudx:so2MIN"
+        },
+        "noAVG": {
+            "@id": "iudx:noAVG"
+        },
+        "co2MAX": {
+            "@id": "iudx:co2MAX"
+        },
+        "o3AVG": {
+            "@id": "iudx:o3AVG"
+        },
+        "aqiCategory": {
+            "@id": "iudx:aqiCategory"
+        },
+        "aqiMajorPollutant": {
+            "@id": "iudx:aqiMajorPollutant"
+        },
+        "o3MIN": {
+            "@id": "iudx:o3MIN"
+        },
+        "uvMIN": {
+            "@id": "iudx:uvMIN"
+        },
+        "coMIN": {
+            "@id": "iudx:coMIN"
+        },
+        "o2AVG": {
+            "@id": "iudx:o2AVG"
+        },
+        "currentLevel": {
+            "@id": "iudx:currentLevel"
+        },
+        "floodLevelStatus": {
+            "@id": "iudx:floodLevelStatus"
+        },
+        "airPressure": {
+            "@id": "iudx:airPressure"
+        },
+        "ambientNoiseMIN": {
+            "@id": "iudx:ambientNoiseMIN"
+        },
+        "noMIN": {
+            "@id": "iudx:noMIN"
+        },
+        "pm2p5MIN": {
+            "@id": "iudx:pm2p5MIN"
+        },
+        "uvAVG": {
+            "@id": "iudx:uvAVG"
+        },
+        "relativeHumidity": {
+            "@id": "iudx:relativeHumidity"
+        },
+        "pm2p5MAX": {
+            "@id": "iudx:pm2p5MAX"
+        },
+        "coAVG": {
+            "@id": "iudx:coAVG"
+        },
+        "referenceLevel": {
+            "@id": "iudx:referenceLevel"
+        },
+        "rainfallForecast": {
+            "@id": "iudx:rainfallForecast"
+        },
+        "co2AVG": {
+            "@id": "iudx:co2AVG"
+        },
+        "pm2p5AVG": {
+            "@id": "iudx:pm2p5AVG"
+        },
+        "ambientNoise": {
+            "@id": "iudx:ambientNoise"
+        },
+        "airQualityIndex": {
+            "@id": "iudx:airQualityIndex"
+        },
         "GeoCoordinates": {
             "@id": "iudx:GeoCoordinates"
         },
@@ -104,26 +299,20 @@
         "Feature": {
             "@id": "iudx:Feature"
         },
-        "EnvAQM": {
-            "@id": "iudx:EnvAQM"
-        },
         "address": {
             "@id": "iudx:address"
         },
         "resourceType": {
             "@id": "iudx:resourceType"
         },
-        "hasFunction": {
-            "@id": "iudx:hasFunction"
-        },
         "isPartOf": {
             "@id": "iudx:isPartOf"
         },
+        "avgDurationInHours": {
+            "@id": "iudx:avgDurationInHours"
+        },
         "sameAs": {
             "@id": "iudx:sameAs"
-        },
-        "maxValue": {
-            "@id": "iudx:maxValue"
         },
         "resourceGroup": {
             "@id": "iudx:resourceGroup"
@@ -161,9 +350,6 @@
         "authServerInfo": {
             "@id": "iudx:authServerInfo"
         },
-        "minValue": {
-            "@id": "iudx:minValue"
-        },
         "longitude": {
             "@id": "iudx:longitude"
         },
@@ -175,6 +361,9 @@
         },
         "openDataFields": {
             "@id": "iudx:openDataFields"
+        },
+        "minDurationInHours": {
+            "@id": "iudx:minDurationInHours"
         },
         "geoJSON": {
             "@id": "iudx:geoJSON"
@@ -191,8 +380,8 @@
         "authType": {
             "@id": "iudx:authType"
         },
-        "listOfDataFields": {
-            "@id": "iudx:listOfDataFields"
+        "maxDurationInHours": {
+            "@id": "iudx:maxDurationInHours"
         },
         "latitude": {
             "@id": "iudx:latitude"
@@ -205,6 +394,9 @@
         },
         "functionParameters": {
             "@id": "iudx:functionParameters"
+        },
+        "requiredProperty": {
+            "@id": "iudx:requiredProperty"
         },
         "tags": {
             "@id": "iudx:tags"
@@ -220,9 +412,6 @@
         },
         "secureDataFields": {
             "@id": "iudx:secureDataFields"
-        },
-        "dataModel": {
-            "@id": "iudx:dataModel"
         },
         "resourceServerHTTPAccessURL": {
             "@id": "iudx:resourceServerHTTPAccessURL"
@@ -251,41 +440,8 @@
         "resourceServer": {
             "@id": "iudx:resourceServer"
         },
-        "requiredProperties": {
-            "@id": "iudx:requiredProperties"
-        },
         "description": {
             "@id": "iudx:description"
-        },
-        "observationDateTime": {
-            "@id": "iudx:observationDateTime"
-        },
-        "deviceID": {
-            "@id": "iudx:deviceID"
-        },
-        "co2MIN": {
-            "@id": "iudx:co2MIN"
-        },
-        "aqmDevice": {
-            "@id": "iudx:aqmDevice"
-        },
-        "co2MAX": {
-            "@id": "iudx:co2MAX"
-        },
-        "aqiCategory": {
-            "@id": "iudx:aqiCategory"
-        },
-        "aqiMajorPollutant": {
-            "@id": "iudx:aqiMajorPollutant"
-        },
-        "airPressure": {
-            "@id": "iudx:airPressure"
-        },
-        "co2AVG": {
-            "@id": "iudx:co2AVG"
-        },
-        "airQualityIndex": {
-            "@id": "iudx:airQualityIndex"
         }
     }
 }
