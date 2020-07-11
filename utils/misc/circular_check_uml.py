@@ -5,23 +5,16 @@ import glob
 import copy
 import subprocess
 
-""" Path to expanded classes."""
-folder_path = "generated/"
-""" Path to generate the UML diagram."""
+
+folder_path = "/tmp/generated/"
+
 if not os.path.exists("diagrams/"):
     os.makedirs("diagrams/")
 diagram_path = "diagrams/"
-""" List of classnames to avoid duplication."""
 dup_classes = []
 
 
 def graph(obj):
-    """ Generate PlantUML text.
-
-    This function generates a text file from the generated expanded classes,
-    which is used by plantuml to generate the UML Ontology diagram for IUDX.
-
-    """
     if "@graph" in obj.keys():
         graph_obj = copy.deepcopy(obj["@graph"])
         for i in obj["@graph"]:
@@ -31,20 +24,23 @@ def graph(obj):
                 cname = "".join(cname)
                 if class_name not in dup_classes:
                     dup_classes.append(class_name)
-                    print("class " + "\"" + class_name + "\"" + " as " + cname + "{", file=text_file) 
+                    print("class " + cname, file=text_file) 
                     for j in graph_obj:
                         for prop in j["@type"]:
+                            pname = j["@id"].split(":")
+                            pname = "".join(pname)
                             if "Property" in prop:
-                                print("\t" + j["@id"], file=text_file)
+                                print("class " + pname, file=text_file)
+                                print(pname + " <-- " + cname, file=text_file)
                             elif "Relationship" in prop:
-                                print("\t" + j["@id"], file=text_file)
-                    print("}", file=text_file)
+                                print("class " + pname, file=text_file)
+                                print(pname + " <-- " + cname, file=text_file)
                     try:
                         if "rdf:" in i["rdfs:subClassOf"]["@id"]:
                             spclass_name = i["rdfs:subClassOf"]["@id"].split(":")
                             superclass_name = "".join(spclass_name)
                             super_class = i["rdfs:subClassOf"]["@id"]
-                            print("class " + "\"" + i["rdfs:subClassOf"]["@id"] + "\" "+ "as " + superclass_name, file=text_file)
+                            print("class " + superclass_name, file=text_file)
                             if "rdf:" not in super_class:
                                 super_class = super_class.split(":")
                                 with open(folder_path + super_class[1] + ".jsonld", "r+") as super_file:
@@ -66,18 +62,16 @@ def graph(obj):
         print("@graph missing in " + filename)
 
 
-with open(diagram_path + "IUDX-Vocab-Ontology.txt", "w+") as text_file:
+with open(diagram_path + "IUDX-domain-range.txt", "w+") as text_file:
     print("@startuml", file=text_file)
-    print("title IUDX-VOC Ontology Diagram", file=text_file)
     print("skinparam titleFontSize 30", file=text_file)
     print("skinparam titleFontColor DarkGoldenRod" + "\n", file=text_file)
-    print("left to right direction" + "\n" + "skinparam classFontColor DarkCyan" + "\n" + "skinparam roundcorner 27" + "\n", file=text_file)
-    # Uncomment to generate UML for a given class
-    #filename = "generated/Resource.jsonld"
+    #print("left to right direction" + "\n" + "skinparam classFontColor DarkCyan" + "\n" + "skinparam roundcorner 27" + "\n", file=text_file)
+    #filename = "/tmp/generated/Resource.jsonld"
     for filename in glob.glob(os.path.join(folder_path, '*.jsonld')):
         with open(filename, "r+") as obj_file:
              obj = json.load(obj_file)
              graph(obj)
     print("\n" + "@enduml", file=text_file)
 which_plantuml = ((subprocess.check_output("which plantuml", shell=True)).decode("utf-8")).rstrip()
-subprocess.call([which_plantuml, diagram_path + "IUDX-Vocab-Ontology.txt"])
+subprocess.call([which_plantuml, diagram_path + "IUDX-domain-range.txt"])

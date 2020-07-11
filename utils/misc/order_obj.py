@@ -9,11 +9,11 @@ from collections import OrderedDict
 
 
 #folder_path = sys.argv[1]
-#folder_path = "../../base-schemas/properties/"
-paths = ["../../base-schemas/classes/",
-        "../../base-schemas/properties/",
-        "../../data-models/classes/",
-        "../../data-models/properties/"]
+#folder_path = "base-schemas/properties/"
+paths = ["base-schemas/classes/",
+        "base-schemas/properties/",
+        "data-models/classes/",
+        "data-models/properties/"]
 def order(folder_path):
     for filename in glob.glob(os.path.join(folder_path, '*.jsonld')):
         with open(filename, "r+") as obj_file:
