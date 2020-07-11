@@ -23,6 +23,9 @@
                 },
                 {
                     "@id": "iudx:Place"
+                },
+                {
+                    "@id": "TransitManagement"
                 }
             ],
             "iudx:rangeIncludes": [
