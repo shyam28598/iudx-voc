@@ -1,12 +1,12 @@
 {
     "@context": {
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "iudx": "https://voc.iudx.org.in/",
         "geojson": "https://purl.org/geojson/vocab#",
         "schema": "http://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
+        "iudx": "https://iudx.org.in/voc/",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     },
     "@graph": [
@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:StructuredProperty"
             ],
-            "rdfs:comment": "Observed the Air Quality Monitoring (AQM) Device Model.",
+            "rdfs:comment": "Describes the information of the device, sensor or system in consideration.",
             "rdfs:label": "deviceModel",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
@@ -29,14 +29,14 @@
                 },
                 {
                     "@id": "iudx:EnvFlood"
+                },
+                {
+                    "@id": "iudx:StreetLightFeeder"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
-                },
-                {
-                    "@id": "iudx:ValueDescriptor"
+                    "@id": "iudx:ModelInfo"
                 }
             ]
         }

@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:observationDateTime",
+            "@id": "iudx:RFID",
             "@type": [
-                "iudx:TimeProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "Last reported time of observation.",
-            "rdfs:label": "observationDateTime",
+            "rdfs:comment": "Gives the ID of the RFID reader.",
+            "rdfs:label": "RFID",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -25,24 +25,12 @@
                     "@id": "iudx:IoTDevice"
                 },
                 {
-                    "@id": "iudx:EnvAQM"
-                },
-                {
-                    "@id": "iudx:EnvFlood"
-                },
-                {
-                    "@id": "iudx:TransitManagement"
-                },
-                {
-                    "@id": "iudx:WiFiHostspot"
-                },
-                {
-                    "@id": "iudx:StreetLightFeeder"
+                    "@id": "iudx:SolidWasteManagement"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:DateTime"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"

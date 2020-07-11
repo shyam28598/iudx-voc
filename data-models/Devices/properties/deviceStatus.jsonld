@@ -1,12 +1,12 @@
 {
     "@context": {
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "iudx": "https://voc.iudx.org.in/",
         "geojson": "https://purl.org/geojson/vocab#",
         "schema": "http://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
+        "iudx": "https://iudx.org.in/voc/",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     },
     "@graph": [
@@ -29,6 +29,9 @@
                 },
                 {
                     "@id": "iudx:EnvFlood"
+                },
+                {
+                    "@id": "iudx:WiFiHostspot"
                 }
             ],
             "iudx:rangeIncludes": [
