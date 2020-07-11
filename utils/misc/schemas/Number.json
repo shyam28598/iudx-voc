@@ -1,0 +1,6 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "<iudx>/Number",
+    "title": "Number",
+    "type": "number"
+}

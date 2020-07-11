@@ -8,12 +8,16 @@ from collections import OrderedDict
 
 template_file = "./template.jsonld"
 
-csv_file_path = ["./DataModel_Properties - EnvAQM_properties.csv"]
-ignore = ["Custom", "location", "deviceModel", "rainfallMeasured", "rainfallForecast", "name", ""]
+csv_file_path = [
+                "./Device - Device_properties.csv"]
+#                "./Environment - EnvAQM_properties.csv", "./Environment - EnvFlood_properties.csv", ]
+#                "./Civic - WifiHotspot_properties.csv", "./Civic - StreetLightFeeder_properties.csv"]
+#ignore = ["Custom", "location", "deviceModel", "rainfallMeasured", "rainfallForecast", "name", ""]
 
-if not os.path.exists("../../../data-models/properties/"):
-    os.makedirs("../../../data-models/properties/")
-properties_path = "../../../data-models/properties/"
+if not os.path.exists("./properties/"):
+    os.makedirs("./properties/")
+properties_path = "./Properties/"
+
 
 
 def gen_properties(file_path):
@@ -22,7 +26,7 @@ def gen_properties(file_path):
         data = list(reader)
         data = data[1:]
         for item in data:
-            if item[0] not in ignore:
+            if item[7] == "0":
                 csv_label = item[0]
                 csv_type = item[1]
                 csv_comment = item[2]
@@ -31,8 +35,16 @@ def gen_properties(file_path):
                 csv_match = item[5]
                 if "," in csv_domain:
                     csv_domain_list = csv_domain.split(",")
+                else:
+                    tmp_domain_list = []
+                    tmp_domain_list.append(csv_domain)
+                    csv_domain_list = tmp_domain_list
                 if "," in csv_range:
                     csv_range_list = csv_range.split(",")
+                else:
+                    tmp_range_list = []
+                    tmp_range_list.append(csv_range)
+                    csv_range_list = tmp_range_list
                 with open(template_file, "r") as template:
                     new_dict = OrderedDict()
                     obj = json.load(template)

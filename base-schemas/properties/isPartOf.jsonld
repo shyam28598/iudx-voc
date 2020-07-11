@@ -15,7 +15,7 @@
             ],
             "rdfs:comment": "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.",
             "rdfs:label": "isPartOf",
-            "schema:domainIncludes": [
+            "iudx:domainIncludes": [
                 {
                     "@id": "schema:CreativeWork"
                 }
@@ -25,7 +25,7 @@
                     "@id": "schema:hasPart"
                 }
             ],
-            "schema:rangeIncludes": [
+            "iudx:rangeIncludes": [
                 {
                     "@id": "schema:CreativeWork"
                 },
