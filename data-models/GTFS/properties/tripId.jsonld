@@ -2,18 +2,12 @@
     "@context": {
         "schema": "http://schema.org/",
         "owl": "http://www.w3.org/2002/07/owl#",
-<<<<<<< HEAD
-=======
-        "skos": "http://www.w3.org/2004/02/skos/core#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "iudx": "https://voc.iudx.org.in/",
->>>>>>> 7a73f70bc816b37306672458208b9dd45800f312
-        "geojson": "https://purl.org/geojson/vocab#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "iudx": "https://iudx.org.in/voc/"
+        "geojson": "https://purl.org/geojson/vocab#",
+        "iudx": "https://voc.iudx.org.in/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "skos": "http://www.w3.org/2004/02/skos/core#"
     },
     "@graph": [
         {
