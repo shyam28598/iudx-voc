@@ -9,8 +9,8 @@
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "schema": "http://schema.org/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "geojson": "https://purl.org/geojson/vocab#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "Boolean": {
             "@id": "iudx:Boolean"
         },
@@ -52,6 +52,12 @@
         },
         "deviceModel": {
             "@id": "iudx:deviceModel"
+        },
+        "RFID": {
+            "@id": "iudx:RFID"
+        },
+        "TransitManagement": {
+            "@id": "iudx:TransitManagement"
         },
         "EnvFlood": {
             "@id": "iudx:EnvFlood"
@@ -206,6 +212,45 @@
         "airQualityIndex": {
             "@id": "iudx:airQualityIndex"
         },
+        "routeShortName": {
+            "@id": "iudx:routeShortName"
+        },
+        "stopId": {
+            "@id": "iudx:stopId"
+        },
+        "stopName": {
+            "@id": "iudx:stopName"
+        },
+        "currentStopSequence": {
+            "@id": "iudx:currentStopSequence"
+        },
+        "vehicleLicensePlate": {
+            "@id": "iudx:vehicleLicensePlate"
+        },
+        "routeDesc": {
+            "@id": "iudx:routeDesc"
+        },
+        "scheduleRelationship": {
+            "@id": "iudx:scheduleRelationship"
+        },
+        "tripId": {
+            "@id": "iudx:tripId"
+        },
+        "routeId": {
+            "@id": "iudx:routeId"
+        },
+        "vehicleCurrentStatus": {
+            "@id": "iudx:vehicleCurrentStatus"
+        },
+        "vehicleID": {
+            "@id": "iudx:vehicleID"
+        },
+        "routeName": {
+            "@id": "iudx:routeName"
+        },
+        "routeType": {
+            "@id": "iudx:routeType"
+        },
         "GeoCoordinates": {
             "@id": "iudx:GeoCoordinates"
         },
@@ -281,6 +326,9 @@
         "Relationship": {
             "@id": "iudx:Relationship"
         },
+        "ModelInfo": {
+            "@id": "iudx:ModelInfo"
+        },
         "Polygon": {
             "@id": "iudx:Polygon"
         },
@@ -325,6 +373,9 @@
         },
         "geometry": {
             "@id": "iudx:geometry"
+        },
+        "brandName": {
+            "@id": "iudx:brandName"
         },
         "coordinates": {
             "@id": "iudx:coordinates"
@@ -377,8 +428,14 @@
         "dataDescriptor": {
             "@id": "iudx:dataDescriptor"
         },
+        "manufacturerName": {
+            "@id": "iudx:manufacturerName"
+        },
         "authType": {
             "@id": "iudx:authType"
+        },
+        "modelName": {
+            "@id": "iudx:modelName"
         },
         "maxDurationInHours": {
             "@id": "iudx:maxDurationInHours"
@@ -388,6 +445,9 @@
         },
         "unitText": {
             "@id": "iudx:unitText"
+        },
+        "modelURL": {
+            "@id": "iudx:modelURL"
         },
         "additionalInfoURL": {
             "@id": "iudx:additionalInfoURL"

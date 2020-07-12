@@ -4,7 +4,7 @@
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "schema": "http://schema.org/",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "iudx": "https://iudx.org.in/voc/",
+        "iudx": "https://voc.iudx.org.in/",
         "geojson": "https://purl.org/geojson/vocab#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
