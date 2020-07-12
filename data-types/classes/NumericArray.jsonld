@@ -15,7 +15,7 @@
                 "rdfs:Class"
             ],
             "rdfs:comment": "Data type: Array of numbers, for representing numeric values (Decimals, Integers, etc)",
-            "rdfs:label": "NumericArray",
+            "rdfs:label": "NumericArray"
         }
     ]
 }
