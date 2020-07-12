@@ -5,7 +5,7 @@
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "schema": "http://schema.org/",
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "iudx": "https://iudx.org.in/voc/",
+        "iudx": "https://voc.iudx.org.in/",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "owl": "http://www.w3.org/2002/07/owl#"
     },
