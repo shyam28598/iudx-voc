@@ -26,7 +26,8 @@
     "provider": "rbccps.org/aa9d66a000d94a78895de8d4c0b3a67f3450e531",
     "itemModifiedAt": "2020-07-01T10:03:26+0000",
     "deviceModelInfo": {
-        "additionalInfoURL": "http://www.boschclimo.com/",
-        "name": "Bosch-Climo"
+        "brandName": "Climo" 
+        "modelName": "Bosch-Climo"
+        "modelURL": "http://www.boschclimo.com/",
     }
 }
