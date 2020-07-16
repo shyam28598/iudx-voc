@@ -34,19 +34,6 @@
                     "@id": "iudx:Organization"
                 },
                 {
-
-                    "@id": "TransitManagement"
-                },
-		{
-                    "@id": "EnvAQM"
-		},
-		{
-                    "@id": "EnvFlood"
-		},
-		{
-                    "@id": "StreetLightFeeder"
-		},
-
                     "@id": "iudx:TransitManagement"
                 },
                 {
