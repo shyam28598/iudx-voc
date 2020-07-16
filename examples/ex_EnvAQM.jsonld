@@ -1,42 +1,39 @@
 {
     "@context": "https://voc.iudx.org.in/",
-    "type": ["iudx:EnvAQM"],
-    "dataDescriptor": {
-        "type": ["DataModel", "EnvAQM"],
-        "airPressure": {
-            "type": ["ValueDescriptor"],
-            "description": "Measured Air pressure",
-            "unitCode": "ATM",
-            "unitText": "standard atmosphere",
-            "dataSchema": "iudx:Number"
-        },
-        "airQualityIndex": {
-            "type": ["ValueDescriptor"],
-            "description": "Overall AQI ",
-            "unitCode": "C62",
-            "unitText": "dimensionless",
-            "dataSchema": "iudx:Number"
-        },
-        "aqiMajorPollutant": {
-            "type": ["ValueDescriptor"],
-            "description": "Major pollutant in the AQI index.",
-            "dataSchema": "iudx:Text"
-        },
-        "co2MAX": {
-            "type": ["ValueDescriptor"],
-            "description": "Maximum value of CO2 for the last 24 hours",
-            "unitCode": "X59",
-            "unitText": "part per million (ppm)",
-            "dataSchema": "iudx:Number",
-            "maxDurationInHours": 24
-        },
-        "co2MIN": {
-            "type": ["ValueDescriptor"],
-            "describes": "Minimum value of CO2 for the last 24 hours",
-            "unitCode": "X59",
-            "unitText": "part per million (ppm)",
-            "dataSchema": "iudx:Number",
-            "minDurationInHours": 24
-        }
+    "type": ["iudx:DataModel", "iudx:EnvAQM"],
+    "airPressure": {
+        "type": ["ValueDescriptor"],
+        "description": "Measured Air pressure",
+        "unitCode": "ATM",
+        "unitText": "standard atmosphere",
+        "dataSchema": "iudx:Number"
+    },
+    "airQualityIndex": {
+        "type": ["ValueDescriptor"],
+        "description": "Overall AQI ",
+        "unitCode": "C62",
+        "unitText": "dimensionless",
+        "dataSchema": "iudx:Number"
+    },
+    "aqiMajorPollutant": {
+        "type": ["ValueDescriptor"],
+        "description": "Major pollutant in the AQI index.",
+        "dataSchema": "iudx:Text"
+    },
+    "co2MAX": {
+        "type": ["ValueDescriptor"],
+        "description": "Maximum value of CO2 for the last 24 hours",
+        "unitCode": "X59",
+        "unitText": "part per million (ppm)",
+        "dataSchema": "iudx:Number",
+        "maxDurationInHours": 24
+    },
+    "co2MIN": {
+        "type": ["ValueDescriptor"],
+        "describes": "Minimum value of CO2 for the last 24 hours",
+        "unitCode": "X59",
+        "unitText": "part per million (ppm)",
+        "dataSchema": "iudx:Number",
+        "minDurationInHours": 24
     }
 }
