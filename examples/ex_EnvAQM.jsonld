@@ -1,37 +1,26 @@
 {
-    "@context": {
-       "@vocab": "https://voc.iudx.org.in/",
-       "iudx": "https://voc.iudx.org.in/",
-       "xsd": "http://www.w3.org/2001/XMLSchema#",
-       "AIR_PRESSURE": "iudx:airPressure", 
-       "AQI": "iudx:airQualityIndex",
-       "AQI_POLLUTANT": "iudx:aqiMajorPollutant",
-       "CO2_MAX": "iudx:co2MAX",
-       "CO2_MIN": "iudx:co2MIN"
-    },
-    "type": ["DataModel", "EnvAQM"],
-    "id": "env_aqm_climo_Pune_example",
-    "description": "Data Descriptor for data from CLIMO sensors in Pune city.",
-    "AIR_PRESSURE": {
+    "@context": "https://voc.iudx.org.in/",
+    "type": ["iudx:DataModel", "iudx:EnvAQM"],
+    "airPressure": {
         "type": ["ValueDescriptor"],
         "description": "Measured Air pressure",
         "unitCode": "ATM",
         "unitText": "standard atmosphere",
         "dataSchema": "iudx:Number"
     },
-    "AQI": {
+    "airQualityIndex": {
         "type": ["ValueDescriptor"],
         "description": "Overall AQI ",
         "unitCode": "C62",
         "unitText": "dimensionless",
         "dataSchema": "iudx:Number"
     },
-    "AQI_POLLUTANT": {
+    "aqiMajorPollutant": {
         "type": ["ValueDescriptor"],
         "description": "Major pollutant in the AQI index.",
         "dataSchema": "iudx:Text"
     },
-    "CO2_MAX": {
+    "co2MAX": {
         "type": ["ValueDescriptor"],
         "description": "Maximum value of CO2 for the last 24 hours",
         "unitCode": "X59",
@@ -39,7 +28,7 @@
         "dataSchema": "iudx:Number",
         "maxDurationInHours": 24
     },
-    "CO2_MIN": {
+    "co2MIN": {
         "type": ["ValueDescriptor"],
         "describes": "Minimum value of CO2 for the last 24 hours",
         "unitCode": "X59",

@@ -1,0 +1,9 @@
+{
+    "@context": "https://voc.iudx.org.in/",
+    "type": ["iudx:EnvAQM"],
+    "airPressure": 50,
+    "airQualityIndex": 100,
+    "aqiMajorPollutant": "co2",
+    "co2MAX": 1200,
+    "co2MIN": 200
+}
