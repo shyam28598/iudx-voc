@@ -34,16 +34,16 @@
                     "@id": "iudx:Organization"
                 },
                 {
-                    "@id": "TransitManagement"
+                    "@id": "iudx:TransitManagement"
                 },
                 {
-                    "@id": "EnvAQM"
+                    "@id": "iudx:EnvAQM"
                 },
                 {
-                    "@id": "EnvFlood"
+                    "@id": "iudx:EnvFlood"
                 },
                 {
-                    "@id": "StreetLightFeeder"
+                    "@id": "iudx:StreetLightFeeder"
                 }
             ],
             "iudx:rangeIncludes": [
