@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:pm10MAX",
+            "@id": "iudx:precipitationForecast",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Observed maximum value of  air pollutant PM10 particulate matter over a set of observations in past.",
-            "rdfs:label": "pm10MAX",
+            "rdfs:comment": "Observed forecast rainfall over a certain duration in future.",
+            "rdfs:label": "precipitationForecast",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },

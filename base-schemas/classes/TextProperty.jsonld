@@ -8,7 +8,7 @@
     "@graph": [
         {
             "@id": "iudx:TextProperty",
-            "@type": ["rdfs:Class"],
+            "@type": "rdfs:Class",
             "rdfs:comment": "Class of all Text Properties. The range of Text property contains text (multiple words).",
             "rdfs:label": "TextProperty",
             "owl:equivalentClass": {
