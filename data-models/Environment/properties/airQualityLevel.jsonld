@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:pm10MAX",
+            "@id": "iudx:airQualityLevel",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "Observed maximum value of  air pollutant PM10 particulate matter over a set of observations in past.",
-            "rdfs:label": "pm10MAX",
+            "rdfs:comment": "Air Quality Category Indication. Qualitative level defined according to the local health agencies. For example, 'GOOD', 'MODERATE', 'POOR', 'UNHEALTHY', 'SEVERE', 'HAZARDOUS' etc.",
+            "rdfs:label": "airQualityLevel",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -27,12 +27,15 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:airQualityLevel"
+            }
         }
     ]
 }

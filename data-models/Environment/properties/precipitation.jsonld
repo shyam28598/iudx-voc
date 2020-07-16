@@ -1,22 +1,22 @@
 {
     "@context": {
-        "geojson": "https://purl.org/geojson/vocab#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
         "iudx": "https://voc.iudx.org.in/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "owl": "http://www.w3.org/2002/07/owl#"
+        "geojson": "https://purl.org/geojson/vocab#",
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     },
     "@graph": [
         {
-            "@id": "iudx:rainfallForecast",
+            "@id": "iudx:precipitation",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Observed forecast rainfall over a certain duration in future.",
-            "rdfs:label": "rainfallForecast",
+            "rdfs:comment": "Observed measured rainfall over a given duration.",
+            "rdfs:label": "precipitation",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -32,7 +32,10 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:precipitation"
+            }
         }
     ]
 }
