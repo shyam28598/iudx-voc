@@ -1,22 +1,22 @@
 {
     "@context": {
-        "iudx": "https://voc.iudx.org.in/",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "geojson": "https://purl.org/geojson/vocab#",
+        "iudx": "https://voc.iudx.org.in/",
         "schema": "http://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     },
     "@graph": [
         {
-            "@id": "iudx:co2MAX",
+            "@id": "iudx:uv",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Observed maximum value of air pollutant Carbon Dioxide (CO2) over a set of observations in past.",
-            "rdfs:label": "co2MAX",
+            "rdfs:comment": "Observed levels of UV radiation. For Aggregation type, the value is an object containing attributes representing statistical aggregates derived from past data. For Number, the numeric value contains the latest data. ",
+            "rdfs:label": "uv",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -31,6 +31,9 @@
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
+                },
+                {
+                    "@id": "iudx:Aggregation"
                 }
             ]
         }
