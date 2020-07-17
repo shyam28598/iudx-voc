@@ -1,11 +1,11 @@
 {
     "@context": "https://voc.iudx.org.in/",
-    "type": ["iudx:DataModel", "iudx:EnvAQM"],
-    "airPressure": {
+    "type": ["iudx:EnvAQM"],
+    "atmosphericPressure": {
         "type": ["ValueDescriptor"],
         "description": "Measured Air pressure",
-        "unitCode": "ATM",
-        "unitText": "standard atmosphere",
+        "unitCode": "http://qudt.org/vocab/unit/MILLIBAR",
+        "unitText": "Milli Bar",
         "dataSchema": "iudx:Number"
     },
     "airQualityIndex": {
@@ -20,20 +20,80 @@
         "description": "Major pollutant in the AQI index.",
         "dataSchema": "iudx:Text"
     },
-    "co2MAX": {
-        "type": ["ValueDescriptor"],
-        "description": "Maximum value of CO2 for the last 24 hours",
-        "unitCode": "X59",
-        "unitText": "part per million (ppm)",
-        "dataSchema": "iudx:Number",
-        "maxDurationInHours": 24
+    "co": {
+        "type": ["Aggregation"],
+        "description": "Describes instantaneous and/or aggregated values for carbon monooxide(CO). Aggregations of CO are derived over the last 24 hours",
+        "avgOverTime": {
+           "type": ["ValueDescriptor"],
+           "description": "Average value of CO for the last 24 hours",
+           "dataSchema": "iudx:Number",
+           "avgDurationInHours": 24,
+           "unitCode": "X59",
+           "unitText": "part per million (ppm)"
+        },
+        "maxOverTime": {
+           "type": ["ValueDescriptor"],
+           "description": "Maximum value of CO for the last 24 hours",
+           "dataSchema": "iudx:Number",
+           "maxDurationInHours": 24,
+           "unitCode": "X59",
+           "unitText": "part per million (ppm)"
+        },
+        "minOverTime": {
+           "type": ["ValueDescriptor"],
+           "description": "Maximum value of CO for the last 24 hours",
+           "dataSchema": "iudx:Number",
+           "minDurationInHours": 24,
+           "unitCode": "X59",
+           "unitText": "part per million (ppm)"
+       }
     },
-    "co2MIN": {
+    "pm2p5": {
+        "type": ["Aggregation"],
+        "description": "Describes instantaneous and/or aggregated values for PM2.5. Aggregations of PM2.5 are derived over the last 24 hours",
+        "instantaneousValue": {
+           "type": ["ValueDescriptor"],
+           "description": "Instantaneous value of pollutant PM2p5.",
+           "dataSchema": "iudx:Number",
+           "unitCode": "XGQ",
+           "unitText": "micro gram per cubic metre (ug/m3)",
+           "resolution": {
+               "value": 0.1,
+               "unitCode": "XGQ"
+           }
+        },
+        "avgOverTime": {
+           "type": ["ValueDescriptor"],
+           "description": "Average value of PM2.5 for the last 24 hours",
+           "dataSchema": "iudx:Number",
+           "avgDurationInHours": 24,
+           "unitCode": "XGQ",
+           "unitText": "micro gram per cubic metre (ug/m3)"
+        }
+    },
+    "co2": {
+        "type": ["Aggregation"],
+        "description": "Describes instantaneous and/or aggregated values for CO2. Aggregations of CO2 are derived over the last 24 hours",
+        "avgOverTime": {
+           "type": ["ValueDescriptor"],
+           "description": "Average value of CO2 for the last 24 hours",
+           "dataSchema": "iudx:Number",
+           "avgDurationInHours": 24,
+           "unitCode": "X59",
+           "unitText": "part per million (ppm)"
+        }
+    },
+    "pm10": {
         "type": ["ValueDescriptor"],
-        "describes": "Minimum value of CO2 for the last 24 hours",
-        "unitCode": "X59",
-        "unitText": "part per million (ppm)",
-        "dataSchema": "iudx:Number",
-        "minDurationInHours": 24
+         "description": "Instantaneous value of pollutant PM10.",
+         "dataSchema": "iudx:Number",
+         "unitCode": "XGQ",
+         "unitText": "micro gram per cubic metre (ug/m3)",
+         "resolution": {
+             "value": 0.5,
+             "unitCode": "XGQ"
+         },
+         "minValue": 0,
+         "maxValue": 100 
     }
 }

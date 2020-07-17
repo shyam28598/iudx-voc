@@ -8,28 +8,25 @@
     }, 
     "@graph": [
         {
-            "@id": "iudx:maxValue",
+            "@id": "iudx:maxOverTime",
             "@type": [
                 "rdf:QuantitativeProperty"
             ], 
-            "rdfs:comment": "The upper value of a quantity/property.",
-            "rdfs:label": "maxValue",
+            "rdfs:comment": "Describes the maximum value of a time-series data over a specified duration in past. The duration is specified using another parameter in the value descriptor object related to this value",
+            "rdfs:label": "maxOverTime",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:ValueDescriptor"
+                    "@id": "iudx:Aggregation"
                 } 
             ], 
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "schema:maxValue"
-            },
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            }
+            ]
         }
     ]
 }
