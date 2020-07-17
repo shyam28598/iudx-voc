@@ -8,12 +8,12 @@
     }, 
     "@graph": [
         {
-            "@id": "iudx:avgValue",
+            "@id": "iudx:instantaneousValue",
             "@type": [
                 "rdf:QuantitativeProperty"
             ], 
-            "rdfs:comment": "Describes the average value of a time-series data over a specified duration in past. The duration is specified using another parameter in the value descriptor object related to this value",
-            "rdfs:label": "avgValue",
+            "rdfs:comment": "Describes the instantaneous value of a time varying quantity.",
+            "rdfs:label": "instantaneousValue",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Aggregation"

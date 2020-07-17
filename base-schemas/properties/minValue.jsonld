@@ -12,21 +12,24 @@
             "@type": [
                 "rdf:QuantitativeProperty"
             ], 
-            "rdfs:comment": "Describes the minimum value of a time-series data over a specified duration in past. The duration is specified using another parameter in the value descriptor object related to this value",
+            "rdfs:comment": "The lower value of a quantity/property.",
             "rdfs:label": "minValue",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:Aggregation"
+                    "@id": "iudx:ValueDescriptor"
                 } 
             ], 
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Number"
-                },
-                {
-                    "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:minValue"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }
