@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:dataType",
+            "@id": "iudx:dataSchema",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Associated data type. Specified as an URI (linking it to one of the known data type vocabulary, e.g., xsd)",
-            "rdfs:label": "dataType",
+            "rdfs:comment": "Associated data schema. Specified as an URI (linking it to one of the known data type vocabulary, e.g., xsd)",
+            "rdfs:label": "dataSchema",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:ValueDescriptor"
