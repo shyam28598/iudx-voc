@@ -26,7 +26,7 @@ auth_api = "https://auth.iudx.org.in/auth/v1/token"
 auth_headers = {"content-type": "application/json"}
 payload = { "request" : [ {"id": "datakaveri.org/f7e044eee8122b5c87dce6e7ad64f3266afa41dc/voc.iudx.org.in/*"} ] }
 
-url = "https://voc.iudx.org.in"
+url = "https://voc.iudx.org.in/"
 
 
 
@@ -35,7 +35,6 @@ token = requests.post(auth_api, data=json.dumps(payload),
                         headers=auth_headers, cert=cert).json()["token"]
 
 voc_headers = {"token": token, "content-type": "application/ld+json", "accept": "application/ld+json"}
-print(voc_headers)
 
 
 
@@ -45,6 +44,22 @@ failed_schemas = []
 failed_examples = []
 
 
+def post_schema(name, path, doc, max_retries=5):
+
+    if max_retries > 0:
+        try:
+            r = requests.post(url+path+name, data=json.dumps(doc), 
+                    headers=voc_headers, timeout=3)
+            if r.status_code != 201:
+                post_schema(name, path, doc, max_retries=max_retries-1)
+            else:
+                return 1
+        except Exception as e:
+            post_schema(name, path, doc, max_retries=max_retries-1)
+        return 1
+    return 0
+
+
 for fldr in schema_folders:
     for filename in os.listdir(fldr):
         try:
@@ -52,9 +67,8 @@ for fldr in schema_folders:
                 print("Pushing " + filename)
                 doc = json.load(f)
                 name = doc["@graph"][0]["@id"][5:]
-                r = requests.post(url+"/"+name, data=json.dumps(doc), 
-                        headers=voc_headers, timeout=2)
-                if r.status_code != 201 :
+                status = post_schema(name, "", doc)
+                if (status == 0):
                     failed_list.append(name)
         except Exception as e:
             print("Failed inserting " + name)
@@ -66,9 +80,8 @@ for filename in os.listdir(all_examples_folder):
         with open(all_examples_folder + "/" + filename, 'r') as f:
             print("Pushing " + filename)
             doc = json.load(f)
-            r = requests.post(url+"/examples/"+filename, data=json.dumps(doc),
-                    headers=voc_headers, timeout=2)
-            if r.status_code != 201 :
+            status = post_schema(filename, "examples/", doc)
+            if status == 0 :
                 failed_list.append(filename)
     except Exception as e:
         print("Failed inserting " + filename)
@@ -77,11 +90,9 @@ for filename in os.listdir(all_examples_folder):
 with open(master_context_file, "r") as f:
     master_context = json.load(f)
     print("Pushing master context")
-    r = requests.post(url, data=json.dumps(master_context), 
-            headers=voc_headers, timeout=2)
-    print(r.status_code)
-    if r.status_code != 201:
-        print("Failed")
+    status = post_schema("", "", master_context)
+    if status == 0:
+        failed_list.append("master")
 
 print( "Failed inserting - ", failed_list)
 with open("failed.txt", "w") as f:
