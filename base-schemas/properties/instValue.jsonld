@@ -8,15 +8,15 @@
     }, 
     "@graph": [
         {
-            "@id": "iudx:instantaneousValue",
+            "@id": "iudx:instValue",
             "@type": [
                 "rdf:QuantitativeProperty"
             ], 
-            "rdfs:comment": "Describes the instantaneous value of a time varying quantity.",
-            "rdfs:label": "instantaneousValue",
+            "rdfs:comment": "Describes the instantaneous value (associated with the current timestamp) of a time varying quantity.",
+            "rdfs:label": "instValue",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:Aggregation"
+                    "@id": "iudx:TimeSeriesAggregation"
                 } 
             ], 
             "iudx:rangeIncludes": [

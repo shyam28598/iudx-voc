@@ -7,13 +7,13 @@
     },
     "@graph": [
         {
-            "@id": "iudx:Aggregation",
+            "@id": "iudx:TimeSeriesAggregation",
             "@type": [
                 "owl:Class",
                 "rdfs:Class"
             ],
             "rdfs:comment": "This object describes various types of aggregated data associated with a time-seried data. For example, average over a certain duration in past, minimum value over a duration in past etc.",
-            "rdfs:label": "Aggregation",
+            "rdfs:label": "TimeSeriesAggregation",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },

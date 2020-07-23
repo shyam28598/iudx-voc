@@ -16,7 +16,7 @@
             "rdfs:label": "minOverTime",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:Aggregation"
+                    "@id": "iudx:TimeSeriesAggregation"
                 } 
             ], 
             "iudx:rangeIncludes": [
