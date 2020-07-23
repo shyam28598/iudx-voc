@@ -93,13 +93,15 @@ def generate(class_path, property_path):
                         except KeyError:
                             pass
                             #print("iudx:domainIncludes not in " + prop_file)
-                        try:
-                            includes = find(domain, prop["@graph"][0]["iudx:rangeIncludes"])
-                            if includes is not None:
-                                new_dict["@graph"].append(prop["@graph"][0])
-                        except KeyError:
-                            pass
-                            #print("iudx:rangeIncludes not in " + prop_file)
+                        # try:
+                        #     includes = find(domain, prop["@graph"][0]["iudx:rangeIncludes"])
+                        #     if includes is not None:
+                        #         print(includes)
+                        #         print(prop["@graph"][0])
+                        #         new_dict["@graph"].append(prop["@graph"][0])
+                        # except KeyError:
+                        #     pass
+                        #     #print("iudx:rangeIncludes not in " + prop_file)
                     else:
                         print("@graph missing in " + prop_file)
             os.makedirs(os.path.dirname(tmp_expanded_path), exist_ok=True)
