@@ -16,7 +16,7 @@
             "rdfs:label": "maxOverTime",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:Aggregation"
+                    "@id": "iudx:TimeSeriesAggregation"
                 } 
             ], 
             "iudx:rangeIncludes": [

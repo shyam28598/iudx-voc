@@ -16,7 +16,7 @@
             "rdfs:label": "avgOverTime",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:Aggregation"
+                    "@id": "iudx:TimeSeriesAggregation"
                 } 
             ], 
             "iudx:rangeIncludes": [
