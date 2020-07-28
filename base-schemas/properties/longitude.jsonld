@@ -1,22 +1,20 @@
 {
     "@context": {
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "iudx": "https://voc.iudx.org.in/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema": "http://schema.org/"
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "geojson": "https://purl.org/geojson/vocab#"
     },
     "@graph": [
         {
-            "@id": "iudx:longitude",
             "@type": [
                 "iudx:GeoProperty"
             ],
-            "rdfs:comment": "Longitude of a place. Specified in WGS 84 CRS (https://en.wikipedia.org/wiki/World_Geodetic_System)",
-            "rdfs:label": "longitude",
+            "@id": "iudx:longitude",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:GeoCoordinates"
@@ -26,8 +24,12 @@
                 },
                 {
                     "@id": "TransitManagement"
+                },
+                {
+                    "@id": "iudx:TransitManagement"
                 }
             ],
+            "rdfs:label": "longitude",
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Number"
@@ -36,11 +38,12 @@
                     "@id": "iudx:Text"
                 }
             ],
-            "skos:exactMatch": {
-                "@id": "schema:longitude"
-            },
+            "rdfs:comment": "Longitude of a place. Specified in WGS 84 CRS (https://en.wikipedia.org/wiki/World_Geodetic_System)",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "schema:longitude"
             }
         }
     ]

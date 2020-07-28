@@ -1,13 +1,13 @@
 {
     "@context": {
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "iudx": "https://voc.iudx.org.in/",
-        "schema": "http://schema.org/",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "geojson": "https://purl.org/geojson/vocab#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://voc.iudx.org.in/",
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
         {
@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Observed levels of UV radiation. For Aggregation type, the value is an object containing attributes representing statistical aggregates derived from past data. For Number, the numeric value contains the latest data. ",
+            "rdfs:comment": "Observed levels of UV radiation. Value is an object containing attributes representing statistical aggregates derived from past data.",
             "rdfs:label": "uv",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
@@ -27,13 +27,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
-                },
-                {
-                    "@id": "iudx:ValueDescriptor"
-                },
-                {
-                    "@id": "iudx:Aggregation"
+                    "@id": "iudx:TimeSeriesAggregation"
                 }
             ]
         }

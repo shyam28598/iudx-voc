@@ -7,13 +7,13 @@
     },
     "@graph": [
         {
-            "@id": "iudx:IoTDevice",
+            "@id": "iudx:Device",
             "@type": [
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "A device connected to the internet that could have sensors or actuators and reporting measurements.",
-            "rdfs:label": "IoTDevice",
+            "rdfs:comment": "Properties of the device that could have sensors or actuators which report measurements corresponding to this observation.",
+            "rdfs:label": "Device",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             }

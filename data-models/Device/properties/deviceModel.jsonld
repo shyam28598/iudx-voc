@@ -1,36 +1,33 @@
 {
     "@context": {
+        "owl": "http://www.w3.org/2002/07/owl#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "iudx": "https://voc.iudx.org.in/",
-        "schema": "http://schema.org/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "geojson": "https://purl.org/geojson/vocab#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        "schema": "http://schema.org/"
     },
     "@graph": [
         {
-            "@id": "iudx:airQualityIndex",
+            "@id": "iudx:deviceModel",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:StructuredProperty"
             ],
-            "rdfs:comment": "Overall Air Quality Index (AQI) for the observed air quality.",
-            "rdfs:label": "airQualityIndex",
+            "rdfs:comment": "Describes the information of the device, sensor or system in consideration.",
+            "rdfs:label": "deviceModel",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:EnvAQM"
+                    "@id": "iudx:Device"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
-                },
-                {
-                    "@id": "iudx:ValueDescriptor"
+                    "@id": "iudx:ModelInfo"
                 }
             ]
         }

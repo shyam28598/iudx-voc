@@ -1,32 +1,35 @@
 {
     "@context": {
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "iudx": "https://voc.iudx.org.in/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema": "http://schema.org/"
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "geojson": "https://purl.org/geojson/vocab#"
     },
     "@graph": [
         {
-            "@id": "iudx:geoCovers",
             "@type": [
                 "iudx:GeoProperty"
             ],
-            "rdfs:comment": "Represents the coverage relationship between two geometries/places.",
-            "rdfs:label": "geoCovers",
+            "@id": "iudx:geoCovers",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Place"
+                },
+                {
+                    "@id": "iudx:TransitManagement"
                 }
             ],
+            "rdfs:label": "geoCovers",
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:GeoJSONGeometry"
                 }
             ],
+            "rdfs:comment": "Represents the coverage relationship between two geometries/places.",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             }

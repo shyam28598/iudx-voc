@@ -34,9 +34,6 @@
                     "@id": "iudx:Organization"
                 },
                 {
-                    "@id": "iudx:TransitManagement"
-                },
-                {
                     "@id": "iudx:EnvAQM"
                 },
                 {
