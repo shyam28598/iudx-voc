@@ -1,29 +1,26 @@
 {
     "@context": {
-        "geojson": "https://purl.org/geojson/vocab#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "schema": "http://schema.org/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
+        "geojson": "https://purl.org/geojson/vocab#",
         "iudx": "https://voc.iudx.org.in/",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
         {
-            "@id": "iudx:deviceModel",
+            "@id": "iudx:observationDateTime",
             "@type": [
-                "iudx:StructuredProperty"
+                "iudx:TimeProperty"
             ],
-            "rdfs:comment": "Describes the information of the device, sensor or system in consideration.",
-            "rdfs:label": "deviceModel",
+            "rdfs:comment": "Last reported time of observation.",
+            "rdfs:label": "observationDateTime",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:IoTDevice"
-                },
                 {
                     "@id": "iudx:EnvAQM"
                 },
@@ -31,12 +28,21 @@
                     "@id": "iudx:EnvFlood"
                 },
                 {
+                    "@id": "iudx:TransitManagement"
+                },
+                {
+                    "@id": "iudx:WiFiHostspot"
+                },
+                {
                     "@id": "iudx:StreetLightFeeder"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:ModelInfo"
+                    "@id": "iudx:DateTime"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
                 }
             ]
         }

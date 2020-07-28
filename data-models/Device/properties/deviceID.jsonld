@@ -1,13 +1,13 @@
 {
     "@context": {
-        "geojson": "https://purl.org/geojson/vocab#",
-        "schema": "http://schema.org/",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "iudx": "https://voc.iudx.org.in/",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "iudx": "https://voc.iudx.org.in/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema": "http://schema.org/"
     },
     "@graph": [
         {
@@ -22,22 +22,7 @@
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:IoTDevice"
-                },
-                {
-                    "@id": "iudx:EnvAQM"
-                },
-                {
-                    "@id": "iudx:EnvFlood"
-                },
-                {
-                    "@id": "iudx:SolidWasteManagement"
-                },
-                {
-                    "@id": "iudx:WiFiHostspot"
-                },
-                {
-                    "@id": "iudx:StreetLightFeeder"
+                    "@id": "iudx:Device"
                 }
             ],
             "iudx:rangeIncludes": [
