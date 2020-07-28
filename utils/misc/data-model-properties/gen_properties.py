@@ -9,7 +9,7 @@ from collections import OrderedDict
 
 csv_file_path = [
                 "./Device - Device_properties.csv"]
-#                "./Environment - EnvAQM_properties.csv", "./Environment - EnvFlood_properties.csv", ]
+#                "./Environment - EnvAQM_new_properties.csv", "./Environment - EnvFlood_properties.csv" ]
 
 """ Add the property names to ignore list to skip property generation. """
 #ignore = ["Custom", "location", "deviceModel", "rainfallMeasured", "rainfallForecast", "name", ""]
@@ -77,10 +77,9 @@ def add_domain_or_range(domain_range_list, domain_range):
 
 
 def add_similar_match(match):
-    if match:
-        match_dict = {}
-        match_dict["@id"] = match
-        return match_dict
+    match_dict = {}
+    match_dict["@id"] = match
+    return match_dict
 
 
 def gen_properties(file_path):
@@ -111,7 +110,8 @@ def gen_properties(file_path):
                     tmp_obj["rdfs:isDefinedBy"] = obj["@graph"][0]["rdfs:isDefinedBy"]
                     tmp_obj["iudx:domainIncludes"] = add_domain_or_range(csv_domain_list, csv_domain)
                     tmp_obj["iudx:rangeIncludes"] = add_domain_or_range(csv_range_list, csv_range)
-                    tmp_obj["skos:exactMatch"] = add_similar_match(csv_match)
+                    if csv_match:
+                        tmp_obj["skos:exactMatch"] = add_similar_match(csv_match)
                     new_dict["@graph"] = new_list
                     with open(properties_path + csv_label + ".jsonld", "w+") as prop_file:
                         json.dump(new_dict, prop_file, indent=4)
