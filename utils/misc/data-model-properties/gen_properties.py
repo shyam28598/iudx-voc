@@ -8,8 +8,9 @@ from collections import OrderedDict
 
 
 csv_file_path = [
-                "./Device - Device_properties.csv"]
+#                "./Device - Device_properties.csv"]
 #                "./Environment - EnvAQM_new_properties.csv", "./Environment - EnvFlood_properties.csv" ]
+                "./Environment - EnvAQM_new_properties.csv", "./Environment - EnvFlood_properties.csv", "./Environment - EnvWeather_properties.csv"]
 
 """ Add the property names to ignore list to skip property generation. """
 #ignore = ["Custom", "location", "deviceModel", "rainfallMeasured", "rainfallForecast", "name", ""]
@@ -82,6 +83,69 @@ def add_similar_match(match):
     return match_dict
 
 
+def order_obj(obj):
+    new_dict = OrderedDict()
+    if "@context" in obj.keys():
+        new_dict["@context"] = obj["@context"]
+        del(obj["@context"]) 
+    if "@graph" in obj.keys():
+        new_list = []
+        tmp_obj = OrderedDict()
+        new_list.append(tmp_obj)
+        try:
+            tmp_obj["@id"] = obj["@graph"][0]["@id"]
+        except KeyError:
+            pass
+        try:
+            tmp_obj["@type"] = obj["@graph"][0]["@type"]
+        except KeyError:
+            pass
+        try:
+            tmp_obj["rdfs:comment"] = obj["@graph"][0]["rdfs:comment"]
+        except KeyError:
+            pass
+        try:
+            tmp_obj["rdfs:label"] = obj["@graph"][0]["rdfs:label"]
+        except KeyError:
+            pass
+        try:
+            tmp_obj["iudx:domainIncludes"] = obj["@graph"][0]["iudx:domainIncludes"]
+        except KeyError:
+            pass
+        try:
+            tmp_obj["iudx:rangeIncludes"] = obj["@graph"][0]["iudx:rangeIncludes"]
+        except KeyError:
+            pass
+        try:
+            del(obj["@graph"][0]["@id"])
+        except KeyError:
+            pass
+        try:
+            del(obj["@graph"][0]["@type"])
+        except KeyError:
+            pass
+        try:
+            del(obj["@graph"][0]["rdfs:comment"])
+        except KeyError:
+            pass
+        try:
+            del(obj["@graph"][0]["rdfs:label"])
+        except KeyError:
+            pass
+        try:
+            del(obj["@graph"][0]["iudx:domainIncludes"])
+        except KeyError:
+            pass
+        try:
+            del(obj["@graph"][0]["iudx:rangeIncludes"])
+        except KeyError:
+            pass
+        new_dict["@graph"] = new_list
+        if bool(obj):
+            new_dict["@graph"][0].update(obj["@graph"][0])
+        return new_dict
+
+
 def gen_properties(file_path):
     with open(file_path, newline='') as f:
         reader = csv.reader(f)
@@ -125,8 +189,9 @@ def gen_properties(file_path):
                     new_domain_obj = {"@id": "iudx:"+new_domain}
                     if new_domain_obj not in base_prop["@graph"][0]["iudx:domainIncludes"]:
                         base_prop["@graph"][0]["iudx:domainIncludes"].append(new_domain_obj)
+                    ordered_prop = order_obj(base_prop)
                     base_file.seek(0)
-                    json.dump(base_prop, base_file, indent=4)
+                    json.dump(ordered_prop, base_file, indent=4)
                     base_file.truncate()
 
 
