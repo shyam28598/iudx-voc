@@ -11,18 +11,18 @@
     },
     "@graph": [
         {
-            "@id": "iudx:referenceLevel",
+            "@id": "iudx:airQualityIndex",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Reference setting used to compute the currentLevel.",
-            "rdfs:label": "referenceLevel",
+            "rdfs:comment": "Overall Air Quality Index (AQI) for the observed air quality.",
+            "rdfs:label": "airQualityIndex",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:EnvFlood"
+                    "@id": "iudx:EnvAQM"
                 }
             ],
             "iudx:rangeIncludes": [

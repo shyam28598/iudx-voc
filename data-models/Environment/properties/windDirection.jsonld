@@ -11,18 +11,18 @@
     },
     "@graph": [
         {
-            "@id": "iudx:referenceLevel",
+            "@id": "iudx:windDirection",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Reference setting used to compute the currentLevel.",
-            "rdfs:label": "referenceLevel",
+            "rdfs:comment": "Observed wind directiont. Measured in degrees clockwise from due north.",
+            "rdfs:label": "windDirection",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:EnvFlood"
+                    "@id": "iudx:EnvWeather"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -32,7 +32,10 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:windDirection"
+            }
         }
     ]
 }

@@ -11,18 +11,21 @@
     },
     "@graph": [
         {
-            "@id": "iudx:referenceLevel",
+            "@id": "iudx:atmosphericPressure",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Reference setting used to compute the currentLevel.",
-            "rdfs:label": "referenceLevel",
+            "rdfs:comment": "Observed air (atmospheric or barometric) pressure.",
+            "rdfs:label": "atmosphericPressure",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:EnvFlood"
+                    "@id": "iudx:EnvWeather"
+                },
+                {
+                    "@id": "iudx:EnvAQM"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -32,7 +35,10 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:atmosphericPressure"
+            }
         }
     ]
 }

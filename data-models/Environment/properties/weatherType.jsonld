@@ -11,28 +11,31 @@
     },
     "@graph": [
         {
-            "@id": "iudx:referenceLevel",
+            "@id": "iudx:weatherType",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "Reference setting used to compute the currentLevel.",
-            "rdfs:label": "referenceLevel",
+            "rdfs:comment": "Observed weather type or status. Represented by a comma separated list of weather types, e.g., cloudy, sunny etc.",
+            "rdfs:label": "weatherType",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:EnvFlood"
+                    "@id": "iudx:EnvWeather"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:weatherType"
+            }
         }
     ]
 }

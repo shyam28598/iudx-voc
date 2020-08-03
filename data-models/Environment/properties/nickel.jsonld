@@ -11,26 +11,23 @@
     },
     "@graph": [
         {
-            "@id": "iudx:referenceLevel",
+            "@id": "iudx:nickel",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Reference setting used to compute the currentLevel.",
-            "rdfs:label": "referenceLevel",
+            "rdfs:comment": "Observed value of environmental pollutant Nickel (Ni). Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "nickel",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:EnvFlood"
+                    "@id": "iudx:EnvAQM"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
-                },
-                {
-                    "@id": "iudx:ValueDescriptor"
+                    "@id": "iudx:TimeSeriesAggregation"
                 }
             ]
         }
