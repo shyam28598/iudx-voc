@@ -1,0 +1,38 @@
+{
+    "@context": {
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://voc.iudx.org.in/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "schema": "http://schema.org/"
+    },
+    "@graph": [
+        {
+            "@id": "iudx:deviceStatus",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Indicates if the physical device is ON or OFF.",
+            "rdfs:label": "deviceStatus",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        }
+    ]
+}

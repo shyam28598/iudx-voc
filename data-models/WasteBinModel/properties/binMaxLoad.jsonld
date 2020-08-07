@@ -1,0 +1,41 @@
+{
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://voc.iudx.org.in/"
+    },
+    "@graph": [
+        {
+            "@id": "iudx:binMaxLoad",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Maximum load (weight) that the waste bin can hold.",
+            "rdfs:label": "binMaxLoad",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtBin"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "fiware:maximumLoad"
+            }
+        }
+    ]
+}

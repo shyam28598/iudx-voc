@@ -1,13 +1,13 @@
 {
     "@context": {
-        "owl": "http://www.w3.org/2002/07/owl#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "iudx": "https://voc.iudx.org.in/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "geojson": "https://purl.org/geojson/vocab#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "schema": "http://schema.org/",
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema": "http://schema.org/"
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://voc.iudx.org.in/",
+        "geojson": "https://purl.org/geojson/vocab#"
     },
     "@graph": [
         {
@@ -23,6 +23,9 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Device"
+                },
+                {
+                    "@id": "iudx:WmgmtBin"
                 }
             ],
             "iudx:rangeIncludes": [
