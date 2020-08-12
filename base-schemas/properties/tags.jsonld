@@ -26,7 +26,9 @@
             ],
             "iudx:rangeIncludes": [
                 {
+                    "@container": "@list",
                     "@id": "iudx:Text"
+
                 }
             ]
         }

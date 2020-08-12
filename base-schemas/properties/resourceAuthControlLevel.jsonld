@@ -12,7 +12,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Authorizataion Control Level for resouces associated with a given resource-group.  Individual authorization control level indicates that access control is available per resource, i.e., authorization can be granted/not-granted on a per resource basis for the resources. Group authorization control level indicates that the authorization is available on group level only, i.e., authorization will be granted/not-granted for all the resources associated with the given resource group. ENUM: [INDIVIDUAL, GROUP].",
+            "rdfs:comment": "Authorizataion Control Level for resouces associated with a given resource-group.  Individual authorization control level indicates that access control is available per resource, i.e., authorization can be granted/not-granted on a per resource basis for the resources. Group authorization control level indicates that the authorization is available on group level only, i.e., authorization will be granted/not-granted for all the resources associated with the given resource group.For open resources, this will be OPEN. ENUM: [INDIVIDUAL, GROUP, OPEN].",
             "rdfs:label": "resourceAuthControlLevel",
             "iudx:domainIncludes": [
                 {

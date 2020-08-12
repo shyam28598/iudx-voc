@@ -7,6 +7,7 @@
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "iudx": "https://voc.iudx.org.in/",
         "skos": "http://www.w3.org/2004/02/skos/core#",
+        "qudt": "http://qudt.org/vocab/unit/",
         "schema": "http://schema.org/"
     },
     "@graph": [
