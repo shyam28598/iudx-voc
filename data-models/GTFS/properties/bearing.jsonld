@@ -1,28 +1,31 @@
 {
     "@context": {
-        "geojson": "https://purl.org/geojson/vocab#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "iudx": "https://voc.iudx.org.in/"
     },
     "@graph": [
         {
-            "@id": "iudx:currentStopSequence",
+            "@id": "iudx:bearing",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Sequence ID/sequence number for the current stop along the designated route. SameAs: 'current_stop_sequence' field from GTFS Realtime message-Vehicleposition (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)",
-            "rdfs:label": "currentStopSequence",
+            "rdfs:comment": "Gives the vehicle GPS angle measured in a clockwise direction from the True North.",
+            "rdfs:label": "bearing",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:TransitManagement"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -34,7 +37,7 @@
                 }
             ],
             "skos:exactMatch": {
-                "@id": "GTFS:current_stop_sequence"
+                "@id": "GTFS:bearing"
             }
         }
     ]

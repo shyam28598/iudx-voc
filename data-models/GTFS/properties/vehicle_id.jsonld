@@ -1,26 +1,29 @@
 {
     "@context": {
-        "geojson": "https://purl.org/geojson/vocab#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "iudx": "https://voc.iudx.org.in/"
     },
     "@graph": [
         {
-            "@id": "iudx:routeId",
+            "@id": "iudx:vehicle_id",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Route ID assigned to the route on which the bus/vehicle corresponding to the bus in this observation is currently plying on. SameAs: 'route_id' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)",
-            "rdfs:label": "routeId",
+            "rdfs:comment": "Unique ID assigned to the vehicle corresponding to this observation, used in internal system identification. SameAs: 'id' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)",
+            "rdfs:label": "vehicle_id",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:VehicleDescriptor"
+                },
                 {
                     "@id": "iudx:TransitManagement"
                 }
@@ -32,10 +35,7 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "GTFS:route_id"
-            }
+            ]
         }
     ]
 }

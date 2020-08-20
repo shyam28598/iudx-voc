@@ -1,28 +1,34 @@
 {
     "@context": {
-        "geojson": "https://purl.org/geojson/vocab#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "iudx": "https://voc.iudx.org.in/"
     },
     "@graph": [
         {
-            "@id": "iudx:routeType",
+            "@id": "iudx:schedule_relationship",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Number indicating the type of transport-\n1 - Subway, Metro. Any underground rail system within a metropolitan area.\n2 - Rail. Used for intercity or long-distance travel.\n3 - Bus. Used for short- and long-distance bus routes. \nSameAs: 'route_type' field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)",
-            "rdfs:label": "routeType",
+            "rdfs:comment": "Describes if the Route/Trip has been scheduled. SameAs: 'schedule_relationship' field from enumScheduleRelationship (https://developers.google.com/transit/gtfs-realtime/reference#enum-schedulerelationship-2)",
+            "rdfs:label": "schedule_relationship",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:TransitManagement"
+                },
+                {
+                    "@id": "iudx:TripDescriptor"
+                },
+                {
+                    "@id": "iudx:StopTimeUpdate"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -30,14 +36,11 @@
                     "@id": "iudx:Text"
                 },
                 {
-                    "@id": "iudx:Number"
-                },
-                {
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
             "skos:exactMatch": {
-                "@id": "GTFS:route_type"
+                "@id": "GTFS:schedule_relationship"
             }
         }
     ]

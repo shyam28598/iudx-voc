@@ -1,22 +1,22 @@
 {
     "@context": {
-        "geojson": "https://purl.org/geojson/vocab#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "iudx": "https://voc.iudx.org.in/"
     },
     "@graph": [
         {
-            "@id": "iudx:tripId",
+            "@id": "iudx:route_desc",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Trip ID/Trip name alloted to the bus corresponding to this observation, in consideration to the time of the day and the direction of the trip on the given routeId. SameAs: 'trip_id' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)",
-            "rdfs:label": "tripId",
+            "rdfs:comment": "Description of the route. This can include the entire route details including to and from destination and timing information in a text description form. SameAs: 'route_desc' field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)",
+            "rdfs:label": "route_desc",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -34,7 +34,7 @@
                 }
             ],
             "skos:exactMatch": {
-                "@id": "GTFS:trip_id"
+                "@id": "GTFS:route_desc"
             }
         }
     ]
