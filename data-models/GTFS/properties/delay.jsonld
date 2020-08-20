@@ -1,31 +1,28 @@
 {
     "@context": {
-        "geojson": "https://purl.org/geojson/vocab#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "iudx": "https://voc.iudx.org.in/"
     },
     "@graph": [
         {
-            "@id": "iudx:vehicleSpeed",
+            "@id": "iudx:delay",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Gives the Speed  of the vehicle.",
-            "rdfs:label": "vehicleSpeed",
+            "rdfs:comment": "Describes the delay of the vehicle. Can be positive when vehicle is late and negative when the vehicle is ahead of schedule. SameAs: 'delay' field from GTFS Realtime message-StopTimeEvent (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeevent)",
+            "rdfs:label": "delay",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:TransitManagement"
-                },
-                {
-                    "@id": "iudx:WmgmtVehicle"
+                    "@id": "iudx:StopTimeEvent"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -35,10 +32,7 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "GTFS:speed"
-            }
+            ]
         }
     ]
 }

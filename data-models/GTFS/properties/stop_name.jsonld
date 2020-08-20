@@ -1,22 +1,22 @@
 {
     "@context": {
-        "geojson": "https://purl.org/geojson/vocab#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "iudx": "https://voc.iudx.org.in/"
     },
     "@graph": [
         {
-            "@id": "iudx:routeDesc",
+            "@id": "iudx:stop_name",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Description of the route. This can include the entire route details including to and from destination and timing information in a text description form. SameAs: 'route_desc' field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)",
-            "rdfs:label": "routeDesc",
+            "rdfs:comment": "Describes the name of the Bus Stop. SameAs: 'stop_name' field from GTFS Static Field definitions-stops.txt (https://developers.google.com/transit/gtfs/reference#stopstxt)",
+            "rdfs:label": "stop_name",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -34,7 +34,7 @@
                 }
             ],
             "skos:exactMatch": {
-                "@id": "GTFS:route_desc"
+                "@id": "GTFS:stop_name"
             }
         }
     ]

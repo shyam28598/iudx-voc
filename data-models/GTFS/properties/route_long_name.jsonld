@@ -1,22 +1,22 @@
 {
     "@context": {
-        "geojson": "https://purl.org/geojson/vocab#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "iudx": "https://voc.iudx.org.in/"
     },
     "@graph": [
         {
-            "@id": "iudx:vehicleCurrentStatus",
+            "@id": "iudx:route_long_name",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Vehicle status Indiaction to denote if the bus is InTransit(Running), haulted at a stop or idle at a depot.SameAs: 'current_status' field from GTFS Realtime message-Vehicleposition (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)",
-            "rdfs:label": "vehicleCurrentStatus",
+            "rdfs:comment": "Full name of a route. This name is more descriptive than the routeShortName and often includes the route's destination or stop. This mostly includes the to and from destination names of the route. SameAs: 'route_long_name' field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)",
+            "rdfs:label": "route_long_name",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -34,7 +34,7 @@
                 }
             ],
             "skos:exactMatch": {
-                "@id": "GTFS:current_status"
+                "@id": "GTFS:route_long_name"
             }
         }
     ]

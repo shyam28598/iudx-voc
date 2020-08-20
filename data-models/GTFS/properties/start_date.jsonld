@@ -1,28 +1,28 @@
 {
     "@context": {
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "iudx": "https://voc.iudx.org.in/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "schema": "http://schema.org/",
         "geojson": "https://purl.org/geojson/vocab#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
+        "iudx": "https://voc.iudx.org.in/"
     },
     "@graph": [
         {
-            "@id": "iudx:ignitionStatus",
+            "@id": "iudx:start_date",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "GIves the ignition status of the vehicle.(Y, N)",
-            "rdfs:label": "ignitionStatus",
+            "rdfs:comment": "Describes the initial scheduled date of the trip corresponding to the vehicle this observation. An example format for this field - YYYYMMDD. SameAs: 'start_date' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)",
+            "rdfs:label": "start_date",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:WmgmtVehicle"
+                    "@id": "iudx:TripDescriptor"
                 }
             ],
             "iudx:rangeIncludes": [
