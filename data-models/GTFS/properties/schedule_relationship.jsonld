@@ -1,47 +1,43 @@
 {
-    "@context": {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "iudx": "https://voc.iudx.org.in/"
-    },
-    "@graph": [
-        {
-            "@id": "iudx:schedule_relationship",
-            "@type": [
-                "iudx:TextProperty"
-            ],
-            "rdfs:comment": "Describes if the Route/Trip has been scheduled. SameAs: 'schedule_relationship' field from enumScheduleRelationship (https://developers.google.com/transit/gtfs-realtime/reference#enum-schedulerelationship-2)",
-            "rdfs:label": "schedule_relationship",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
-            "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:TransitManagement"
-                },
-                {
-                    "@id": "iudx:TripDescriptor"
-                },
-                {
-                    "@id": "iudx:StopTimeUpdate"
-                }
-            ],
-            "iudx:rangeIncludes": [
-                {
-                    "@id": "iudx:Text"
-                },
-                {
-                    "@id": "iudx:ValueDescriptor"
-                }
-            ],
-            "skos:exactMatch": {
-                "@id": "GTFS:schedule_relationship"
-            }
-        }
-    ]
+	"@context": {
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+		"schema": "http://schema.org/",
+		"geojson": "https://purl.org/geojson/vocab#",
+		"skos": "http://www.w3.org/2004/02/skos/core#",
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"xsd": "http://www.w3.org/2001/XMLSchema#",
+		"owl": "http://www.w3.org/2002/07/owl#",
+		"iudx": "https://voc.iudx.org.in/"
+	},
+	"@graph": [{
+		"@id": "iudx:schedule_relationship",
+		"@type": [
+			"iudx:TextProperty"
+		],
+		"rdfs:comment": "Describes if the Route/Trip has been scheduled. SameAs: 'schedule_relationship' field from enumScheduleRelationship <a href=https://developers.google.com/transit/gtfs-realtime/reference#enum-schedulerelationship-2>https://developers.google.com/transit/gtfs-realtime/reference#enum-schedulerelationship-2</a>",
+		"rdfs:label": "schedule_relationship",
+		"rdfs:isDefinedBy": {
+			"@id": "iudx:"
+		},
+		"iudx:domainIncludes": [{
+				"@id": "iudx:TransitManagement"
+			},
+			{
+				"@id": "iudx:TripDescriptor"
+			},
+			{
+				"@id": "iudx:StopTimeUpdate"
+			}
+		],
+		"iudx:rangeIncludes": [{
+				"@id": "iudx:Text"
+			},
+			{
+				"@id": "iudx:ValueDescriptor"
+			}
+		],
+		"skos:exactMatch": {
+			"@id": "GTFS:schedule_relationship"
+		}
+	}]
 }
