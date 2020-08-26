@@ -22,7 +22,7 @@ schema_folders = [all_classes_folder, all_properties_folder]
 
 
 cert = (cert_file, key_file)
-auth_api = "https://auth.iudx.org.in/auth/v1/token"
+auth_api = "https://authdev.iudx.io/auth/v1/token"
 auth_headers = {"content-type": "application/json"}
 payload = { "request" : [ {"id": "datakaveri.org/f7e044eee8122b5c87dce6e7ad64f3266afa41dc/voc.iudx.org.in/*"} ] }
 
