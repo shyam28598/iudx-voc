@@ -9,9 +9,6 @@ import os
 import sys
 import time
 
-cert_file = "keys/cert.pem"
-key_file = "keys/private-key.pem"
-
 
 all_classes_folder = "/tmp/generated_classes/"
 all_properties_folder = "/tmp/all_properties/"
@@ -21,18 +18,9 @@ master_context_file = "./iudx.jsonld"
 schema_folders = [all_classes_folder, all_properties_folder]
 
 
-cert = (cert_file, key_file)
-auth_api = "https://auth.iudx.org.in/auth/v1/token"
-auth_headers = {"content-type": "application/json"}
-payload = { "request" : [ {"id": "datakaveri.org/f7e044eee8122b5c87dce6e7ad64f3266afa41dc/voc.iudx.org.in/*"} ] }
-
+token = os.environ["TOKEN"]
 url = "https://voc.iudx.org.in/"
 
-
-
-# Obtain token from auth server
-token = requests.post(auth_api, data=json.dumps(payload),
-                        headers=auth_headers, cert=cert).json()["token"]
 
 voc_headers = {"token": token, "content-type": "application/ld+json", "accept": "application/ld+json"}
 
