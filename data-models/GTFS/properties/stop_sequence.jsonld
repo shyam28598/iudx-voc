@@ -29,6 +29,9 @@
                 },
                 {
                     "@id": "iudx:TripDetails"
+                },
+		{
+                    "@id": "iudx:Sequence"
                 }
             ],
             "iudx:rangeIncludes": [
