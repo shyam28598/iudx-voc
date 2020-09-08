@@ -1,0 +1,44 @@
+{
+    "@context": {
+        "iudx": "https://voc.iudx.org.in/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema": "http://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "iudx:pickup_type",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Indicates whether passengers are picked up at a stop as part of the normal schedule or whether a pickup at the stop is not available. This field also allows the transit agency to indicate that passengers must call the agency or notify the driver to arrange a pickup at a particular stop.. Valid options are:\n0 or empty - Regularly scheduled pickup.\n1 - No pickup available.\n2 - Must phone agency to arrange pickup.\n3 - Must coordinate with driver to arrange pickup.\nSameAs: 'pickup_type' field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)",
+            "rdfs:label": "pickup_type",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TripDetails"
+                },
+                {
+                    "@id": "iudx:TransitManagement"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: pickup_type"
+            }
+        }
+    ]
+}

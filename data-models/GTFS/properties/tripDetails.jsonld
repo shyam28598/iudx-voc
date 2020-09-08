@@ -1,0 +1,35 @@
+{
+    "@context": {
+        "iudx": "https://voc.iudx.org.in/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema": "http://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "iudx:tripDetails",
+            "@type": [
+                "iudx:StructuredProperty"
+            ],
+            "rdfs:comment": "A descriptor of realtime update on the schedule of a vehicle along a trip.",
+            "rdfs:label": "tripDetails",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TransitManagement"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TripDetails"
+                }
+            ]
+        }
+    ]
+}
