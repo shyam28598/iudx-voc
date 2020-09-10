@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:route_color",
+            "@id": "iudx:busType",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "If assigned, this field defines a color that corresponds to a route. The color must be provided as a six-character hexadecimal number, for example, 00FFFF. If no color is specified, the default route color is white (FFFFFF). SameAs: 'route_color' field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)",
-            "rdfs:label": "route_color",
+            "rdfs:comment": "Describes the type of bus that is being used. Eg - Mini Bus, City Bus, Double Decker.",
+            "rdfs:label": "busType",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -32,10 +32,7 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "GTFS: route_color"
-            }
+            ]
         }
     ]
 }
