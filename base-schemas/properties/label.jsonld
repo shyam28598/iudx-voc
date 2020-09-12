@@ -9,12 +9,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:entityLabel",
+            "@id": "iudx:label",
             "@type": [
                 "iudx:TextProperty"
             ],
             "rdfs:comment": "Human readable label for an entity",
-            "rdfs:label": "entityLabel",
+            "rdfs:label": "label",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:IUDXEntity"
