@@ -18,6 +18,9 @@
                 {
                     "@id": "iudx:ResourceGroup",
                     "iudx:requiredProperty": true
+                },
+                {
+                    "@id": "iudx:Resource"
                 }
             ],
             "iudx:rangeIncludes": [

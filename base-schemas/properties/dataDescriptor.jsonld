@@ -15,6 +15,9 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:Resource"
                 }
             ],
             "iudx:rangeIncludes": [
