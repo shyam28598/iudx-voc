@@ -1,22 +1,22 @@
 {
     "@context": {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "schema": "http://schema.org/",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "iudx": "https://voc.iudx.org.in/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "geojson": "https://purl.org/geojson/vocab#",
-        "skos": "http://www.w3.org/2004/02/skos/core#"
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "iudx": "https://voc.iudx.org.in/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@graph": [
         {
-            "@id": "iudx:busType",
+            "@id": "iudx:trip_details",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:StructuredProperty"
             ],
-            "rdfs:comment": "Describes the type of bus that is being used. Eg - Mini Bus, City Bus, Double Decker.",
-            "rdfs:label": "busType",
+            "rdfs:comment": "A descriptor of realtime update on the schedule of a vehicle along a trip.",
+            "rdfs:label": "trip_details",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -27,10 +27,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
-                },
-                {
-                    "@id": "iudx:ValueDescriptor"
+                    "@id": "iudx:TripDetails"
                 }
             ]
         }

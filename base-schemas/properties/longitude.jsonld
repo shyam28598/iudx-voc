@@ -1,13 +1,13 @@
 {
     "@context": {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "geojson": "https://purl.org/geojson/vocab#",
+        "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "geojson": "https://purl.org/geojson/vocab#",
         "iudx": "https://voc.iudx.org.in/",
-        "schema": "http://schema.org/"
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
@@ -39,11 +39,11 @@
                     "@id": "iudx:Text"
                 }
             ],
-            "skos:exactMatch": {
-                "@id": "schema:longitude"
-            },
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "schema:longitude"
             }
         }
     ]
