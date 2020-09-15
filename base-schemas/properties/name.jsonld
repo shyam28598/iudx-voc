@@ -25,9 +25,6 @@
                     "@id": "iudx:Organization"
                 },
                 {
-                    "@id": "iudx:DataDescriptor"
-                },
-                {
                     "@id": "iudx:IUDXEntity",
                     "iudx:requiredProperty": true
                 }
