@@ -18,6 +18,9 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:IUDXEntity"
+                },
+                {
+                    "@id": "iudx:DataDescriptor"
                 }
             ],
             "iudx:rangeIncludes": [
