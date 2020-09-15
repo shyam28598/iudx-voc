@@ -11,7 +11,7 @@
     },
     "@graph": [
         {
-            "@id": "iudx:dataDescriptorName","
+            "@id": "iudx:dataDescriptorName",
             "@type": [
                 "iudx:TextProperty"
             ],
