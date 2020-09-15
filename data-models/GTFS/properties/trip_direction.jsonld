@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:ac_available",
+            "@id": "iudx:trip_direction",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Describes the presence of air conditioning option in the vehicle corresponding to this observation.",
-            "rdfs:label": "ac_available",
+            "rdfs:comment": "Gives the direction in which the vehicle is travelling. SameAs: 'direction_id' field from GTFS Realtime message-TripDescriptor but is represented in the form of an ENUM[UP,DN] in place of [0,1] as seen in 'direction_id' (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor).",
+            "rdfs:label": "trip_direction",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -32,7 +32,10 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: direction_id"
+            }
         }
     ]
 }

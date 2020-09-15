@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:ac_available",
+            "@id": "iudx:actual_trip_start_time",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:TimeProperty"
             ],
-            "rdfs:comment": "Describes the presence of air conditioning option in the vehicle corresponding to this observation.",
-            "rdfs:label": "ac_available",
+            "rdfs:comment": "This field specifies the time at which service actually began.  This is SameAs: absolute 'time'(StopTimeEvent) in the 'arrival' field of the stop_time_update (StopTimeUpdate) message of the GTFS Realtime message-TripUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)",
+            "rdfs:label": "actual_trip_start_time",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -27,10 +27,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
-                },
-                {
-                    "@id": "iudx:ValueDescriptor"
+                    "@id": "iudx:DateTime"
                 }
             ]
         }

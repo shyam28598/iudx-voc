@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:ac_available",
+            "@id": "iudx:depot_name",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Describes the presence of air conditioning option in the vehicle corresponding to this observation.",
-            "rdfs:label": "ac_available",
+            "rdfs:comment": "Describes the depot name of the bus depot corresponding to this observation.",
+            "rdfs:label": "depot_name",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },

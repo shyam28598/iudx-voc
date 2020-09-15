@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:ac_available",
+            "@id": "iudx:stop_long",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:GeoProperty"
             ],
-            "rdfs:comment": "Describes the presence of air conditioning option in the vehicle corresponding to this observation.",
-            "rdfs:label": "ac_available",
+            "rdfs:comment": "This field contains the longitude of a stop or station. SameAs: 'stop_lon' field from GTFS Static Field definitions-stops.txt (https://developers.google.com/transit/gtfs/reference#stopstxt)",
+            "rdfs:label": "stop_long",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -27,12 +27,15 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Place"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: stop_long"
+            }
         }
     ]
 }
