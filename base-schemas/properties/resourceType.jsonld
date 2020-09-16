@@ -12,7 +12,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Type of resource. ENUM: [MESSAGESTREAM, DATASET, FILE, MEDIASTREAM].",
+            "rdfs:comment": "Type of resource. ENUM: [MESSAGESTREAM, DATASET, FILE, GSLAYER, MEDIASTREAM].",
             "rdfs:label": "resourceType",
             "iudx:domainIncludes": [
                 {
