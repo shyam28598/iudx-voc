@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:agency_lang",
+            "@id": "iudx:trip_delay",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Contains a two-letter ISO 639-1 code for the primary language used by this transit agency. The language code is case-insensitive (both en and EN are accepted). SameAs: 'agency_lang' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)",
-            "rdfs:label": "agency_lang",
+            "rdfs:comment": "This can be positive and negative in seconds and shows how much the vehicle deviates from the planned one. SameAs: 'delay' field from GTFS Realtime message-StopTimeEvent (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeevent)",
+            "rdfs:label": "trip_delay",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -27,14 +27,14 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Number"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
             "skos:exactMatch": {
-                "@id": "GTFS: agency_lang"
+                "@id": "GTFS: delay"
             }
         }
     ]
