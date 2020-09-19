@@ -1,0 +1,35 @@
+{
+    "@context": {
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://voc.iudx.org.in/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@graph": [
+        {
+            "@id": "iudx:accessPolicy",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Defines the access policy for resources belonging to ResourceGroup or an individual Resource. In case of ResourceGroup item, it can take on values [ALLOPEN, ALLSECURE, MISC]. ALLOPEN implies all Resources in the group are OPEN (and need no authorization token), ALLSECURE means that all Resources are secured and will need authorization token for access and MISC implies that some of Resource items may be open and some may be secured. In case of MISC value being set to this field in resource group, the individual resource items will indicate the access policy via this field and when included in a resource item it will take on values from [OPEN, SECURE] to indicate whether the item is OPEN  or SECURE, i.e., an authorization token is required to access the data.",
+            "rdfs:label": "accessPolicy",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:Resource"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        }
+    ]
+}
