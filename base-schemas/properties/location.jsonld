@@ -1,13 +1,13 @@
 {
     "@context": {
+        "schema": "http://schema.org/",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "geojson": "https://purl.org/geojson/vocab#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema": "http://schema.org/",
         "iudx": "https://voc.iudx.org.in/",
-        "owl": "http://www.w3.org/2002/07/owl#"
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@graph": [
         {
@@ -50,6 +50,9 @@
                 },
                 {
                     "@id": "iudx:TransitManagement"
+                },
+                {
+                    "@id": "iudx:PointOfInterest"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -69,11 +72,11 @@
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
-            "skos:exactMatch": {
-                "@id": "schema:location"
-            },
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "schema:location"
             }
         }
     ]
