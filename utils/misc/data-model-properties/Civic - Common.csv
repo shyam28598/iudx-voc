@@ -1,0 +1,3 @@
+label,type,comment,domainIncludes,rangeIncludes,exactMatch,older_labels,fromOtherSchemas,fromBaseSchema,Reference Link 
+location,GP,The location of the complaint,CrowdSourced,"Text, ValueDescriptor",open311:location parameter,complaintLocation,1,1,
+mediaURL,TXP,Link(s) to any image(s) or media of the complaint or place corresponding to this observation,"CrowdSourced, SafetipinDesc","Text, ValueDescriptor",open311:media_url,SOURCEMEDIA,0,0,
