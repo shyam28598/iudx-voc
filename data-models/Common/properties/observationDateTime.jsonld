@@ -41,9 +41,6 @@
                 },
 		{
                     "@id": "iudx:CrowdSourced"
-                },
-                {
-                    "@id": "iudx:SafetipinDesc"
                 }
             ],
             "iudx:rangeIncludes": [
