@@ -22,9 +22,6 @@
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:CrowdSourced"
-                },
-                {
                     "@id": "iudx:SafetipinDesc"
                 }
             ],
