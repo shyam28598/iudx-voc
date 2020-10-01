@@ -1,3 +1,0 @@
-label,type,comment,domainIncludes,rangeIncludes,exactMatch,older_labels,fromOtherSchemas,fromBaseSchema,Reference Link 
-feeling,SP,Feeling data obtained on the My Safetipin crowd sorced application,CrowdSourced,SafetipinDesc,,,0,0,
-audit,SP,Audit data obtained on the My Safetipin crowd sorced application,CrowdSourced,SafetipinDesc,,,0,0,

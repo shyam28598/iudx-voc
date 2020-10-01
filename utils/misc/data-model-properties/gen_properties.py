@@ -11,8 +11,7 @@ csv_file_path = [
 #                "./Device - Device_properties.csv"]
 #                "./Environment - EnvAQM_new_properties.csv", "./Environment - EnvFlood_properties.csv" ]
 #                "./Environment - EnvAQM_new_properties.csv", "./Environment - EnvFlood_properties.csv", "./Environment - EnvWeather_properties.csv"]
-#                "./WasteManagement - WasteManagementBin.csv", "./WasteManagement - WasteManagementVehicle.csv"]
-                "./Civic - Common.csv", "./Civic - CrowdSourced_SafetiPin.csv", "./Civic - SafetipinDesc.csv"]
+                "./WasteManagement - WasteManagementBin.csv", "./WasteManagement - WasteManagementVehicle.csv"]
 """ Add the property names to ignore list to skip property generation. """
 #ignore = ["Custom", "location", "deviceModel", "rainfallMeasured", "rainfallForecast", "name", ""]
 
