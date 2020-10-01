@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:vehicleRunningStatus",
+            "@id": "iudx:currentTripCount",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Moving status of the vehicle, one of running, waiting, stopped.",
-            "rdfs:label": "vehicleRunningStatus",
+            "rdfs:comment": "The total trip count made by the SWM vehicle corresponding to this obsevation on the designated route.",
+            "rdfs:label": "currentTripCount",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -27,7 +27,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Number"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"

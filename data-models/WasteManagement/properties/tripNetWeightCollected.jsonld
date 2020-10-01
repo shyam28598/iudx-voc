@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:vehicleRunningStatus",
+            "@id": "iudx:tripNetWeightCollected",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Moving status of the vehicle, one of running, waiting, stopped.",
-            "rdfs:label": "vehicleRunningStatus",
+            "rdfs:comment": "The net weight of garbage collected by the SWM vehicle corresponding to this observation at the end of the trip.",
+            "rdfs:label": "tripNetWeightCollected",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -27,7 +27,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Number"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
