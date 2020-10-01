@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:StructuredProperty"
             ],
-            "rdfs:comment": "Feeling data obtained on the My Safetipin crowd sorced application",
+            "rdfs:comment": "Feeling data obtained on the My Safetipin crowd sourced application",
             "rdfs:label": "feeling",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

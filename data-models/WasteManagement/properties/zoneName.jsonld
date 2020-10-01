@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:vehicleRunningStatus",
+            "@id": "iudx:zoneName",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Moving status of the vehicle, one of running, waiting, stopped.",
-            "rdfs:label": "vehicleRunningStatus",
+            "rdfs:comment": "The zone name in which the SWM vehicle corresponding to this observation is operating.",
+            "rdfs:label": "zoneName",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
