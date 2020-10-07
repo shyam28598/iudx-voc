@@ -40,10 +40,7 @@
                     "@id": "iudx:WmgmtVehicle"
                 },
 		{
-                    "@id": "iudx:CrowdSourced"
-                },
-		{
-                    "@id": "iudx:SafetipinDesc"
+                    "@id": "iudx:SafetiPin"
                 }
             ],
             "iudx:rangeIncludes": [
