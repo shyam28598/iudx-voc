@@ -1,28 +1,28 @@
 {
     "@context": {
-        "iudx": "https://voc.iudx.org.in/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
         "geojson": "https://purl.org/geojson/vocab#",
-        "schema": "http://schema.org/"
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "iudx": "https://voc.iudx.org.in/"
     },
     "@graph": [
         {
-            "@id": "iudx:pinType",
+            "@id": "iudx:safetiPinType",
             "@type": [
                 "iudx:TextProperty"
             ],
             "rdfs:comment": "The type corresponding to this observation, could be audit type or feeling type",
-            "rdfs:label": "pinType",
+            "rdfs:label": "safetiPinType",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:SafetipinDesc"
+                    "@id": "iudx:SafetiPin"
                 }
             ],
             "iudx:rangeIncludes": [

@@ -1,28 +1,28 @@
 {
     "@context": {
-        "iudx": "https://voc.iudx.org.in/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
         "geojson": "https://purl.org/geojson/vocab#",
-        "schema": "http://schema.org/"
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "iudx": "https://voc.iudx.org.in/"
     },
     "@graph": [
         {
-            "@id": "iudx:safetyScore",
+            "@id": "iudx:safetiPinScore",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Score given to the location corresponding to this observation. The score is on a scale of 5 if the pinType is feeling and on a scale of 10 if the pinType is audit",
-            "rdfs:label": "safetyScore",
+            "rdfs:comment": "Score given to the location corresponding to this observation. The score is on a scale of 5 if the SafetiPinType is feeling and on a scale of 10 if the SafetiPinType is audit",
+            "rdfs:label": "safetiPinScore",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:SafetipinDesc"
+                    "@id": "iudx:SafetiPin"
                 }
             ],
             "iudx:rangeIncludes": [

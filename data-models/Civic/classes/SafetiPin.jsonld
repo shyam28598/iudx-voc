@@ -7,15 +7,18 @@
     },
     "@graph": [
         {
-            "@id": "iudx:SafetipinDesc",
+            "@id": "iudx:SafetiPin",
             "@type": [
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "A descriptor for the fields obtained from My Safetipin crowd sourced application.",
-            "rdfs:label": "SafetipinDesc",
+            "rdfs:comment": "A Data Model for information collected from a large group of people who submit their data via the My safetiPin app.",
+            "rdfs:label": "SafetiPin",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:Civic"
             }
         }
     ]

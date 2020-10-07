@@ -1,22 +1,22 @@
 {
     "@context": {
-        "owl": "http://www.w3.org/2002/07/owl#",
         "geojson": "https://purl.org/geojson/vocab#",
-        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "iudx": "https://voc.iudx.org.in/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "iudx": "https://voc.iudx.org.in/"
     },
     "@graph": [
         {
-            "@id": "iudx:mediaURL",
+            "@id": "iudx:comments",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Link(s) to any image(s) or media of the complaint or place corresponding to this observation",
-            "rdfs:label": "mediaURL",
+            "rdfs:comment": "User comments for the audit or feeling corresponding to this observation.",
+            "rdfs:label": "comments",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -31,16 +31,8 @@
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
-                },
-		{
-                    "@container": "@list",
-                    "@id": "iudx:Text"
-
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "open311:media_url"
-            }
+            ]
         }
     ]
 }
