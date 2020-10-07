@@ -27,15 +27,11 @@
             ],
             "iudx:rangeIncludes": [
                 {
+                    "@container": "@list",
                     "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
-                },
-		{
-                    "@container": "@list",
-                    "@id": "iudx:Text"
-
                 }
             ],
             "skos:exactMatch": {
