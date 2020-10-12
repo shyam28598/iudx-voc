@@ -1,0 +1,41 @@
+{
+    "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "iudx": "https://voc.iudx.org.in/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "skos": "http://www.w3.org/2004/02/skos/core#"
+    },
+    "@graph": [
+        {
+            "@id": "iudx:currentTripCount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The current count of trips made by the vehicle corresponding to this obersvation on the given day of operation.",
+            "rdfs:label": "currentTripCount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:FareCollectionSystem"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "iudx": "https://voc.iudx.org.in/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "skos": "http://www.w3.org/2004/02/skos/core#"
+    },
+    "@graph": [
+        {
+            "@id": "iudx:employeeShiftCode",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Shift of operation the employee belonging the fare collection agency/ public transit agency. Indiacted as \"1\" when the employee operates in the first shift, \"2\" when the employee operates in the second shift and \"3\" when the employee operates in the third shift.",
+            "rdfs:label": "employeeShiftCode",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:FareCollectionSystem"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        }
+    ]
+}

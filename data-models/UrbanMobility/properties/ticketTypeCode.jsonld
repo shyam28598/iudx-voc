@@ -1,33 +1,33 @@
 {
     "@context": {
         "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "geojson": "https://purl.org/geojson/vocab#",
         "schema": "http://schema.org/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "geojson": "https://purl.org/geojson/vocab#",
         "iudx": "https://voc.iudx.org.in/",
         "owl": "http://www.w3.org/2002/07/owl#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "skos": "http://www.w3.org/2004/02/skos/core#"
     },
     "@graph": [
         {
-            "@id": "iudx:currentTripCount",
+            "@id": "iudx:ticketTypeCode",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "The total trip count made by the SWM vehicle corresponding to this obsevation on the designated route.",
-            "rdfs:label": "currentTripCount",
+            "rdfs:comment": "Unique ticket type code of the corresponding trip.",
+            "rdfs:label": "ticketTypeCode",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:WmgmtVehicle"
+                    "@id": "iudx:FareCollectionSystem"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
