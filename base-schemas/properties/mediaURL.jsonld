@@ -1,38 +1,42 @@
 {
     "@context": {
-        "geojson": "https://purl.org/geojson/vocab#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "iudx": "https://voc.iudx.org.in/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "geojson": "https://purl.org/geojson/vocab#",
         "schema": "http://schema.org/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "iudx": "https://voc.iudx.org.in/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@graph": [
         {
-            "@id": "iudx:address",
+            "@id": "iudx:mediaURL",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Address of the point of interest location corresponding to this observation.",
-            "rdfs:label": "address",
+            "rdfs:comment": "URL providing further information of any image(s) or media of the complaint or place.",
+            "rdfs:label": "mediaURL",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:PointOfInterest"
+                    "@id": "iudx:SafetiPin"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
+                    "@container": "@list",
                     "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "skos:exactMatch": {
+                "@id": "open311:media_url"
+            }
         }
     ]
 }

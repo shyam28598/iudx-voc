@@ -1,28 +1,28 @@
 {
     "@context": {
-        "geojson": "https://purl.org/geojson/vocab#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "geojson": "https://purl.org/geojson/vocab#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
+        "iudx": "https://voc.iudx.org.in/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/",
-        "iudx": "https://voc.iudx.org.in/"
+        "schema": "http://schema.org/"
     },
     "@graph": [
         {
-            "@id": "iudx:safetiPinID",
+            "@id": "iudx:ZoneID",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Unique ID for the audit or feeling corresponding to this observation",
-            "rdfs:label": "safetiPinID",
+            "rdfs:comment": "Zone ID of the entity corresponding to this observation.",
+            "rdfs:label": "ZoneID",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:SafetiPin"
+                    "@id": "iudx:PointOfInterest"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -32,10 +32,7 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "open311:servicecode"
-            }
+            ]
         }
     ]
 }

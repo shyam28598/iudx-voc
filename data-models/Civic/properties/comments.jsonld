@@ -1,12 +1,12 @@
 {
     "@context": {
-        "geojson": "https://purl.org/geojson/vocab#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "owl": "http://www.w3.org/2002/07/owl#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/",
         "iudx": "https://voc.iudx.org.in/"
     },
     "@graph": [
@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "User comments for the audit or feeling corresponding to this observation.",
+            "rdfs:comment": "User comments for the 'Audit' or 'Feeling' pin corresponding to this observation.",
             "rdfs:label": "comments",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
