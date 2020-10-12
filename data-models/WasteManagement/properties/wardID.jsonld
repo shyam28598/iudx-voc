@@ -1,13 +1,13 @@
 {
     "@context": {
         "owl": "http://www.w3.org/2002/07/owl#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "geojson": "https://purl.org/geojson/vocab#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema": "http://schema.org/",
         "iudx": "https://voc.iudx.org.in/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/"
     },
     "@graph": [
         {
@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Gives the ward number where the bin is located at.",
+            "rdfs:comment": "Ward ID of the entity corresponding to this observation.",
             "rdfs:label": "wardID",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
