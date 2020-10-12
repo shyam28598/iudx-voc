@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Propertiy/properties sensed/observed/measured by the device.",
+            "rdfs:comment": "Property/properties sensed/observed/measured by the device.",
             "rdfs:label": "measurand",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

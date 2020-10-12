@@ -22,9 +22,6 @@
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:Device"
-                },
-                {
                     "@id": "iudx:EnvAQM"
                 },
                 {
