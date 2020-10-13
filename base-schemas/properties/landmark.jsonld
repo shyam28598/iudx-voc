@@ -11,19 +11,13 @@
     },
     "@graph": [
         {
-            "@id": "iudx:address",
+            "@id": "iudx:landmark",
             "@type": [
                 "iudx:GeoProperty"
             ],
-            "rdfs:comment": "Physical address of a place.",
-            "rdfs:label": "address",
+            "rdfs:comment": "A physical distinguishing feature on land that marks a locality or a place.",
+            "rdfs:label": "landmark",
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:Place"
-                },
-                {
-                    "@id": "iudx:PointOfInterest"
-                },
                 {
                     "@id": "iudx:IssueReporting"
                 }
@@ -35,9 +29,6 @@
             ],
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
-            },
-            "skos:exactMatch": {
-                "@id": "schema:address"
             }
         }
     ]

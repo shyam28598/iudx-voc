@@ -1,28 +1,28 @@
 {
     "@context": {
-        "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
         "geojson": "https://purl.org/geojson/vocab#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "iudx": "https://voc.iudx.org.in/"
+        "iudx": "https://voc.iudx.org.in/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "iudx:safetiPinType",
+            "@id": "iudx:ulbName",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "The type corresponding to this observation.ENUM [Audit, Feeling].\n 'Audit' pins correspond to SafetiPin audits and 'Feeling' pins correspond to crowd feelings.",
-            "rdfs:label": "safetiPinType",
+            "rdfs:comment": "Name of the Urban Local Body from which the issue, report or feedback corresponding to this observation was raised or submitted.",
+            "rdfs:label": "ulbName",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:SafetiPin"
+                    "@id": "iudx:IssueReporting"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -32,10 +32,7 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "open311:service_name"
-            }
+            ]
         }
     ]
 }

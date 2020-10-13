@@ -11,21 +11,18 @@
     },
     "@graph": [
         {
-            "@id": "iudx:reportID",
+            "@id": "iudx:resolutionStatus",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "Unique ID assigned for the issue or report or feedback corresponding to this observation.",
-            "rdfs:label": "reportID",
+            "rdfs:comment": "Status of the issue that was reported in terms of resolution or the actions taken on it. Could be Open, Assigned, InProgress, Unassigned, Closed.",
+            "rdfs:label": "resolutionStatus",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:IssueReporting"
-                },
-                {
-                    "@id": "iudx:SafetiPin"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -35,10 +32,7 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "open311:servicecode"
-            }
+            ]
         }
     ]
 }
