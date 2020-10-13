@@ -5,18 +5,21 @@
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "geojson": "https://purl.org/geojson/vocab#",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "iudx": "https://voc.iudx.org.in/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "iudx": "https://voc.iudx.org.in/"
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "iudx:landmark",
+            "@id": "iudx:resolutionStatus",
             "@type": [
-                "iudx:GeoProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "A physical distinguishing feature on land that marks a locality or a place.",
-            "rdfs:label": "landmark",
+            "rdfs:comment": "Status of the issue that was reported in terms of resolution or the actions taken on it. Could be Open, Assigned, InProgress, Unassigned, Closed.",
+            "rdfs:label": "resolutionStatus",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:IssueReporting"
@@ -24,12 +27,12 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            }
+            ]
         }
     ]
 }
