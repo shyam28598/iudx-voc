@@ -11,21 +11,18 @@
     },
     "@graph": [
         {
-            "@id": "iudx:solarRadiation",
+            "@id": "iudx:airQualityIndexForecast",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Observed solar radiation.",
-            "rdfs:label": "solarRadiation",
+            "rdfs:comment": "Forecasted overall Air Quality Index (AQI) over a certain duration in future.",
+            "rdfs:label": "airQualityIndexForecast",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvWeather"
-                },
-                {
-                    "@id": "iudx:EnvAQM"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -35,10 +32,7 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "Fiware:solarRadiation"
-            }
+            ]
         }
     ]
 }
