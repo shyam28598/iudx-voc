@@ -12,7 +12,7 @@
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "A Data Model for for citizen reports, issues and feedbacks.",
+            "rdfs:comment": "A Data Model for citizen issues, reports and feedbacks.",
             "rdfs:label": "IssueReporting",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
