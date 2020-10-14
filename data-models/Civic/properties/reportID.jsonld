@@ -13,7 +13,7 @@
         {
             "@id": "iudx:reportID",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TextProperty"
             ],
             "rdfs:comment": "Unique ID assigned for the issue or report or feedback corresponding to this observation.",
             "rdfs:label": "reportID",
@@ -30,7 +30,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
