@@ -25,6 +25,9 @@
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
                 }
             ],
             "rdfs:isDefinedBy": {
