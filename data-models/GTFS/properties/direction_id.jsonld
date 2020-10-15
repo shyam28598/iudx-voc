@@ -26,6 +26,9 @@
                 },
                 {
                     "@id": "iudx:TripDescriptor"
+                },
+                {
+                    "@id": "iudx:FareCollectionSystem"
                 }
             ],
             "iudx:rangeIncludes": [
