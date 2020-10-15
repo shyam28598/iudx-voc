@@ -1,22 +1,22 @@
 {
     "@context": {
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "schema": "http://schema.org/",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "iudx": "https://voc.iudx.org.in/",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "skos": "http://www.w3.org/2004/02/skos/core#"
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "schema": "http://schema.org/",
+        "iudx": "https://voc.iudx.org.in/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "iudx:equipmentStationCode",
+            "@id": "iudx:transactionType",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Unique station code of the corresponding equipment (used by fare collection agency).",
-            "rdfs:label": "equipmentStationCode",
+            "rdfs:comment": "Type of the transaction corresponding to this observation. For Eg - Issue, ReIssue, Entry, Exit etc.",
+            "rdfs:label": "transactionType",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },

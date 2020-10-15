@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:exitAreaCode",
+            "@id": "iudx:travelDistance",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Area code of the passenger alighting stop (used by the fare collection agency). For example, whether the stop is city-bus-service stop or brts stop or other service type stop etc.",
-            "rdfs:label": "exitAreaCode",
+            "rdfs:comment": "The distance between the orgin bus stop and the destination bus stop corresponding to this observation.",
+            "rdfs:label": "travelDistance",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -27,7 +27,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Number"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"

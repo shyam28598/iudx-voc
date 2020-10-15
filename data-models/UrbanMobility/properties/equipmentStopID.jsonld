@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:exitAreaCode",
+            "@id": "iudx:equipmentStopID",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Area code of the passenger alighting stop (used by the fare collection agency). For example, whether the stop is city-bus-service stop or brts stop or other service type stop etc.",
-            "rdfs:label": "exitAreaCode",
+            "rdfs:comment": "Stop ID (BRTS) at which the equipment corresponding to this transaction is installed.",
+            "rdfs:label": "equipmentStopID",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
