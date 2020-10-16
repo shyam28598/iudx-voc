@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:binId",
+            "@id": "iudx:binID",
             "@type": [
                 "iudx:TextProperty"
             ],
             "rdfs:comment": "ID of the waste carrying bin",
-            "rdfs:label": "binId",
+            "rdfs:label": "binID",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
