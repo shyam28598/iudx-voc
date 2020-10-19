@@ -35,6 +35,9 @@
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
                 }
             ],
             "skos:exactMatch": {
