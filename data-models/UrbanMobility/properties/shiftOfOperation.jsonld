@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:employeeShiftCode",
+            "@id": "iudx:shiftOfOperation",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Shift of operation the employee belonging the fare collection agency/ public transit agency. Indiacted as \"1\" when the employee operates in the first shift, \"2\" when the employee operates in the second shift and \"3\" when the employee operates in the third shift.",
-            "rdfs:label": "employeeShiftCode",
+            "rdfs:comment": "Shift of operation of the public transit vehicle operated by the fare collection agency/ public transit agency corresponding to this observation. Indiacted as '1' when the vehicle operates in the first shift, '2' when the vehicle operates in the second shift and '3' when the vehilce operates in the third shift.",
+            "rdfs:label": "shiftOfOperation",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
