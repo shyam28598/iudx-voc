@@ -47,6 +47,9 @@
                 },
 		{
                     "@id": "iudx:IssueReporting"
+                },
+		{
+                    "@id": "iudx:FareCollectionSystem"
                 }
             ],
             "iudx:rangeIncludes": [
