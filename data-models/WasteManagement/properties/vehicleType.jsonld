@@ -26,6 +26,9 @@
                 },
                 {
                     "@id": "iudx:TransitManagement"
+                },
+		{
+                    "@id": "iudx:CityRevenueCollection"
                 }
             ],
             "iudx:rangeIncludes": [
