@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Amount collected (duration) towards the service corresponding to this observation.",
+            "rdfs:comment": "Amount collected towards the service corresponding to this observation.",
             "rdfs:label": "amountCollected",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
