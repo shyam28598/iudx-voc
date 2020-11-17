@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Shift of operation of the public transit vehicle operated by the fare collection agency/ public transit agency corresponding to this observation. Indiacted as '1' when the vehicle operates in the first shift, '2' when the vehicle operates in the second shift and '3' when the vehilce operates in the third shift.",
+            "rdfs:comment": "Shift of operation of the public transit vehicle operated by the fare collection agency/ public transit agency or the employee corresponding to this observation. Indiacted as '1' when the vehicle operates in the first shift, '2' when the vehicle operates in the second shift and '3' when the vehilce operates in the third shift.",
             "rdfs:label": "shiftOfOperation",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
@@ -23,6 +23,9 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:FareCollectionSystem"
+                },
+                {
+                    "@id": "iudx:EmployeeDetails"
                 }
             ],
             "iudx:rangeIncludes": [
