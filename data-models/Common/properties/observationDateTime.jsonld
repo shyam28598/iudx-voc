@@ -50,6 +50,9 @@
                 },
 		{
                     "@id": "iudx:FareCollectionSystem"
+                },
+		{
+                    "@id": "iudx:EmployeeDetails"
                 }
             ],
             "iudx:rangeIncludes": [
