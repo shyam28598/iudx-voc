@@ -21,6 +21,9 @@
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
+	    	{
+                    "@id": "iudx:EnvWeather"
+                },
                 {
                     "@id": "iudx:EnvAQM"
                 }
