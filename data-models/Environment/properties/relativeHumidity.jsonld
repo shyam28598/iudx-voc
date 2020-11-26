@@ -29,11 +29,8 @@
                 }
             ],
             "iudx:rangeIncludes": [
-                {
-                    "@id": "iudx:Number"
-                },
-                {
-                    "@id": "iudx:ValueDescriptor"
+	    	{
+                    "@id": "iudx:TimeSeriesAggregation"
                 }
             ],
             "skos:exactMatch": {
