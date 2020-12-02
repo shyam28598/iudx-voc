@@ -13,13 +13,13 @@
         {
             "@id": "iudx:measEntity",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:Relationship"
             ],
             "rdfs:comment": "Entity used for measuring or sensing the mearsurement corresponding to this observation.",
             "rdfs:label": "measEntity",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:ValueDescriptor"
+                    "@id": "iudx:TimeSeriesAggregation"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -27,7 +27,11 @@
                     "@id": "iudx:Text"
                 },
                 {
-                    "@id": "iudx:ValueDescriptor"
+                    "@id": "iudx:Text",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
                 }
             ],
             "rdfs:isDefinedBy": {
