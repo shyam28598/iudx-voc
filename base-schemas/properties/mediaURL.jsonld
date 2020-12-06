@@ -24,8 +24,11 @@
                 {
                     "@id": "iudx:SafetiPin"
                 },
-		{
+                {
                     "@id": "iudx:IssueReporting"
+                },
+                {
+                    "@id": "iudx:TrafficViolations"
                 }
             ],
             "iudx:rangeIncludes": [

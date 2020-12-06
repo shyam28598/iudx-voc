@@ -23,6 +23,9 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:FareCollectionSystem"
+                },
+                {
+                    "@id": "iudx:TrafficViolations"
                 }
             ],
             "iudx:rangeIncludes": [
