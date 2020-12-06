@@ -27,7 +27,7 @@
                 {
                     "@id": "iudx:EnvFlood"
                 },
-		{
+                {
                     "@id": "iudx:EnvWeather"
                 },
                 {
@@ -42,17 +42,20 @@
                 {
                     "@id": "iudx:WmgmtVehicle"
                 },
-		{
+                {
                     "@id": "iudx:SafetiPin"
                 },
-		{
+                {
                     "@id": "iudx:IssueReporting"
                 },
-		{
+                {
                     "@id": "iudx:FareCollectionSystem"
                 },
-		{
+                {
                     "@id": "iudx:EmployeeDetails"
+                },
+                {
+                    "@id": "iudx:TrafficViolations"
                 }
             ],
             "iudx:rangeIncludes": [

@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Unique ID of the equipment corresponding to this transaction.",
+            "rdfs:comment": "Unique ID of the equipment corresponding to this observation.",
             "rdfs:label": "equipmentID",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
@@ -23,6 +23,9 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:FareCollectionSystem"
+                },
+                {
+                    "@id": "iudx:TrafficViolations
                 }
             ],
             "iudx:rangeIncludes": [
