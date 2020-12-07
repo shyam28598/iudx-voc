@@ -26,6 +26,9 @@
                 },
                 {
                     "@id": "iudx:EmployeeDetails"
+                },
+                {
+                    "@id": "iudx:Streetlight"
                 }
             ],
             "iudx:rangeIncludes": [
