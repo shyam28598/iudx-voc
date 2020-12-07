@@ -62,6 +62,9 @@
                 },
                 {
                     "@id": "iudx:TrafficViolations"
+                },
+                {
+                    "@id": "iudx:Streetlight"
                 }
             ],
             "iudx:rangeIncludes": [
