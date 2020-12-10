@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Version number corresponding to this observation.",
+            "rdfs:comment": "Version number corresponding to this observation",
             "rdfs:label": "versionNum",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
