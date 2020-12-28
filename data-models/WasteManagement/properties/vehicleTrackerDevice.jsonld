@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:vehicleTrackerDeviceStatus",
+            "@id": "iudx:vehicleTrackerDevice",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Status of the GPS device or the tracking device fitted to the vehicle corresponding to this observation.",
-            "rdfs:label": "vehicleTrackerDeviceStatus",
+            "rdfs:comment": "Installation status of the GPS device or the tracking device fitted to the vehicle corresponding to this observation.",
+            "rdfs:label": "vehicleTrackerDevice",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
