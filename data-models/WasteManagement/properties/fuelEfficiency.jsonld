@@ -11,28 +11,31 @@
     },
     "@graph": [
         {
-            "@id": "iudx:StreetPoleNum",
+            "@id": "iudx:fuelEfficiency",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Street pole information associated with the streetlight corresponding to this observation.",
-            "rdfs:label": "StreetPoleNum",
+            "rdfs:comment": "The distance traveled per unit of fuel used, commonly in kilometers per liter (km/L).",
+            "rdfs:label": "fuelEfficiency",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:Streetlight"
+                    "@id": "iudx:WmgmtVehicle"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Number"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:fuelEfficiency"
+            }
         }
     ]
 }
