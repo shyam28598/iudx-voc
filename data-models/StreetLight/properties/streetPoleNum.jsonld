@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:StreetPoleNum",
+            "@id": "iudx:streetPoleNum",
             "@type": [
                 "iudx:TextProperty"
             ],
             "rdfs:comment": "Street pole information associated with the streetlight corresponding to this observation.",
-            "rdfs:label": "StreetPoleNum",
+            "rdfs:label": "streetPoleNum",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
