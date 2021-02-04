@@ -23,12 +23,16 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:SafetiPin"
+                },
+                {
+                    "@id": "iudx:IssueReporting"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
+                    "@container": "@list",
                     "@id": "iudx:Text"
-                },
+                }
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
