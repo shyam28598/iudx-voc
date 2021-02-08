@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "User comments for the 'Audit' or 'Feeling' pin corresponding to this observation.",
+            "rdfs:comment": "User comments corresponding to this observation.",
             "rdfs:label": "comments",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
