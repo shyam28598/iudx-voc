@@ -29,6 +29,9 @@
                 },
                 {
                     "@id": "iudx:Streetlight"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
                 }
             ],
             "iudx:rangeIncludes": [
