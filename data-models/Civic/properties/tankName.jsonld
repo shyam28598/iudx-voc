@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Name of the water storage tank coressponding to this observation.",
+            "rdfs:comment": "Name of the water storage tank corresponding to this observation.",
             "rdfs:label": "tankName",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
