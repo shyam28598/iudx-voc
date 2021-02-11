@@ -68,6 +68,9 @@
                 },
                 {
                     "@id": "iudx:BikeDockingStation"
+                },
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
                 }
             ],
             "iudx:rangeIncludes": [
