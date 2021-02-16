@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:cl",
+            "@id": "iudx:turbidity",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Concentration of chlorides in the water.",
-            "rdfs:label": "cl",
+            "rdfs:comment": "Measurement of the amount of light that is scattered by material in the water when a light is shined through the water.",
+            "rdfs:label": "turbidity",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -34,7 +34,7 @@
                 }
             ],
             "skos:exactMatch": {
-                "@id": "Fiware: WaterQualityObserved.Cl"
+                "@id": "Fiware: WaterQualityObserved.turbidity"
             }
         }
     ]
