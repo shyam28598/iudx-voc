@@ -30,9 +30,6 @@
                 },
                 {
                     "@id": "iudx:PointOfInterest"
-                },
-                {
-                    "@id": "iudx:Version"
                 }
             ],
             "iudx:rangeIncludes": [

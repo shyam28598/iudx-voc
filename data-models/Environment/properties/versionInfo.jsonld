@@ -28,6 +28,10 @@
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Version"
+                },
+                {
+                    "@container": "@list",
+                    "@id": "iudx:Version"
                 }
             ]
         }

@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:versionNum",
+            "@id": "iudx:versionName",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "Version number corresponding to this observation",
-            "rdfs:label": "versionNum",
+            "rdfs:comment": "Version name corresponding to this observation",
+            "rdfs:label": "versionName",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -27,7 +27,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"

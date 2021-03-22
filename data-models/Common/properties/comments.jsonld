@@ -26,11 +26,17 @@
                 },
                 {
                     "@id": "iudx:IssueReporting"
+                },
+                {
+                    "@id": "iudx:Version"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
                     "@container": "@list",
+                    "@id": "iudx:Text"
+                },
+                {
                     "@id": "iudx:Text"
                 },
                 {
