@@ -11,23 +11,23 @@
     },
     "@graph": [
         {
-            "@id": "iudx:travelDistance",
+            "@id": "iudx:travelTime",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TimeProperty"
             ],
-            "rdfs:comment": "The distance between the orgin bus stop and the destination bus stop corresponding to this observation.",
-            "rdfs:label": "travelDistance",
+            "rdfs:comment": "The time taken to travel between the orgin bus stop and the destination bus stop corresponding to this observation in HH:MM:SS format.",
+            "rdfs:label": "travelTime",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:FareCollectionSystem"
+                    "@id": "iudx:TransitManagement"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:DateTime"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
