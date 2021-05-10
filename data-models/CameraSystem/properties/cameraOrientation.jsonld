@@ -11,29 +11,23 @@
     },
     "@graph": [
         {
-            "@id": "iudx:startDateTime",
+            "@id": "iudx:cameraOrientation",
             "@type": [
-                "iudx:TimeProperty"
+                "iudx:StructuredProperty"
             ],
-            "rdfs:comment": "Reported start time corresponding to this observation.",
-            "rdfs:label": "startDateTime",
+            "rdfs:comment": "Orientation information for the camera corresponding to this observation",
+            "rdfs:label": "cameraOrientation",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:Version"
-                },
                 {
                     "@id": "iudx:Camera"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:DateTime"
-                },
-                {
-                    "@id": "iudx:ValueDescriptor"
+                    "@id": "iudx:Orientation"
                 }
             ]
         }

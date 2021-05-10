@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TimeProperty"
             ],
-            "rdfs:comment": "Reported end time of the version corresponding to this observation.",
+            "rdfs:comment": "Reported end time corresponding to this observation.",
             "rdfs:label": "endDateTime",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
@@ -23,6 +23,9 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Version"
+                },
+                {
+                    "@id": "iudx:Camera"
                 }
             ],
             "iudx:rangeIncludes": [
