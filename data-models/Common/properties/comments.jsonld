@@ -29,6 +29,9 @@
                 },
                 {
                     "@id": "iudx:Version"
+                },
+                {
+                    "@id": "iudx:Orientation"
                 }
             ],
             "iudx:rangeIncludes": [

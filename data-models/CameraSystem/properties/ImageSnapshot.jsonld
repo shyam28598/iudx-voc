@@ -11,26 +11,23 @@
     },
     "@graph": [
         {
-            "@id": "iudx:startDateTime",
+            "@id": "iudx:ImageSnapshot",
             "@type": [
-                "iudx:TimeProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "Reported start time corresponding to this observation.",
-            "rdfs:label": "startDateTime",
+            "rdfs:comment": "Camera feed snapshot download link for the camera corresponding to this observation",
+            "rdfs:label": "ImageSnapshot",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:Version"
-                },
                 {
                     "@id": "iudx:Camera"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:DateTime"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
