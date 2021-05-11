@@ -7,13 +7,13 @@
     },
     "@graph": [
         {
-            "@id": "iudx:CameraSystem",
+            "@id": "iudx:VideoSystems",
             "@type": [
                 "owl:Class",
                 "rdfs:Class"
             ],
             "rdfs:comment": "Data models that pertain to surveillance or traffic cameras",
-            "rdfs:label": "CameraSystem",
+            "rdfs:label": "VideoSystems",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
