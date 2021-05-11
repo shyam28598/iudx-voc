@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:ImageSnapshot",
+            "@id": "iudx:imageSnapshot",
             "@type": [
                 "iudx:TextProperty"
             ],
             "rdfs:comment": "Camera feed snapshot download link for the camera corresponding to this observation",
-            "rdfs:label": "ImageSnapshot",
+            "rdfs:label": "imageSnapshot",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
