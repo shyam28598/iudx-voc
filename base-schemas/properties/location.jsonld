@@ -74,6 +74,9 @@
                 },
                 {
                     "@id": "iudx:Camera"
+                },
+                {
+                    "@id": "iudx:WasteWaterMgmt"
                 }
             ],
             "iudx:rangeIncludes": [

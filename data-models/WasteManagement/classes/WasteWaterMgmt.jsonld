@@ -7,13 +7,13 @@
     },
     "@graph": [
         {
-            "@id": "iudx:WmgmtVehicle",
+            "@id": "iudx:WasteWaterMgmt",
             "@type": [
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "Data model for solid waste management vehicles.",
-            "rdfs:label": "WmgmtVehicle",
+            "rdfs:comment": "Data model for waste water treatment plant.",
+            "rdfs:label": "WasteWaterMgmt",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },

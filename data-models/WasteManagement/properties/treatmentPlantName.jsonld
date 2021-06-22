@@ -11,34 +11,28 @@
     },
     "@graph": [
         {
-            "@id": "iudx:pH",
+            "@id": "iudx:treatmentPlantName",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "Acidity level or basicity level obsevered in the water.",
-            "rdfs:label": "pH",
+            "rdfs:comment": "Name of the waste-water treatment plant corresponding to this observation.",
+            "rdfs:label": "treatmentPlantName",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:WaterDistributionNetwork"
-                },
                 {
                     "@id": "iudx:WasteWaterMgmt"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:TimeSeriesAggregation"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "Fiware: WaterQualityObserved.pH"
-            }
+            ]
         }
     ]
 }

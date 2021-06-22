@@ -12,7 +12,7 @@
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "Data model for solid waste management bins in Varanasi city.",
+            "rdfs:comment": "Data model for solid waste management bins.",
             "rdfs:label": "WmgmtBin",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
