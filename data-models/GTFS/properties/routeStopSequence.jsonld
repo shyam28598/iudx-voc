@@ -30,7 +30,7 @@
                     "@container": "@list",
                     "@id": "iudx:Text"
 
-                }
+                },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
