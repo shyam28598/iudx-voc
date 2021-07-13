@@ -12,7 +12,7 @@
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "Properties of the camera corresponding to this observation that indiactes its orientation.",
+            "rdfs:comment": "Properties of the camera corresponding to this observation that indicates its orientation.",
             "rdfs:label": "Orientation",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
