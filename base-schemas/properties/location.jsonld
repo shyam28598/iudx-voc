@@ -77,6 +77,9 @@
                 },
                 {
                     "@id": "iudx:WasteWaterMgmt"
+                },
+                {
+                    "@id": "iudx:SmartParking"
                 }
             ],
             "iudx:rangeIncludes": [

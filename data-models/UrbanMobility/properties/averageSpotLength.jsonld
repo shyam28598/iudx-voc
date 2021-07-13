@@ -11,19 +11,16 @@
     },
     "@graph": [
         {
-            "@id": "iudx:totalSlotNumber",
+            "@id": "iudx:averageSpotLength",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "The total number of bike racks/bike-docking slots or parking slots in the bike docking station or the parking site corresponding to this observation.",
-            "rdfs:label": "totalSlotNumber",
+            "rdfs:comment": "The average length of parking spots in the parking site corresponding to this observation.",
+            "rdfs:label": "averageSpotLength",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:BikeDockingStation"
-                },
                 {
                     "@id": "iudx:SmartParking"
                 }
@@ -37,7 +34,7 @@
                 }
             ],
             "skos:exactMatch": {
-                "@id": "Fiware:totalSlotNumber"
+                "@id": "Fiware: OffStreetParking.averageSpotLength"
             }
         }
     ]
