@@ -12,7 +12,7 @@
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "A Parking Facility Data Model.",
+            "rdfs:comment": "A parking facility Data Model.",
             "rdfs:label": "SmartParking",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
