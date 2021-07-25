@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Amount of fuel filled in liters to the vehicle corresponding to this observation.",
+            "rdfs:comment": "Amount of fuel filled to the vehicle corresponding to this observation.",
             "rdfs:label": "fuelFilled",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
@@ -23,6 +23,9 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
                 }
             ],
             "iudx:rangeIncludes": [

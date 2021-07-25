@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "The distance traveled per unit of fuel used, commonly in kilometers per liter (km/L).",
+            "rdfs:comment": "The distance traveled per unit of fuel used.",
             "rdfs:label": "fuelEfficiency",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
@@ -23,6 +23,9 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
                 }
             ],
             "iudx:rangeIncludes": [

@@ -11,19 +11,16 @@
     },
     "@graph": [
         {
-            "@id": "iudx:fuelType",
+            "@id": "iudx:serviceOnDuty",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "The type of fuel suitable for the engine or engines of the vehicle corresponding to this observation.",
-            "rdfs:label": "fuelType",
+            "rdfs:comment": "Nature of service provided by emergency vehicle corresponding to this observation. ENUM: [TRUE, FALSE].\nTRUE indicates the emergency vehicle corresponding to this observation is attending to/ servicing to an emergency call of duty and is FALSE otherwise.",
+            "rdfs:label": "serviceOnDuty",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:WmgmtVehicle"
-                },
                 {
                     "@id": "iudx:EmergencyVehicle"
                 }
@@ -35,10 +32,7 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "schema:fuelType"
-            }
+            ]
         }
     ]
 }
