@@ -32,6 +32,9 @@
                 },
                 {
                     "@id": "iudx:VehicleDescriptor"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
                 }
             ],
             "iudx:rangeIncludes": [

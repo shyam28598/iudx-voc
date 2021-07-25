@@ -71,6 +71,9 @@
                 },
                 {
                     "@id": "iudx:SmartParking"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
                 }
             ],
             "iudx:rangeIncludes": [

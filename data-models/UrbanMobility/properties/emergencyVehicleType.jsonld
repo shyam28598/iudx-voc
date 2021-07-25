@@ -11,19 +11,16 @@
     },
     "@graph": [
         {
-            "@id": "iudx:fuelType",
+            "@id": "iudx:emergencyVehicleType",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "The type of fuel suitable for the engine or engines of the vehicle corresponding to this observation.",
-            "rdfs:label": "fuelType",
+            "rdfs:comment": "Type of emergency vehicle corresponding to this observation. ENUM: [POLICE CAR, POLICE MOTORCYCLE POLICE VAN, POLICE S.W.A.T, FIRE ENGINE, WATER TENDER, AIR AMBULANCE, AMBULANCE, MOTORCYCLE AMBULANCE, RESCUE VEHICLE, HAZARDOUS MATERIALS APPARATUS, TOW TRUCK]",
+            "rdfs:label": "emergencyVehicleType",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:WmgmtVehicle"
-                },
                 {
                     "@id": "iudx:EmergencyVehicle"
                 }
@@ -35,10 +32,7 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "schema:fuelType"
-            }
+            ]
         }
     ]
 }
