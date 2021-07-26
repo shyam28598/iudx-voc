@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Nature of service provided by emergency vehicle corresponding to this observation. ENUM: [TRUE, FALSE].\nTRUE indicates the emergency vehicle corresponding to this observation is attending to/ servicing to an emergency call of duty and is FALSE otherwise.",
+            "rdfs:comment": "Nature of service provided by emergency vehicle corresponding to this observation. ENUM: [YES, NO]. YES indicates the emergency vehicle corresponding to this observation is attending to/ servicing to an emergency call of duty and is NO otherwise.",
             "rdfs:label": "serviceOnDuty",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
