@@ -22,7 +22,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "rdfs:Class"
+                    "@id": "iudx:Class"
                 }
             ],
             "skos:exactmatch": {

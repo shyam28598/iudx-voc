@@ -10,7 +10,7 @@
         {
             "@id": "iudx:maxValue",
             "@type": [
-                "rdf:QuantitativeProperty"
+                "iudx:QuantitativeProperty"
             ], 
             "rdfs:comment": "The upper value of a quantity/property.",
             "rdfs:label": "maxValue",

@@ -10,7 +10,7 @@
         {
             "@id": "iudx:instValue",
             "@type": [
-                "rdf:QuantitativeProperty"
+                "iudx:QuantitativeProperty"
             ], 
             "rdfs:comment": "Describes the instantaneous value (associated with the current timestamp) of a time varying quantity.",
             "rdfs:label": "instValue",

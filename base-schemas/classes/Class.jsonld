@@ -8,7 +8,7 @@
     "@graph": [
         {
             "@id": "iudx:Class",
-            "@type": "rdfs:Class",
+            "@type": ["rdfs:Class"],
             "rdfs:comment": "A class, also often called a 'Type'; equivalent to rdfs:Class.",
             "rdfs:label": "Class",
             "iudx:isPartOf": {

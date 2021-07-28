@@ -18,7 +18,7 @@
                 "@id": "iudx:"
             },
             "rdfs:subClassOf": {
-                "@id": "iudx:rdf:Property"
+                "@id": "rdf:Property"
             }
         }
     ]
