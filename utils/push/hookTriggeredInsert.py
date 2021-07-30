@@ -19,7 +19,7 @@ schema_folders = [all_classes_folder, all_properties_folder]
 
 token = ""
 with open("../config/vocserver.json", "r") as f:
-    token = json.load(f)["vocserver.jkspasswd"]
+    token = json.load(f)["vocserver.webhookpasswd"]
 
 url = "https://voc.iudx.org.in/"
 
