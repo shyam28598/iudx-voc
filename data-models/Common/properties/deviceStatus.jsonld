@@ -26,9 +26,6 @@
                 },
                 {
                     "@id": "iudx:EnvFlood"
-                },
-                {
-                    "@id": "iudx:WiFiHostspot"
                 }
             ],
             "iudx:rangeIncludes": [
