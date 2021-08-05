@@ -31,9 +31,6 @@
                     "@id": "iudx:TransitManagement"
                 },
                 {
-                    "@id": "iudx:WiFiHotspot"
-                },
-                {
                     "@id": "iudx:StreetLightFeeder"
                 },
                 {
