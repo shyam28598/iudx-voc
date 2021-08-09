@@ -9,7 +9,7 @@ os.system("rm -r /tmp/generated* && rm -r /tmp/all_*")
 # Generate classes
 os.system("python3 utils/generation/generate_class.py")
 # Generate master context
-os.system("python3 utils/generation/generate_master.py")
+#os.system("python3 utils/generation/generate_master.py")
 
 # Wait for schemas to get generated
 time.sleep(5)
