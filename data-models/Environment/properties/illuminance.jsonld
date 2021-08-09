@@ -34,6 +34,9 @@
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
+                },
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
                 }
             ],
             "skos:exactMatch": {
