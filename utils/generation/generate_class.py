@@ -12,8 +12,8 @@ properties = ["iudx:TextProperty", "iudx:QuantitativeProperty", "iudx:Structured
 relation = ["iudx:Relationship"]
 class_folder_path = "/tmp/all_classes/"
 properties_folder_path = "/tmp/all_properties/"
-# os.mkdir(class_folder_path)
-# os.mkdir(properties_folder_path)
+os.mkdir(class_folder_path)
+os.mkdir(properties_folder_path)
 relation_list = ["domainOf", "subClassOf", "rangeOf"]
 error_list = []
 
