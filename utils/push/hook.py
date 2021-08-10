@@ -5,11 +5,10 @@ import time
 os.system("git fetch && git reset --hard origin/master ")
 time.sleep(10)
 # clear tmp
-os.system("rm -r /tmp/generated* && rm -r /tmp/all_*")
+os.system("rm -rf /tmp/all_*")
 # Generate classes
 os.system("python3 utils/generation/generate_class.py")
 # Generate master context
-#os.system("python3 utils/generation/generate_master.py")
 
 # Wait for schemas to get generated
 time.sleep(5)

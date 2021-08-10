@@ -10,7 +10,7 @@ import sys
 import time
 
 
-all_classes_folder = "/tmp/generated_classes/"
+all_classes_folder = "/tmp/all_classes/"
 all_properties_folder = "/tmp/all_properties/"
 all_examples_folder = "/tmp/all_examples/"
 master_context_file = "./iudx.jsonld"

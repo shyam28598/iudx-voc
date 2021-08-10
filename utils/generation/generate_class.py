@@ -1,19 +1,18 @@
-
-
 import os
 import json
 from collections import OrderedDict
+import shutil
 
 
 
-path_to_json ='./iudx-voc/'
 classes = ['owl:Class', 'rdfs:Class']
 properties = ["iudx:TextProperty", "iudx:QuantitativeProperty", "iudx:StructuredProperty", "iudx:GeoProperty", "iudx:TimeProperty", "iudx:Relationship", 'rdf:Property'] 
 relation = ["iudx:Relationship"]
 class_folder_path = "/tmp/all_classes/"
 properties_folder_path = "/tmp/all_properties/"
-os.mkdir(class_folder_path)
-os.mkdir(properties_folder_path)
+examples_path = "/tmp/all_examples"
+
+
 relation_list = ["domainOf", "subClassOf", "rangeOf"]
 error_list = []
 
@@ -205,6 +204,14 @@ class Vocabulary:
                 json.dump(master_dict, master_file, indent = 4)
 
 
+    def gen_examples(self):
+        try:
+            shutil.copytree("./examples/", examples_path)
+        except Exception as e:
+            pass
+
+
+
     def make_propertiesfile(self):
         for n in self.g:
             if n.node_type == "Property":
@@ -220,17 +227,19 @@ class Vocabulary:
 
 
 def main():
-    voc = Vocabulary("./iudx-voc")
+
+
+    if not os.path.exists(class_folder_path):
+        os.makedirs(class_folder_path)
+
+    if not os.path.exists(properties_folder_path):
+        os.makedirs(properties_folder_path)
+
+    voc = Vocabulary("./")
     voc.make_classfile()
     voc.make_propertiesfile()
     voc.make_master()
-    root = "iudx:Resource"
-    visited = voc.visited
-    
-    if voc.is_loop(voc.g.get_vertex("iudx:Resource"), visited, root) == True:
-        print("Graph contains cycle")
-    else:
-        print("Graph does not contain cycle")
+    voc.gen_examples()
     
 
 if __name__ == "__main__":
