@@ -227,6 +227,7 @@ class Vocabulary:
 
 
 def main():
+<<<<<<< HEAD
 
 
     if not os.path.exists(class_folder_path):
@@ -235,11 +236,16 @@ def main():
     if not os.path.exists(properties_folder_path):
         os.makedirs(properties_folder_path)
 
+=======
+>>>>>>> ae2cda1 (Fixes to scripts)
     voc = Vocabulary("./")
     voc.make_classfile()
     voc.make_propertiesfile()
     voc.make_master()
+<<<<<<< HEAD
     voc.gen_examples()
+=======
+>>>>>>> ae2cda1 (Fixes to scripts)
     
 
 if __name__ == "__main__":
