@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:RFID",
+            "@id": "iudx:rfID",
             "@type": [
                 "iudx:TextProperty"
             ],
             "rdfs:comment": "Gives the ID of the RFID reader.",
-            "rdfs:label": "RFID",
+            "rdfs:label": "rfID",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
