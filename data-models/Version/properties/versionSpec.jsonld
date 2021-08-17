@@ -8,22 +8,28 @@
     },
     "@graph": [
         {
-            "@id": "iudx:deviceList",
+            "@id": "iudx:versionSpec",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:StructuredProperty"
             ],
-            "rdfs:comment": "Information of device part number and sub devices corresponding to this observation.",
-            "rdfs:label": "deviceList",
+            "rdfs:comment": "Version specifications or information corresponding to the version in this observation.",
+            "rdfs:label": "versionSpec",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:Device"
+                    "@id": "iudx:Version"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@container": "@list",
                     "@id": "iudx:Text"
 
+                },
+                {
+                    "@id": "iudx:Object"
+
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
                 }
             ]
         }
