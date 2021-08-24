@@ -1,3 +1,4 @@
+from abc import abstractmethod
 import os
 import json
 
@@ -7,6 +8,7 @@ path_to_json ='./repos/iudx-voc/'
 classes = ['owl:Class', 'rdfs:Class']
 properties = ["iudx:TextProperty", "iudx:QuantitativeProperty", "iudx:StructuredProperty", "iudx:GeoProperty", "iudx:TimeProperty", "iudx:Relationship", 'rdf:Property'] 
 relation = ["iudx:Relationship"]
+basic_types = ["iudx:Text", "iudx:Number", "iudx:DateTime"]
 class_folder_path = "./all_classes/"
 properties_folder_path = "./all_properties/"
 # os.mkdir(class_folder_path)
@@ -76,7 +78,11 @@ class Graph:
                 out["@graph"].append(key.jsonld)
                 out["@context"].update(key.context)
                 self.get_children(key, out)
-    
+   
+    def get_schema(self, v):
+        if v.node_type == "Property":
+            print(v.schema)
+            
     def get_class_graph (self, v, out = {"@graph":[],"@context":{}}):
         out["@graph"].append(v.jsonld)
         out["@context"].update(v.context)
@@ -97,7 +103,7 @@ class Vocabulary:
     
     def __init__(self, path_to_json):
         self.json_ld_graph = []
-        self.schema = {}
+        self.schema = {"anyOf":[]}
         self.visited = {}
         self.read_repo(path_to_json)
         self.g = Graph()
@@ -113,7 +119,43 @@ class Vocabulary:
                         data = json.load(input_file)
                         if "@graph" in data:
                             self.json_ld_graph.append({"@graph":data["@graph"][0],"@context":data["@context"]})    
-                                    
+    def gen_schema(self):
+        for n in self.json_ld_graph:
+            if "iudx:rangeIncludes" in n["@graph"]:
+                if len(n["@graph"]["iudx:rangeIncludes"]) > 1:
+                    print(len(n["@graph"]["iudx:rangeIncludes"]))
+                    for range_incl in n["@graph"]["iudx:rangeIncludes"]:
+                        self.schema["anyOf"].append({"id":range_incl["@id"]})
+                        if range_incl["@id"] == "iudx:Text":
+                            self.schema["anyOf"].append({"type":"string"})
+                        elif  range_incl["@id"] == "iudx:Number":
+                            self.schema["anyOf"].append({"type":"number"})
+                        elif range_incl["@id"] == "iudx:TimeSeriesAggregation":
+                            self.schema["anyOf"].append({"type":"object"})
+                        self.schema["anyOf"].append({"type"})
+                if len(n["@graph"]["iudx:rangeIncludes"]) == 1:
+                    
+                    if n["@graph"]["iudx:rangeIncludes"][0]["@id"] == "iudx:DateTime":
+                        # print(n["@graph"]["iudx:rangeIncludes"][0]["@id"])
+                        self.schema["$schema"] = "http://json-schema.org/draft-07/schema#"
+                        self.schema["id"] = n["@graph"]["@id"]
+                        self.schema["type"] = "date-time"
+                        self.schema["description"] = n["@graph"]["rdfs:comment"]
+                        # print(self.schema)
+                    elif n["@graph"]["iudx:rangeIncludes"][0]["@id"] == "iudx:Text":
+                        # print(n["@graph"]["iudx:rangeIncludes"][0]["@id"])
+                        self.schema["$schema"] = "http://json-schema.org/draft-07/schema#"
+                        self.schema["id"] = n["@graph"]["@id"]
+                        self.schema["type"] = "string"
+                        self.schema["description"] = n["@graph"]["rdfs:comment"]
+                        # print(self.schema)
+                    elif n["@graph"]["iudx:rangeIncludes"][0]["@id"] == "iudx:Number":
+                        # print(n["@graph"]["iudx:rangeIncludes"][0]["@id"])
+                        self.schema["$schema"] = "http://json-schema.org/draft-07/schema#"
+                        self.schema["id"] = n["@graph"]["@id"]
+                        self.schema["type"] = "number"
+                        self.schema["description"] = n["@graph"]["rdfs:comment"]
+                        # print(self.schema)                
 
     def build_graph(self):
         for n in self.json_ld_graph:
@@ -157,31 +199,8 @@ class Vocabulary:
                         except Exception as error:
                             error_list.append({"type" : "rangeIncludes missing", "value" : i["@id"], "in": n["@graph"]["@id"]})
                             pass
-    def gen_schema(self):
-        for n in self.json_ld_graph:
-            if "iudx:rangeIncludes" in n["@graph"]:
-                print(len(n["@graph"]["iudx:rangeIncludes"]))
-                if len(n["@graph"]["iudx:rangeIncludes"]) >1:
-                    for range_incl in n["@graph"]["iudx:rangeIncludes"]:
-                        print(range_incl["@id"])
-                    # print(n["@graph"]["iudx:rangeIncludes"])
-                self.schema["$id"] = n["@graph"]["@id"]
-                self.schema["description"] = n["@graph"]["rdfs:comment"]
-                if n["@graph"]["iudx:rangeIncludes"][0]["@id"] == "iudx:Text" :
-                    self.schema["type"] = "string"
-                elif n["@graph"]["iudx:rangeIncludes"][0]["@id"] == "iudx:Number":
-                    self.schema["type"] = "number"
-                elif n["@graph"]["iudx:rangeIncludes"][0]["@id"] == "iudx:DateTime":
-                    self.schema["type"] = "text"
-                    self.schema["format"] = "date-time"
-                # elif  len(n["@graph"]["iudx:rangeIncludes"]) > 1:
-                    # print(n["@graph"]["iudx:rangeIncludes"])
-                    # for range_incl in n["@graph"]["iudx:rangeIncludes"]:
-                    #         # self.schema["type"] = range["@id"]
-                    #     print(range_incl)
-            # print(self.schema)
     
-    
+
     def make_classfile(self):
         for n in self.g:
             if n.node_type == "Class":
@@ -224,6 +243,9 @@ def main():
     voc = Vocabulary("./repos/iudx-voc")
     voc.make_classfile()
     voc.make_propertiesfile()
+    a =[]
+    # voc.g.get_schema(voc.g.get_vertex("iudx:activePower"), a)
+    # print(a)
     root = "iudx:Resource"
     visited = voc.visited
     
