@@ -1,4 +1,3 @@
-from abc import abstractmethod
 import os
 import json
 
@@ -125,14 +124,18 @@ class Vocabulary:
                 if len(n["@graph"]["iudx:rangeIncludes"]) > 1:
                     print(len(n["@graph"]["iudx:rangeIncludes"]))
                     for range_incl in n["@graph"]["iudx:rangeIncludes"]:
-                        self.schema["anyOf"].append({"id":range_incl["@id"]})
                         if range_incl["@id"] == "iudx:Text":
-                            self.schema["anyOf"].append({"type":"string"})
+                            self.schema["anyOf"].append({"id":range_incl["@id"],"type":"string" })
+                            print(self.schema)
                         elif  range_incl["@id"] == "iudx:Number":
-                            self.schema["anyOf"].append({"type":"number"})
+                            self.schema["anyOf"].append({"id":range_incl["@id"],"type":"number"})
+                            print(self.schema)
                         elif range_incl["@id"] == "iudx:TimeSeriesAggregation":
-                            self.schema["anyOf"].append({"type":"object"})
-                        self.schema["anyOf"].append({"type"})
+                            self.schema["anyOf"].append({"id":range_incl["@id"],"type":"object"})
+                            print(self.schema)
+                        else:
+                            self.schema["anyOf"].append({"id":range_incl["@id"]})
+                            print(self.schema)
                 if len(n["@graph"]["iudx:rangeIncludes"]) == 1:
                     
                     if n["@graph"]["iudx:rangeIncludes"][0]["@id"] == "iudx:DateTime":
