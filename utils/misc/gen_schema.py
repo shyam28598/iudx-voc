@@ -102,7 +102,8 @@ class Vocabulary:
     
     def __init__(self, path_to_json):
         self.json_ld_graph = []
-        self.schema = {"anyOf":[]}
+        self.mulschema = {}
+        self.schema = {} 
         self.visited = {}
         self.read_repo(path_to_json)
         self.g = Graph()
@@ -124,18 +125,25 @@ class Vocabulary:
                 if len(n["@graph"]["iudx:rangeIncludes"]) > 1:
                     print(len(n["@graph"]["iudx:rangeIncludes"]))
                     for range_incl in n["@graph"]["iudx:rangeIncludes"]:
-                        if range_incl["@id"] == "iudx:Text":
-                            self.schema["anyOf"].append({"id":range_incl["@id"],"type":"string" })
-                            print(self.schema)
+                        if range_incl["@id"] == "iudx:Text" or "iudx:RelationshipValue":
+                            self.mulschema["anyOf"] = [{"id":range_incl["@id"],"type":"string" }]
+                            # print(self.mulschema)
+                        elif range_incl["@id"] == "iudx:RelationshipValue":
+                            self.mulschema["anyOf"] = [{"id":range_incl["@id"],"type":"object" }]
+                            # print(self.mulschema)
+                        elif range_incl["@id"] == "iudx:ValueDescriptor":
+                            self.mulschema["anyOf"] = [{"id":range_incl["@id"],"type":"object" }]
+                            # print(self.mulschema)
                         elif  range_incl["@id"] == "iudx:Number":
-                            self.schema["anyOf"].append({"id":range_incl["@id"],"type":"number"})
-                            print(self.schema)
+                            self.mulschema["anyOf"] = [{"id":range_incl["@id"],"type":"number"}]
+                            # print(self.mulschema)
                         elif range_incl["@id"] == "iudx:TimeSeriesAggregation":
-                            self.schema["anyOf"].append({"id":range_incl["@id"],"type":"object"})
-                            print(self.schema)
+                            self.mulschema["anyOf"] = [{"id":range_incl["@id"],"type":"object"}]
+                            # print(self.mulschema)
                         else:
-                            self.schema["anyOf"].append({"id":range_incl["@id"]})
-                            print(self.schema)
+                            self.mulschema["anyOf"] = [{"id":range_incl["@id"]}]
+                            # print(self.mulschema)
+                        print(self.mulschema)
                 if len(n["@graph"]["iudx:rangeIncludes"]) == 1:
                     
                     if n["@graph"]["iudx:rangeIncludes"][0]["@id"] == "iudx:DateTime":
